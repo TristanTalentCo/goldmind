@@ -1,0 +1,1213 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    :root {
+      --color-primary: #f24605;
+      --color-secondary: #ffaaaa;
+      --color-background: #f6f8fb;
+      --color-white: #ffffff;
+      --color-gray: #6c7a91;
+      --color-dark: #182336;
+      --color-blue: #00236E;
+      --color-border: rgba(4, 32, 69, 0.1);
+      --color-shadow: rgba(0, 0, 0, 0.25);
+      --border-radius: 4px;
+      --font-weight-bold: 800;
+    }
+
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: var(--font-weight-bold);
+      font-size: 1.5em;
+      user-select: none;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--color-background);
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: var(--color-secondary);
+      height: 112px;
+    }
+
+    .logo-bar {
+      background-color: var(--color-white);
+      height: 56px;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .logo-bar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      padding: 0 60px;
+    }
+
+
+
+    .Goldmind {
+      color: var(--color-primary);
+    }
+
+    .user-actions {
+      display: flex;
+      align-items: center;
+      user-select: none;
+    }
+
+    .btn-gm-insights {
+      width: 35px;
+      height: 35px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
+      margin-right: 22px;
+      cursor: pointer;
+    }
+    .btn-gm-insights:hover, .btn-gm-insights:focus, .btn-gm-insights:active {
+      background-color: #e0e0e0;
+
+    }
+
+    .user-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .profile-pic {
+      width: 32px;
+      height: 32px;
+      background-color: var(--color-primary);
+      border-radius: var(--border-radius);
+      margin-right: 9px;
+    }
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .user-info p{
+      margin: 0;
+      padding: 0;
+      
+    }
+
+    .User-Name {
+      color: var(--color-gray);
+    }
+
+    .User-position {
+      color: var(--color-gray);
+      font-size: .8em;
+    }
+
+    .title-bar {
+      background-color: var(--color-white);
+      height: 56px;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .title-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      margin: 0 232.5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .nombre-institucion {
+      color: var(--color-dark);
+      font-weight: 500;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .title-bar-access {
+      display: flex;
+      align-items: center;
+    }
+
+    .btn-acc-qp {
+      width: 206px;
+      height: 34px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-primary);
+      border-radius: var(--border-radius);
+      box-shadow: 1px 1px 0 var(--color-shadow);
+      margin-right: 23px;
+      user-select: none;
+    }
+
+    .btn-acc-qp:hover, .btn-acc-qp:focus {
+      background-color: #ff693c;
+      box-shadow: 1px 1px 0 var(--color-shadow);
+      cursor: pointer;
+    }
+
+    .btn-acc-lx {
+      width: 206px;
+      height: 34px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-blue);
+      border-radius: var(--border-radius);
+      box-shadow: 1px 1px 0 var(--color-shadow);
+      user-select: none;
+    }
+
+    .btn-acc-lx:hover, .btn-acc-lx:focus {
+      background-color: #365EB5;
+      box-shadow: 1px 1px 0 var(--color-shadow);
+      cursor: pointer;
+    }
+
+    .btn-acc-qp img, .btn-acc-lx img{
+      padding-left: 8px;
+      height: 17px;
+    }
+    .btn-acc-qp .Acceso-a {
+      color: var(--color-white);
+    }
+
+    .btn-acc-lx .Acceso-a {
+      color: var(--color-white);
+    }
+
+/* INICIA MENU USER ACTIONS */
+
+        .user-actions-menu {
+            width: 247px;
+            height: 177px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #ffffff;
+            border: 1px solid rgba(4, 32, 69, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        .ua-accesos {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .ua-b-acc-qp, .ua-b-acc-lx {
+            width: 247px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ua-b-acc-qp img, .ua-b-acc-lx img{
+            height: 17px;
+            padding-left: 8px;
+        }
+
+        .ua-b-acc-qp {
+            background-color:  var(--color-primary);
+            border-bottom: 1px solid rgba(4, 32, 69, 0.1);
+            font-weight: 300;
+            font-size: .9em;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .ua-b-acc-lx {
+            background-color: var(--color-blue);
+            border-bottom: 1px solid rgba(4, 32, 69, 0.1);
+            font-weight: 300;
+            font-size: .9em;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .ua-b-acc-qp:hover, .ua-b-acc-qp:focus, .ua-b-acc-qp:active {
+            background-color: #e07b3c;
+        }
+
+        .ua-b-acc-lx:hover, .ua-b-acc-lx:focus, .ua-b-acc-lx:active {
+            background-color: #1a8ae0;
+        }
+
+        .ua-b-acc-qp .text, .ua-b-acc-lx .text {
+            color: #ffffff;
+        }
+
+        .ua-cerrar {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 17px;
+        }
+
+        .ua-btn-cerrar {
+            width: 247px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(4, 32, 69, 0.1);
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .ua-btn-cerrar:hover, .ua-btn-cerrar:focus, .ua-btn-cerrar:active {
+            background-color: #e0e0e0;
+        }
+
+        .ua-btn-cerrar .text {
+            color: #6c7a91;
+        }
+        .ua-btn-cerrar img,  {
+            padding-right:6px;
+        filter: invert(41%) sepia(11%) saturate(0%) hue-rotate(180deg) brightness(94%) contrast(83%);
+        }
+
+/* TERMINA MENU USER ACTIONS */
+
+/*INICIA MAIN*/
+        main{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+        }
+
+        .main-container {
+          width: 1400px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+ 
+          padding: 20px;
+        }
+
+        .wr-title-bar p, .wr-notes p, .wr-subtitle p{
+          margin: 0;
+          padding: 0;
+        }
+
+        .wr-title-bar {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 10px 50px;
+        }
+        .second-titlebar{
+          border-top: 1px solid var(--color-gray);
+          padding-top: 25px;
+        }
+
+        .wr-tb-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        
+          width: 100%;
+        }
+
+        .wr-tb-gp {
+          display: flex;
+          flex-direction: column;
+          
+        }
+
+        .wr-category-title .category-title {
+          color: var(--color-dark);
+          font-size: 1.1em;
+          font-weight: 500;
+        }
+
+        .wr-subtitle .category-subtitle {
+          color: var(--color-gray);
+          font-size: .8em;
+        }
+
+        .wr-notes {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 0 50px;
+        }
+
+        .wr-notes-content {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+        }
+
+        .note .st-data {
+          color: var(--color-gray);
+          font-size: .8em;
+        }
+
+        .wr-subtitle {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 0px 0px;
+        }
+
+        .wr-st-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          width: 100%;
+          padding: 5px 50px;
+        }
+
+        .subcategory-title {
+          color: var(--color-dark);
+          font-size: 1em;
+          font-weight: 300;
+          font-style: italic;
+        }
+
+/*TERMINA MAIN*/
+
+
+
+/* INICIA WIDGET ROW*/
+
+.widget-row-a {
+  width: 1400px;
+  height: 652px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 50px;
+  gap: 20px;
+}
+
+.widget-layout {
+  width: 100%;
+  height: 632px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid rgba(4, 32, 69, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.wg-top {
+  width: 100%;
+  height: 51px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wg-title-bar {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ffffff;
+  padding-top: 15px;
+}
+
+.wg-title {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
+
+.widget-title {
+  color: var(--color-dark);
+  font-size: 1em;
+}
+
+.wg-actions-gp {
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  padding-right: 16px;
+}
+
+.act-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-sq-gray {
+  width: 28px;
+  height: 28px;
+  background-color: var(--color-gray);
+  border-radius: 4px;
+}
+.btn-sq-gray:hover, .btn-sq-gray:focus, .btn-sq-gray:active {
+  background-color: #8a9ab1;
+}
+
+.btn-sq-blue {
+  width: 28px;
+  height: 28px;
+  background-color: var(--color-blue);
+  border-radius: 4px;
+}
+.btn-sq-blue:hover, .btn-sq-blue:focus, .btn-sq-blue:active {
+  background-color: #365EB5;
+}
+.btn-sq-gray, .btn-sq-blue{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-sq-gray img, .btn-sq-blue img {
+  height: 20px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.act-detail {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+
+
+.wg-status-bar {
+  width: 100%;
+  height: 30px;
+  padding: 0 18px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid rgba(4, 32, 69, 0.1);
+}
+
+.wg-st-a, .wg-st-b, .wg-st-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 30px;
+  font-size: .8em;
+}
+
+.wg-st-a .st-data, .wg-st-b .st-data, .wg-st-c .st-data {
+  color: rgba(108, 122, 145, 1);
+}
+
+.wg-content{
+  width: 100%;
+  height: 100%;
+  display: flex; 
+
+}
+
+.wg-bttm-a {
+  width: 100%;
+  height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.insight-wrap {
+  width: 604px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(0, 143, 251, 0.2);
+}
+
+.is-margin {
+  width: 15px;
+  height: 60px;
+  background-color: rgba(0, 143, 251, 1);
+}
+
+.insight-content {
+  width: 589px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.is-icon-content {
+  width: 60px;
+  height: 60px;
+}
+
+.is-text-content {
+  width: 499px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+.is-title {
+  width: 100%;
+  height: 22px;
+  display: flex;
+  align-items: center;
+}
+
+.insight-title {
+  color: #000000;
+  font-size: .9em;
+  font-weight: 600;
+}
+
+.insight-txt {
+  color: #000000;
+  font-size: 0.7em;
+}
+
+/* TERMINA WIDGET ROW*/
+
+
+
+    @media (max-width: 768px) {
+      .title-bar {
+      height: fit-content;
+      padding: 10px 0;
+    }
+      .title-wrap {
+        margin: 0 ;
+        gap: 10px;
+      flex-direction: column;
+      justify-content: center;
+      }
+
+      .nombre-institucion, .title-bar-access {
+      justify-content: center;
+        font-size: 1.2em;
+      }
+
+      .btn-acc-qp .Acceso-a, .btn-acc-lx .Acceso-a {
+      display: none;
+      }
+
+/* INICIA MENU USER ACTIONS */
+
+            .user-actions-menu {
+            position: fixed;
+            top: 0;
+            right: 0%;
+            width: 300px;
+            height: 100%;
+            flex-direction: column;
+            justify-content: flex-start;
+            transition: left 0.3s ease-in-out;
+            z-index: 1000;
+            border-radius: 0;
+            }
+
+            .user-actions-menu.open {
+            right: 0;
+            }
+
+            .ua-accesos, .ua-cerrar {
+            width: 100%;
+            }
+            .ua-accesos{
+            margin-top: 100px;
+            }
+
+            .ua-b-acc-qp, .ua-b-acc-lx, .ua-btn-cerrar {
+            width: 100%;
+            height: 65px;
+            }
+            .ua-b-acc-qp img, .ua-b-acc-lx img {
+            
+            height: 25px;
+            }
+
+            .ua-cerrar {
+            margin-top: auto;
+            margin-bottom: env(safe-area-inset-bottom);
+            }
+
+/* TERMINA MENU USER ACTIONS */
+
+
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="body">
+  <div class="header">
+    <div class="logo-bar">
+      <div class="logo-bar-container">
+        <div class="logo">
+          <span class="Goldmind">Goldmind</span>
+        </div>
+        <div class="user-actions">
+          <div class="btn-gm-insights"><img src="img/icon/bulb.svg" alt="Ver Goldmind Insights"></div>
+          <div class="user-container">
+            <div class="profile-pic"></div>
+            <div class="user-info">
+                <div class="user-info-name">
+                <p class="User-Name" id="headUserName">User Name</p>
+              </div>
+              <div class="user-info-position">
+                <p class="User-position" id="headUserPositon">User position</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="title-bar">
+      <div class="title-wrap">
+        <div class="title-bar-container">
+            <span class="nombre-institucion">Placeholder Nombre de la Institución</span>
+        </div>
+        <div class="title-bar-access">
+          <div class="btn-acc-qp">
+            <span class="Acceso-a">Acceso a</span>
+            <img src="img/logo/questionpro-logo-white.svg" alt="">
+          </div>
+          <div class="btn-acc-lx">
+            <span class="Acceso-a">Acceso a</span>
+            <img src="img/logo/lexium-logo.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="main-container">
+      <div class="wr-title-bar">
+        <div class="wr-tb-content">
+          <div class="wr-tb-gp">
+            <div class="wr-category-title">
+              <p class="category-title" id="categoryTitle1">Category Title</p>
+            </div>
+            <div class="wr-subtitle">
+              <p class="category-subtitle" id="categorySubtitle1">Category Subtitle</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Inicia Widget Row -->
+      <div class="widget-row-a">
+
+        <!--Inicia Widget-->
+        <div class="widget-layout">
+          <!--Inicia Widget Title bar -->
+          <div class="wg-top">
+            <div class="wg-title-bar">
+              <div class="wg-title">
+                <p class="widget-title">Widget Title</p>
+              </div>
+              <div class="wg-actions-gp">
+                <div class="act-btns">
+                    <a href="link1.html" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
+                    <a href="link2.html" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="link3.html" class="btn-sq-gray"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                </div>
+                <div class="act-detail">
+                    <a href="link4.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Termina Widget Title bar -->
+
+          <!--Inicia Widget Status bar -->
+          <div class="wg-status-bar">
+            <div class="wg-st-a">
+              <p class="st-data">Data A</p>
+            </div>
+            <div class="wg-st-b">
+              <p class="st-data">Data B</p>
+            </div>
+            <div class="wg-st-c">
+              <p class="st-data">Data C</p>
+            </div>
+          </div>
+          <!--Termina Widget Status bar -->
+
+          <!--Inicia Widget Content -->
+          <div class="wg-content">
+
+          </div>
+
+          <!--Termina Widget Content -->
+
+          <!--Inicia Widget Bottom bar -->
+          <div class="wg-bttm-a">
+            <div class="insight-wrap">
+              <div class="is-margin"></div>
+              <div class="insight-content">
+                <div class="is-icon-content"></div>
+                <div class="is-text-content">
+                  <div class="is-title">
+                    <p class="insight-title">Insight Title</p>
+                  </div>
+                  <div class="is-title">
+                    <p class="insight-txt">Insight Text</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Termina Widget Bottom bar -->
+        </div>
+        <!--Termina Widget-->
+        <!--Inicia Widget-->
+        <div class="widget-layout">
+          <!--Inicia Widget Title bar -->
+          <div class="wg-top">
+            <div class="wg-title-bar">
+              <div class="wg-title">
+                <p class="widget-title">Widget Title</p>
+              </div>
+              <div class="wg-actions-gp">
+                <div class="act-btns">
+                    <a href="link1.html" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
+                    <a href="link2.html" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="link3.html" class="btn-sq-gray"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                </div>
+                <div class="act-detail">
+                    <a href="link4.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Termina Widget Title bar -->
+
+          <!--Inicia Widget Status bar -->
+          <div class="wg-status-bar">
+            <div class="wg-st-a">
+              <p class="st-data">Data A</p>
+            </div>
+            <div class="wg-st-b">
+              <p class="st-data">Data B</p>
+            </div>
+            <div class="wg-st-c">
+              <p class="st-data">Data C</p>
+            </div>
+          </div>
+          <!--Termina Widget Status bar -->
+
+          <!--Inicia Widget Content -->
+          <div class="wg-content">
+
+          </div>
+
+          <!--Termina Widget Content -->
+
+          <!--Inicia Widget Bottom bar -->
+          <div class="wg-bttm-a">
+            <div class="insight-wrap">
+              <div class="is-margin"></div>
+              <div class="insight-content">
+                <div class="is-icon-content"></div>
+                <div class="is-text-content">
+                  <div class="is-title">
+                    <p class="insight-title">Insight Title</p>
+                  </div>
+                  <div class="is-title">
+                    <p class="insight-txt">Insight Text</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Termina Widget Bottom bar -->
+        </div>
+        <!--Termina Widget-->
+        
+      </div>
+      <!--Termina Widget Row -->
+
+      <div class="wr-title-bar second-titlebar">
+        <div class="wr-tb-content">
+          <div class="wr-tb-gp">
+            <div class="wr-category-title">
+              <p class="category-title" id="categoryTitle2">Category Title</p>
+            </div>
+            <div class="wr-subtitle">
+              <p class="category-subtitle" id="categorySubtitle2">Category Subtitle</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wr-notes">
+        <div class="wr-notes-content">
+          <div class="note">
+            <p class="st-data" id="note1">Note 1</p>
+          </div>
+          <div class="note">
+            <p class="st-data" id="note2">Note 2</p>
+          </div>
+        </div>
+      </div>
+      <div class="wr-subtitle">
+        <div class="wr-st-content">
+          <p class="subcategory-title" id="subcategoryTitle">Subcategory Title</p>
+        </div>
+      </div>
+      <!--Inicia Widget Row -->
+      <div class="widget-row-a">
+
+        <!--Inicia Widget-->
+        <div class="widget-layout">
+          <!--Inicia Widget Title bar -->
+          <div class="wg-top">
+            <div class="wg-title-bar">
+              <div class="wg-title">
+                <p class="widget-title">Widget Title</p>
+              </div>
+              <div class="wg-actions-gp">
+                <div class="act-btns">
+                    <a href="link1.html" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
+                    <a href="link2.html" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="link3.html" class="btn-sq-gray"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                </div>
+                <div class="act-detail">
+                    <a href="link4.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Termina Widget Title bar -->
+
+          <!--Inicia Widget Status bar -->
+          <div class="wg-status-bar">
+            <div class="wg-st-a">
+              <p class="st-data">Data A</p>
+            </div>
+            <div class="wg-st-b">
+              <p class="st-data">Data B</p>
+            </div>
+            <div class="wg-st-c">
+              <p class="st-data">Data C</p>
+            </div>
+          </div>
+          <!--Termina Widget Status bar -->
+
+          <!--Inicia Widget Content -->
+          <div class="wg-content">
+
+          </div>
+
+          <!--Termina Widget Content -->
+
+          <!--Inicia Widget Bottom bar -->
+          <div class="wg-bttm-a">
+            <div class="insight-wrap">
+              <div class="is-margin"></div>
+              <div class="insight-content">
+                <div class="is-icon-content"></div>
+                <div class="is-text-content">
+                  <div class="is-title">
+                    <p class="insight-title">Insight Title</p>
+                  </div>
+                  <div class="is-title">
+                    <p class="insight-txt">Insight Text</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Termina Widget Bottom bar -->
+        </div>
+        <!--Termina Widget-->
+        <!--Inicia Widget-->
+        <div class="widget-layout">
+          <!--Inicia Widget Title bar -->
+          <div class="wg-top">
+            <div class="wg-title-bar">
+              <div class="wg-title">
+                <p class="widget-title">Widget Title</p>
+              </div>
+              <div class="wg-actions-gp">
+                <div class="act-btns">
+                    <a href="link1.html" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
+                    <a href="link2.html" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="link3.html" class="btn-sq-gray"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                </div>
+                <div class="act-detail">
+                    <a href="link4.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Termina Widget Title bar -->
+
+          <!--Inicia Widget Status bar -->
+          <div class="wg-status-bar">
+            <div class="wg-st-a">
+              <p class="st-data">Data A</p>
+            </div>
+            <div class="wg-st-b">
+              <p class="st-data">Data B</p>
+            </div>
+            <div class="wg-st-c">
+              <p class="st-data">Data C</p>
+            </div>
+          </div>
+          <!--Termina Widget Status bar -->
+
+          <!--Inicia Widget Content -->
+          <div class="wg-content">
+
+          </div>
+
+          <!--Termina Widget Content -->
+
+          <!--Inicia Widget Bottom bar -->
+          <div class="wg-bttm-a">
+            <div class="insight-wrap">
+              <div class="is-margin"></div>
+              <div class="insight-content">
+                <div class="is-icon-content"></div>
+                <div class="is-text-content">
+                  <div class="is-title">
+                    <p class="insight-title">Insight Title</p>
+                  </div>
+                  <div class="is-title">
+                    <p class="insight-txt">Insight Text</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Termina Widget Bottom bar -->
+        </div>
+        <!--Termina Widget-->
+        
+      </div>
+      <!--Termina Widget Row -->
+      <div class="wr-subtitle second-titlebar">
+        <div class="wr-st-content">
+          <p class="subcategory-title" id="subcategoryTitle">Subcategory Title</p>
+        </div>
+      </div>
+      <!--Inicia Widget Row -->
+      <div class="widget-row-a">
+
+        <!--Inicia Widget-->
+        <div class="widget-layout">
+          <!--Inicia Widget Title bar -->
+          <div class="wg-top">
+            <div class="wg-title-bar">
+              <div class="wg-title">
+                <p class="widget-title">Widget Title</p>
+              </div>
+              <div class="wg-actions-gp">
+                <div class="act-btns">
+                    <a href="link1.html" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
+                    <a href="link2.html" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="link3.html" class="btn-sq-gray"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                </div>
+                <div class="act-detail">
+                    <a href="link4.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Termina Widget Title bar -->
+
+          <!--Inicia Widget Status bar -->
+          <div class="wg-status-bar">
+            <div class="wg-st-a">
+              <p class="st-data">Data A</p>
+            </div>
+            <div class="wg-st-b">
+              <p class="st-data">Data B</p>
+            </div>
+            <div class="wg-st-c">
+              <p class="st-data">Data C</p>
+            </div>
+          </div>
+          <!--Termina Widget Status bar -->
+
+          <!--Inicia Widget Content -->
+          <div class="wg-content">
+
+          </div>
+
+          <!--Termina Widget Content -->
+
+          <!--Inicia Widget Bottom bar -->
+          <div class="wg-bttm-a">
+            <div class="insight-wrap">
+              <div class="is-margin"></div>
+              <div class="insight-content">
+                <div class="is-icon-content"></div>
+                <div class="is-text-content">
+                  <div class="is-title">
+                    <p class="insight-title">Insight Title</p>
+                  </div>
+                  <div class="is-title">
+                    <p class="insight-txt">Insight Text</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Termina Widget Bottom bar -->
+        </div>
+        <!--Termina Widget-->
+        <!--Inicia Widget-->
+        <div class="widget-layout">
+          <!--Inicia Widget Title bar -->
+          <div class="wg-top">
+            <div class="wg-title-bar">
+              <div class="wg-title">
+                <p class="widget-title">Widget Title</p>
+              </div>
+              <div class="wg-actions-gp">
+                <div class="act-btns">
+                    <a href="link1.html" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
+                    <a href="link2.html" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="link3.html" class="btn-sq-gray"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                </div>
+                <div class="act-detail">
+                    <a href="link4.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Termina Widget Title bar -->
+
+          <!--Inicia Widget Status bar -->
+          <div class="wg-status-bar">
+            <div class="wg-st-a">
+              <p class="st-data">Data A</p>
+            </div>
+            <div class="wg-st-b">
+              <p class="st-data">Data B</p>
+            </div>
+            <div class="wg-st-c">
+              <p class="st-data">Data C</p>
+            </div>
+          </div>
+          <!--Termina Widget Status bar -->
+
+          <!--Inicia Widget Content -->
+          <div class="wg-content">
+
+          </div>
+
+          <!--Termina Widget Content -->
+
+          <!--Inicia Widget Bottom bar -->
+          <div class="wg-bttm-a">
+            <div class="insight-wrap">
+              <div class="is-margin"></div>
+              <div class="insight-content">
+                <div class="is-icon-content"></div>
+                <div class="is-text-content">
+                  <div class="is-title">
+                    <p class="insight-title">Insight Title</p>
+                  </div>
+                  <div class="is-title">
+                    <p class="insight-txt">Insight Text</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Termina Widget Bottom bar -->
+        </div>
+        <!--Termina Widget-->
+        
+      </div>
+      <!--Termina Widget Row -->
+    </div>
+  </main>
+
+
+  <div class="user-actions-menu">
+
+    <div class="ua-accesos">
+        <a href="https://www.questionpro.com" class="ua-b-acc-qp">
+            <span class="text">Acceso a</span>
+            <img src="img/logo/questionpro-logo-white.svg" alt="">
+        </a>
+        <a href="https://www.lexium.com" class="ua-b-acc-lx">
+            <span class="text">Acceso a</span>
+            <img src="img/logo/lexium-logo.svg" alt="">
+        </a>
+    </div>
+    <div class="ua-cerrar">
+        <a href="logout.html" class="ua-btn-cerrar">
+            <img src="img/icon/logout.svg" alt="">
+            <span class="text">Cerrar Sesión</span>
+        </a>
+    </div>
+</div>
+</div>
+
+</body>
+
+</html>
