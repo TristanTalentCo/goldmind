@@ -1,0 +1,373 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    :root {
+      --color-primary: #f24605;
+      --color-secondary: #ffaaaa;
+      --color-background: #f6f8fb;
+      --color-white: #ffffff;
+      --color-gray: #6c7a91;
+      --color-dark: #182336;
+      --color-blue: #00236E;
+      --color-border: rgba(4, 32, 69, 0.1);
+      --color-shadow: rgba(0, 0, 0, 0.25);
+      --border-radius: 4px;
+      --font-weight-bold: 800;
+    }
+    a{
+      text-decoration: none;
+    }
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: var(--font-weight-bold);
+      font-size: 1.5em;
+      user-select: none;
+    }
+    body {
+      min-width: 100vw;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--color-background);
+      margin: 0;
+      padding: 0;
+    }
+    body::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    main {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .main-container {
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-background);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .title-bar {
+      width: 100%;
+      height: 149px;
+      background-color: var(--color-background);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .title-bar-container {
+      width: 95%;
+      height: 109px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      user-select: none;
+    }
+
+    .goldmind {
+      font-size: 3.5em;
+      font-weight: bold;
+      color: var(--color-primary);
+      padding: 0;
+      margin: 0;
+    }
+
+    .business-intelligence {
+      font-size: 1.5em;
+      color: var(--color-gray);
+      padding: 0;
+      margin: 0;
+    }
+
+    .widget-row-a {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .login-card {
+      width: 448px;
+      background-color: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 3px var(--color-shadow);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-top {
+      width: 100%;
+      padding: 20px;
+    }
+
+    .card-titlebar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .bienvenido-a-goldmind {
+      font-size: 1.5em;
+      color: var(--color-dark);
+    }
+
+    .card-main-index {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .us-title, .pw-title {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .direccion-de-email, .contrasena {
+      font-size: 1em;
+      color: var(--color-dark);
+    }
+
+    .olvide-mi-contrasena {
+      font-size: 0.9em;
+      color: var(--color-blue);
+      cursor: pointer;
+    }
+
+    .input-email, .input-pw {
+      width: 100%;
+      height: 35px;
+      background-color: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 3px var(--color-shadow);
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      margin-bottom: 20px;
+    }
+
+    .tu-email, .tu-contrasena {
+      font-size: 1em;
+      color: var(--color-gray);
+    }
+
+    .check-recordar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .check-rec {
+      width: 20px;
+      height: 20px;
+      background-color: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 3px var(--color-shadow);
+      margin-right: 10px;
+    }
+
+    .recordar-en-este-dispositivo {
+      font-size: 1em;
+      color: var(--color-dark);
+    }
+
+    .btn-blue {
+      width: 100%;
+      height: 36px;
+      background-color: var(--color-blue);
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .ingresar {
+      font-size: 1em;
+      color: var(--color-white);
+    }
+
+    .card-bottom {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .btn-google {
+      width: 220px;
+      height: 36px;
+      background-color: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .boton-imprimir{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+    }
+    .ingresar-con-google {
+      padding: 0 10px;
+      font-size: 1em;
+      color: var(--color-dark);
+    }
+
+    @media (max-width: 768px) {
+      .login-card {
+      width: 90%;
+      }
+
+      .bienvenido-a-goldmind {
+      font-size: 1.2em;
+      }
+
+      .direccion-de-email, .contrasena {
+      font-size: 0.9em;
+      }
+
+      .olvide-mi-contrasena {
+      font-size: 0.8em;
+      }
+
+      .tu-email, .tu-contrasena {
+      font-size: 0.9em;
+      }
+
+      .recordar-en-este-dispositivo {
+      font-size: 0.9em;
+      }
+
+      .ingresar {
+      font-size: 0.9em;
+      }
+
+      .ingresar-con-google {
+      font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<main>
+  <div class="main-container">
+    <div class="title-bar">
+      <div class="title-bar-container">
+        <div class="logo-container">
+          <div class="goldmind">Goldmind</div>
+          <div class="business-intelligence">Business Intelligence</div>
+        </div>
+      </div>
+    </div>
+    <div class="widget-row-a">
+      <div class="login-card">
+        <div class="card-top">
+          <div class="card-titlebar">
+            <div class="bienvenido-a-goldmind">Bienvenido a Goldmind</div>
+          </div>
+          <div class="card-main-index">
+            <div class="us-title">
+              <div class="direccion-de-email">Dirección de e-mail</div>
+            </div>
+            <div class="input-email">
+                <input type="email" class="tu-email" placeholder="Tu email" style="border: none; outline: none; width: 100%;">
+            </div>
+            <div class="pw-title">
+              <div class="contrasena">Contraseña</div>
+              <div class="olvide-mi-contrasena">Olvidé mi contraseña</div>
+            </div>
+            <div class="input-pw">
+              
+             <input type="password" class="tu-contrasena" placeholder="Tu contraseña" style="border: none; outline: none; width: 100%;">
+            </div>
+            <div class="check-recordar">
+                <input type="checkbox" class="check-rec">
+              <div class="recordar-en-este-dispositivo">Recordar en este dispositivo</div>
+            </div>
+            <div class="alert" style="display: ; background-color: #ffdddd; color: red; margin-bottom: 20px; padding: 10px; border-radius: 4px;">
+              Por favor, complete todos los campos.
+            </div>
+            <a href="" class="btn-blue">
+              <div class="ingresar">Ingresar</div>
+            </a>
+          </div>
+        </div>
+        <div class="card-bottom">
+          <div class="btn-google">
+            <a href="" class="boton-imprimir">
+              <img src="img/icon/brand-google.svg" alt="">
+              <div class="ingresar-con-google">Ingresar con Google</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+</body>
+
+</html>

@@ -20,7 +20,7 @@
 
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
-
+  
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
@@ -50,14 +50,19 @@
       user-select: none;
     }
     body {
+      min-width: 100vw;
       font-family: 'Poppins', sans-serif;
       background-color: var(--color-background);
       margin: 0;
       padding: 0;
     }
-
+    body::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
     .header {
-      background-color: var(--color-secondary);
+      width: 100%;
       height: 112px;
     }
 
@@ -140,6 +145,7 @@
     .title-bar {
       background-color: var(--color-white);
       height: 56px;
+      padding: 0 80px;
       border-bottom: 1px solid var(--color-border);
     }
 
@@ -148,7 +154,7 @@
       justify-content: space-between;
       align-items: center;
       height: 100%;
-      margin: 0 232.5px;
+      
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -316,7 +322,7 @@
 
 /*INICIA MAIN*/
         main{
-          width: 100%;
+          width: 100vw ;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -450,7 +456,7 @@
 
 .wg-top {
   width: 100%;
-  height: 51px;
+  height: 60px;
   display: flex;
   flex-direction: column;
 }
@@ -487,7 +493,7 @@
 
 .act-btns {
   display: flex;
-  gap: 10px;
+  gap: 6px;
 }
 
 .btn-sq-gray {
@@ -561,6 +567,7 @@
 .wg-bttm-a {
   width: 100%;
   height: 96px;
+  padding: 0 16px 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -568,28 +575,30 @@
 }
 
 .insight-wrap {
-  width: 604px;
-  height: 60px;
+  width: 100%;
+  height: 80px;
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: rgba(0, 143, 251, 0.2);
 }
 
-.is-margin {
-  width: 15px;
-  height: 60px;
-  background-color: rgba(0, 143, 251, 1);
-}
-
 .insight-content {
   width: 589px;
-  height: 60px;
+  height: 80px;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding-left: 10px;
 }
+
+.is-margin {
+  width: 15px;
+  height: 100%;
+  background-color: rgba(0, 143, 251, 1);
+}
+
+
 
 .is-icon-content {
   width: 60px;
@@ -598,16 +607,18 @@
 
 .is-text-content {
   width: 499px;
-  height: 40px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 10px;
+
+
 }
 
 .is-title {
   width: 100%;
-  height: 22px;
+  
   display: flex;
   align-items: center;
 }
@@ -616,22 +627,127 @@
   color: #000000;
   font-size: .9em;
   font-weight: 600;
+  padding: 0;
+  margin: 0;
 }
 
+.is-text{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
 .insight-txt {
+  height: 3lh;
+  margin: 0;
   color: #000000;
   font-size: 0.7em;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
 }
 
+.btn-edit{
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.btn-edit img{
+  height: 20px;
+}
 /* TERMINA WIDGET ROW*/
 
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .logo-bar-container {
+    padding: 0 30px;
+  }
 
+  .title-bar {
+    padding: 0 30px;
+  }
+
+  .main-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .widget-row-a {
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .logo-bar-container {
+    padding: 0 40px;
+  }
+
+  .title-bar {
+    padding: 0 40px;
+  }
+
+  .main-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .widget-row-a {
+    width: 100%;
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1080px) and (orientation: landscape) {
+  .logo-bar-container {
+    padding: 0 50px;
+  }
+
+  .title-bar {
+    padding: 0 50px;
+  }
+
+  .main-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .widget-row-a {
+    width: 100%;
+    padding: 0 50px;
+  }
+}
 
     @media (max-width: 768px) {
-      .title-bar {
-      height: fit-content;
-      padding: 10px 0;
+    .logo-bar {
+      background-color: var(--color-white);
+      height: 100px;
+      border-bottom: 1px solid var(--color-border);
     }
+
+    .logo-bar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items:end;
+      height: 100%;
+      padding: 0 12px 12px 15px;
+    }
+
+    .user-info {
+      display: none;     
+    }
+
+      .title-bar {
+        display: none;
+        height: fit-content;
+        padding: 10px 0;
+      }
       .title-wrap {
         margin: 0 ;
         gap: 10px;
@@ -651,6 +767,7 @@
 /* INICIA MENU USER ACTIONS */
 
             .user-actions-menu {
+              display: none;
             position: fixed;
             top: 0;
             right: 0%;
@@ -690,15 +807,51 @@
 
 /* TERMINA MENU USER ACTIONS */
 
+        .main-container {
+          width: 100%;
+          padding: 20px;
+        }
 
+
+      .widget-row-a {
+        width: 100%;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 0px 15px 0;
+        gap: 20px;
+      }
+      .wg-top {
+        height: 95px;
+      }
+      .wg-bttm-a {
+        height: fit-content;
+        padding: 10px 10px;
+      }
+      .insight-wrap {
+        width: 100%;
+        height: 80px;
+
+      }
+      .insight-content {
+        width: 90%;
+      }
+      .is-margin {
+        width: 15px;
+        height: 100%;
+        background-color: rgba(0, 143, 251, 1);
+      }
+      .is-text-content {
+        padding-left: 0px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<div class="body">
-  <div class="header">
+<div class="header">
     <div class="logo-bar">
       <div class="logo-bar-container">
         <div class="logo">
@@ -808,10 +961,11 @@
                 <div class="is-icon-content"></div>
                 <div class="is-text-content">
                   <div class="is-title">
-                    <p class="insight-title">Insight Title</p>
+                    <p class="insight-title" id="insightTitle">Insight Title</p>
+                    <a href="" class="btn-edit"><img src="img/icon/pencil.svg" alt="Editar Insight"></a>
                   </div>
-                  <div class="is-title">
-                    <p class="insight-txt">Insight Text</p>
+                  <div class="is-text">
+                    <p class="insight-txt" id="insightText">Insight Text</p>
                   </div>
                 </div>
               </div>
@@ -872,9 +1026,10 @@
                 <div class="is-text-content">
                   <div class="is-title">
                     <p class="insight-title">Insight Title</p>
+                    <a href="" class="btn-edit"><img src="img/icon/pencil.svg" alt="Editar Insight"></a>
                   </div>
-                  <div class="is-title">
-                    <p class="insight-txt">Insight Text</p>
+                  <div class="is-text">
+                    <p class="insight-txt">Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text </p>
                   </div>
                 </div>
               </div>
@@ -970,7 +1125,7 @@
                   <div class="is-title">
                     <p class="insight-title">Insight Title</p>
                   </div>
-                  <div class="is-title">
+                  <div class="is-text">
                     <p class="insight-txt">Insight Text</p>
                   </div>
                 </div>
@@ -1033,7 +1188,7 @@
                   <div class="is-title">
                     <p class="insight-title">Insight Title</p>
                   </div>
-                  <div class="is-title">
+                  <div class="is-text">
                     <p class="insight-txt">Insight Text</p>
                   </div>
                 </div>
@@ -1107,7 +1262,7 @@
                   <div class="is-title">
                     <p class="insight-title">Insight Title</p>
                   </div>
-                  <div class="is-title">
+                  <div class="is-text">
                     <p class="insight-txt">Insight Text</p>
                   </div>
                 </div>
@@ -1205,7 +1360,6 @@
             <span class="text">Cerrar Sesión</span>
         </a>
     </div>
-</div>
 </div>
 
 </body>
