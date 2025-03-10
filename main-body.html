@@ -277,11 +277,11 @@
         }
 
         .ua-b-acc-qp:hover, .ua-b-acc-qp:focus, .ua-b-acc-qp:active {
-            background-color: #e07b3c;
+            background-color: #ff693c;
         }
 
         .ua-b-acc-lx:hover, .ua-b-acc-lx:focus, .ua-b-acc-lx:active {
-            background-color: #1a8ae0;
+            background-color: #365EB5;
         }
 
         .ua-b-acc-qp .text, .ua-b-acc-lx .text {
@@ -551,6 +551,7 @@
   width: fit-content;
   height: 30px;
   font-size: .8em;
+  gap: 5px;
 }
 
 .wg-st-a .st-data, .wg-st-b .st-data, .wg-st-c .st-data {
@@ -566,7 +567,7 @@
 
 .wg-bttm-a {
   width: 100%;
-  height: 96px;
+  height: 100px;
   padding: 0 16px 10px;
   display: flex;
   flex-direction: column;
@@ -576,20 +577,24 @@
 
 .insight-wrap {
   width: 100%;
-  height: 80px;
+  height: 96px;
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: rgba(0, 143, 251, 0.2);
+  user-select: none;
 }
 
 .insight-content {
-  width: 589px;
-  height: 80px;
+  width: 100%;
+
+  height: 90px;
+  gap: 5px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-left: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .is-margin {
@@ -606,8 +611,8 @@
 }
 
 .is-text-content {
-  width: 499px;
-
+  width: 100%;
+  gap: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -636,7 +641,11 @@
   padding: 0;
   margin: 0;
 }
+.is-text a{
+  text-decoration: none;
+}
 .insight-txt {
+  width: 100%;
   height: 3lh;
   margin: 0;
   color: #000000;
@@ -662,6 +671,78 @@
 .btn-edit img{
   height: 20px;
 }
+
+/*INICIA TOOLTIP */
+.tooltip {
+  width: 600px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid rgba(4, 32, 69, 0.1);
+  border-radius: 4px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  margin: 10px;
+  user-select: none;
+}
+
+.tt-top {
+  width: 100%;
+  height: 38px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.tt-t-bar {
+  width: 100%;
+  height: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tooltip-title {
+  color: rgba(24, 35, 54, 1);
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.btn-close {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid rgba(4, 32, 69, 0.1);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-close img{
+  height: 16px;
+}
+
+.tt-btm {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-top: 1px solid rgba(4, 32, 69, 0.1);
+}
+
+.tooltip-text {
+  color: rgba(24, 35, 54, 1);
+  font-size: 0.9em;
+  text-align: center;
+}
+/*TERMINA TOOLTIP */
+
 /* TERMINA WIDGET ROW*/
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -910,6 +991,7 @@
       <!--Inicia Widget Row -->
       <div class="widget-row-a">
 
+
         <!--Inicia Widget-->
         <div class="widget-layout">
           <!--Inicia Widget Title bar -->
@@ -935,13 +1017,12 @@
           <!--Inicia Widget Status bar -->
           <div class="wg-status-bar">
             <div class="wg-st-a">
-              <p class="st-data">Data A</p>
+              <p class="st-data">Filtrado por:</p>
+              <p class="st-data" id="statusA">Data A</p>
             </div>
             <div class="wg-st-b">
+              <p class="st-data">Periodo:</p>
               <p class="st-data">Data B</p>
-            </div>
-            <div class="wg-st-c">
-              <p class="st-data">Data C</p>
             </div>
           </div>
           <!--Termina Widget Status bar -->
@@ -961,11 +1042,13 @@
                 <div class="is-icon-content"></div>
                 <div class="is-text-content">
                   <div class="is-title">
-                    <p class="insight-title" id="insightTitle">Insight Title</p>
+                    <p class="insight-title" id="isgTitle">Insight Title</p>
                     <a href="" class="btn-edit"><img src="img/icon/pencil.svg" alt="Editar Insight"></a>
                   </div>
                   <div class="is-text">
-                    <p class="insight-txt" id="insightText">Insight Text</p>
+                    <a href="">
+                      <p class="insight-txt" id="isgText">Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text </p>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -999,13 +1082,12 @@
           <!--Inicia Widget Status bar -->
           <div class="wg-status-bar">
             <div class="wg-st-a">
-              <p class="st-data">Data A</p>
+              <p class="st-data">Filtrado por:</p>
+              <p class="st-data" id="statusA">Data A</p>
             </div>
             <div class="wg-st-b">
+              <p class="st-data">Periodo:</p>
               <p class="st-data">Data B</p>
-            </div>
-            <div class="wg-st-c">
-              <p class="st-data">Data C</p>
             </div>
           </div>
           <!--Termina Widget Status bar -->
@@ -1025,11 +1107,13 @@
                 <div class="is-icon-content"></div>
                 <div class="is-text-content">
                   <div class="is-title">
-                    <p class="insight-title">Insight Title</p>
+                    <p class="insight-title" id="isgTitle">Insight Title</p>
                     <a href="" class="btn-edit"><img src="img/icon/pencil.svg" alt="Editar Insight"></a>
                   </div>
                   <div class="is-text">
-                    <p class="insight-txt">Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text </p>
+                    <a href="">
+                      <p class="insight-txt" id="isgText">Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text </p>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1038,6 +1122,9 @@
           <!--Termina Widget Bottom bar -->
         </div>
         <!--Termina Widget-->
+        
+
+
         
       </div>
       <!--Termina Widget Row -->
@@ -1069,138 +1156,148 @@
           <p class="subcategory-title" id="subcategoryTitle">Subcategory Title</p>
         </div>
       </div>
-      <!--Inicia Widget Row -->
-      <div class="widget-row-a">
+        <!--Inicia Widget Row -->
+        <div class="widget-row-a">
 
-        <!--Inicia Widget-->
-        <div class="widget-layout">
-          <!--Inicia Widget Title bar -->
-          <div class="wg-top">
-            <div class="wg-title-bar">
-              <div class="wg-title">
-                <p class="widget-title">Widget Title</p>
-              </div>
-              <div class="wg-actions-gp">
-                <div class="act-btns">
-                    <a href="link1.html" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
-                    <a href="link2.html" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                    <a href="link3.html" class="btn-sq-gray"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+
+          <!--Inicia Widget-->
+          <div class="widget-layout">
+            <!--Inicia Widget Title bar -->
+            <div class="wg-top">
+              <div class="wg-title-bar">
+                <div class="wg-title">
+                  <p class="widget-title">Widget Title</p>
                 </div>
-                <div class="act-detail">
-                    <a href="link4.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--Termina Widget Title bar -->
-
-          <!--Inicia Widget Status bar -->
-          <div class="wg-status-bar">
-            <div class="wg-st-a">
-              <p class="st-data">Data A</p>
-            </div>
-            <div class="wg-st-b">
-              <p class="st-data">Data B</p>
-            </div>
-            <div class="wg-st-c">
-              <p class="st-data">Data C</p>
-            </div>
-          </div>
-          <!--Termina Widget Status bar -->
-
-          <!--Inicia Widget Content -->
-          <div class="wg-content">
-
-          </div>
-
-          <!--Termina Widget Content -->
-
-          <!--Inicia Widget Bottom bar -->
-          <div class="wg-bttm-a">
-            <div class="insight-wrap">
-              <div class="is-margin"></div>
-              <div class="insight-content">
-                <div class="is-icon-content"></div>
-                <div class="is-text-content">
-                  <div class="is-title">
-                    <p class="insight-title">Insight Title</p>
+                <div class="wg-actions-gp">
+                  <div class="act-btns">
+                      <a href="link1.html" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
+                      <a href="link2.html" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                      <a href="link3.html" class="btn-sq-gray"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                   </div>
-                  <div class="is-text">
-                    <p class="insight-txt">Insight Text</p>
+                  <div class="act-detail">
+                      <a href="link4.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
                   </div>
                 </div>
               </div>
             </div>
+            <!--Termina Widget Title bar -->
+  
+            <!--Inicia Widget Status bar -->
+            <div class="wg-status-bar">
+              <div class="wg-st-a">
+                <p class="st-data">Filtrado por:</p>
+                <p class="st-data" id="statusA">Data A</p>
+              </div>
+              <div class="wg-st-b">
+                <p class="st-data">Periodo:</p>
+                <p class="st-data">Data B</p>
+              </div>
+            </div>
+            <!--Termina Widget Status bar -->
+  
+            <!--Inicia Widget Content -->
+            <div class="wg-content">
+  
+            </div>
+  
+            <!--Termina Widget Content -->
+  
+            <!--Inicia Widget Bottom bar -->
+            <div class="wg-bttm-a">
+              <div class="insight-wrap">
+                <div class="is-margin"></div>
+                <div class="insight-content">
+                  <div class="is-icon-content"></div>
+                  <div class="is-text-content">
+                    <div class="is-title">
+                      <p class="insight-title" id="isgTitle">Insight Title</p>
+                      <a href="" class="btn-edit"><img src="img/icon/pencil.svg" alt="Editar Insight"></a>
+                    </div>
+                    <div class="is-text">
+                      <a href="">
+                        <p class="insight-txt" id="isgText">Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text </p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Termina Widget Bottom bar -->
           </div>
-          <!--Termina Widget Bottom bar -->
+          <!--Termina Widget-->
+          <!--Inicia Widget-->
+          <div class="widget-layout">
+            <!--Inicia Widget Title bar -->
+            <div class="wg-top">
+              <div class="wg-title-bar">
+                <div class="wg-title">
+                  <p class="widget-title">Widget Title</p>
+                </div>
+                <div class="wg-actions-gp">
+                  <div class="act-btns">
+                      <a href="link1.html" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
+                      <a href="link2.html" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                      <a href="link3.html" class="btn-sq-gray"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                  </div>
+                  <div class="act-detail">
+                      <a href="link4.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Termina Widget Title bar -->
+  
+            <!--Inicia Widget Status bar -->
+            <div class="wg-status-bar">
+              <div class="wg-st-a">
+                <p class="st-data">Filtrado por:</p>
+                <p class="st-data" id="statusA">Data A</p>
+              </div>
+              <div class="wg-st-b">
+                <p class="st-data">Periodo:</p>
+                <p class="st-data">Data B</p>
+              </div>
+            </div>
+            <!--Termina Widget Status bar -->
+  
+            <!--Inicia Widget Content -->
+            <div class="wg-content">
+  
+            </div>
+  
+            <!--Termina Widget Content -->
+  
+            <!--Inicia Widget Bottom bar -->
+            <div class="wg-bttm-a">
+              <div class="insight-wrap">
+                <div class="is-margin"></div>
+                <div class="insight-content">
+                  <div class="is-icon-content"></div>
+                  <div class="is-text-content">
+                    <div class="is-title">
+                      <p class="insight-title" id="isgTitle">Insight Title</p>
+                      <a href="" class="btn-edit"><img src="img/icon/pencil.svg" alt="Editar Insight"></a>
+                    </div>
+                    <div class="is-text">
+                      <a href="">
+                        <p class="insight-txt" id="isgText">Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text </p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Termina Widget Bottom bar -->
+          </div>
+          <!--Termina Widget-->
+          
+  
+  
+          
         </div>
-        <!--Termina Widget-->
-        <!--Inicia Widget-->
-        <div class="widget-layout">
-          <!--Inicia Widget Title bar -->
-          <div class="wg-top">
-            <div class="wg-title-bar">
-              <div class="wg-title">
-                <p class="widget-title">Widget Title</p>
-              </div>
-              <div class="wg-actions-gp">
-                <div class="act-btns">
-                    <a href="link1.html" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
-                    <a href="link2.html" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                    <a href="link3.html" class="btn-sq-gray"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
-                </div>
-                <div class="act-detail">
-                    <a href="link4.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--Termina Widget Title bar -->
+        <!--Termina Widget Row -->
 
-          <!--Inicia Widget Status bar -->
-          <div class="wg-status-bar">
-            <div class="wg-st-a">
-              <p class="st-data">Data A</p>
-            </div>
-            <div class="wg-st-b">
-              <p class="st-data">Data B</p>
-            </div>
-            <div class="wg-st-c">
-              <p class="st-data">Data C</p>
-            </div>
-          </div>
-          <!--Termina Widget Status bar -->
 
-          <!--Inicia Widget Content -->
-          <div class="wg-content">
-
-          </div>
-
-          <!--Termina Widget Content -->
-
-          <!--Inicia Widget Bottom bar -->
-          <div class="wg-bttm-a">
-            <div class="insight-wrap">
-              <div class="is-margin"></div>
-              <div class="insight-content">
-                <div class="is-icon-content"></div>
-                <div class="is-text-content">
-                  <div class="is-title">
-                    <p class="insight-title">Insight Title</p>
-                  </div>
-                  <div class="is-text">
-                    <p class="insight-txt">Insight Text</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--Termina Widget Bottom bar -->
-        </div>
-        <!--Termina Widget-->
-        
-      </div>
-      <!--Termina Widget Row -->
       <div class="wr-subtitle second-titlebar">
         <div class="wr-st-content">
           <p class="subcategory-title" id="subcategoryTitle">Subcategory Title</p>
@@ -1209,6 +1306,7 @@
       <!--Inicia Widget Row -->
       <div class="widget-row-a">
 
+
         <!--Inicia Widget-->
         <div class="widget-layout">
           <!--Inicia Widget Title bar -->
@@ -1234,13 +1332,12 @@
           <!--Inicia Widget Status bar -->
           <div class="wg-status-bar">
             <div class="wg-st-a">
-              <p class="st-data">Data A</p>
+              <p class="st-data">Filtrado por:</p>
+              <p class="st-data" id="statusA">Data A</p>
             </div>
             <div class="wg-st-b">
+              <p class="st-data">Periodo:</p>
               <p class="st-data">Data B</p>
-            </div>
-            <div class="wg-st-c">
-              <p class="st-data">Data C</p>
             </div>
           </div>
           <!--Termina Widget Status bar -->
@@ -1260,10 +1357,13 @@
                 <div class="is-icon-content"></div>
                 <div class="is-text-content">
                   <div class="is-title">
-                    <p class="insight-title">Insight Title</p>
+                    <p class="insight-title" id="isgTitle">Insight Title</p>
+                    <a href="" class="btn-edit"><img src="img/icon/pencil.svg" alt="Editar Insight"></a>
                   </div>
                   <div class="is-text">
-                    <p class="insight-txt">Insight Text</p>
+                    <a href="">
+                      <p class="insight-txt" id="isgText">Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text </p>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1297,13 +1397,12 @@
           <!--Inicia Widget Status bar -->
           <div class="wg-status-bar">
             <div class="wg-st-a">
-              <p class="st-data">Data A</p>
+              <p class="st-data">Filtrado por:</p>
+              <p class="st-data" id="statusA">Data A</p>
             </div>
             <div class="wg-st-b">
+              <p class="st-data">Periodo:</p>
               <p class="st-data">Data B</p>
-            </div>
-            <div class="wg-st-c">
-              <p class="st-data">Data C</p>
             </div>
           </div>
           <!--Termina Widget Status bar -->
@@ -1323,10 +1422,13 @@
                 <div class="is-icon-content"></div>
                 <div class="is-text-content">
                   <div class="is-title">
-                    <p class="insight-title">Insight Title</p>
+                    <p class="insight-title" id="isgTitle">Insight Title</p>
+                    <a href="" class="btn-edit"><img src="img/icon/pencil.svg" alt="Editar Insight"></a>
                   </div>
-                  <div class="is-title">
-                    <p class="insight-txt">Insight Text</p>
+                  <div class="is-text">
+                    <a href="">
+                      <p class="insight-txt" id="isgText">Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text </p>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1336,14 +1438,16 @@
         </div>
         <!--Termina Widget-->
         
+
+
+        
       </div>
       <!--Termina Widget Row -->
     </div>
   </main>
 
-
-  <div class="user-actions-menu">
-
+  <!-- INICIA MENU USER ACTIONS -->
+  <div class="user-actions-menu" id="userActionsMenu">
     <div class="ua-accesos">
         <a href="https://www.questionpro.com" class="ua-b-acc-qp">
             <span class="text">Acceso a</span>
@@ -1360,8 +1464,60 @@
             <span class="text">Cerrar Sesión</span>
         </a>
     </div>
-</div>
+  </div>
+  <!-- TERMINA MENU USER ACTIONS -->
 
+  <script>
+    document.querySelector('.user-container').addEventListener('click', function() {
+      document.getElementById('userActionsMenu').classList.toggle('open');
+    });
+
+    document.addEventListener('click', function(event) {
+      var isClickInside = document.querySelector('.user-container').contains(event.target);
+      var userActionsMenu = document.getElementById('userActionsMenu');
+      if (!isClickInside && userActionsMenu.classList.contains('open')) {
+        userActionsMenu.classList.remove('open');
+      }
+    });
+  </script>
+
+  <style>
+    .user-actions-menu {
+      display: none;
+      position: absolute;
+      top: 56px;
+      right: 0;
+      width: 247px;
+      background-color: #ffffff;
+      border: 1px solid rgba(4, 32, 69, 0.1);
+      border-radius: 4px;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+    }
+
+    .user-actions-menu.open {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .user-container {
+      position: relative;
+      cursor: pointer;
+    }
+  </style>
+
+  <div class="tooltip">
+    <div class="tt-top">
+      <div class="tt-t-bar">
+        <p class="tooltip-title" id="ttTitle">Voz del Cliente - VoC</p>
+        <div class="btn-close"><img src="img/icon/x.svg" alt=""></div>
+      </div>
+    </div>
+    <div class="tt-btm">
+      <p class="tooltip-text" id="ttText">Refleja la satisfacción de estudiantes y familias con la institución educativa.</p>
+    </div>
+  </div>
+  
 </body>
 
 </html>
