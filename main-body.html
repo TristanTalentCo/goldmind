@@ -50,7 +50,7 @@
       user-select: none;
     }
     body {
-      min-width: 100vw;
+
       font-family: 'Poppins', sans-serif;
       background-color: var(--color-background);
       margin: 0;
@@ -61,8 +61,8 @@
       display: block;
       clear: both;
     }
-    .header {
-      width: 100%;
+    header {
+      width: 100vw;
       height: 112px;
     }
 
@@ -134,12 +134,20 @@
     }
 
     .User-Name {
+      width: 16ch;
       color: var(--color-gray);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
-    .User-position {
+    .user-position {
+      width: 18ch;
       color: var(--color-gray);
       font-size: .8em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     .title-bar {
@@ -225,6 +233,10 @@
       color: var(--color-white);
     }
 
+    .ins-name-container{
+      display: none;
+    }
+
 /* INICIA MENU USER ACTIONS */
 
         .user-actions-menu {
@@ -240,6 +252,31 @@
             user-select: none;
         }
 
+        .user-actions-menu {
+      display: none;
+      position: absolute;
+      top: 56px;
+      right: 0;
+      width: 247px;
+      background-color: #ffffff;
+      border: 1px solid rgba(4, 32, 69, 0.1);
+      border-radius: 4px;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+    }
+
+    .user-actions-menu.open {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .user-container {
+      position: relative;
+      cursor: pointer;
+    }
+           .ua-user-container {
+              display: none;  
+            }
         .ua-accesos {
             display: flex;
             flex-direction: column;
@@ -313,7 +350,7 @@
         .ua-btn-cerrar .text {
             color: #6c7a91;
         }
-        .ua-btn-cerrar img,  {
+        .ua-btn-cerrar img  {
             padding-right:6px;
         filter: invert(41%) sepia(11%) saturate(0%) hue-rotate(180deg) brightness(94%) contrast(83%);
         }
@@ -322,7 +359,7 @@
 
 /*INICIA MAIN*/
         main{
-          width: 100vw ;
+          width: 100%;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -335,9 +372,10 @@
           flex-direction: column;
           align-items: center;
           justify-content: center;
- 
           padding: 20px;
         }
+
+
 
         .wr-title-bar p, .wr-notes p, .wr-subtitle p{
           margin: 0;
@@ -350,6 +388,7 @@
           flex-direction: row;
           align-items: center;
           padding: 10px 50px;
+          user-select: none;
         }
         .second-titlebar{
           border-top: 1px solid var(--color-gray);
@@ -387,6 +426,7 @@
           flex-direction: row;
           align-items: center;
           padding: 0 50px;
+          user-select: none;
         }
 
         .wr-notes-content {
@@ -408,6 +448,7 @@
           flex-direction: row;
           align-items: center;
           padding: 0px 0px;
+          user-select: none;
         }
 
         .wr-st-content {
@@ -441,6 +482,22 @@
   gap: 20px;
 }
 
+        @media (min-width: 1280px) and (max-width: 1440px) {
+          .main-container {
+            width: 100%;
+            padding: 20px;
+            margin: 0;
+          }
+          .widget-row-a {
+            width: 100%;
+            padding: 0 20px;
+
+          }
+          header{
+            width: 100%;
+          }
+
+        }
 .widget-layout {
   width: 100%;
   height: 632px;
@@ -480,6 +537,10 @@
 .widget-title {
   color: var(--color-dark);
   font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  user-select: none;
 }
 
 .wg-actions-gp {
@@ -537,11 +598,11 @@
   width: 100%;
   height: 30px;
   padding: 0 18px;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-top: 1px solid rgba(4, 32, 69, 0.1);
+  user-select: none;
 }
 
 .wg-st-a, .wg-st-b, .wg-st-c {
@@ -743,6 +804,7 @@
 }
 /*TERMINA TOOLTIP */
 
+
 /* TERMINA WIDGET ROW*/
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -760,9 +822,26 @@
   }
 
   .widget-row-a {
-    width: 100%;
-    padding: 0 30px;
+        width: 100%;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 0px 15px 0;
+        gap: 20px;
+    }
+  .wg-top {
+      height: 95px;
   }
+        .wr-title-bar {
+          padding: 10px;
+        }
+        .wr-st-content {
+          padding: 5px 10px;
+        }
+        .wr-notes {
+          padding: 0 10px;
+        }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
@@ -783,6 +862,7 @@
     width: 100%;
     padding: 0 40px;
   }
+  
 }
 
 @media (min-width: 1024px) and (max-width: 1080px) and (orientation: landscape) {
@@ -844,7 +924,9 @@
       .btn-acc-qp .Acceso-a, .btn-acc-lx .Acceso-a {
       display: none;
       }
-
+      .ins-name-container{
+        display: flex;
+      }
 /* INICIA MENU USER ACTIONS */
 
             .user-actions-menu {
@@ -859,6 +941,22 @@
             transition: left 0.3s ease-in-out;
             z-index: 1000;
             border-radius: 0;
+            }
+
+            .ua-user-container {
+              width: 100%;
+              height: 99px;
+              display: flex;  
+              flex-direction: row;
+              align-items: end;
+              justify-content: end;
+              padding-bottom: 12px;
+              padding-right: 10px;
+              border-bottom: 1px solid var(--color-border);
+            }
+            .ua-user-container p{
+              margin: 0;
+              padding: 0;
             }
 
             .user-actions-menu.open {
@@ -893,7 +991,15 @@
           padding: 20px;
         }
 
-
+        .wr-title-bar {
+          padding: 10px;
+        }
+        .wr-st-content {
+          padding: 5px 10px;
+        }
+        .wr-notes {
+          padding: 0 10px;
+        }
       .widget-row-a {
         width: 100%;
         height: 700px;
@@ -906,6 +1012,7 @@
       .wg-top {
         height: 95px;
       }
+
       .wg-bttm-a {
         height: fit-content;
         padding: 10px 10px;
@@ -926,13 +1033,202 @@
       .is-text-content {
         padding-left: 0px;
       }
+      .tooltip {
+        width: 90%;
+        height: auto;
+        margin: 10px auto;
+      }
+
+      .tooltip-title {
+        font-size: 1.2em;
+      }
+
+      .tooltip-text {
+        font-size: 1em;
+        padding: 10px;
+      }
     }
+    @media (max-width: 390px) {
+      .widget-title{
+        width: 16ch;
+        text-align: right;
+      }
+      .wr-notes-content{
+        flex-direction: column;
+        gap: 5px;
+      }
+      .nombre-institucion{
+        width: 20
+        ch;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+
+
+/* INICIA CONTENIDO WIDGETS */
+
+/* INICIA WIDGET HAB INTELECTUAL */
+
+.tb-gp {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.tb-top {
+  width: 100%;
+  height: 53px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.tb-header {
+  width: 100%;
+  height: 26px;
+  display: flex;
+  background-color: #eef4ff;
+  border-bottom: 1px solid rgba(4, 32, 69, 0.1);
+}
+
+.tb-c-a, .tb-c-b, .tb-c-c, .tb-c-d {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(4, 32, 69, 0.1);
+}
+
+.tb-c-a {
+  width: 131px;
+}
+
+.tb-c-b {
+  width: 112px;
+}
+
+.tb-c-c {
+  width: 154px;
+  background-color: #bdcfff;
+}
+
+.tb-c-d {
+  width: 243px;
+}
+
+.tag-cell {
+  color: #182336;
+}
+
+.tb_row {
+  width: 100%;
+  height: 26px;
+  display: flex;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(4, 32, 69, 0.1);
+}
+
+.tb-c-a1, .tb-c-a2, .tb-c-b, .tb-c-c, .tb-c-d {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(4, 32, 69, 0.1);
+}
+
+.tb-c-a1 {
+  width: 62px;
+}
+
+.tb-c-a2 {
+  width: 69px;
+}
+
+.tb-c-b {
+  width: 112px;
+}
+
+.tb-c-c {
+  width: 154px;
+  background-color: #bdcfff;
+}
+
+.tb-c-d {
+  width: 243px;
+}
+
+.t-n {
+  color: #182336;
+}
+
+.t-ng {
+  color: #6c7a91;
+}
+
+.t-skill {
+  color: #182336;
+}
+
+.tb_row_end {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  background-color: #eef4ff;
+  border-bottom: 1px solid rgba(4, 32, 69, 0.1);
+}
+
+.tbe-a1, .tbe-a2, .tbe-b, .tbe-c, .tbe-d {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(4, 32, 69, 0.1);
+}
+
+.tbe-a1 {
+  width: 62px;
+}
+
+.tbe-a2 {
+  width: 69px;
+}
+
+.tbe-b {
+  width: 112px;
+}
+
+.tbe-c {
+  width: 154px;
+  background-color: #bdcfff;
+}
+
+.Frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.t-md {
+  color: #182336;
+}
+
+.tbe-d {
+  width: 243px;
+}
+
+.t-n {
+  color: #182336;
+}
+
+/*TERMINA WIDGET HAB INTELECTUAL */
   </style>
 </head>
 
 <body>
 
-<div class="header">
+<header>
     <div class="logo-bar">
       <div class="logo-bar-container">
         <div class="logo">
@@ -944,10 +1240,10 @@
             <div class="profile-pic"></div>
             <div class="user-info">
                 <div class="user-info-name">
-                <p class="User-Name" id="headUserName">User Name</p>
+                <p class="User-Name" id="headUserName">Nombre de Usuario Extenso</p>
               </div>
               <div class="user-info-position">
-                <p class="User-position" id="headUserPositon">User position</p>
+                <p class="user-position" id="headUserPositon">Administrador de la institución educativa</p>
               </div>
             </div>
           </div>
@@ -957,7 +1253,7 @@
     <div class="title-bar">
       <div class="title-wrap">
         <div class="title-bar-container">
-            <span class="nombre-institucion">Placeholder Nombre de la Institución</span>
+            <span class="nombre-institucion" id="headIstName">Placeholder Nombre de la Institución</span>
         </div>
         <div class="title-bar-access">
           <div class="btn-acc-qp">
@@ -971,18 +1267,21 @@
         </div>
       </div>
     </div>
-  </div>
+  </header>
 
   <main>
     <div class="main-container">
+      <div class="ins-name-container">
+        <span class="nombre-institucion" id="headIstName">Placeholder Nombre de la Institución</span>
+      </div>
       <div class="wr-title-bar">
         <div class="wr-tb-content">
           <div class="wr-tb-gp">
             <div class="wr-category-title">
-              <p class="category-title" id="categoryTitle1">Category Title</p>
+              <p class="category-title" id="categoryTitle1">Indicadores de Experiencia del Cliente y Colaboradores</p>
             </div>
             <div class="wr-subtitle">
-              <p class="category-subtitle" id="categorySubtitle1">Category Subtitle</p>
+              <p class="category-subtitle" id="categorySubtitle1">Powered by Growe</p>
             </div>
           </div>
         </div>
@@ -998,7 +1297,7 @@
           <div class="wg-top">
             <div class="wg-title-bar">
               <div class="wg-title">
-                <p class="widget-title">Widget Title</p>
+                <p class="widget-title">Voz del Cliente - VoC</p>
               </div>
               <div class="wg-actions-gp">
                 <div class="act-btns">
@@ -1063,7 +1362,7 @@
           <div class="wg-top">
             <div class="wg-title-bar">
               <div class="wg-title">
-                <p class="widget-title">Widget Title</p>
+                <p class="widget-title">Voz del Colaborador - VoE</p>
               </div>
               <div class="wg-actions-gp">
                 <div class="act-btns">
@@ -1133,10 +1432,10 @@
         <div class="wr-tb-content">
           <div class="wr-tb-gp">
             <div class="wr-category-title">
-              <p class="category-title" id="categoryTitle2">Category Title</p>
+              <p class="category-title" id="categoryTitle2">Indicadores de Permanencia y Éxito del Alumno</p>
             </div>
             <div class="wr-subtitle">
-              <p class="category-subtitle" id="categorySubtitle2">Category Subtitle</p>
+              <p class="category-subtitle" id="categorySubtitle2">Powered by Lexium</p>
             </div>
           </div>
         </div>
@@ -1144,16 +1443,16 @@
       <div class="wr-notes">
         <div class="wr-notes-content">
           <div class="note">
-            <p class="st-data" id="note1">Note 1</p>
+            <p class="st-data" id="note1">Lexium es una estadística de referencia.</p>
           </div>
           <div class="note">
-            <p class="st-data" id="note2">Note 2</p>
+            <p class="st-data" id="note2">Muestra no representativa.</p>
           </div>
         </div>
       </div>
       <div class="wr-subtitle">
         <div class="wr-st-content">
-          <p class="subcategory-title" id="subcategoryTitle">Subcategory Title</p>
+          <p class="subcategory-title" id="subcategoryTitle">Indicadores Cuantitativos</p>
         </div>
       </div>
         <!--Inicia Widget Row -->
@@ -1166,7 +1465,7 @@
             <div class="wg-top">
               <div class="wg-title-bar">
                 <div class="wg-title">
-                  <p class="widget-title">Widget Title</p>
+                  <p class="widget-title">Habilidades Intelectuales</p>
                 </div>
                 <div class="wg-actions-gp">
                   <div class="act-btns">
@@ -1197,7 +1496,58 @@
   
             <!--Inicia Widget Content -->
             <div class="wg-content">
-  
+              
+              <div class="tb-gp">
+                <div class="tb-top">
+                  <div class="tb-header">
+                    <div class="tb-c-a">
+                      <div class="tag-cell">Text A</div>
+                    </div>
+                    <div class="tb-c-b">
+                      <div class="tag-cell">Text B</div>
+                    </div>
+                    <div class="tb-c-c">
+                      <div class="tag-cell">Text C</div>
+                    </div>
+                    <div class="tb-c-d">
+                      <div class="tag-cell">Text D</div>
+                    </div>
+                  </div>
+                  <div class="tb_row">
+                    <div class="tb-c-a1"></div>
+                    <div class="tb-c-a2">
+                      <div class="t-n">Text E</div>
+                    </div>
+                    <div class="tb-c-b">
+                      <div class="t-ng">Text F</div>
+                    </div>
+                    <div class="tb-c-c">
+                      <div class="t-skill">Text G</div>
+                    </div>
+                    <div class="tb-c-d">
+                      <div class="t-n">Text H</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tb_row_end">
+                  <div class="tbe-a1"></div>
+                  <div class="tbe-a2">
+                    <div class="t-n">Text I</div>
+                  </div>
+                  <div class="tbe-b">
+                    <div class="t-ng">Text J</div>
+                  </div>
+                  <div class="tbe-c">
+                    <div class="Frame 51">
+                      <div class="t-md">Text K</div>
+                    </div>
+                  </div>
+                  <div class="tbe-d">
+                    <div class="t-n">Text L</div>
+                  </div>
+                </div>
+              </div>
+
             </div>
   
             <!--Termina Widget Content -->
@@ -1231,7 +1581,7 @@
             <div class="wg-top">
               <div class="wg-title-bar">
                 <div class="wg-title">
-                  <p class="widget-title">Widget Title</p>
+                  <p class="widget-title">Habilidades Socioemocionales</p>
                 </div>
                 <div class="wg-actions-gp">
                   <div class="act-btns">
@@ -1300,7 +1650,7 @@
 
       <div class="wr-subtitle second-titlebar">
         <div class="wr-st-content">
-          <p class="subcategory-title" id="subcategoryTitle">Subcategory Title</p>
+          <p class="subcategory-title" id="subcategoryTitle">Indicadores Cualitativos</p>
         </div>
       </div>
       <!--Inicia Widget Row -->
@@ -1313,7 +1663,7 @@
           <div class="wg-top">
             <div class="wg-title-bar">
               <div class="wg-title">
-                <p class="widget-title">Widget Title</p>
+                <p class="widget-title">Preferencias de Aprendizaje</p>
               </div>
               <div class="wg-actions-gp">
                 <div class="act-btns">
@@ -1378,7 +1728,7 @@
           <div class="wg-top">
             <div class="wg-title-bar">
               <div class="wg-title">
-                <p class="widget-title">Widget Title</p>
+                <p class="widget-title">Balance Psicosocial</p>
               </div>
               <div class="wg-actions-gp">
                 <div class="act-btns">
@@ -1448,6 +1798,19 @@
 
   <!-- INICIA MENU USER ACTIONS -->
   <div class="user-actions-menu" id="userActionsMenu">
+    
+    <div class="ua-user-container">
+      <div class="profile-pic"></div>
+      <div class="ua-user-info">
+          <div class="user-info-name">
+          <p class="User-Name" id="headUserName">Nombre de Usuario Extenso</p>
+        </div>
+        <div class="user-info-position">
+          <p class="user-position" id="headUserPositon">Administrador de la institución educativa</p>
+        </div>
+      </div>
+    </div>
+
     <div class="ua-accesos">
         <a href="https://www.questionpro.com" class="ua-b-acc-qp">
             <span class="text">Acceso a</span>
@@ -1482,28 +1845,7 @@
   </script>
 
   <style>
-    .user-actions-menu {
-      display: none;
-      position: absolute;
-      top: 56px;
-      right: 0;
-      width: 247px;
-      background-color: #ffffff;
-      border: 1px solid rgba(4, 32, 69, 0.1);
-      border-radius: 4px;
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-      z-index: 1000;
-    }
 
-    .user-actions-menu.open {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .user-container {
-      position: relative;
-      cursor: pointer;
-    }
   </style>
 
   <div class="tooltip">
