@@ -500,7 +500,7 @@
         }
 .widget-layout {
   width: 100%;
-  height: 632px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -513,7 +513,7 @@
 
 .wg-top {
   width: 100%;
-  height: 60px;
+  height: 45px;
   display: flex;
   flex-direction: column;
 }
@@ -621,7 +621,7 @@
 
 .wg-content{
   width: 100%;
-  height: 100%;
+  height: fit-content;
   display: flex; 
 
 }
@@ -806,6 +806,219 @@
 
 
 /* TERMINA WIDGET ROW*/
+
+
+/* INICIA CONTENIDO WIDGETS */
+
+/* INICIA WIDGET HAB INTELECTUAL */
+
+.tb-gp {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  line-height: .7em;
+  
+}
+.tb-gp p{
+  margin: 0;
+  padding: 0;
+}
+
+.tb-top {
+  width: 100%;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tb-header-container {  
+  width: 100%;
+  border-top: 1px solid var(--color-border);
+  display: grid;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: 1.5fr 1.5fr 2fr 3fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "tb-col tb-ref tb-sk tb-des"
+;
+}
+.tb-row-container {  
+  width: 100%;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: 1.5fr 1.5fr 2fr 3fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "tb-col-a tb-ref-a tb-sk-a tb-des-a";
+}
+.tb-row-container-end {  
+  width: 100%;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: 1.5fr 1.5fr 2fr 3fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "tb-col-h tb-ref-h tb-sk-h tb-des-h";
+}
+
+.tb-header-container > div, .tb-row-container   > div {
+  border-bottom: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  user-select: none;
+}
+.tb-row-container-end  > div {
+  border-bottom: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  user-select: none;
+}
+
+.tb-col {  
+  justify-content: center;
+}
+.tb-ref {  
+  display: flex;
+  flex-direction: column !important;
+  gap: 5px;
+}
+.tb-ref-r {  
+  width: fit-content;
+  font-size: .9em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tb-ref-t {  
+  font-weight: 600;
+}
+.tb-col-a {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "ts-a trf-a";
+  grid-area: tb-col-a;
+}
+.tb-col-h {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "ts-h trf-h";
+  grid-area: tb-col-h;
+}
+.tb-col-a, .tb-col-h{
+  padding: 0 10px;
+}
+.ts-a { grid-area: ts-a;  }
+.trf-a { grid-area: trf-a; }
+.ts-h { grid-area: ts-h;  }
+.trf-h { grid-area: trf-h; }
+
+.tb-col, .tb-ref, .tb-des, .tb-col-h, .tb-ref-h, .tb-des-h{
+  background-color: #EEF4FE;
+}
+.tb-col, .tb-ref, .tb-sk, .tb-des{
+  font-size: .7em;
+}
+
+.tb-col-h, .tb-ref-h, .tb-sk-h, .tb-des-h{
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.tb-sk-a{ 
+  font-size: .9em;
+  font-weight: 500;
+
+}
+.tb-sk, .tb-sk-a, .tb-sk-h{ 
+  background-color: #BDD6FF;
+  justify-content: center;
+}
+
+.tb-ref, .tb-ref-a, .tb-ref-h{
+  color:#6C7A91;
+  justify-content: center;
+}
+.tb-des-a{ 
+  font-weight: 600;
+}
+.tb-des, .tb-des-a,.tb-des-h{ 
+  border-right: none !important;
+  justify-content: center;
+}
+.ts-a,  .ts-h{ 
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trf-a,.trf-h{ 
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.traffic-light {
+  width: 46px;
+  height: 18px;
+  padding: 0 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ececec;
+  border-radius: 22px;
+}
+
+.traffic-light .green,
+.traffic-light .yellow,
+.traffic-light .red {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.traffic-light .red {
+  background-color: #ed1b24;
+}
+
+.traffic-light .yellow {
+  background-color: #feea00;
+}
+
+.traffic-light .green {
+  background-color: #00a552;
+}
+
+/*TERMINA WIDGET HAB INTELECTUAL */
+
+
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .logo-bar-container {
@@ -1002,17 +1215,22 @@
         }
       .widget-row-a {
         width: 100%;
-        height: 700px;
+        height: fit-content;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 0 0px 15px 0;
         gap: 20px;
       }
-      .wg-top {
-        height: 95px;
+      .widget-layout {
+        height: fit-content;
       }
-
+      .wg-top {
+        height: 44px;
+      }
+      .wg-content {
+        height: fit-content;
+      }
       .wg-bttm-a {
         height: fit-content;
         padding: 10px 10px;
@@ -1047,7 +1265,17 @@
         font-size: 1em;
         padding: 10px;
       }
-    }
+      .tb-ref {  
+        display: flex;
+        flex-direction: column !important;
+      }
+      .tb-ref-r {  
+        width: 10ch;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      }
     @media (max-width: 390px) {
       .widget-title{
         width: 16ch;
@@ -1058,315 +1286,59 @@
         gap: 5px;
       }
       .nombre-institucion{
-        width: 20
-        ch;
+        width: 20ch;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+      }
+      .tb-col, .tb-col-a, .tb-col-h { 
+        width: 80px;
+      }
+      .tb-ref, .tb-ref-a, .tb-ref-h { 
+        width: 80px;
+      }
+
+      .tb-sk, .tb-sk-a, .tb-sk-h { 
+        width: 100px;
+      }
+       .tb-sk-a p, .tb-sk-h p{ 
+        margin: 0;
+        padding: 0;
+        font-size: .8em;
+        width: 10ch;
+        line-height: 1em;
+        justify-content:left !important  ;
+        padding: 0 8px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .tb-col-a, .tb-col-h{
+        padding: 0;
+      }
+      .traffic-light {
+        width: 39px;
+        height: 14px;
+        padding: 0 3px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ececec;
+        border-radius: 22px;
+      }
+
+      .traffic-light .green,
+      .traffic-light .yellow,
+      .traffic-light .red {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
       }
     }
 
 
 
-/* INICIA CONTENIDO WIDGETS */
 
-/* INICIA WIDGET HAB INTELECTUAL */
-
-.tb-gp {
-  width: 100%;
-  height: 100%;
-  padding-bottom: 12px;
-  display: flex;
-  flex-direction: column;
-  line-height: .7em;
-  
-}
-.tb-gp p{
-  margin: 0;
-  padding: 0;
-}
-
-.tb-top {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-}
-
-.container {  
-  width: 100%;
-  height: 256px;
-  border-top: 1px solid var(--color-border);
-  display: grid;
-  text-align: center;
-  align-items: center;
-  grid-template-columns: 1.5fr 1.5fr 2fr 3fr;
-  grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "tb-col tb-ref tb-sk tb-des"
-    "tb-col-a tb-ref-a tb-sk-a tb-des-a"
-    "tb-col-b tb-ref-b tb-sk-b tb-des-b"
-    "tb-col-c tb-ref-c tb-sk-c tb-des-c"
-    "tb-col-d tb-ref-d tb-sk-d tb-des-d"
-    "tb-col-e tb-ref-e tb-sk-e tb-des-e"
-    "tb-col-f tb-ref-f tb-sk-f tb-des-f"
-    "tb-col-g tb-ref-g tb-sk-g tb-des-g"
-    "tb-col-h tb-ref-h tb-sk-h tb-des-h";
-}
-
-
-.container > div {
-  border-bottom: 1px solid var(--color-border);
-  border-right: 1px solid var(--color-border);
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.tb-col-a {  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "ts-a trf-a";
-  grid-area: tb-col-a;
-}
-
-.ts-a { grid-area: ts-a; }
-
-.trf-a { grid-area: trf-a; }
-
-.tb-col-b {  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "ts-b trf-b";
-  grid-area: tb-col-b;
-}
-
-.ts-b { grid-area: ts-b; }
-
-.trf-b { grid-area: trf-b; }
-
-.tb-col-c {  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "ts-c trf-c";
-  grid-area: tb-col-c;
-}
-
-.ts-c { grid-area: ts-c; }
-
-.trf-c { grid-area: trf-c; }
-
-.tb-col-d {  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "ts-d trf-d";
-  grid-area: tb-col-d;
-}
-
-.ts-d { grid-area: ts-d; }
-
-.trf-d { grid-area: trf-d; }
-
-.tb-col-e {  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "ts-e trf-e";
-  grid-area: tb-col-e;
-}
-
-.ts-e { grid-area: ts-e; }
-
-.trf-e { grid-area: trf-e; }
-
-.tb-col-f {  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "ts-f trf-f";
-  grid-area: tb-col-f;
-}
-
-.ts-f { grid-area: ts-f; }
-
-.trf-f { grid-area: trf-f; }
-
-.tb-col-g {  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "ts-g trf-g";
-  grid-area: tb-col-g;
-}
-
-.ts-g { grid-area: ts-g; }
-
-.trf-g { grid-area: trf-g; }
-
-.tb-col-h {  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "ts-h trf-h";
-  grid-area: tb-col-h;
-}
-
-.ts-h { grid-area: ts-h; }
-
-.trf-h { grid-area: trf-h; }
-
-.tb-col { grid-area: tb-col; }
-
-.tb-ref { grid-area: tb-ref; }
-
-.tb-ref-a { grid-area: tb-ref-a; }
-
-.tb-ref-b { grid-area: tb-ref-b; }
-
-.tb-ref-c { grid-area: tb-ref-c; }
-
-.tb-ref-d { grid-area: tb-ref-d; }
-
-.tb-ref-e { grid-area: tb-ref-e; }
-
-.tb-ref-f { grid-area: tb-ref-f; }
-
-.tb-ref-g { grid-area: tb-ref-g; }
-
-.tb-ref-h { grid-area: tb-ref-h; }
-
-.tb-col, .tb-ref, .tb-des, .tb-col-h, .tb-ref-h, .tb-des-h{
-  background-color: #EEF4FE;
-}
-.tb-col, .tb-ref, .tb-sk, .tb-des{
-  font-size: .7em;
-}
-.tb-col-h, .tb-ref-h, .tb-sk-h, .tb-des-h{
-  font-size: 1.1em;
-  font-weight: 600;
-}
-.tb-sk-a, .tb-sk-b, .tb-sk-c, .tb-sk-d, .tb-sk-e, .tb-sk-f, .tb-sk-g{ 
-  font-size: .9em;
-  font-weight: 500;
-}
-.tb-sk, .tb-sk-a, .tb-sk-b, .tb-sk-c, .tb-sk-d, .tb-sk-e, .tb-sk-f, .tb-sk-g, .tb-sk-h{ 
-  background-color: #BDD6FF;
-}
-
-.tb-ref, .tb-ref-a, .tb-ref-b, .tb-ref-c, .tb-ref-d, .tb-ref-e, .tb-ref-f, .tb-ref-g, .tb-ref-h{
-  color:#6C7A91;
-}
-.tb-des-a, .tb-des-b, .tb-des-c, .tb-des-d, .tb-des-e, .tb-des-f, .tb-des-g{ 
-  font-weight: 600;
-}
-.ts-a, .ts-b, .ts-c, .ts-d, .ts-e, .ts-f, .ts-g, .ts-h{ 
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-.trf-a, .trf-b, .trf-c, .trf-d, .trf-e, .trf-f, .trf-g, .trf-h{ 
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.tb-sk { grid-area: tb-sk; }
-
-.tb-sk-a { grid-area: tb-sk-a; }
-
-.tb-sk-b { grid-area: tb-sk-b; }
-
-.tb-sk-c { grid-area: tb-sk-c; }
-
-.tb-sk-d { grid-area: tb-sk-d; }
-
-.tb-sk-e { grid-area: tb-sk-e; }
-
-.tb-sk-f { grid-area: tb-sk-f; }
-
-.tb-sk-g { grid-area: tb-sk-g; }
-
-.tb-sk-h { grid-area: tb-sk-h; }
-
-.tb-des { grid-area: tb-des; }
-
-.tb-des-a { grid-area: tb-des-a; }
-
-.tb-des-b { grid-area: tb-des-b; }
-
-.tb-des-c { grid-area: tb-des-c; }
-
-.tb-des-d { grid-area: tb-des-d; }
-
-.tb-des-e { grid-area: tb-des-e; }
-
-.tb-des-f { grid-area: tb-des-f; }
-
-.tb-des-g { grid-area: tb-des-g; }
-
-.tb-des-h { grid-area: tb-des-h; }
-
-.traffic-light {
-  width: 40px;
-  height: 14px;
-  padding: 0 2px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ececec;
-  border-radius: 22px;
-}
-
-.traffic-light .green,
-.traffic-light .yellow,
-.traffic-light .red {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.traffic-light .green {
-  background-color: #ed1b24;
-}
-
-.traffic-light .yellow {
-  background-color: #feea00;
-}
-
-.traffic-light .red {
-  background-color: #00a552;
-}
-
-/*TERMINA WIDGET HAB INTELECTUAL */
   </style>
 </head>
 
@@ -1643,116 +1615,133 @@
               
               <div class="tb-gp">
                 <div class="tb-top">
-                  <div class="container">
+                  <div class="tb-header-container">
+                    <div class="tb-col">Diagnóstico</div>
+                    <div class="tb-ref"><p class="tb-ref-r">Referencia Pertinente:</p> <p class="tb-ref-t" id="tipoRef">Nacional</p></div>
+                    <div class="tb-sk">Habilidad</div>
+                    <div class="tb-des">Desviación Estándar</div>
+                  </div>
+                  <div class="tb-row-container">
                     <div class="tb-col-a">
                       <div class="ts-a">
                         <div class="traffic-light">
-                          <div class="green"></div>
-                          <div class="yellow"></div>
-                          <div class="red"></div>
+                          <div class="red" id="tlRed"></div>
+                          <div class="yellow" id="tlYellow"></div>
+                          <div class="green" id="tlGreen"></div>
                         </div>
                       </div>
-                      <div class="trf-a">D</div>
+                      <div class="trf-a" id="diagnostico">333</div>
                     </div>
-                    <div class="tb-col-b">
-                      <div class="ts-b">
-                        <div class="traffic-light">
-                          <div class="green"></div>
-                          <div class="yellow"></div>
-                          <div class="red"></div>
-                        </div>
-                      </div>
-                      <div class="trf-b">D</div>
-                    </div>
-                    <div class="tb-col-c">
-                      <div class="ts-c">
-                        <div class="traffic-light">
-                          <div class="green"></div>
-                          <div class="yellow"></div>
-                          <div class="red"></div>
-                        </div>
-                      </div>
-                      <div class="trf-c">D</div>
-                    </div>
-                    <div class="tb-col-d">
-                      <div class="ts-d">
-                        <div class="traffic-light">
-                          <div class="green"></div>
-                          <div class="yellow"></div>
-                          <div class="red"></div>
-                        </div>
-                      </div>
-                      <div class="trf-d">D</div>
-                    </div>
-                    <div class="tb-col-e">
-                      <div class="ts-e">
-                        <div class="traffic-light">
-                          <div class="green"></div>
-                          <div class="yellow"></div>
-                          <div class="red"></div>
-                        </div>
-                      </div>
-                      <div class="trf-e">D</div>
-                    </div>
-                    <div class="tb-col-f">
-                      <div class="ts-f">
-                        <div class="traffic-light">
-                          <div class="green"></div>
-                          <div class="yellow"></div>
-                          <div class="red"></div>
-                        </div>
-                      </div>
-                      <div class="trf-f">D</div>
-                    </div>
-                    <div class="tb-col-g">
-                      <div class="ts-g">
-                        <div class="traffic-light">
-                          <div class="green"></div>
-                          <div class="yellow"></div>
-                          <div class="red"></div>
-                        </div>
-                      </div>
-                      <div class="trf-g">D</div>
-                    </div>
-                    <div class="tb-col-h">
-                      <div class="ts-h">
-                        <div class="traffic-light">
-                          <div class="green"></div>
-                          <div class="yellow"></div>
-                          <div class="red"></div>
-                        </div>
-                      </div>
-                      <div class="trf-h">D</div>
-                    </div>
-                    <div class="tb-col">Diagnóstico</div>
-                    <div class="tb-ref">Referencia Pertinente: Nacional</div>
-                    <div class="tb-ref-a">8</div>
-                    <div class="tb-ref-b">8</div>
-                    <div class="tb-ref-c">8</div>
-                    <div class="tb-ref-d">8</div>
-                    <div class="tb-ref-e">8</div>
-                    <div class="tb-ref-f">8</div>
-                    <div class="tb-ref-g">8</div>
-                    <div class="tb-ref-h">8</div>
-                    <div class="tb-sk">Habilidad</div>
-                    <div class="tb-sk-a">Aprendizaje</div>
-                    <div class="tb-sk-b">Verbal</div>
-                    <div class="tb-sk-c">Razonamiento</div>
-                    <div class="tb-sk-d">Toma de Decisiones</div>
-                    <div class="tb-sk-e">Planeación</div>
-                    <div class="tb-sk-f">Lectura</div>
-                    <div class="tb-sk-g">Matemáticas</div>
-                    <div class="tb-sk-h">Indice Promedio</div>
-                    <div class="tb-des">Desviación Estándar</div>
-                    <div class="tb-des-a">9</div>
-                    <div class="tb-des-b">9</div>
-                    <div class="tb-des-c">9</div>
-                    <div class="tb-des-d">9</div>
-                    <div class="tb-des-e">9</div>
-                    <div class="tb-des-f">9</div>
-                    <div class="tb-des-g">9</div>
-                    <div class="tb-des-h">9</div>
+                    <div class="tb-ref-a" id="referencia">888</div>
+                    <div class="tb-sk-a"  id="habilidad"><p>Aprendizaje</p></div>
+                    <div class="tb-des-a" id="desviacion">999</div>
                   </div>
+                  <div class="tb-row-container">
+                    <div class="tb-col-a">
+                      <div class="ts-a">
+                        <div class="traffic-light">
+                          <div class="red" id="tlRed"></div>
+                          <div class="yellow" id="tlYellow"></div>
+                          <div class="green" id="tlGreen"></div>
+                        </div>
+                      </div>
+                      <div class="trf-a" id="diagnostico">333</div>
+                    </div>
+                    <div class="tb-ref-a" id="referencia">888</div>
+                    <div class="tb-sk-a"  id="habilidad"><p>Verbal</p></div>
+                    <div class="tb-des-a" id="desviacion">999</div>
+                  </div>
+                  <div class="tb-row-container">
+                    <div class="tb-col-a">
+                      <div class="ts-a">
+                        <div class="traffic-light">
+                          <div class="red" id="tlRed"></div>
+                          <div class="yellow" id="tlYellow"></div>
+                          <div class="green" id="tlGreen"></div>
+                        </div>
+                      </div>
+                      <div class="trf-a" id="diagnostico">333</div>
+                    </div>
+                    <div class="tb-ref-a" id="referencia">888</div>
+                    <div class="tb-sk-a"  id="habilidad"><p>Razonamiento</p></div>
+                    <div class="tb-des-a" id="desviacion">999</div>
+                  </div>
+                  <div class="tb-row-container">
+                    <div class="tb-col-a">
+                      <div class="ts-a">
+                        <div class="traffic-light">
+                          <div class="red" id="tlRed"></div>
+                          <div class="yellow" id="tlYellow"></div>
+                          <div class="green" id="tlGreen"></div>
+                        </div>
+                      </div>
+                      <div class="trf-a" id="diagnostico">333</div>
+                    </div>
+                    <div class="tb-ref-a" id="referencia">888</div>
+                    <div class="tb-sk-a"  id="habilidad"><p>Toma de Decisiones</p></div>
+                    <div class="tb-des-a" id="desviacion">999</div>
+                  </div>
+                  <div class="tb-row-container">
+                    <div class="tb-col-a">
+                      <div class="ts-a">
+                        <div class="traffic-light">
+                          <div class="red" id="tlRed"></div>
+                          <div class="yellow" id="tlYellow"></div>
+                          <div class="green" id="tlGreen"></div>
+                        </div>
+                      </div>
+                      <div class="trf-a" id="diagnostico">333</div>
+                    </div>
+                    <div class="tb-ref-a" id="referencia">888</div>
+                    <div class="tb-sk-a"  id="habilidad"><p>Planeación</p></div>
+                    <div class="tb-des-a" id="desviacion">999</div>
+                  </div>
+                  <div class="tb-row-container">
+                    <div class="tb-col-a">
+                      <div class="ts-a">
+                        <div class="traffic-light">
+                          <div class="red" id="tlRed"></div>
+                          <div class="yellow" id="tlYellow"></div>
+                          <div class="green" id="tlGreen"></div>
+                        </div>
+                      </div>
+                      <div class="trf-a" id="diagnostico">333</div>
+                    </div>
+                    <div class="tb-ref-a" id="referencia">888</div>
+                    <div class="tb-sk-a"  id="habilidad"><p>Lectura</p></div>
+                    <div class="tb-des-a" id="desviacion">999</div>
+                  </div>
+                  <div class="tb-row-container">
+                    <div class="tb-col-a">
+                      <div class="ts-a">
+                        <div class="traffic-light">
+                          <div class="red" id="tlRed"></div>
+                          <div class="yellow" id="tlYellow"></div>
+                          <div class="green" id="tlGreen"></div>
+                        </div>
+                      </div>
+                      <div class="trf-a" id="diagnostico">333</div>
+                    </div>
+                    <div class="tb-ref-a" id="referencia">888</div>
+                    <div class="tb-sk-a"  id="habilidad"><p>Matemáticas</p></div>
+                    <div class="tb-des-a" id="desviacion">999</div>
+                  </div>
+
+                </div>
+                <div class="tb-row-container-end">
+                  <div class="tb-col-h">
+                    <div class="ts-h">
+                      <div class="traffic-light">
+                        <div class="red" id="tlRed"></div>
+                        <div class="yellow" id="tlYellow"></div>
+                        <div class="green" id="tlGreen"></div>
+                      </div>
+                    </div>
+                    <div class="trf-h" id="diagnostico">333</div>
+                  </div>
+                  <div class="tb-ref-h" id="referencia">888</div>
+                  <div class="tb-sk-h"  id="habilidad"><p>Indice Promedio</p></div>
+                  <div class="tb-des-h" id="desviacion">999</div>
                 </div>
               </div>
 
@@ -1789,7 +1778,7 @@
             <div class="wg-top">
               <div class="wg-title-bar">
                 <div class="wg-title">
-                  <p class="widget-title">Habilidades Intelectuales</p>
+                  <p class="widget-title">Habilidades Socioemocionales</p>
                 </div>
                 <div class="wg-actions-gp">
                   <div class="act-btns">
@@ -1823,68 +1812,73 @@
               
               <div class="tb-gp">
                 <div class="tb-top">
-                  <div class="container">
-                    <div class="tb-col-a">
-                      <div class="ts-a">S</div>
-                      <div class="trf-a">D</div>
-                    </div>
-                    <div class="tb-col-b">
-                      <div class="ts-b">S</div>
-                      <div class="trf-b">D</div>
-                    </div>
-                    <div class="tb-col-c">
-                      <div class="ts-c">S</div>
-                      <div class="trf-c">D</div>
-                    </div>
-                    <div class="tb-col-d">
-                      <div class="ts-d">S</div>
-                      <div class="trf-d">D</div>
-                    </div>
-                    <div class="tb-col-e">
-                      <div class="ts-e">S</div>
-                      <div class="trf-e">D</div>
-                    </div>
-                    <div class="tb-col-f">
-                      <div class="ts-f">S</div>
-                      <div class="trf-f">D</div>
-                    </div>
-                    <div class="tb-col-g">
-                      <div class="ts-g">S</div>
-                      <div class="trf-g">D</div>
-                    </div>
-                    <div class="tb-col-h">
-                      <div class="ts-h">S</div>
-                      <div class="trf-h">D</div>
-                    </div>
+                  <div class="tb-header-container">
                     <div class="tb-col">Diagnóstico</div>
-                    <div class="tb-ref">Referencia Pertinente: Nacional</div>
-                    <div class="tb-ref-a">8</div>
-                    <div class="tb-ref-b">8</div>
-                    <div class="tb-ref-c">8</div>
-                    <div class="tb-ref-d">8</div>
-                    <div class="tb-ref-e">8</div>
-                    <div class="tb-ref-f">8</div>
-                    <div class="tb-ref-g">8</div>
-                    <div class="tb-ref-h">8</div>
+                    <div class="tb-ref"><p class="tb-ref-r">Referencia Pertinente:</p> <p class="tb-ref-t" id="tipoRef">Nacional</p></div>
                     <div class="tb-sk">Habilidad</div>
-                    <div class="tb-sk-a">Aprendizaje</div>
-                    <div class="tb-sk-b">Verbal</div>
-                    <div class="tb-sk-c">Razonamiento</div>
-                    <div class="tb-sk-d">Toma de Decisiones</div>
-                    <div class="tb-sk-e">Planeación</div>
-                    <div class="tb-sk-f">Lectura</div>
-                    <div class="tb-sk-g">Matemáticas</div>
-                    <div class="tb-sk-h">Indice Promedio</div>
                     <div class="tb-des">Desviación Estándar</div>
-                    <div class="tb-des-a">9</div>
-                    <div class="tb-des-b">9</div>
-                    <div class="tb-des-c">9</div>
-                    <div class="tb-des-d">9</div>
-                    <div class="tb-des-e">9</div>
-                    <div class="tb-des-f">9</div>
-                    <div class="tb-des-g">9</div>
-                    <div class="tb-des-h">9</div>
                   </div>
+                  <div class="tb-row-container">
+                    <div class="tb-col-a">
+                      <div class="ts-a">
+                        <div class="traffic-light">
+                          <div class="red" id="tlRed"></div>
+                          <div class="yellow" id="tlYellow"></div>
+                          <div class="green" id="tlGreen"></div>
+                        </div>
+                      </div>
+                      <div class="trf-a" id="diagnostico">333</div>
+                    </div>
+                    <div class="tb-ref-a" id="referencia">888</div>
+                    <div class="tb-sk-a"  id="habilidad"><p>Intrapersonales</p></div>
+                    <div class="tb-des-a" id="desviacion">999</div>
+                  </div>
+                  <div class="tb-row-container">
+                    <div class="tb-col-a">
+                      <div class="ts-a">
+                        <div class="traffic-light">
+                          <div class="red" id="tlRed"></div>
+                          <div class="yellow" id="tlYellow"></div>
+                          <div class="green" id="tlGreen"></div>
+                        </div>
+                      </div>
+                      <div class="trf-a" id="diagnostico">333</div>
+                    </div>
+                    <div class="tb-ref-a" id="referencia">888</div>
+                    <div class="tb-sk-a"  id="habilidad"><p>Interpersonales</p></div>
+                    <div class="tb-des-a" id="desviacion">999</div>
+                  </div>
+                  <div class="tb-row-container">
+                    <div class="tb-col-a">
+                      <div class="ts-a">
+                        <div class="traffic-light">
+                          <div class="red" id="tlRed"></div>
+                          <div class="yellow" id="tlYellow"></div>
+                          <div class="green" id="tlGreen"></div>
+                        </div>
+                      </div>
+                      <div class="trf-a" id="diagnostico">333</div>
+                    </div>
+                    <div class="tb-ref-a" id="referencia">888</div>
+                    <div class="tb-sk-a"  id="habilidad"><p>Para la Vida</p></div>
+                    <div class="tb-des-a" id="desviacion">999</div>
+                  </div>
+
+                </div>
+                <div class="tb-row-container-end">
+                  <div class="tb-col-h">
+                    <div class="ts-h">
+                      <div class="traffic-light">
+                        <div class="red" id="tlRed"></div>
+                        <div class="yellow" id="tlYellow"></div>
+                        <div class="green" id="tlGreen"></div>
+                      </div>
+                    </div>
+                    <div class="trf-h" id="diagnostico">333</div>
+                  </div>
+                  <div class="tb-ref-h" id="referencia">888</div>
+                  <div class="tb-sk-h"  id="habilidad"><p>Indice Promedio</p></div>
+                  <div class="tb-des-h" id="desviacion">999</div>
                 </div>
               </div>
 
@@ -1915,6 +1909,7 @@
             <!--Termina Widget Bottom bar -->
           </div>
           <!--Termina Widget-->
+         
          
           
   
