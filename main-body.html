@@ -47,6 +47,7 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: var(--font-weight-bold);
       font-size: 1.5em;
+      -webkit-user-select: none;
       user-select: none;
     }
     body {
@@ -90,6 +91,7 @@
       display: flex;
       align-items: center;
       user-select: none;
+      -webkit-user-select: none;
     }
 
     .btn-gm-insights {
@@ -175,6 +177,7 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       user-select: none;
+      -webkit-user-select: none;
     }
 
     .title-bar-access {
@@ -194,6 +197,7 @@
       box-shadow: 1px 1px 0 var(--color-shadow);
       margin-right: 23px;
       user-select: none;
+      -webkit-user-select: none;
     }
 
     .btn-acc-qp:hover, .btn-acc-qp:focus {
@@ -205,6 +209,7 @@
     .btn-acc-lx {
       width: 206px;
       height: 34px;
+      color: var(--color-white);
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -213,6 +218,7 @@
       border-radius: var(--border-radius);
       box-shadow: 1px 1px 0 var(--color-shadow);
       user-select: none;
+      -webkit-user-select: none;
     }
 
     .btn-acc-lx:hover, .btn-acc-lx:focus {
@@ -239,41 +245,42 @@
 
 /* INICIA MENU USER ACTIONS */
 
-        .user-actions-menu {
+          .user-actions-menu {
+              width: 247px;
+              height: 177px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              background-color: #ffffff;
+              border: 1px solid rgba(4, 32, 69, 0.1);
+              border-radius: 4px;
+              overflow: hidden;
+              user-select: none;
+              -webkit-user-select: none;
+          }
+
+          .user-actions-menu {
+            display: none;
+            position: absolute;
+            top: 56px;
+            right: 0;
             width: 247px;
-            height: 177px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             background-color: #ffffff;
             border: 1px solid rgba(4, 32, 69, 0.1);
             border-radius: 4px;
-            overflow: hidden;
-            user-select: none;
-        }
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+          }
 
-        .user-actions-menu {
-      display: none;
-      position: absolute;
-      top: 56px;
-      right: 0;
-      width: 247px;
-      background-color: #ffffff;
-      border: 1px solid rgba(4, 32, 69, 0.1);
-      border-radius: 4px;
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-      z-index: 1000;
-    }
+          .user-actions-menu.open {
+            display: flex;
+            flex-direction: column;
+          }
 
-    .user-actions-menu.open {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .user-container {
-      position: relative;
-      cursor: pointer;
-    }
+          .user-container {
+            position: relative;
+            cursor: pointer;
+          }
            .ua-user-container {
               display: none;  
             }
@@ -306,6 +313,7 @@
 
         .ua-b-acc-lx {
             background-color: var(--color-blue);
+            
             border-bottom: 1px solid rgba(4, 32, 69, 0.1);
             font-weight: 300;
             font-size: .9em;
@@ -389,6 +397,7 @@
           align-items: center;
           padding: 10px 50px;
           user-select: none;
+          -webkit-user-select: none;
         }
         .second-titlebar{
           border-top: 1px solid var(--color-gray);
@@ -399,8 +408,9 @@
           display: flex;
           flex-direction: row;
           align-items: center;
-        
+          justify-content: space-between;
           width: 100%;
+          height: fit-content;
         }
 
         .wr-tb-gp {
@@ -420,6 +430,85 @@
           font-size: .8em;
         }
 
+/* INICIA FILTRO PARA WIDGETS */
+
+          .wg-filter {
+          width: fit-content;
+          height: fit-content;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
+        .fl-title {
+          width: fit-content;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: right;
+          color: rgba(108, 122, 145, 1);
+          font-size: .9em;
+          text-align: right;
+        }
+        .form {
+          width: fit-content;
+          height: 37px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+        }
+
+        .select {
+          width: 130px;
+          height: 37px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #ffffff;
+          border: 1px solid rgba(108, 122, 145, 1);
+          border-radius: 4px;
+        }
+        .btn-width{
+          width: 100px;
+        }
+        button {
+          background: none;
+          border: none;
+          padding: 0;
+          margin: 0;
+          font: inherit;
+          color: inherit;
+        }
+        .ft-sync {
+          width: 180px;
+          height: 36px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+        }
+        .ft-sync-date {
+          width: 136px;
+          height: 36px;
+          font-size: .7em;
+          text-align: right;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .ft-sync-date p {
+          color: rgba(108, 122, 145, 1);
+        }
+        .date {
+          color: rgba(108, 122, 145, 1);
+        }
+
+/*  TERMINA FILTRO PARA WIDGETS */
+
+
         .wr-notes {
           width: 100%;
           display: flex;
@@ -427,6 +516,7 @@
           align-items: center;
           padding: 0 50px;
           user-select: none;
+          -webkit-user-select: none;
         }
 
         .wr-notes-content {
@@ -449,6 +539,7 @@
           align-items: center;
           padding: 0px 0px;
           user-select: none;
+          -webkit-user-select: none;
         }
 
         .wr-st-content {
@@ -474,30 +565,15 @@
 
 .widget-row-a {
   width: 1400px;
-  height: 652px;
+  height: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 50px;
+  padding: 15px 50px;
   gap: 20px;
 }
 
-        @media (min-width: 1280px) and (max-width: 1440px) {
-          .main-container {
-            width: 100%;
-            padding: 20px;
-            margin: 0;
-          }
-          .widget-row-a {
-            width: 100%;
-            padding: 0 20px;
 
-          }
-          header{
-            width: 100%;
-          }
-
-        }
 .widget-layout {
   width: 100%;
   height: fit-content;
@@ -509,13 +585,16 @@
   border: 1px solid rgba(4, 32, 69, 0.1);
   border-radius: 4px;
   overflow: hidden;
+
 }
 
 .wg-top {
   width: 100%;
-  height: 45px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 0px;
 }
 
 .wg-title-bar {
@@ -524,8 +603,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #ffffff;
-  padding-top: 15px;
+
 }
 
 .wg-title {
@@ -541,6 +619,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .wg-actions-gp {
@@ -572,8 +651,19 @@
   height: 28px;
   background-color: var(--color-blue);
   border-radius: 4px;
+  cursor: pointer;
 }
-.btn-sq-blue:hover, .btn-sq-blue:focus, .btn-sq-blue:active {
+.btn-sq-blue-m {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-blue);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-sq-blue:hover, .btn-sq-blue:focus, .btn-sq-blue:active, .btn-sq-blue-m:hover, .btn-sq-blue-m:focus, .btn-sq-blue-m:active  {
   background-color: #365EB5;
 }
 .btn-sq-gray, .btn-sq-blue{
@@ -581,7 +671,7 @@
   align-items: center;
   justify-content: center;
 }
-.btn-sq-gray img, .btn-sq-blue img {
+.btn-sq-gray img, .btn-sq-blue img, .btn-sq-blue-m img {
   height: 20px;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
@@ -603,6 +693,7 @@
   justify-content: space-between;
   border-top: 1px solid rgba(4, 32, 69, 0.1);
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .wg-st-a, .wg-st-b, .wg-st-c {
@@ -623,6 +714,7 @@
   width: 100%;
   height: fit-content;
   display: flex; 
+  flex-direction: column;
 
 }
 
@@ -644,6 +736,7 @@
   align-items: center;
   background-color: rgba(0, 143, 251, 0.2);
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .insight-content {
@@ -745,6 +838,7 @@
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
   margin: 10px;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .tt-top {
@@ -879,6 +973,7 @@
   flex-direction: row;
   align-items: center;
   user-select: none;
+  -webkit-user-select: none;
 }
 .tb-row-container-end  > div {
   border-bottom: 1px solid var(--color-border);
@@ -888,6 +983,7 @@
   flex-direction: row;
   align-items: center;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .tb-col {  
@@ -1015,9 +1111,171 @@
 .traffic-light .green {
   background-color: #00a552;
 }
+.traffic-light .gray {
+  background-color: #CFCFCF;
+}
+
+/* INICIA WIDGET CHART */
+.chart-gp{
+  width: 100%;
+  height: 255px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  gap: 5px;
+
+}
+.chart-gp p{
+  margin: 0;
+  padding: 0;
+}
+.chart-title{
+  font-weight: 600;
+}
+.chart-bottom{
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  color: var(--color-gray);
+  gap: 20px;
+}
+.wg-chart-legend-color{
+  width: 30px;
+  height: 3px;
+}
+.chart-legend{
+  width: 100%;
+  font-size: .7em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+}
+.wg-chart-legend-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.toggle-switch {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-switch-checkbox {
+  display: none;
+}
+
+.toggle-switch-label {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.toggle-switch-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+.toggle-switch-switch {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.1s;
+}
+
+.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-inner {
+  background-color: var(--color-primary);
+}
+
+.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-switch {
+  transform: translateX(15px);
+}
+
+.toggle-switch-text {
+  width: 80px;
+  font-size: 0.7em;
+  line-height: .9em;
+  color: var(--color-gray);
+}
 
 /*TERMINA WIDGET HAB INTELECTUAL */
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .main-container {
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+  }
+  .widget-row-a {
+    width: 100%;
+    padding: 0 20px;
 
+  }
+  header{
+    width: 100%;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1138px) and (orientation: landscape) {
+  .logo-bar-container {
+    padding: 0 40px;
+  }
+
+  .title-bar {
+    padding: 0 40px;
+  }
+
+  .main-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .widget-row-a {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .tb-ref p{
+    width: 12ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .tb-sk-a p , .tb-sk-h p{
+    width: 10ch;
+    line-height: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .tb-col-h{
+    padding: 0 9px;
+  }
+}
 
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -1055,6 +1313,7 @@
         .wr-notes {
           padding: 0 10px;
         }
+  
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
@@ -1099,23 +1358,23 @@
 }
 
     @media (max-width: 768px) {
-    .logo-bar {
-      background-color: var(--color-white);
-      height: 100px;
-      border-bottom: 1px solid var(--color-border);
-    }
+      .logo-bar {
+        background-color: var(--color-white);
+        height: 100px;
+        border-bottom: 1px solid var(--color-border);
+      }
 
-    .logo-bar-container {
-      display: flex;
-      justify-content: space-between;
-      align-items:end;
-      height: 100%;
-      padding: 0 12px 12px 15px;
-    }
+      .logo-bar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items:end;
+        height: 100%;
+        padding: 0 12px 12px 15px;
+      }
 
-    .user-info {
-      display: none;     
-    }
+      .user-info {
+        display: none;     
+      }
 
       .title-bar {
         display: none;
@@ -1140,20 +1399,24 @@
       .ins-name-container{
         display: flex;
       }
+      .wr-tb-content{
+        flex-direction: column;
+        gap: 10px;
+      }
 /* INICIA MENU USER ACTIONS */
 
             .user-actions-menu {
               display: none;
-            position: fixed;
-            top: 0;
-            right: 0%;
-            width: 300px;
-            height: 100%;
-            flex-direction: column;
-            justify-content: flex-start;
-            transition: left 0.3s ease-in-out;
-            z-index: 1000;
-            border-radius: 0;
+              position: fixed;
+              top: 0;
+              right: 0%;
+              width: 300px;
+              height: 100%;
+              flex-direction: column;
+              justify-content: flex-start;
+              transition: left 0.3s ease-in-out;
+              z-index: 1000;
+              border-radius: 0;
             }
 
             .ua-user-container {
@@ -1280,6 +1543,16 @@
       .widget-title{
         width: 16ch;
         text-align: right;
+      }
+      .wr-tb-content{
+        flex-direction: column;
+        gap: 10px;
+      }
+      .wg-filter{
+        flex-direction: column;
+        align-items: right;
+        justify-content: right;
+        gap: 5px;
       }
       .wr-notes-content{
         flex-direction: column;
@@ -1554,6 +1827,28 @@
               <p class="category-subtitle" id="categorySubtitle2">Powered by Lexium</p>
             </div>
           </div>
+          <div class="wg-filter">
+            <div class="form">
+              <div class="fl-title">
+                <p>Elegir Nivel Educativo</p>
+              </div>
+              <div>
+                <select class="select" id="nivel-educativo" name="nivel-educativo">
+                  <option value="primaria">Primaria</option>
+                  <option value="secundaria">Secundaria</option>
+                  <option value="preparatoria">Preparatoria</option>
+                </select>
+              </div>
+                <button class="btn-acc-lx btn-width">Aplicar</button>
+            </div>
+            <div class="ft-sync">
+              <div class="ft-sync-date">
+                <p>Última sincronización:</p>
+                <p class="date">01/01/2023</p>
+              </div>
+              <div class="btn-sq-blue-m"><img src="img/icon/history.svg" alt=""></div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="wr-notes">
@@ -1744,7 +2039,37 @@
                   <div class="tb-des-h" id="desviacion">999</div>
                 </div>
               </div>
-
+              <div class="chart-gp">
+                <div class="chart-title-container">
+                  <p class="chart-title">Dispersión</p>
+                </div>
+                <div class="chart-img">
+                  <img src="img/chart/chart-placeholder.png" alt="Gráfica de Línea">
+                </div>
+                <div class="chart-bottom">
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="toggleSwitch1" class="toggle-switch-checkbox">
+                    <label class="toggle-switch-label" for="toggleSwitch1">
+                      <span class="toggle-switch-inner"></span>
+                      <span class="toggle-switch-switch"></span>
+                    </label>
+                    <span class="toggle-switch-text">Ver Promedio</span>
+                  </div>
+                  <div class="chart-legend">
+                    <div class="wg-chart-legend-item">
+                      <div class="wg-chart-legend-color" style="background-color: #7005F2;"></div>
+                      <div class="wg-chart-legend-text">Promedio Tu Institución</div>
+                    </div>
+                    <div class="wg-chart-legend-item">
+                      <div class="wg-chart-legend-color" style="background-color: #FF9500;"></div>
+                      <div class="wg-chart-legend-text">Referencia Pertinente: Nacional</div>
+                    </div>
+                    <div class="wg-chart-legend-item">
+                      <div class="wg-chart-legend-text">n= 200 alumnos</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
   
             <!--Termina Widget Content -->
@@ -1881,7 +2206,37 @@
                   <div class="tb-des-h" id="desviacion">999</div>
                 </div>
               </div>
-
+              <div class="chart-gp">
+                <div class="chart-title-container">
+                  <p class="chart-title">Dispersión</p>
+                </div>
+                <div class="chart-img">
+                  <img src="img/chart/chart-placeholder.png" alt="Gráfica de Línea">
+                </div>
+                <div class="chart-bottom">
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="toggleSwitch" class="toggle-switch-checkbox">
+                    <label class="toggle-switch-label" for="toggleSwitch">
+                      <span class="toggle-switch-inner"></span>
+                      <span class="toggle-switch-switch"></span>
+                    </label>
+                    <span class="toggle-switch-text">Ver Promedio</span>
+                  </div>
+                  <div class="chart-legend">
+                    <div class="wg-chart-legend-item">
+                      <div class="wg-chart-legend-color" style="background-color: #7005F2;"></div>
+                      <div class="wg-chart-legend-text">Promedio Tu Institución</div>
+                    </div>
+                    <div class="wg-chart-legend-item">
+                      <div class="wg-chart-legend-color" style="background-color: #FF9500;"></div>
+                      <div class="wg-chart-legend-text">Referencia Pertinente: Nacional</div>
+                    </div>
+                    <div class="wg-chart-legend-item">
+                      <div class="wg-chart-legend-text">n= 200 alumnos</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
   
             <!--Termina Widget Content -->
@@ -2128,6 +2483,61 @@
     </div>
     <div class="tt-btm">
       <p class="tooltip-text" id="ttText">Refleja la satisfacción de estudiantes y familias con la institución educativa.</p>
+    </div>
+  </div>
+  <div class="tooltip">
+    <div class="tt-top">
+      <div class="tt-t-bar">
+        <p class="tooltip-title" id="ttTitle">Voz del Colaborador - VoE</p>
+        <div class="btn-close"><img src="img/icon/x.svg" alt=""></div>
+      </div>
+    </div>
+    <div class="tt-btm">
+      <p class="tooltip-text" id="ttText">Refleja la satisfacción de estudiantes y familias con la institución educativa.</p>
+    </div>
+  </div>
+  <div class="tooltip">
+    <div class="tt-top">
+      <div class="tt-t-bar">
+        <p class="tooltip-title" id="ttTitle">Habilidades Intelectuales</p>
+        <div class="btn-close"><img src="img/icon/x.svg" alt=""></div>
+      </div>
+    </div>
+    <div class="tt-btm">
+      <p class="tooltip-text" id="ttText">Evalúa el razonamiento lógico, memoria y capacidades cognitivas clave de los estudiantes.</p>
+    </div>
+  </div>
+  <div class="tooltip">
+    <div class="tt-top">
+      <div class="tt-t-bar">
+        <p class="tooltip-title" id="ttTitle">Habilidades Socioemocionales</p>
+        <div class="btn-close"><img src="img/icon/x.svg" alt=""></div>
+      </div>
+    </div>
+    <div class="tt-btm">
+      <p class="tooltip-text" id="ttText">Mide la inteligencia emocional, manejo de emociones y habilidades sociales.</p>
+    </div>
+  </div>
+  <div class="tooltip">
+    <div class="tt-top">
+      <div class="tt-t-bar">
+        <p class="tooltip-title" id="ttTitle">Preferencias de Aprendizaje</p>
+        <div class="btn-close"><img src="img/icon/x.svg" alt=""></div>
+      </div>
+    </div>
+    <div class="tt-btm">
+      <p class="tooltip-text" id="ttText">Identifica los estilos de aprendizaje predominantes de los alumnos y maestros para personalizar la enseñanza.</p>
+    </div>
+  </div>
+  <div class="tooltip">
+    <div class="tt-top">
+      <div class="tt-t-bar">
+        <p class="tooltip-title" id="ttTitle">Balance Psicosocial</p>
+        <div class="btn-close"><img src="img/icon/x.svg" alt=""></div>
+      </div>
+    </div>
+    <div class="tt-btm">
+      <p class="tooltip-text" id="ttText">Analiza el equilibrio entre el bienestar emocional, social y académico de los estudiantes.</p>
     </div>
   </div>
   
