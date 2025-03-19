@@ -715,9 +715,20 @@
   height: fit-content;
   display: flex; 
   flex-direction: column;
-
+  user-select: none;
+  -webkit-user-select: none;
 }
-
+.wg-legend{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: .6em;
+  color: var(--color-gray);
+}
+.wg-legend p{
+  margin: 0;
+  padding: 0;
+}
 .wg-bttm-a {
   width: 100%;
   height: 100px;
@@ -897,7 +908,87 @@
   text-align: center;
 }
 /*TERMINA TOOLTIP */
+/*INICIA MODAL SINCRONIZACION*/
+.sync-modal {
+  width: 600px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid rgba(4, 32, 69, 0.1);
+  border-radius: 4px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  margin: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+}
 
+      .multi-select {
+       width: 50%;
+      }
+
+      .multi-select select {
+        width: 100%;
+        height: 100px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 5px;
+        font-size: 1em;
+      }
+      .multi-select select option:checked {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+      }
+      .sync-btm{
+        border-top: 1px solid var(--color-border);
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+      }
+
+      .s-top{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .s-top select{
+        width: 130px;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1em;
+        gap: 20px;
+      }
+      .s-mid{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px;
+        gap: 20px;
+      }
+      .s-mid label, .s-top label{
+        font-size: .9em;
+        color: var(--color-gray);
+        
+      }
+      .s-btm{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 10px;
+      }
+      .s-btm a{
+        text-decoration: none;
+        color: var(--color-white);
+      }
 
 /* TERMINA WIDGET ROW*/
 
@@ -1213,7 +1304,7 @@
 }
 
 .toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-switch {
-  transform: translateX(15px);
+  transform: translateX(13px);
 }
 
 .toggle-switch-text {
@@ -2993,7 +3084,9 @@
                   
                 </div>
               </div>
-
+              <div class="wg-legend">
+                <p>La tabla muestra el número de alumnos que presentan riesgo o alto riesgo en ese factor.</p>
+              </div>
             </div>
 
           </div>
@@ -3105,7 +3198,7 @@
       </div>
     </div>
     <div class="tt-btm">
-      <p class="tooltip-text" id="ttText">Refleja la satisfacción de estudiantes y familias con la institución educativa.</p>
+      <p class="tooltip-text" id="ttText">...</p>
     </div>
   </div>
   <div class="tooltip">
@@ -3151,6 +3244,55 @@
     <div class="tt-btm">
       <p class="tooltip-text" id="ttText">Analiza el equilibrio entre el bienestar emocional, social y académico de los estudiantes.</p>
     </div>
+  </div>
+  <div class="sync-modal">
+    <div class="tt-top">
+      <div class="tt-t-bar">
+        <p class="tooltip-title" id="ttTitle">Sincronizar</p>
+        <div class="btn-close"><img src="img/icon/x.svg" alt=""></div>
+      </div>
+    </div>
+
+    <div class="sync-btm">
+      <div class="s-top">
+        <div class="single-select"></div>
+          <label for="singleSelect">Seleccionar Ciclo:</label>
+          <select id="singleSelect" name="singleSelect">
+            <option value="opcion1">Opción 1</option>
+            <option value="opcion2">Opción 2</option>
+            <option value="opcion3">Opción 3</option>
+            <option value="opcion4">Opción 4</option>
+          </select>
+        </div>
+      </div>
+      <div class="s-mid">
+        <div class="multi-select">
+          <label for="multiSelect">Seleccionar Grados:</label>
+          <select id="multiSelect" name="multiSelect" multiple>
+            <option value="opcion1">Opción 1</option>
+            <option value="opcion2">Opción 2</option>
+            <option value="opcion3">Opción 3</option>
+            <option value="opcion4">Opción 4</option>
+          </select>
+        </div>
+        <div class="multi-select">
+          <label for="multiSelect">Seleccionar Evaluaciones:</label>
+          <select id="multiSelect" name="multiSelect" multiple>
+            <option value="opcion1">Opción 1</option>
+            <option value="opcion2">Opción 2</option>
+            <option value="opcion3">Opción 3</option>
+            <option value="opcion4">Opción 4</option>
+          </select>
+        </div>
+      </div>
+      <div class="s-btm">
+        <div class="btn-acc-lx">
+          <a href="" class="btn-sync-a">Sincronizar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   </div>
   
 </body>
