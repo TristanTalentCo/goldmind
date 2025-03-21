@@ -838,6 +838,19 @@
 }
 
 /*INICIA TOOLTIP */
+.tt-bg{
+  display: none; /* Hide tooltips by default */
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
 .tooltip {
   width: 600px;
   height: 140px;
@@ -848,6 +861,7 @@
   border-radius: 4px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
   margin: 10px;
+  overflow: hidden;
   user-select: none;
   -webkit-user-select: none;
 }
@@ -859,6 +873,19 @@
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
+  
+}
+@keyframes fadeBlink {
+  0%, 100% { background-color: #ffffff; }
+  50% { background-color: var(--color-primary); }
+}
+
+.tt-bg.flex .tt-top {
+  animation: fadeBlink 1s ease-in-out 0s 2;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .tt-t-bar {
@@ -919,6 +946,7 @@
   border-radius: 4px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
   margin: 10px;
+  overflow: hidden;
   user-select: none;
   -webkit-user-select: none;
 }
@@ -1950,7 +1978,7 @@
       .is-text-content {
         padding-left: 0px;
       }
-      .tooltip {
+      .tooltip, .sync-modal {
         width: 90%;
         height: auto;
         margin: 10px auto;
@@ -1963,6 +1991,21 @@
       .tooltip-text {
         font-size: 1em;
         padding: 10px;
+      }
+      .s-content{
+        flex-direction: column;
+      }
+      .s-col{
+        width: 100%;
+        padding: 0 10px;
+      }
+      .b-right{
+        border: none;
+      }
+      .s-btm{
+        padding: 10px 0 ;
+        align-items: center;
+        justify-content: center;
       }
       .tb-ref {  
         display: flex;
@@ -2126,7 +2169,275 @@
     }
 
 
+    /* INICIA GOLDMIND INSIGHTS */
+    .is-t-bar{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: right;
+      justify-content: right;
+      padding-right: 10px;
+    }
+    .insight-container {
+      width: 544px;
+      height: fit-content;
+      background-color: #ffffff;
+      box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.25);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0;
+      overflow: hidden;
+    }
 
+    .is-top {
+      width: 100%;
+      padding: 10px 0;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-text {
+      font-family: 'Montserrat', sans-serif;
+      color: #f24605;
+      margin: 0;
+      padding: 0;
+      font-size: 48px;
+      font-weight: var(--font-weight-bold);
+    }
+
+    .slogan-text {
+      font-family: 'Montserrat', sans-serif;
+      color: #6c7a91;
+      font-size: 24px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .is-subtitle {
+      width: 100%;
+      height: 54px;
+      background-color: #53b5ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .subtitle-text {
+      color: #ffffff;
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+
+    .is-content {
+      width: 100%;
+      padding: 12px 0;
+      height: fit-content;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;  
+      gap: 10px;
+    }
+
+    .is-content-top {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .is-nps-tb {
+      width: 245px;
+      height: 165px;
+      border: 1px solid rgba(4, 32, 69, 0.1);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .nps-header {
+      width: 100%;
+      height: 80px;
+      background-color: rgba(232, 245, 255, 0.85);
+      border-bottom: 1px solid rgba(4, 32, 69, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+    }
+
+    .nps-title {
+      color: #182336;
+      font-size: 30px;
+    }
+
+    .nps-cell {
+      width: 100%;
+      height: 80px;
+      border-top: 1px solid rgba(4, 32, 69, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+           
+    }
+
+    .nps-q {
+      color: #182336;
+      font-size: 2em;
+      
+    }
+
+    .is-content-bttm {
+      width: 500px;
+      height: fit-content;
+      border: 1px solid rgba(4, 32, 69, 0.1);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+
+    .is-tb-header {
+      width: 100%;
+      height: 50px;
+      background-color: rgba(232, 245, 255, 0.85);
+      border-bottom: 1px solid rgba(4, 32, 69, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .Preparatoria {
+      color: #6c7a91;
+      font-size: 1.1em;
+    }
+
+    .is-tb-tags {
+      width: 100%;
+      height: 50px;
+      color: #6c7a91;
+      font-size: .8em;
+      background-color: rgba(232, 245, 255, 0.85);
+      border-bottom: 1px solid rgba(4, 32, 69, 0.1);
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      font-weight: 500;
+      gap: 0;
+    }
+
+    .tag-b {
+      width: 88.75px;
+      border-right: 1px solid rgba(4, 32, 69, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tag-a{
+      width: 145px;
+      border-right: 1px solid rgba(4, 32, 69, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .is-tb-row {
+      width: 100%;
+      height: 100px;
+      border-bottom: 1px solid rgba(4, 32, 69, 0.1);
+      display: flex;
+      flex-direction: row;
+      gap: 0;
+    }
+
+    .is-cell-b {
+      width: 88.75px;
+      border-right: 1px solid rgba(4, 32, 69, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+    }
+
+    .is-cell-a {
+      width: 145px;
+      font-size: .8em;
+      font-weight: 500;
+      text-align: center;
+      border-right: 1px solid rgba(4, 32, 69, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .is-sign-r {
+      background-color: rgba(242, 70, 5, 0.25);
+    }
+
+    .is-sign-y {
+      background-color: rgba(254, 208, 25, 0.5);
+    }
+
+    .is-sign-g {
+      background-color: rgba(0, 166, 82, 0.3);
+    }
+
+    .is-bttm {
+      width: 100%;
+      height: 35px;
+      background-color: #53b5ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .insight-container {
+      width: 90%;
+      }
+
+      .is-content-bttm {
+      width: 100%;
+      }
+
+      .is-nps-tb {
+      width: 100%;
+      }
+
+      .is-content-top {
+      flex-direction: column;
+      }
+      .is-cell-a p{
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+      }
+      .is-cell-a p{
+        width: 98px;
+      }
+      .is-nps-tb {
+        width: 300px;
+      }
+      .nps-header, .nps-cell {
+        height: 60px;
+      }
+      .is-nps-tb {
+        height: 120px;
+      }
+    }
 
   </style>
 </head>
@@ -2140,7 +2451,7 @@
           <span class="Goldmind">Goldmind</span>
         </div>
         <div class="user-actions">
-          <div class="btn-gm-insights"><img src="img/icon/bulb.svg" alt="Ver Goldmind Insights"></div>
+          <div data-tooltip-id="ttGolIns" class="btn-gm-insights btn-modal"><img src="img/icon/bulb.svg" alt="Ver Goldmind Insights"></div>
           <div class="user-container">
             <div class="profile-pic"></div>
             <div class="user-info">
@@ -2206,9 +2517,9 @@
               </div>
               <div class="wg-actions-gp">
                 <div class="act-btns">
-                    <a href="link1.html" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
-                    <a href="link2.html" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                    <a href="link3.html" class="btn-sq-gray"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                    <a href="#" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
+                    <a href="#" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" data-tooltip-id="ttVoc" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                 </div>
                 <div class="act-detail">
                     <a href="link4.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
@@ -2271,10 +2582,10 @@
               </div>
               <div class="wg-actions-gp">
                 <div class="act-btns">
-                    <a href="link1.html" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
-                    <a href="link2.html" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                    <a href="link3.html" class="btn-sq-gray"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
-                </div>
+                  <a href="#" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
+                  <a href="#" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                  <a href="#" data-tooltip-id="ttVoe" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+              </div>
                 <div class="act-detail">
                     <a href="link4.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
                 </div>
@@ -2362,7 +2673,7 @@
                 <p>Última sincronización:</p>
                 <p class="date">01/01/2023</p>
               </div>
-              <div class="btn-sq-blue-m"><img src="img/icon/history.svg" alt=""></div>
+              <a href="#" data-tooltip-id="ttSync" class="btn-sq-blue-m btn-modal"><img src="img/icon/history.svg" alt=""></a>
             </div>
           </div>
         </div>
@@ -2396,10 +2707,10 @@
                 </div>
                 <div class="wg-actions-gp">
                   <div class="act-btns">
-                      <a href="link1.html" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
-                      <a href="link2.html" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                      <a href="link3.html" class="btn-sq-gray"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
-                  </div>
+                    <a href="#" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
+                    <a href="#" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" data-tooltip-id="ttHabInt" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                </div>
                   <div class="act-detail">
                       <a href="link4.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
                   </div>
@@ -2623,10 +2934,10 @@
                 </div>
                 <div class="wg-actions-gp">
                   <div class="act-btns">
-                      <a href="link1.html" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
-                      <a href="link2.html" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                      <a href="link3.html" class="btn-sq-gray"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
-                  </div>
+                    <a href="#" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
+                    <a href="#" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" data-tooltip-id="ttHabSoc" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                </div>
                   <div class="act-detail">
                       <a href="link4.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
                   </div>
@@ -2809,10 +3120,10 @@
               </div>
               <div class="wg-actions-gp">
                 <div class="act-btns">
-                    <a href="link1.html" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
-                    <a href="link2.html" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                    <a href="link3.html" class="btn-sq-gray"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
-                </div>
+                  <a href="#" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
+                  <a href="#" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                  <a href="#" data-tooltip-id="ttPreApr" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+              </div>
                 <div class="act-detail">
                     <a href="link4.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
                 </div>
@@ -3111,10 +3422,10 @@
               </div>
               <div class="wg-actions-gp">
                 <div class="act-btns">
-                    <a href="link1.html" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
-                    <a href="link2.html" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                    <a href="link3.html" class="btn-sq-gray"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
-                </div>
+                  <a href="#" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
+                  <a href="#" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                  <a href="#" data-tooltip-id="ttBalPsi" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+              </div>
                 <div class="act-detail">
                     <a href="link4.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
                 </div>
@@ -3288,6 +3599,237 @@
   </div>
   <!-- TERMINA MENU USER ACTIONS -->
 
+
+    <!-- INICIA MODALES -->
+    <div class="tt-bg" id="ttVoc">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Voz del Cliente - VoC</p>
+            <div class="btn-close" onclick="closeTooltip('ttVoc')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="ttText">Refleja la satisfacción de estudiantes y familias con la institución educativa.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="ttVoe">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Voz del Colaborador - VoE</p>
+            <div class="btn-close" onclick="closeTooltip('ttVoe')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="ttText">...</p>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="ttHabInt">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Habilidades Intelectuales</p>
+            <div class="btn-close" onclick="closeTooltip('ttHabInt')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="ttText">Evalúa el razonamiento lógico, memoria y capacidades cognitivas clave de los estudiantes.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="ttHabSoc">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Habilidades Socioemocionales</p>
+            <div class="btn-close" onclick="closeTooltip('ttHabSoc')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="ttText">Mide la inteligencia emocional, manejo de emociones y habilidades sociales.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="ttPreApr">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Preferencias de Aprendizaje</p>
+            <div class="btn-close" onclick="closeTooltip('ttPreApr')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="ttText">Identifica los estilos de aprendizaje predominantes de los alumnos y maestros para personalizar la enseñanza.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="ttBalPsi">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Balance Psicosocial</p>
+            <div class="btn-close" onclick="closeTooltip('ttBalPsi')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="ttText">Analiza el equilibrio entre el bienestar emocional, social y académico de los estudiantes.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="ttSync">
+      <div class="sync-modal">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Sincronizar</p>
+            <div class="btn-close" onclick="closeTooltip('ttSync')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <form action="">
+          <div class="sync-btm">
+            <div class="s-content">
+              <div class="s-col b-right">
+                <div class="single-select">
+                  <label for="singleSelect">Seleccionar Ciclo:</label>
+                  <select id="singleSelect" name="singleSelect">
+                    <option value="opcion1">Opción 1</option>
+                    <option value="opcion2">Opción 2</option>
+                    <option value="opcion3">Opción 3</option>
+                    <option value="opcion4">Opción 4</option>
+                  </select>
+                </div>
+                <div class="multi-select">
+                  <label for="multiSelect">Seleccionar Grados:</label>
+                  <select id="multiSelect" name="multiSelect" multiple>
+                    <option value="opcion1">Opción 1</option>
+                    <option value="opcion2">Opción 2</option>
+                    <option value="opcion3">Opción 3</option>
+                    <option value="opcion4">Opción 4</option>
+                  </select>
+                  <div class="single-select">
+                    <button class="btn-acc-qp">
+                      Buscar Evaluaciones
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="s-col">
+                <div class="multi-select">
+                  <label for="multiSelect">Seleccionar Evaluaciones:</label>
+                  <select id="multiSelect" name="multiSelect" multiple>
+                    <option value="opcion1">Opción 1</option>
+                    <option value="opcion2">Opción 2</option>
+                    <option value="opcion3">Opción 3</option>
+                    <option value="opcion4">Opción 4</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="s-btm">
+              <button class="btn-acc-lx">
+                Sincronizar
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="tt-bg" id="ttGolIns" style="display: flex;">
+      <div class="insight-container">
+        <div class="is-top">
+          <div class="is-t-bar">
+            <div class="btn-close" onclick="closeTooltip('ttGolIns')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+          <div class="logo-text">Goldmind</div>
+          <div class="slogan-text">Business Intelligence</div>
+        </div>
+        <div class="is-subtitle">
+          <p class="subtitle-text">Skills Analytics  VoC VoE</p>
+        </div>
+        <div class="is-content">
+          <div class="is-content-top">
+            <div class="is-nps-tb">
+              <div class="nps-header">
+                <div class="nps-title">NPS</div>
+              </div>
+              <div class="nps-cell">
+                <p class="nps-q" id="NPS_data">NPS Q</p>
+              </div>
+            </div>
+            <div class="is-nps-tb">
+              <div class="nps-header">
+                <div class="nps-title">eNPS</div>
+              </div>
+              <div class="nps-cell">
+                <p class="nps-q" id="ENPS_data">NPS Q</p>
+              </div>
+            </div>
+          </div>
+          <div class="is-content-bttm">
+            <div class="is-tb-header">
+              <div class="Preparatoria">Preparatoria</div>
+            </div>
+            <div class="is-tb-tags">
+              <div class="tag-a">
+                <div class="Indice de:">Indice de:</div>
+              </div>
+              <div class="tag-b">
+                <div class="Bajo">Bajo</div>
+              </div>
+              <div class="tag-b">
+                <div class="Medio">Medio</div>
+              </div>
+              <div class="tag-b">
+                <div class="Alto">Alto</div>
+              </div>
+              <div class="tag-b">
+                <div class="Desviación Estándar">Desviación Estándar</div>
+              </div>
+            </div>
+            <div class="is-tb-row">
+              <div class="is-cell-a">
+                <p>Habilidades Intelectuales</p>
+              </div>
+              <div class="is-cell-b">
+                <p class="51" id="intA">51</p>
+              </div>
+              <div class="is-cell-b">
+                <p class="51" id="intB">51</p>
+              </div>
+              <div class="is-cell-b">
+                <p class="51" id="intC">51</p>
+              </div>
+              <div class="is-cell-b">
+                <p class="15" id="intD">15</p>
+              </div>
+            </div>
+            <div class="is-tb-row">
+              <div class="is-cell-a">
+                <p>Habilidades Socioemocionales</p>
+              </div>
+              <div class="is-cell-b is-sign-r">
+                <p class="51" id="socA">51</p>
+              </div>
+              <div class="is-cell-b is-sign-y">
+                <p class="51" id="socB">51</p>
+              </div>
+              <div class="is-cell-b is-sign-g">
+                <p class="63" id="socC">63</p>
+              </div>
+              <div class="is-cell-b">
+                <p class="16" id="socD">16</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="is-bttm"></div>
+      </div>
+    </div>
+  <!-- TERMINA MODALES -->
+  
   <script>
     document.querySelector('.user-container').addEventListener('click', function() {
       document.getElementById('userActionsMenu').classList.toggle('open');
@@ -3302,136 +3844,36 @@
     });
   </script>
 
-  <style>
+  <script>
+    function showTooltip(id) {
+      const tooltip = document.getElementById(id);
+      tooltip.style.display = 'flex';
+      tooltip.classList.add('flex');
+      document.body.classList.add('no-scroll');
+    }
 
-  </style>
+    function closeTooltip(id) {
+      const tooltip = document.getElementById(id);
+      tooltip.style.display = 'none';
+      tooltip.classList.remove('flex');
+      document.body.classList.remove('no-scroll');
+    }
 
-  <div class="tooltip">
-    <div class="tt-top">
-      <div class="tt-t-bar">
-        <p class="tooltip-title" id="ttTitle">Voz del Cliente - VoC</p>
-        <div class="btn-close"><img src="img/icon/x.svg" alt=""></div>
-      </div>
-    </div>
-    <div class="tt-btm">
-      <p class="tooltip-text" id="ttText">Refleja la satisfacción de estudiantes y familias con la institución educativa.</p>
-    </div>
-  </div>
-  <div class="tooltip">
-    <div class="tt-top">
-      <div class="tt-t-bar">
-        <p class="tooltip-title" id="ttTitle">Voz del Colaborador - VoE</p>
-        <div class="btn-close"><img src="img/icon/x.svg" alt=""></div>
-      </div>
-    </div>
-    <div class="tt-btm">
-      <p class="tooltip-text" id="ttText">...</p>
-    </div>
-  </div>
-  <div class="tooltip">
-    <div class="tt-top">
-      <div class="tt-t-bar">
-        <p class="tooltip-title" id="ttTitle">Habilidades Intelectuales</p>
-        <div class="btn-close"><img src="img/icon/x.svg" alt=""></div>
-      </div>
-    </div>
-    <div class="tt-btm">
-      <p class="tooltip-text" id="ttText">Evalúa el razonamiento lógico, memoria y capacidades cognitivas clave de los estudiantes.</p>
-    </div>
-  </div>
-  <div class="tooltip">
-    <div class="tt-top">
-      <div class="tt-t-bar">
-        <p class="tooltip-title" id="ttTitle">Habilidades Socioemocionales</p>
-        <div class="btn-close"><img src="img/icon/x.svg" alt=""></div>
-      </div>
-    </div>
-    <div class="tt-btm">
-      <p class="tooltip-text" id="ttText">Mide la inteligencia emocional, manejo de emociones y habilidades sociales.</p>
-    </div>
-  </div>
-  <div class="tooltip">
-    <div class="tt-top">
-      <div class="tt-t-bar">
-        <p class="tooltip-title" id="ttTitle">Preferencias de Aprendizaje</p>
-        <div class="btn-close"><img src="img/icon/x.svg" alt=""></div>
-      </div>
-    </div>
-    <div class="tt-btm">
-      <p class="tooltip-text" id="ttText">Identifica los estilos de aprendizaje predominantes de los alumnos y maestros para personalizar la enseñanza.</p>
-    </div>
-  </div>
-  <div class="tooltip">
-    <div class="tt-top">
-      <div class="tt-t-bar">
-        <p class="tooltip-title" id="ttTitle">Balance Psicosocial</p>
-        <div class="btn-close"><img src="img/icon/x.svg" alt=""></div>
-      </div>
-    </div>
-    <div class="tt-btm">
-      <p class="tooltip-text" id="ttText">Analiza el equilibrio entre el bienestar emocional, social y académico de los estudiantes.</p>
-    </div>
-  </div>
-  <div class="sync-modal">
-    <div class="tt-top">
-      <div class="tt-t-bar">
-        <p class="tooltip-title" id="ttTitle">Sincronizar</p>
-        <div class="btn-close"><img src="img/icon/x.svg" alt=""></div>
-      </div>
-    </div>
+    document.querySelectorAll('.btn-modal').forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        const tooltipId = this.getAttribute('data-tooltip-id');
+        showTooltip(tooltipId);
+      });
+    });
 
-    <form action="">
-      <div class="sync-btm">
-        <div class="s-content">
-          <div class="s-col b-right">
-            <div class="single-select">
-              <label for="singleSelect">Seleccionar Ciclo:</label>
-              <select id="singleSelect" name="singleSelect">
-                <option value="opcion1">Opción 1</option>
-                <option value="opcion2">Opción 2</option>
-                <option value="opcion3">Opción 3</option>
-                <option value="opcion4">Opción 4</option>
-              </select>
-            </div>
-            <div class="multi-select">
-              <label for="multiSelect">Seleccionar Grados:</label>
-              <select id="multiSelect" name="multiSelect" multiple>
-                <option value="opcion1">Opción 1</option>
-                <option value="opcion2">Opción 2</option>
-                <option value="opcion3">Opción 3</option>
-                <option value="opcion4">Opción 4</option>
-              </select>
-              <div class="single-select">
-                <button class="btn-acc-qp">
-                  Buscar Evaluaciones
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="s-col">
-
-            <div class="multi-select">
-              <label for="multiSelect">Seleccionar Evaluaciones:</label>
-              <select id="multiSelect" name="multiSelect" multiple>
-                <option value="opcion1">Opción 1</option>
-                <option value="opcion2">Opción 2</option>
-                <option value="opcion3">Opción 3</option>
-                <option value="opcion4">Opción 4</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="s-btm">
-          <button class="btn-acc-lx">
-            Sincronizar
-          </button>
-        </div>
-      </div>
-    </form>
-  </div>
-
-  </div>
-  
+    document.querySelectorAll('.btn-close').forEach(button => {
+      button.addEventListener('click', function() {
+        const tooltipId = this.getAttribute('data-tooltip-id');
+        closeTooltip(tooltipId);
+      });
+    });
+  </script>
 </body>
 
 </html>
