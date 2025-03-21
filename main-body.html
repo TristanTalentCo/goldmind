@@ -935,6 +935,14 @@
         padding: 5px;
         font-size: 1em;
       }
+      .multi-select:nth-child(1) select {
+        width: 100%;
+        height: 170px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 5px;
+        font-size: 1em;
+      }
       .multi-select select option:checked {
         background-color: var(--color-primary);
         color: var(--color-white);
@@ -968,7 +976,7 @@
           align-items: center;
           justify-content: center;
         }
-      .single-select a{
+      .single-select button{
           text-decoration: none;
           color: var(--color-white);
         }
@@ -1017,10 +1025,12 @@
         
       }
       .s-btm{
+        border-top: 1px solid var(--color-border);
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        padding-bottom: 10px;
+        justify-content: right;
+        padding: 15px 25px 10px 0px ;
+        
       }
       .s-btm a{
         text-decoration: none;
@@ -2032,6 +2042,86 @@
         width: 10px;
         height: 10px;
         border-radius: 50%;
+      }
+
+      /* PREFERENCIAS APRENDIZAJE MOBIL */
+      .pa-content-top {
+          padding: 10px 8px;
+          gap: 9px;
+        }
+      .pa-pref-row {
+        width: 100%;
+        height: 65px;
+      }
+
+      .pa-m, .pa-a {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .pa-m-top, .pa-a-top {
+        width: 100%;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ccc9ff;
+
+        gap: 10px;
+      }
+
+      .pref-row-t {
+        color: #000000;
+        font-size: .5em;
+        font-weight: 600;
+      }
+
+      .pa-m-btm, .pa-a-btm {
+        width: 100%;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .pref-value {
+        color: #182336;
+        font-size: .9em;
+        font-weight: 600;
+      }
+
+      .pa-n {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        background-color: #a9a5fa;
+        gap: 2px;
+      }
+
+      .pref-title {
+        width: 100%;
+        height: 1lh;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: center;
+        color: #182336;
+        font-size: .7em;
+      }
+
+      .pref-icon-fr{
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        background-color: #fff ;
+
       }
     }
 
@@ -3290,51 +3380,54 @@
       </div>
     </div>
 
-    <div class="sync-btm">
-      <div class="s-content">
-        <div class="s-col b-right">
-          <div class="single-select">
-            <label for="singleSelect">Seleccionar Ciclo:</label>
-            <select id="singleSelect" name="singleSelect">
-              <option value="opcion1">Opción 1</option>
-              <option value="opcion2">Opción 2</option>
-              <option value="opcion3">Opción 3</option>
-              <option value="opcion4">Opción 4</option>
-            </select>
+    <form action="">
+      <div class="sync-btm">
+        <div class="s-content">
+          <div class="s-col b-right">
+            <div class="single-select">
+              <label for="singleSelect">Seleccionar Ciclo:</label>
+              <select id="singleSelect" name="singleSelect">
+                <option value="opcion1">Opción 1</option>
+                <option value="opcion2">Opción 2</option>
+                <option value="opcion3">Opción 3</option>
+                <option value="opcion4">Opción 4</option>
+              </select>
+            </div>
+            <div class="multi-select">
+              <label for="multiSelect">Seleccionar Grados:</label>
+              <select id="multiSelect" name="multiSelect" multiple>
+                <option value="opcion1">Opción 1</option>
+                <option value="opcion2">Opción 2</option>
+                <option value="opcion3">Opción 3</option>
+                <option value="opcion4">Opción 4</option>
+              </select>
+              <div class="single-select">
+                <button class="btn-acc-qp">
+                  Buscar Evaluaciones
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="multi-select">
-            <label for="multiSelect">Seleccionar Grados:</label>
-            <select id="multiSelect" name="multiSelect" multiple>
-              <option value="opcion1">Opción 1</option>
-              <option value="opcion2">Opción 2</option>
-              <option value="opcion3">Opción 3</option>
-              <option value="opcion4">Opción 4</option>
-            </select>
+          <div class="s-col">
+
+            <div class="multi-select">
+              <label for="multiSelect">Seleccionar Evaluaciones:</label>
+              <select id="multiSelect" name="multiSelect" multiple>
+                <option value="opcion1">Opción 1</option>
+                <option value="opcion2">Opción 2</option>
+                <option value="opcion3">Opción 3</option>
+                <option value="opcion4">Opción 4</option>
+              </select>
+            </div>
           </div>
         </div>
-        <div class="s-col">
-          <div class="single-select">
-            <a href="" class="btn-acc-qp">
-              Buscar Evaluaciones
-            </a>
-          </div>
-          <div class="multi-select">
-            <label for="multiSelect">Seleccionar Evaluaciones:</label>
-            <select id="multiSelect" name="multiSelect" multiple>
-              <option value="opcion1">Opción 1</option>
-              <option value="opcion2">Opción 2</option>
-              <option value="opcion3">Opción 3</option>
-              <option value="opcion4">Opción 4</option>
-            </select>
-          </div>
+        <div class="s-btm">
+          <button class="btn-acc-lx">
+            Sincronizar
+          </button>
         </div>
       </div>
-      <div class="s-btm">
-        <a class="btn-acc-lx">
-          Sincronizar
-        </a>
-      </div>
-    </div>
+    </form>
   </div>
 
   </div>
