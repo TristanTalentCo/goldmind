@@ -829,7 +829,7 @@
 }
 .tooltip {
   width: 600px;
-  height: 140px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
@@ -2194,6 +2194,12 @@
         background-color: #fff ;
 
       }
+      .tooltip-title {
+        width: 23ch;
+        overflow: auto;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
     }
 
 
@@ -2479,3 +2485,16 @@
     }
 
     /* TERMINA VOC VOE CONTENT */
+    /* INICIA TIPPY */
+    .tippy-tt{
+      background-color: rgba(24, 35, 54, .7);    color: #ffffff;
+      font-size: .65em;
+      padding: 8px;
+      border-radius: 4px;
+    }
+    .tippy-tt p{
+      width: 16ch;
+      margin: 0;
+      padding: 0;
+    }
+    /* TERMINA TIPPY */
