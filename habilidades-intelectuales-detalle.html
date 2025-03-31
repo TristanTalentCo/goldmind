@@ -143,7 +143,7 @@
                     <a href="#" data-tooltip-id="ttHabInt" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                 </div>
                   <div class="act-detail">
-                      <a href="link4.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
+                      <a href="link4.html" class="btn-sq-blue"><img src="img/icon/zoom-out.svg" alt="Ver indicador a detalle"></a>
                   </div>
                 </div>
               </div>
@@ -165,169 +165,155 @@
   
             <!--Inicia Widget Content -->
             <div class="wg-content">
-              
-              <div class="tb-gp">
-                <div class="tb-top">
-                  <div class="tb-header-container">
-                    <div class="tb-col">Diagnóstico</div>
-                    <div class="tb-ref"><p class="tb-ref-r">Referencia Pertinente:</p> <p class="tb-ref-t" id="tipoRef">Nacional</p></div>
-                    <div class="tb-sk">Habilidad</div>
-                    <div class="tb-des">Desviación Estándar</div>
-                  </div>
-                  <div class="tb-row-container">
-                    <div class="tb-col-a">
-                      <div class="ts-a">
-                        <div class="traffic-light">
-                          <div class="red" id="tlRed"></div>
-                          <div class="yellow" id="tlYellow"></div>
-                          <div class="green" id="tlGreen"></div>
-                        </div>
+              <div class="hab-dtl">
+                <div class="hd-col-a">
+                  <div class="accordion">
+                    <div class="accordion-header">Selecciona Habilidad</div>
+                    <div class="accordion-category">
+                      <div class="acc-category-title">Aprendizaje</div>
+                      <div class="acc-category-options">
+                        <a href="#" class="option">Clasificación <span>▶</span></a>
+                        <a href="#" class="option">Orientación <span>▶</span></a>
+                        <a href="#" class="option">Planeación <span>▶</span></a>
+                        <a href="#" class="option">Analogías Simbólicas <span>▶</span></a>
+                        <a href="#" class="option">Progresión Numérica <span>▶</span></a>
+                        <a href="#" class="option">Vocabulario <span>▶</span></a>
+                        <a href="#" class="option">Vocabulario de Matemáticas <span>▶</span></a>
+                        <a href="#" class="option">Analogías <span>▶</span></a>
+                        <a href="#" class="option">Seguimiento de Instrucciones <span>▶</span></a>
                       </div>
-                      <div class="trf-a" id="diagnostico">333</div>
                     </div>
-                    <div class="tb-ref-a" id="referencia">888</div>
-                    <div class="tb-sk-a"  id="habilidad" tip-id="Descripción breve de la habilidad de Aprendizaje"><p>Aprendizaje</p></div>
-                    <div class="tb-des-a" id="desviacion">999</div>
-                  </div>
-                  <div class="tb-row-container">
-                    <div class="tb-col-a">
-                      <div class="ts-a">
-                        <div class="traffic-light">
-                          <div class="red" id="tlRed"></div>
-                          <div class="yellow" id="tlYellow"></div>
-                          <div class="green" id="tlGreen"></div>
-                        </div>
+                    <div class="accordion-category">
+                      <div class="acc-category-title">Verbal</div>
+                      <div class="acc-category-options">
+                        <a href="#" class="option">Vocabulario <span>▶</span></a>
+                        <a href="#" class="option">Vocabulario de Matemáticas <span>▶</span></a>
+                        <a href="#" class="option">Analogías <span>▶</span></a>
+                        <a href="#" class="option">Seguimiento de Instrucciones <span>▶</span></a>
                       </div>
-                      <div class="trf-a" id="diagnostico">333</div>
                     </div>
-                    <div class="tb-ref-a" id="referencia">888</div>
-                    <div class="tb-sk-a"  id="habilidad" tip-id="Descripción breve de la habilidad Verbal"><p>Verbal</p></div>
-                    <div class="tb-des-a" id="desviacion">999</div>
-                  </div>
-                  <div class="tb-row-container">
-                    <div class="tb-col-a">
-                      <div class="ts-a">
-                        <div class="traffic-light">
-                          <div class="red" id="tlRed"></div>
-                          <div class="yellow" id="tlYellow"></div>
-                          <div class="green" id="tlGreen"></div>
-                        </div>
+                    <div class="accordion-category">
+                      <div class="acc-category-title">Razonamiento</div>
+                      <div class="acc-category-options">
+                        <a href="#" class="option">Razonamiento Lógico <span>▶</span></a>
                       </div>
-                      <div class="trf-a" id="diagnostico">333</div>
                     </div>
-                    <div class="tb-ref-a" id="referencia">888</div>
-                    <div class="tb-sk-a"  id="habilidad" tip-id="Descripción breve de la habilidad de Razonamiento"><p>Razonamiento</p></div>
-                    <div class="tb-des-a" id="desviacion">999</div>
-                  </div>
-                  <div class="tb-row-container">
-                    <div class="tb-col-a">
-                      <div class="ts-a">
-                        <div class="traffic-light">
-                          <div class="red" id="tlRed"></div>
-                          <div class="yellow" id="tlYellow"></div>
-                          <div class="green" id="tlGreen"></div>
-                        </div>
+                    <div class="accordion-category">
+                      <div class="acc-category-title">Toma de Decisiones</div>
+                      <div class="acc-category-options">
+                        <a href="#" class="option">Discriminación <span>▶</span></a>
+                        <a href="#" class="option">Juicio de Conceptos <span>▶</span></a>
+                        <a href="#" class="option">Conceptualización de Hechos <span>▶</span></a>
+                        <a href="#" class="option">Aplicación de Hechos <span>▶</span></a>
                       </div>
-                      <div class="trf-a" id="diagnostico">333</div>
                     </div>
-                    <div class="tb-ref-a" id="referencia">888</div>
-                    <div class="tb-sk-a"  id="habilidad" tip-id="Descripción breve de la habilidad de Toma de Decisiones"><p>Toma de Decisiones</p></div>
-                    <div class="tb-des-a" id="desviacion">999</div>
-                  </div>
-                  <div class="tb-row-container">
-                    <div class="tb-col-a">
-                      <div class="ts-a">
-                        <div class="traffic-light">
-                          <div class="red" id="tlRed"></div>
-                          <div class="yellow" id="tlYellow"></div>
-                          <div class="green" id="tlGreen"></div>
-                        </div>
+                    <div class="accordion-category">
+                      <div class="acc-category-title">Planeación</div>
+                      <div class="acc-category-options">
+                        <a href="#" class="option">Orientación <span>▶</span></a>
+                        <a href="#" class="option">Planeación <span>▶</span></a>
                       </div>
-                      <div class="trf-a" id="diagnostico">333</div>
                     </div>
-                    <div class="tb-ref-a" id="referencia">888</div>
-                    <div class="tb-sk-a"  id="habilidad" tip-id="Descripción breve de la habilidad de Planeación"><p>Planeación</p></div>
-                    <div class="tb-des-a" id="desviacion">999</div>
-                  </div>
-                  <div class="tb-row-container">
-                    <div class="tb-col-a">
-                      <div class="ts-a">
-                        <div class="traffic-light">
-                          <div class="red" id="tlRed"></div>
-                          <div class="yellow" id="tlYellow"></div>
-                          <div class="green" id="tlGreen"></div>
-                        </div>
+                    <div class="accordion-category">
+                      <div class="acc-category-title">Lectura</div>
+                      <div class="acc-category-options">
+                        <a href="#" class="option">Discriminación <span>▶</span></a>
+                        <a href="#" class="option">Clasificación <span>▶</span></a>
+                        <a href="#" class="option">Vocabulario <span>▶</span></a>
+                        <a href="#" class="option">Analogías <span>▶</span></a>
+                        <a href="#" class="option">Seguimiento de Instrucciones <span>▶</span></a>
                       </div>
-                      <div class="trf-a" id="diagnostico">333</div>
                     </div>
-                    <div class="tb-ref-a" id="referencia">888</div>
-                    <div class="tb-sk-a"  id="habilidad" tip-id="Descripción breve de la habilidad de Lectura"><p>Lectura</p></div>
-                    <div class="tb-des-a" id="desviacion">999</div>
-                  </div>
-                  <div class="tb-row-container">
-                    <div class="tb-col-a">
-                      <div class="ts-a">
-                        <div class="traffic-light">
-                          <div class="red" id="tlRed"></div>
-                          <div class="yellow" id="tlYellow"></div>
-                          <div class="green" id="tlGreen"></div>
-                        </div>
+                    <div class="accordion-category">
+                      <div class="acc-category-title">Matemáticas</div>
+                      <div class="acc-category-options">
+                        <a href="#" class="option">Progresión Numérica <span>▶</span></a>
+                        <a href="#" class="option">Aplicación de Hechos <span>▶</span></a>
+                        <a href="#" class="option">Análisis de Hechos <span>▶</span></a>
+                        <a href="#" class="option">Orientación <span>▶</span></a>
+                        <a href="#" class="option">Planeación <span>▶</span></a>
+                        <a href="#" class="option">Analogías Simbólicas <span>▶</span></a>
+                        <a href="#" class="option">Razonamiento Lógico <span>▶</span></a>
                       </div>
-                      <div class="trf-a" id="diagnostico">333</div>
                     </div>
-                    <div class="tb-ref-a" id="referencia">888</div>
-                    <div class="tb-sk-a"  id="habilidad" tip-id="Descripción breve de la habilidad de Matemáticas"><p>Matemáticas</p></div>
-                    <div class="tb-des-a" id="desviacion">999</div>
+                    <a href="#" class="option final-button">Indice Promedio<span>▶</span></a>
+                  </div>
+                </div>
+                
+                <div class="hd-col-b">
+                  <div class="hd-tb-top">
+                    <div class="hd-tb-header">
+                      <div class="hd-tb-col-a ">
+                        <p>Habilidad</p>
+                      </div>
+                      <div class="hd-tb-col-b ">
+                        <p>Diagnóstico</p>
+                      </div>
+                      <div class="hd-tb-col-b col-b col-g">
+                        <p class="tb-ref-r">Referencia Pertinente: </p>
+                        <p class="tb-ref-t" id="tipoRef">Nacional</p>
+                      </div>
+                      <div class="hd-tb-col-b ">
+                        <p>Desviación Estándar</p>
+                      </div>
+                    </div>
+                    <div class="hd-tb-row">
+                      <div class="hd-tb-col-a">
+                        <p class="hd-tb-title" id="habilidad">Vocabulario de Matemáticas</p>
+                      </div>
+                      <div class="hd-tb-col-b">
+                        <div class="ts-a">
+                          <div class="traffic-light">
+                            <div class="red" id="tlRed"></div>
+                            <div class="yellow" id="tlYellow"></div>
+                            <div class="green" id="tlGreen"></div>
+                          </div>
+                        </div>
+                        <div class="trf-a" id="diagnostico">333</div>
+                      </div>
+                      <div class="hd-tb-col-b col-g">
+                        <p id="referencia">888</p>
+                      </div>
+                      <div class="hd-tb-col-b">
+                        <p id="desviacion">999</p>
+                      </div>
+                    </div>
                   </div>
 
-                </div>
-                <div class="tb-row-container-end">
-                  <div class="tb-col-h">
-                    <div class="ts-h">
-                      <div class="traffic-light">
-                        <div class="red" id="tlRed"></div>
-                        <div class="yellow" id="tlYellow"></div>
-                        <div class="green" id="tlGreen"></div>
+                  <div class="chart-gp">
+                    <div class="chart-title-container">
+                      <p class="chart-title" >Dispersión</p>
+                    </div>
+                    <div class="chart-img">
+                      <img src="img/chart/chart-placeholder.png"  alt="Gráfica de Línea">
+                    </div>
+                    <div class="chart-bottom">
+                      <div class="toggle-switch">
+                        <input type="checkbox" id="toggleSwitch1" class="toggle-switch-checkbox">
+                        <label class="toggle-switch-label" for="toggleSwitch1">
+                          <span class="toggle-switch-inner"></span>
+                          <span class="toggle-switch-switch"></span>
+                        </label>
+                        <span class="toggle-switch-text">Ver Promedio</span>
+                      </div>
+                      <div class="chart-legend">
+                        <div class="wg-chart-legend-item">
+                          <div class="wg-chart-legend-color" style="background-color: #7005F2;"></div>
+                          <div class="wg-chart-legend-text">Promedio Tu Institución</div>
+                        </div>
+                        <div class="wg-chart-legend-item">
+                          <div class="wg-chart-legend-color" style="background-color: #FF9500;"></div>
+                          <div class="wg-chart-legend-text">Referencia Pertinente: Nacional </div>
+                        </div>
+                        <div class="wg-chart-legend-item">
+                          <div class="wg-chart-legend-text">n= 200 alumnos</div>
+                        </div>
                       </div>
                     </div>
-                    <div class="trf-h" id="diagnostico">333</div>
-                  </div>
-                  <div class="tb-ref-h" id="referencia">888</div>
-                  <div class="tb-sk-h"  id="habilidad" tip-id="Descripción breve del Indice Promedio"><p>Indice Promedio</p></div>
-                  <div class="tb-des-h" id="desviacion">999</div>
-                </div>
-              </div>
-              <div class="chart-gp">
-                <div class="chart-title-container">
-                  <p class="chart-title" tip-id="Descripción breve de gráfica de Dispersión">Dispersión</p>
-                </div>
-                <div class="chart-img">
-                  <img src="img/chart/chart-placeholder.png" alt="Gráfica de Línea">
-                </div>
-                <div class="chart-bottom">
-                  <div class="toggle-switch">
-                    <input type="checkbox" id="toggleSwitch1" class="toggle-switch-checkbox">
-                    <label class="toggle-switch-label" for="toggleSwitch1">
-                      <span class="toggle-switch-inner"></span>
-                      <span class="toggle-switch-switch"></span>
-                    </label>
-                    <span class="toggle-switch-text">Ver Promedio</span>
-                  </div>
-                  <div class="chart-legend">
-                    <div class="wg-chart-legend-item">
-                      <div class="wg-chart-legend-color" style="background-color: #7005F2;"></div>
-                      <div class="wg-chart-legend-text">Promedio Tu Institución</div>
-                    </div>
-                    <div class="wg-chart-legend-item">
-                      <div class="wg-chart-legend-color" style="background-color: #FF9500;"></div>
-                      <div class="wg-chart-legend-text">Referencia Pertinente: Nacional</div>
-                    </div>
-                    <div class="wg-chart-legend-item">
-                      <div class="wg-chart-legend-text">n= 200 alumnos</div>
-                    </div>
                   </div>
                 </div>
               </div>
+
             </div>
   
             <!--Termina Widget Content -->
@@ -337,7 +323,9 @@
               <div class="insight-wrap">
                 <div class="is-margin"></div>
                 <div class="insight-content">
-                  <div class="is-icon-content"></div>
+                  <div class="is-icon-content">
+                    <img src="img/icon/bulb.svg" alt="">
+                  </div>
                   <div class="is-text-content">
                     <div class="is-title">
                       <p class="insight-title" id="isgTitle">Insight Title</p>
@@ -789,7 +777,33 @@
       });
     });
   </script>
+  <script>
+    document.querySelectorAll('.acc-category-title').forEach(title => {
+  title.addEventListener('click', () => {
+    const options = title.nextElementSibling;
+    const isActive = title.classList.contains('active');
 
+    // Close all other categories
+    document.querySelectorAll('.acc-category-title').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.acc-category-options').forEach(o => o.style.display = 'none');
+
+    // Toggle the clicked category
+    if (!isActive) {
+      title.classList.add('active');
+      options.style.display = 'flex';
+    }
+  });
+});
+
+document.querySelectorAll(' .option').forEach(option => {
+  option.addEventListener('click', () => {
+    document.querySelectorAll('.option').forEach(o => o.classList.remove('active'));
+    option.classList.add('active');
+  });
+});
+
+
+  </script>
 </body>
 
 </html>

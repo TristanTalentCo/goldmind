@@ -749,6 +749,14 @@
 .is-icon-content {
   width: 60px;
   height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.is-icon-content img{
+
+  height: 60%;
+
 }
 
 .is-text-content {
@@ -1982,7 +1990,9 @@
         height: fit-content;
       }
       .wg-bttm-a {
+        width: 100%;
         height: fit-content;
+        display: flex;
         padding: 10px 10px;
       }
       .insight-wrap {
@@ -2498,3 +2508,207 @@
       padding: 0;
     }
     /* TERMINA TIPPY */
+
+    /* INICIA WIDGET HAB INTELECTUAL DETALLE */
+    .hab-dtl{
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      justify-content: center;
+    }
+    .hd-col-a{
+      width: 300px;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .hd-col-b{
+      width: 1000px;
+      height: 560px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .hd-col-b > .chart-gp{
+      height: 100%;
+      padding: 30px 0;
+    }
+    .hd-col-b > .chart-gp > .chart-title-container > .chart-title{
+      font-size: 1.2em;
+    }
+    .hd-col-b > .chart-gp img{
+      width: 900px;
+    }
+    .hd-col-b > .chart-gp > .chart-bottom > .chart-legend{
+      gap: 20px;
+    }
+    /* ACORDEON */
+
+    .accordion {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--color-border);
+    }
+    
+    .accordion-header {
+      height: 31px;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      padding: 10px;
+      font-size: .7em;
+      font-weight: 600;
+      color: var(--color-dark);
+      border-bottom: var(--color-border) 1px solid;
+      border-top: var(--color-border) 1px solid;
+      text-align: center;
+      background-color: #EEF4FE;
+    }
+    
+    .accordion-category {
+      border-bottom: 1px solid var(--color-gray);
+      overflow: hidden;
+    }
+    
+    .acc-category-title {
+      height: 35px;
+      background-color: #F6F8FB;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      padding-right: 10px;
+      gap: 10px;
+      font-size: 1em;
+      font-weight: 400;
+      color: #182336;
+      cursor: pointer;
+      position: relative;
+    }
+    
+    .acc-category-title::after {
+      content: '>';
+      font-size: 1.3em;
+      color: var(--color-gray);
+      transition: transform 0.3s;
+      transform: rotate(90deg);
+    }
+    
+    .acc-category-title.active::after {
+      transform: rotate(-90deg);
+    }
+      
+      .acc-category-options {
+        display: none;
+        flex-direction: column;
+        border-top: var(--color-dark) 1px solid;
+      }
+      .accordion a{
+        text-decoration: none;
+        color: var(--color-dark);
+      }
+
+
+    
+    .option {
+      height: 26px;
+      font-size: .85em;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      background-color: #FFFFFF;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      gap: 10px;
+      padding-right: 10px;
+    }
+      .option span{
+      font-size: .8em;  
+      color: #c3c3c3;
+    }
+    
+    
+     .option:hover {
+      background-color: #CCCAFF;
+    }
+     .option:hover span{
+      color: #ffffffa2;
+    }
+    
+    .option.active {
+      background-color: #CCCAFF;
+    }
+    .option.active span{
+      color: #7a72ff;
+    }
+  
+    
+    .final-button {
+      height: 35px;
+      font-size: 1em;
+    }
+    .hd-tb-top{
+      width: 100%;
+    }
+    .hd-tb-header{
+      background-color: #EEF4FE;
+      width: 100%;
+      height: 31px;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      flex-direction: row;
+      font-size: .7em;
+    }
+    .hd-tb-col-a{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: right;
+      background-color: #C7DBFA;
+      padding-right: 15px;
+    }
+    .hd-tb-col-b{
+      width: 280px;
+      height: 100%;
+      padding: 0 15px;
+      border-left: 1px solid var(--color-border);
+      display: flex;
+      
+      align-items: center;
+      justify-content: center;
+    }
+    .col-b{
+      flex-direction: column;
+    }
+    .col-g{
+      color: var(--color-gray);
+    }
+    .hd-tb-col-b p, .hd-tb-col-a p{
+      margin: 0;
+      padding: 0;
+
+    }
+    .hd-tb-row{
+      width: 100%;
+      height: 35px;
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .hd-tb-row > .hd-tb-col-b{
+      font-weight: 500;
+    }
+    .hd-tb-title{
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+    /* TERMINA WIDGET HAB INTELECTUAL DETALLE */
