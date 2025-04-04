@@ -2403,8 +2403,63 @@
     }
     /* TERMINA WIDGET HAB INTELECTUAL DETALLE */
 
-
-
+    /* INICIA WIDGET BALANCE PSICOSOCIAL */
+    
+    .bp-tb-content{
+      border-bottom: 1px solid var(--color-border);
+      border-top: 1px solid var(--color-border);
+      margin: 10px 0;
+      color: var(--color-dark);
+    }
+    .bp-tb-row-h{
+      height: 26px;
+      display: flex; 
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--color-border);
+      font-size: .8em;
+    }
+    .bp-tb-row{
+      height: 65px;
+      display: flex; 
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .bp-tb-cell-a{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 1.1em;
+    }
+    .bp-tb-cell-a > .bp-title{
+      height: 2lh;
+      width: 15ch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bp-tb-cell-b{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-left: 1px solid var(--color-border);
+    }
+    .bp-tb-cell-b p{
+      margin: 0;
+      padding: 0;
+    }
+    .bp-cb-g{background-color:#83DE98 ;}
+    .bp-cb-y{background-color:#F0F355 ;}
+    .bp-cb-o{background-color:#F29A5B ;}
+    .bp-cb-r{background-color:#FE4548 ;}
+    .bp-tb-row > .bp-tb-cell-a{
+      background-color: #A9A5FA;
+    }
+    /* TERMINA WIDGET BALANCE PSICOSOCIAL */
 
 
     @media (max-width: 768px) {
@@ -2666,6 +2721,10 @@
         .is-nps-tb {
           height: 120px;
         }
+        .bp-tb-row > .bp-tb-cell-a{
+          
+          font-size: .7em;
+        }
       }
 
 
@@ -2856,5 +2915,20 @@
         .hd-tb-row{
           height: 70px;
         }
+        .bp-tb-row{
+          height: 100px;
+        }
+        .bp-tb-cell-a {
+          flex-direction: column-reverse;
+          overflow: hidden;
+        }
+        .bp-tb-cell-a > .bp-title{
+          width: 5ch;
+          font-size: .5em;
 
+        }
+        .bp-tb-row-h > .bp-tb-cell-b{
+          overflow: hidden;
+          font-size: .7em;
+        }
       }
