@@ -2461,6 +2461,170 @@
     }
     /* TERMINA WIDGET BALANCE PSICOSOCIAL */
 
+    /* INICIA PREFERENCIAS DE APRENDIZAJE */
+
+    .pa-d-content{
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      justify-content: center;
+      margin: 10px 0 10px 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .pa-d-col-a{
+      width: fit-content;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--color-border);
+    }
+    .pa-d-col-b{
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .pa-c-title{
+      width: 100%;
+      height: 26px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      font-size: .9em;
+      font-weight: 600;
+      color: var(--color-dark);
+      background-color: #eef4fe;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .pa-tb-header{
+      width: 100%;
+      height: 29px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5px 0 5px;
+      gap:5px;
+      font-size: .8em;
+      font-weight: 600;
+      color: var(--color-white);
+    }
+    .pa-tb-per{
+      padding: 10px 0 2px 0;
+    }
+    .pa-h-cell-a{
+      width: 126px;
+      height: 29px;
+
+    }
+    .pa-h-cell{
+      width: 210px;
+      height: 29px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px 4px 0 0;
+    }
+    .pa-h-cell-2{
+      width: 119px;
+      height: 29px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px 4px 0 0;
+    }
+    .pa-c-r{
+      background-color: #E74E4E;
+    }
+    .pa-c-y{
+      background-color: #E5BB31;
+    }
+    .pa-c-g{
+      background-color: #00A652;
+    }
+    .pa-c-cell{
+      width: 100%;
+      height: fit-content;
+      padding: 10px 0;
+    }
+    .pa-tb-row{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      padding: 3px 5px;
+      gap: 5px;
+    }
+    .pa-tb-pref{
+      width: 127px;
+      height: 83px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      border-radius: 4px 0 0 4px;
+      background-color: #A9A5FA;
+    }
+    .pa-tb-gp-bars{
+      width: 644px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .pa-tb-gp-bars-2{
+      width: 369px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .pa-bar-al{
+      width: 85%;
+      height: 39px;
+      border-radius: 0 4px 4px 0 ;
+      background-color: #CCCAFF;
+    }
+    .pa-bar-mt{
+      width: 50%;
+      height: 39px;
+      border-radius: 0 4px 4px 0 ;
+      background-color: #DFE4EF;
+    }
+
+    .pa-bar-al , .pa-bar-mt{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 15px;
+    }
+    .pb-b-data{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: .8em;
+      color: var(--color-dark);
+    }
+    .bar-tag{
+      width: 100%;
+      
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .bar-data{
+      font-weight: 600;
+    }
+    .pref-title{
+      line-height: 11px;
+    }
+    /* INICIA PREFERENCIAS DE APRENDIZAJE */
 
     @media (max-width: 768px) {
       .logo-bar {
