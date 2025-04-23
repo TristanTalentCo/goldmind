@@ -747,7 +747,7 @@
 
 
 .is-icon-content {
-  width: 60px;
+  width: 0;
   height: 60px;
   display: flex;
   align-items: center;
