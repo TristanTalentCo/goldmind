@@ -25,7 +25,7 @@
   
 </head>
 
-<body>
+<body class="no-scroll">
 
 <header>
     <div class="logo-bar">
@@ -34,6 +34,10 @@
           <span class="Goldmind">Goldmind</span>
         </div>
         <div class="user-actions">
+          <div class="user-actions-inst-logo">
+            <span class="nombre-institucion user-inst-name" id="headIstName">Placeholder Nombre de la Institución</span>
+            <img src="img/logo/inst-logo.png" alt="">
+          </div>
           <div data-tooltip-id="ttGolIns" class="btn-gm-insights btn-modal"><img src="img/icon/bulb.svg" alt="Ver Goldmind Insights"></div>
           <div class="user-container">
             <div class="profile-pic"></div>
@@ -1153,11 +1157,8 @@
   <!-- INICIA FOOTER BAR -->
   <footer class="footer-bar">
     <div class="footer-container">
-      <a href="terms.html" class="footer-link">Términos y condiciones</a>
-      <a href="policy.html" class="footer-link">Política de uso</a>
-      <a href="privacy.html" class="footer-link">Acuerdo de privacidad</a>
-      <a href="support.html" class="footer-link">Soporte técnico</a>
-      <p class="footer-link">Lexium - © Derechos Reservados 2025</p>
+      <a href="https://www.lexiumonline.com/politicas/" class="footer-link">Acuerdo de privacidad</a>
+      <p class="footer-text">Lexium - © Derechos Reservados 2025</p>
     </div>
   </footer>
   <!-- TERMINA FOOTER BAR -->
@@ -1420,7 +1421,7 @@
           <div class="slogan-text">Business Intelligence</div>
         </div>
         <div class="is-subtitle">
-          <p class="subtitle-text">Skills Analytics  VoC VoE</p>
+          <p class="subtitle-text">Skills Analytics / VoC VoE</p>
         </div>
         <div class="is-content">
           <div class="is-content-top">
@@ -1442,58 +1443,60 @@
             </div>
           </div>
           <div class="is-content-bttm">
-            <div class="is-tb-header">
-              <div class="Preparatoria">Preparatoria</div>
-            </div>
-            <div class="is-tb-tags">
-              <div class="tag-a">
-                <div class="Indice de:">Indice de:</div>
+            <div class="is-tb-main">
+              <div class="is-tb-header">
+                <div>Preparatoria</div>
               </div>
-              <div class="tag-b">
-                <div class="Bajo">Bajo</div>
+              <div class="is-tb-tags">
+                <div class="tag-a">
+                  <div>Indice de:</div>
+                </div>
+                <div class="tag-b">
+                  <div>Bajo</div>
+                </div>
+                <div class="tag-b">
+                  <div>Medio</div>
+                </div>
+                <div class="tag-b">
+                  <div>Alto</div>
+                </div>
+                <div class="tag-b">
+                  <p>Desviación Estándar</p>
+                </div>
               </div>
-              <div class="tag-b">
-                <div class="Medio">Medio</div>
+              <div class="is-tb-row">
+                <div class="is-cell-a">
+                  <p>Habilidades Intelectuales</p>
+                </div>
+                <div class="is-cell-b">
+                  <p class="51" id="intA">51</p>
+                </div>
+                <div class="is-cell-b">
+                  <p class="51" id="intB">51</p>
+                </div>
+                <div class="is-cell-b">
+                  <p class="51" id="intC">51</p>
+                </div>
+                <div class="is-cell-b">
+                  <p class="15" id="intD">15</p>
+                </div>
               </div>
-              <div class="tag-b">
-                <div class="Alto">Alto</div>
-              </div>
-              <div class="tag-b">
-                <div class="Desviación Estándar">Desviación Estándar</div>
-              </div>
-            </div>
-            <div class="is-tb-row">
-              <div class="is-cell-a">
-                <p>Habilidades Intelectuales</p>
-              </div>
-              <div class="is-cell-b">
-                <p class="51" id="intA">51</p>
-              </div>
-              <div class="is-cell-b">
-                <p class="51" id="intB">51</p>
-              </div>
-              <div class="is-cell-b">
-                <p class="51" id="intC">51</p>
-              </div>
-              <div class="is-cell-b">
-                <p class="15" id="intD">15</p>
-              </div>
-            </div>
-            <div class="is-tb-row">
-              <div class="is-cell-a">
-                <p>Habilidades Socioemocionales</p>
-              </div>
-              <div class="is-cell-b is-sign-r">
-                <p class="51" id="socA">51</p>
-              </div>
-              <div class="is-cell-b is-sign-y">
-                <p class="51" id="socB">51</p>
-              </div>
-              <div class="is-cell-b is-sign-g">
-                <p class="63" id="socC">63</p>
-              </div>
-              <div class="is-cell-b">
-                <p class="16" id="socD">16</p>
+              <div class="is-tb-row">
+                <div class="is-cell-a">
+                  <p>Habilidades Socioemocionales</p>
+                </div>
+                <div class="is-cell-b is-sign-r">
+                  <p class="51" id="socA">51</p>
+                </div>
+                <div class="is-cell-b is-sign-y">
+                  <p class="51" id="socB">51</p>
+                </div>
+                <div class="is-cell-b is-sign-g">
+                  <p class="63" id="socC">63</p>
+                </div>
+                <div class="is-cell-b">
+                  <p class="16" id="socD">16</p>
+                </div>
               </div>
             </div>
           </div>
