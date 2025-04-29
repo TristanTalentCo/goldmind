@@ -45,7 +45,7 @@
 
     .logo-bar {
       background-color: var(--color-white);
-      height: 56px;
+      height: 80px;
       border-bottom: 1px solid var(--color-border);
     }
 
@@ -69,7 +69,11 @@
       user-select: none;
       -webkit-user-select: none;
     }
-
+    .user-actions-inst-logo{
+      width: fit-content;
+      height: 60px;
+      margin-right: 20px;
+    }
     .btn-gm-insights {
       width: 35px;
       height: 35px;
@@ -126,6 +130,9 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+    }
+    .user-inst-name {
+      display: none;
     }
 
     .title-bar {
@@ -747,7 +754,11 @@
 
 
 .is-icon-content {
+<<<<<<< HEAD
   width: 0;
+=======
+  width: fit-content;
+>>>>>>> 0289700ba6a8b6f7291d489165540e44d10ced01
   height: 60px;
   display: flex;
   align-items: center;
@@ -1269,11 +1280,11 @@
 /* INICIA WIDGET CHART */
 .chart-gp{
   width: 100%;
-  height: 255px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 10px 10px;
   gap: 5px;
 
@@ -1695,6 +1706,13 @@
       z-index: 999;
       user-select: none;
       -webkit-user-select: none;
+<<<<<<< HEAD
+=======
+    }
+.footer-bar p{
+      margin: 0;
+      padding: 0;
+>>>>>>> 0289700ba6a8b6f7291d489165540e44d10ced01
     }
 
     .footer-container {
@@ -1852,6 +1870,13 @@
     }
 
     .is-content-bttm {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .is-tb-main{
       width: 500px;
       height: fit-content;
       border: 1px solid rgba(4, 32, 69, 0.1);
@@ -2945,6 +2970,10 @@
           width: 120px;
           overflow: hidden;
         }
+        .footer-bar{
+          display: flex;
+          position: relative;
+        }
       }
 
 
@@ -3235,6 +3264,7 @@
           padding: 5px 0;
           font-weight: 600;
         }
+<<<<<<< HEAD
         
       .footer-bar {
         height: fit-content;
@@ -3249,4 +3279,27 @@
        padding: 0;
        margin: 0;
       }
+=======
+        .is-tb-main{
+          width: 90%;
+        }
+        .is-tb-header{
+          height: 35px;
+        }
+        .is-tb-row{
+          height: 60px;
+        }
+        .tag-b p{
+          width: 6ch;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .footer-container{
+          flex-direction: column;
+        }
+        .user-actions-inst-logo{
+          display: none;
+        }
+>>>>>>> 0289700ba6a8b6f7291d489165540e44d10ced01
       }
