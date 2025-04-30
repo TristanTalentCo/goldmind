@@ -104,7 +104,7 @@
               <div class="wg-actions-gp">
                 <div class="act-btns">
                   <a href="#" class="btn-sq-gray" onclick="takeScreenshot('voc')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                    <a href="#" data-tooltip-id="ttVoc" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                  <a href="#" data-tooltip-id="ttVoc" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                 </div>
                 <div class="act-detail">
                     <a href="voc-detalle.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
@@ -116,7 +116,7 @@
 
           <!--Inicia Widget Status bar -->
           <div class="wg-status-bar">
-            <div class="wg-st-a">
+            <div class="wg-st-a"> 
               <p class="st-data">Filtrado por:</p>
               <p class="st-data" id="statusA">Data A</p>
             </div>
@@ -1513,21 +1513,7 @@
     <script src="js/tip.js"></script>
     <script src="js/accordion.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script>
-      function takeScreenshot(divId) {
-        const element = document.getElementById(divId);
-        if (element) {
-          html2canvas(element).then(canvas => {
-            const link = document.createElement('a');
-            link.download = `${divId}-gm.png`;
-            link.href = canvas.toDataURL();
-            link.click();
-          });
-        } else {
-          console.error(`Element with ID "${divId}" not found.`);
-        }
-      }
-    </script>
+    <script src="js/screenshot.js"></script>
 </body>
 
 </html>

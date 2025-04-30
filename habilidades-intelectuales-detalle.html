@@ -129,7 +129,7 @@
 
 
           <!--Inicia Widget-->
-          <div class="widget-layout">
+          <div class="widget-layout" id="detallehabintelectuales">
             <!--Inicia Widget Title bar -->
             <div class="wg-top">
               <div class="wg-title-bar">
@@ -138,8 +138,7 @@
                 </div>
                 <div class="wg-actions-gp">
                   <div class="act-btns">
-                    <a href="#" class="btn-sq-gray"><img src="img/icon/share.svg" alt="Compartir este indicador"></a>
-                    <a href="#" class="btn-sq-gray"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallehabintelectuales')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
                     <a href="#" data-tooltip-id="ttHabInt" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                 </div>
                   <div class="act-detail">
@@ -682,6 +681,8 @@
   <script src="js/tooltip.js"></script>
   <script src="js/tip.js"></script>
   <script src="js/accordion.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="js/screenshot.js"></script>
 </body>
 
 </html>
