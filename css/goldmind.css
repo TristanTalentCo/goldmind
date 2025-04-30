@@ -608,7 +608,7 @@
 }
 
 .wg-actions-gp {
-  width: 160px;
+  width: fit-content;
   display: flex;
   align-items: center;
   justify-content: space-between;
