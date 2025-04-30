@@ -48,6 +48,8 @@
       height: 80px;
       border-bottom: 1px solid var(--color-border);
     }
+    .logo-bar p{
+      }
 
     .logo-bar-container {
       display: flex;
