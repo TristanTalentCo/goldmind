@@ -700,8 +700,28 @@
   height: fit-content;
   display: flex; 
   flex-direction: column;
+  align-items: center;
   user-select: none;
   -webkit-user-select: none;
+}
+.voc-content , .voc-content-detail{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+}
+.voc-content iframe{
+  width: 100%;
+  height: 400px;
+  
+}
+.voc-content-detail iframe{
+  width: 100%;
+  height: 400px;
+  
 }
 .wg-legend{
   width: 100%;
