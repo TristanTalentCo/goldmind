@@ -26,6 +26,9 @@
       -webkit-user-select: none;
       user-select: none;
     }
+    .logo img{
+      height: 50px;
+    }
     body {
 
       font-family: 'Poppins', sans-serif;
@@ -1811,6 +1814,9 @@
       padding: 0;
       font-size: 48px;
       font-weight: var(--font-weight-bold);
+    }
+    .logo-text img{
+      height: 80px;
     }
 
     .slogan-text {
