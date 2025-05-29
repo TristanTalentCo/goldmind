@@ -1829,7 +1829,7 @@
 
     .is-subtitle {
       width: 100%;
-      height: 54px;
+      height: 40px;
       background-color: #53b5ff;
       display: flex;
       align-items: center;
@@ -1866,7 +1866,7 @@
 
     .is-nps-tb {
       width: 245px;
-      height: 165px;
+      height: 120px;
       border: 1px solid rgba(4, 32, 69, 0.1);
       border-radius: 4px;
       display: flex;
@@ -1876,7 +1876,7 @@
 
     .nps-header {
       width: 100%;
-      height: 80px;
+      height: 60px;
       background-color: rgba(232, 245, 255, 0.85);
       
       display: flex;
@@ -1892,7 +1892,7 @@
 
     .nps-cell {
       width: 100%;
-      height: 80px;
+      height: 60px;
       border-top: 1px solid rgba(4, 32, 69, 0.1);
       display: flex;
       align-items: center;
@@ -1927,7 +1927,7 @@
 
     .is-tb-header {
       width: 100%;
-      height: 50px;
+      height: 40px;
       background-color: rgba(232, 245, 255, 0.85);
 
       display: flex;
@@ -1942,7 +1942,7 @@
 
     .is-tb-tags {
       width: 100%;
-      height: 50px;
+      height: 40px;
       color: #6c7a91;
       font-size: .8em;
       background-color: rgba(232, 245, 255, 0.85);
@@ -1971,7 +1971,7 @@
 
     .is-tb-row {
       width: 100%;
-      height: 100px;
+      height: 75px;
       border-top: 1px solid rgba(4, 32, 69, 0.1);
       display: flex;
       flex-direction: row;
