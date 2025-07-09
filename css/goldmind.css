@@ -2339,6 +2339,7 @@
     /* INICIA WIDGET BALANCE PSICOSOCIAL */
     
     .bp-tb-content{
+      width: 100%;
       border-bottom: 1px solid var(--color-border);
       border-top: 1px solid var(--color-border);
       margin: 10px 0;
