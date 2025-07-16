@@ -1,0 +1,990 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Goldmind - Business Intelligence</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/goldmind.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+  
+  
+</head>
+
+<body>
+
+<header>
+    <div class="logo-bar">
+      <div class="logo-bar-container">
+        <div class="logo">
+          <img src="img/logo/goldmind.svg" alt="Goldmind Business Intelligence">
+        </div>
+        <div class="user-actions">
+          <div data-tooltip-id="ttGolIns" class="btn-gm-insights btn-modal"><img src="img/icon/bulb.svg" alt="Ver Goldmind Insights"></div>
+          <div class="user-container">
+            <div class="profile-pic"></div>
+            <div class="user-info">
+                <div class="user-info-name">
+                <p class="User-Name" id="headUserName">Nombre de Usuario Extenso</p>
+              </div>
+              <div class="user-info-position">
+                <p class="user-position" id="headUserPositon">Administrador de la institución educativa</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="title-bar">
+      <div class="title-wrap">
+        <div class="title-bar-container">
+            <span class="nombre-institucion" id="headIstName">Placeholder Nombre de la Institución</span>
+        </div>
+        <div class="title-bar-access">
+          <div class="btn-acc-qp">
+            <span class="Acceso-a">Acceso a</span>
+            <img src="img/logo/questionpro-logo-white.svg" alt="">
+          </div>
+          <div class="btn-acc-lx">
+            <span class="Acceso-a">Acceso a</span>
+            <img src="img/logo/lexium-logo.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="main-container">
+      <div class="ins-name-container">
+        <span class="nombre-institucion" id="headIstName">Placeholder Nombre de la Institución</span>
+      </div>
+      
+
+      <div class="wr-title-bar ">
+        <div class="wr-tb-content">
+          <div class="wr-tb-gp">
+            <div class="wr-category-title">
+              <p class="category-title" id="categoryTitle2">CARE -Captación, Admisión, Retención</p>
+            </div>
+            <div class="wr-subtitle">
+              <p class="category-subtitle" id="categorySubtitle2">Powered by Lexium</p>
+            </div>
+          </div>
+          <div class="wg-filter">
+            <div class="form">
+              <div class="fl-title">
+                <p>Elegir Nivel Educativo</p>
+              </div>
+              <div>
+                <select class="select" id="nivel-educativo" name="nivel-educativo">
+                  <option value="primaria">Primaria</option>
+                  <option value="secundaria">Secundaria</option>
+                  <option value="preparatoria">Preparatoria</option>
+                </select>
+              </div>
+                <button class="btn-acc-lx btn-width">Aplicar</button>
+            </div>
+            <div class="ft-sync">
+              <div class="ft-sync-date">
+                <p>Última sincronización:</p>
+                <p class="date">01/01/2023</p>
+              </div>
+              <a href="#" data-tooltip-id="ttSync" class="btn-sq-blue-m btn-modal"><img src="img/icon/history.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        <!--Inicia Widget Row -->
+        <div class="widget-row-a">
+
+
+          <!--Inicia Widget-->
+          <div class="widget-layout" id="detallebalpsicosocial">
+            <!--Inicia Widget Title bar -->
+            <div class="wg-top">
+              <div class="wg-title-bar">
+                <div class="wg-title">
+                  <p class="widget-title">Captación</p>
+                </div>
+                <div class="wg-actions-gp">
+                  <div class="act-btns">
+                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallebalpsicosocial')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" data-tooltip-id="ttBalPsi" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                </div>
+                  <div class="act-detail">
+                      <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Termina Widget Title bar -->
+  
+            <!--Inicia Widget Status bar -->
+            <div class="wg-status-bar">
+              <div class="wg-st-a">
+                <p class="st-data">Filtrado por:</p>
+                <p class="st-data" id="statusA">Data A</p>
+              </div>
+              <div class="wg-st-b">
+                <p class="st-data">Periodo:</p>
+                <p class="st-data">Data B</p>
+              </div>
+            </div>
+            <!--Termina Widget Status bar -->
+  
+            <!--Inicia Widget Content -->
+            <div class="wg-content">
+              <div class="care-container">
+                <div class="care-row">
+                  <div class="care-col cap1">
+                    <div class="care-title-bar">
+                      <h4 class="care-title">Institución de origen de los aspirantes</h4>
+                    </div>
+                    <div class="care-content">
+                      <div class="frame-content">
+                        <div class="care-h-row">
+                          <div class="care-h-capsule cb-g1">
+                            <div class="care-h-a"><p>Institución</p></div>
+                            <div class="care-h-b"><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                        </div>
+                        <div class="care-h-row">
+                          <div class="care-h-capsule cb-g1">
+                            <div class="care-h-a"><p>Institución</p></div>
+                            <div class="care-h-b"><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                        </div>
+                        <div class="care-h-row">
+                          <div class="care-h-capsule cb-g1">
+                            <div class="care-h-a"><p>Institución</p></div>
+                            <div class="care-h-b"><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                        </div>
+                        <div class="care-h-row">
+                          <div class="care-h-capsule cb-g1">
+                            <div class="care-h-a"><p>Institución</p></div>
+                            <div class="care-h-b"><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                        </div>
+                        <div class="care-h-row">
+                          <div class="care-h-capsule cb-g1">
+                            <div class="care-h-a"><p>Institución</p></div>
+                            <div class="care-h-b"><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                        </div>
+                        <div class="care-h-row">
+                          <div class="care-h-capsule cb-g1">
+                            <div class="care-h-a"><p>Institución</p></div>
+                            <div class="care-h-b"><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                        </div>
+                        <div class="care-h-row">
+                          <div class="care-h-capsule cb-g1">
+                            <div class="care-h-a"><p>Institución</p></div>
+                            <div class="care-h-b"><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                        </div>
+                        <div class="care-h-row">
+                          <div class="care-h-capsule cb-g1">
+                            <div class="care-h-a"><p>Institución</p></div>
+                            <div class="care-h-b"><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                        </div>
+                        <div class="care-h-row">
+                          <div class="care-h-capsule cb-g1">
+                            <div class="care-h-a"><p>Institución</p></div>
+                            <div class="care-h-b"><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                        </div>
+                        <div class="care-h-row">
+                          <div class="care-h-capsule cb-g1">
+                            <div class="care-h-a"><p>Institución</p></div>
+                            <div class="care-h-b"><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                          <div class="care-h-cell cb-g1">
+                            <div class="care-h-b "><p>888</p></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="care-col ">
+                    <div class="care-title-bar">
+                      <h4 class="care-title">Inclinación de aspirantes  por área educativa</h4>
+                    </div>
+                    <div class="care-content">
+                      <div class="frame-content">
+                        <p>contenido</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="care-row">
+                  <div class="care-col cap3">
+                    <div class="care-title-bar">
+                      <h4 class="care-title">Orden de los motivadores de los aspirantes</h4>
+                    </div>
+                    <div class="care-content">
+                      <div class="frame-content">
+                        <p>contenido</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="care-col">
+                    <div class="care-title-bar">
+                      <h4 class="care-title">Estilo predominante de aprendizaje de los aspirantess</h4>
+                    </div>
+                    <div class="care-content">
+                      <div class="frame-content">
+                        <p>contenido</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!--Termina Widget Content -->
+  
+
+          </div>
+          <!--Termina Widget-->
+
+          
+        </div>
+        <!--Termina Widget Row -->
+    </div>
+    <div class="main-container">
+      <div class="ins-name-container">
+        <span class="nombre-institucion" id="headIstName">Placeholder Nombre de la Institución</span>
+      </div>
+      
+
+      <div class="wr-title-bar ">
+        <div class="wr-tb-content">
+          <div class="wr-tb-gp">
+            <div class="wr-category-title">
+              <p class="category-title" id="categoryTitle2">CARE -Captación, Admisión, Retención</p>
+            </div>
+            <div class="wr-subtitle">
+              <p class="category-subtitle" id="categorySubtitle2">Powered by Lexium</p>
+            </div>
+          </div>
+          <div class="wg-filter">
+            <div class="form">
+              <div class="fl-title">
+                <p>Elegir Nivel Educativo</p>
+              </div>
+              <div>
+                <select class="select" id="nivel-educativo" name="nivel-educativo">
+                  <option value="primaria">Primaria</option>
+                  <option value="secundaria">Secundaria</option>
+                  <option value="preparatoria">Preparatoria</option>
+                </select>
+              </div>
+                <button class="btn-acc-lx btn-width">Aplicar</button>
+            </div>
+            <div class="ft-sync">
+              <div class="ft-sync-date">
+                <p>Última sincronización:</p>
+                <p class="date">01/01/2023</p>
+              </div>
+              <a href="#" data-tooltip-id="ttSync" class="btn-sq-blue-m btn-modal"><img src="img/icon/history.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        <!--Inicia Widget Row -->
+        <div class="widget-row-a">
+
+
+          <!--Inicia Widget-->
+          <div class="widget-layout" id="detallebalpsicosocial">
+            <!--Inicia Widget Title bar -->
+            <div class="wg-top">
+              <div class="wg-title-bar">
+                <div class="wg-title">
+                  <p class="widget-title">Retención</p>
+                </div>
+                <div class="wg-actions-gp">
+                  <div class="act-btns">
+                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallebalpsicosocial')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" data-tooltip-id="ttBalPsi" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                </div>
+                  <div class="act-detail">
+                      <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Termina Widget Title bar -->
+  
+            <!--Inicia Widget Status bar -->
+            <div class="wg-status-bar">
+              <div class="wg-st-a">
+                <p class="st-data">Filtrado por:</p>
+                <p class="st-data" id="statusA">Data A</p>
+              </div>
+              <div class="wg-st-b">
+                <p class="st-data">Periodo:</p>
+                <p class="st-data">Data B</p>
+              </div>
+            </div>
+            <!--Termina Widget Status bar -->
+  
+            <!--Inicia Widget Content -->
+            <div class="wg-content">
+              <div class="care-container">
+                <div class="care-row">
+                  <div class="care-col ">
+                    <div class="care-title-bar">
+                      <h4 class="care-title">Habilidades bajas relacionadas con el riesgo de abandono alto</h4>
+                    </div>
+                    <div class="care-content">
+                      <div class="frame-content">
+                        <p>contenido</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="care-row">
+
+                  <div class="care-col">
+                    <div class="care-title-bar">
+                      <h4 class="care-title">Percepción por el alumno de los factores contextuales que pueden determinar el riesgo de abandono </h4>
+                    </div>
+                    <div class="care-content">
+                      <div class="frame-content">
+                        <p>contenido</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!--Termina Widget Content -->
+  
+
+          </div>
+          <!--Termina Widget-->
+
+          
+        </div>
+        <!--Termina Widget Row -->
+    </div>
+
+    <div class="main-container">
+      <div class="ins-name-container">
+        <span class="nombre-institucion" id="headIstName">Placeholder Nombre de la Institución</span>
+      </div>
+      
+
+      <div class="wr-title-bar ">
+        <div class="wr-tb-content">
+          <div class="wr-tb-gp">
+            <div class="wr-category-title">
+              <p class="category-title" id="categoryTitle2">CARE -Captación, Admisión, Retención</p>
+            </div>
+            <div class="wr-subtitle">
+              <p class="category-subtitle" id="categorySubtitle2">Powered by Lexium</p>
+            </div>
+          </div>
+          <div class="wg-filter">
+            <div class="form">
+              <div class="fl-title">
+                <p>Elegir Nivel Educativo</p>
+              </div>
+              <div>
+                <select class="select" id="nivel-educativo" name="nivel-educativo">
+                  <option value="primaria">Primaria</option>
+                  <option value="secundaria">Secundaria</option>
+                  <option value="preparatoria">Preparatoria</option>
+                </select>
+              </div>
+                <button class="btn-acc-lx btn-width">Aplicar</button>
+            </div>
+            <div class="ft-sync">
+              <div class="ft-sync-date">
+                <p>Última sincronización:</p>
+                <p class="date">01/01/2023</p>
+              </div>
+              <a href="#" data-tooltip-id="ttSync" class="btn-sq-blue-m btn-modal"><img src="img/icon/history.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        <!--Inicia Widget Row -->
+        <div class="widget-row-a">
+
+
+          <!--Inicia Widget-->
+          <div class="widget-layout" id="detallebalpsicosocial">
+            <!--Inicia Widget Title bar -->
+            <div class="wg-top">
+              <div class="wg-title-bar">
+                <div class="wg-title">
+                  <p class="widget-title">Admisión</p>
+                </div>
+                <div class="wg-actions-gp">
+                  <div class="act-btns">
+                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallebalpsicosocial')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" data-tooltip-id="ttBalPsi" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                </div>
+                  <div class="act-detail">
+                      <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Termina Widget Title bar -->
+  
+            <!--Inicia Widget Status bar -->
+            <div class="wg-status-bar">
+              <div class="wg-st-a">
+                <p class="st-data">Filtrado por:</p>
+                <p class="st-data" id="statusA">Data A</p>
+              </div>
+              <div class="wg-st-b">
+                <p class="st-data">Periodo:</p>
+                <p class="st-data">Data B</p>
+              </div>
+            </div>
+            <!--Termina Widget Status bar -->
+  
+            <!--Inicia Widget Content -->
+            <div class="wg-content">
+              <div class="care-container">
+                <div class="care-row">
+                  <div class="care-col ">
+                    <div class="care-title-bar">
+                      <h4 class="care-title">Resultados KP</h4>
+                    </div>
+                    <div class="care-content">
+                      <div class="frame-content">
+                        <p>contenido</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!--Termina Widget Content -->
+  
+
+          </div>
+          <!--Termina Widget-->
+
+          
+        </div>
+        <!--Termina Widget Row -->
+        <!--Inicia Widget Row -->
+        <div class="widget-row-a">
+
+
+          <!--Inicia Widget-->
+          <div class="widget-layout" id="detallebalpsicosocial">
+            <!--Inicia Widget Title bar -->
+            <div class="wg-top">
+              <div class="wg-title-bar">
+                <div class="wg-title">
+                  <p class="widget-title">Habilidades Intelectuales</p>
+                </div>
+                <div class="wg-actions-gp">
+                  <div class="act-btns">
+                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallebalpsicosocial')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" data-tooltip-id="ttBalPsi" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                </div>
+                  <div class="act-detail">
+                      <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Termina Widget Title bar -->
+  
+            <!--Inicia Widget Status bar -->
+            <div class="wg-status-bar">
+              <div class="wg-st-a">
+                <p class="st-data">Filtrado por:</p>
+                <p class="st-data" id="statusA">Data A</p>
+              </div>
+              <div class="wg-st-b">
+                <p class="st-data">Periodo:</p>
+                <p class="st-data">Data B</p>
+              </div>
+            </div>
+            <!--Termina Widget Status bar -->
+  
+            <!--Inicia Widget Content -->
+            <div class="wg-content">
+              <div class="care-container">
+                <div class="care-row">
+                  <div class="care-col ">
+                    <div class="care-content">
+                      <div class="frame-content">
+                        <p>contenido</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!--Termina Widget Content -->
+  
+
+          </div>
+          <!--Termina Widget-->
+          <!--Inicia Widget-->
+          <div class="widget-layout" id="detallebalpsicosocial">
+            <!--Inicia Widget Title bar -->
+            <div class="wg-top">
+              <div class="wg-title-bar">
+                <div class="wg-title">
+                  <p class="widget-title">Habilidades Socioemocionales</p>
+                </div>
+                <div class="wg-actions-gp">
+                  <div class="act-btns">
+                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallebalpsicosocial')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" data-tooltip-id="ttBalPsi" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                </div>
+                  <div class="act-detail">
+                      <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Termina Widget Title bar -->
+  
+            <!--Inicia Widget Status bar -->
+            <div class="wg-status-bar">
+              <div class="wg-st-a">
+                <p class="st-data">Filtrado por:</p>
+                <p class="st-data" id="statusA">Data A</p>
+              </div>
+              <div class="wg-st-b">
+                <p class="st-data">Periodo:</p>
+                <p class="st-data">Data B</p>
+              </div>
+            </div>
+            <!--Termina Widget Status bar -->
+  
+            <!--Inicia Widget Content -->
+            <div class="wg-content">
+              <div class="care-container">
+                <div class="care-row">
+                  <div class="care-col ">
+                    <div class="care-content">
+                      <div class="frame-content">
+                        <p>contenido</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!--Termina Widget Content -->
+  
+
+          </div>
+          <!--Termina Widget-->
+
+          
+        </div>
+        <!--Termina Widget Row -->
+    </div>
+  </main>
+
+  <!-- INICIA FOOTER BAR -->
+  <footer class="footer-bar">
+    <div class="footer-container">
+      <a href="https://www.lexiumonline.com/politicas/" class="footer-link">Acuerdo de privacidad</a>
+      <p class="footer-text">Lexium - © Derechos Reservados 2025</p>
+    </div>
+  </footer>
+  <!-- TERMINA FOOTER BAR -->
+
+  <!-- INICIA MENU USER ACTIONS -->
+  <div class="user-actions-menu" id="userActionsMenu">
+    
+    <div class="ua-user-container">
+      <div class="profile-pic"></div>
+      <div class="ua-user-info">
+          <div class="user-info-name">
+          <p class="User-Name" id="headUserName">Nombre de Usuario Extenso</p>
+        </div>
+        <div class="user-info-position">
+          <p class="user-position" id="headUserPositon">Administrador de la institución educativa</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ua-accesos">
+        <a href="https://www.questionpro.com" class="ua-b-acc-qp">
+            <span class="text">Acceso a</span>
+            <img src="img/logo/questionpro-logo-white.svg" alt="">
+        </a>
+        <a href="https://www.lexium.com" class="ua-b-acc-lx">
+            <span class="text">Acceso a</span>
+            <img src="img/logo/lexium-logo.svg" alt="">
+        </a>
+    </div>
+    <div class="ua-cerrar">
+        <a href="logout.html" class="ua-btn-cerrar">
+            <img src="img/icon/logout.svg" alt="">
+            <span class="text">Cerrar Sesión</span>
+        </a>
+    </div>
+  </div>
+  <!-- TERMINA MENU USER ACTIONS -->
+
+    <!-- INICIA MODALES -->
+
+    <div class="tt-bg" id="ttHabInt">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Habilidades Intelectuales</p>
+            <div class="btn-close" onclick="closeTooltip('ttHabInt')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="ttText">Evalúa el razonamiento lógico, memoria y capacidades cognitivas clave de los estudiantes.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="ttHabSoc">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Habilidades Socioemocionales</p>
+            <div class="btn-close" onclick="closeTooltip('ttHabSoc')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="ttText">Mide la inteligencia emocional, manejo de emociones y habilidades sociales.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="ttPreApr">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Preferencias de Aprendizaje</p>
+            <div class="btn-close" onclick="closeTooltip('ttPreApr')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="ttText">Identifica los estilos de aprendizaje predominantes de los alumnos y maestros para personalizar la enseñanza.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="ttBalPsi">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Balance Psicosocial</p>
+            <div class="btn-close" onclick="closeTooltip('ttBalPsi')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="ttText">Está diseñado para identificar los pensamientos, sentimientos y conductas que una persona presenta y que pueden traducirse en factores de riesgo en alguna
+            o algunas de las siguientes variables relacionadas con el ámbito psicosocial: ansiedad, depresión, autoimagen negativa en redes sociales, adicción a la tecnología, tendencia a la autolesión, tendencia a ser bully y bajo control de impulsos.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="imEA">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Implicaciones: Enseñanza / Aprendizaje</p>
+            <div class="btn-close" onclick="closeTooltip('imEA')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="igText">Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. </p>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="imCR">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Implicaciones: Captación / Retención</p>
+            <div class="btn-close" onclick="closeTooltip('imCR')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="isgText">Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. </p>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="imAF">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Implicaciones: Administrativas / Financieras</p>
+            <div class="btn-close" onclick="closeTooltip('imAF')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="isgText">Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tt-bg" id="ttSync">
+      <div class="sync-modal">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Sincronizar</p>
+            <div class="btn-close" onclick="closeTooltip('ttSync')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <form action="">
+          <div class="sync-btm">
+            <div class="s-content">
+              <div class="s-col b-right">
+                <div class="single-select">
+                  <label for="singleSelect">Seleccionar Ciclo:</label>
+                  <select id="singleSelect" name="singleSelect">
+                    <option value="opcion1">Opción 1</option>
+                    <option value="opcion2">Opción 2</option>
+                    <option value="opcion3">Opción 3</option>
+                    <option value="opcion4">Opción 4</option>
+                  </select>
+                </div>
+                <div class="multi-select">
+                  <label for="multiSelect">Seleccionar Grados:</label>
+                  <select id="multiSelect" name="multiSelect" multiple>
+                    <option value="opcion1">Opción 1</option>
+                    <option value="opcion2">Opción 2</option>
+                    <option value="opcion3">Opción 3</option>
+                    <option value="opcion4">Opción 4</option>
+                  </select>
+                  <div class="single-select">
+                    <button class="btn-acc-qp">
+                      Buscar Evaluaciones
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="s-col">
+                <div class="multi-select">
+                  <label for="multiSelect">Seleccionar Evaluaciones:</label>
+                  <select id="multiSelect" name="multiSelect" multiple>
+                    <option value="opcion1">Opción 1</option>
+                    <option value="opcion2">Opción 2</option>
+                    <option value="opcion3">Opción 3</option>
+                    <option value="opcion4">Opción 4</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="s-btm">
+              <button class="btn-acc-lx">
+                Sincronizar
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="tt-bg" id="ttGolIns" style="display: none;">
+      <div class="insight-container">
+        <div class="is-top">
+          <div class="is-t-bar">
+            <div class="btn-close" onclick="closeTooltip('ttGolIns')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+          <div class="logo-text"><img src="img/logo/goldmind.svg" alt="Goldmind Business Intelligence"></div>
+          <div class="slogan-text">Business Intelligence</div>
+        </div>
+        <div class="is-subtitle">
+          <p class="subtitle-text">Skills Analytics / VoC VoE</p>
+        </div>
+        <div class="is-content">
+          <div class="is-content-top">
+            <div class="is-nps-tb">
+              <div class="nps-header">
+                <div class="nps-title">NPS</div>
+              </div>
+              <div class="nps-cell">
+                <p class="nps-q" id="NPS_data">NPS Q</p>
+              </div>
+            </div>
+            <div class="is-nps-tb">
+              <div class="nps-header">
+                <div class="nps-title">eNPS</div>
+              </div>
+              <div class="nps-cell">
+                <p class="nps-q" id="ENPS_data">NPS Q</p>
+              </div>
+            </div>
+          </div>
+        <div class="is-subtitle">
+          <p class="subtitle-text">Skills Analytics</p>
+        </div>
+          <div class="is-content-bttm">
+            <div class="is-tb-main">
+              <div class="is-tb-header">
+                <div>Preparatoria</div>
+              </div>
+              <div class="is-tb-tags">
+                <div class="tag-a">
+                  <div>Indice de:</div>
+                </div>
+                <div class="tag-b">
+                  <div>Bajo</div>
+                </div>
+                <div class="tag-b">
+                  <div>Medio</div>
+                </div>
+                <div class="tag-b">
+                  <div>Alto</div>
+                </div>
+                <div class="tag-b">
+                  <p>Desviación Estándar</p>
+                </div>
+              </div>
+              <div class="is-tb-row">
+                <div class="is-cell-a">
+                  <p>Habilidades Intelectuales</p>
+                </div>
+                <div class="is-cell-b">
+                  <p class="51" id="intA">51</p>
+                </div>
+                <div class="is-cell-b">
+                  <p class="51" id="intB">51</p>
+                </div>
+                <div class="is-cell-b">
+                  <p class="51" id="intC">51</p>
+                </div>
+                <div class="is-cell-b">
+                  <p class="15" id="intD">15</p>
+                </div>
+              </div>
+              <div class="is-tb-row">
+                <div class="is-cell-a">
+                  <p>Habilidades Socioemocionales</p>
+                </div>
+                <div class="is-cell-b is-sign-r">
+                  <p class="51" id="socA">51</p>
+                </div>
+                <div class="is-cell-b is-sign-y">
+                  <p class="51" id="socB">51</p>
+                </div>
+                <div class="is-cell-b is-sign-g">
+                  <p class="63" id="socC">63</p>
+                </div>
+                <div class="is-cell-b">
+                  <p class="16" id="socD">16</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="is-bttm"></div>
+      </div>
+    </div>
+
+
+    <div class="tippy-tt" id="tooltip" style="display: none; position: absolute;">
+      <p id="tooltipText">Descripción habilidad</p>
+    </div>
+
+    
+
+  <!-- TERMINA MODALES -->
+  
+ 
+
+  <script src="js/menu.js"></script>
+  <script src="js/tooltip.js"></script>
+  <script src="js/tip.js"></script>
+  <script src="js/accordion.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="js/screenshot.js"></script>
+</body>
+
+</html>
