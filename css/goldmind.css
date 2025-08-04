@@ -2732,16 +2732,49 @@
   font-size: .6em;
   color: var(--color-gray);
 }
-
+.inclinacion-content{
+  width: 100%;
+}
 .inc-chart{
   width: 100%;
-  height: 350px;
+  height: 450px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
+/* inicia chart tab switcher */
+
+.inc-tabs {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: end ;
+  margin: 8px 0 24px 0;
+  
+}
+.inc-tab-btn {
+  background: #dadada;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: .8em;  
+  font-weight: 600;
+  color: #333;
+  transition: background 0.2s;
+}
+.inc-tab-btn.active {
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+.it-l{
+  border-radius: 15px 0 0 15px;
+}
+.it-r{
+  border-radius: 0 15px 15px 0;
+}
+/* termina chart tab switcher */
 .cb-g1{
   background-color: #F2935C;
   border: 2px solid #F2935C;
@@ -2899,14 +2932,14 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap:8px;
+  gap:10px;
   font-weight: 500;
   font-size: .9em;
 }
 .care-v-capsule{
   display: flex; 
   flex-direction: column; 
-  width: 200px;
+  width: 230px;
   border-radius: var(--border-radius);
   overflow: hidden;
 }
@@ -2966,7 +2999,7 @@
 .care-rt-capsule{
   display: flex; 
   flex-direction: column; 
-  width: 460px;
+  width: 490px;
   border-radius: var(--border-radius);
   overflow: hidden;
 }
@@ -3005,6 +3038,54 @@
   justify-content: center;
   background-color: var(--color-white);
 }
+
+.hra-content{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  padding: 0 30px;
+  gap: 10px;
+}
+.hra-col{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.hra-title{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-dark);
+  font-size: .9em;
+  font-weight: 600;
+}
+.hra-capsule{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background-color: rgb(235, 0, 0);
+  color: var(--color-white);
+  gap: 5px;
+  font-size: .9em;
+  font-weight: 600;
+}
+
 /* termina retencion */
 
 
