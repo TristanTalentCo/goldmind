@@ -27,7 +27,7 @@
 
 <body class="no-scroll">
 
-<header>
+  <header>
     <div class="logo-bar">
       <div class="logo-bar-container">
         <div class="logo">
@@ -76,87 +76,19 @@
 
     <nav class="custom-navbar">
       <ul class="navbar-tabs">
-        <li class="navbar-tab active">Satisfacción - Voc / VoE</li>
-        <li class="navbar-tab">Skills Analytics</li>
-        <li class="navbar-tab">Captación</li>
-        <li class="navbar-tab">Admisión</li>
-        <li class="navbar-tab">Retención</li>
-        <li class="navbar-tab">Taking Care</li>
-        <div class="navbar-slider"></div>
+      <li class="navbar-tab active">Satisfacción - Voc / VoE</li>
+      <li class="navbar-tab">Skills Analytics</li>
+      <li class="navbar-tab">Captación</li>
+      <li class="navbar-tab">Admisión</li>
+      <li class="navbar-tab">Retención</li>
+      <div class="navbar-slider"></div>
       </ul>
     </nav>
-    <style>
-    .custom-navbar {
-      width: 1200px;
-      margin: 48px auto 0 auto;
-      position: relative;
-      background: #ffffff70;
-
-      border-radius: 8px;
-      overflow: visible;
-      font-family: inherit;
-      
-    }
-    .navbar-tabs {
-      display: flex;
-      position: relative;
-      list-style: none;
-      margin: 0;
-      padding: 0 0 0 0;
-      height: 44px;
-      align-items: center;
-    }
-    .navbar-tab {
-
-      flex: 1 1 0;
-      text-align: center;
-      cursor: pointer;
-      padding: 0 0;
-      line-height: 56px;
-      font-size: .8rem;
-      font-weight: 500;
-      color: #6C7A91;
-      position: relative;
-      z-index: 2;
-      transition: color 0.2s;
-      user-select: none;
-    }
-    .navbar-tab.active {
-      color: #6C7A91;
-
-
-      
-    }
-    .navbar-slider {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: calc(100% / 6);
-      height: 100%;
-      background: #EEF4FE;
-      border: 1px solid #CCE9FE;
-      border-radius: 8px;
-      z-index: 1;
-      transition: left 0.35s cubic-bezier(.4,0,.2,1);
-      box-shadow: 0 2px 8px rgba(5, 64, 242, 0.08);
-      pointer-events: none;
-    }
-    </style>
-    <script>
-    (function() {
-      const tabs = document.querySelectorAll('.navbar-tab');
-      const slider = document.querySelector('.navbar-slider');
-      tabs.forEach((tab, idx) => {
-        tab.addEventListener('click', function() {
-          document.querySelector('.navbar-tab.active').classList.remove('active');
-          tab.classList.add('active');
-          slider.style.left = `calc(${idx} * (100% / 6))`;
-        });
-      });
-    })();
-    </script>
+    <script src="js/gm-tab-nav.js"></script>
+    
 
     <div class="tab-content-container" >
+      <!-- Contenido de la pestaña Satisfacción -->
       <div id="tab-satisfaccion" class="tab-content" style="display:block;">
 
         
@@ -313,7 +245,16 @@
         
       </div>
       <!--Termina Widget Row -->
-      <div class="wr-title-bar second-titlebar">
+      </div>
+      <!-- Termina Contenido de la pestaña Satisfacción -->
+
+      <!-- Contenido de la pestaña Skills Analytics -->
+      <div id="tab-skills" class="tab-content" style="display:none;">        
+      <div class="ins-name-container">
+        <span class="nombre-institucion" id="headIstName">Placeholder Nombre de la Institución</span>
+      </div>
+                 
+      <div class="wr-title-bar ">
         <div class="wr-tb-content">
           <div class="wr-tb-gp">
             <div class="wr-category-title">
@@ -1233,14 +1174,15 @@
       <!--Termina Widget Row -->
 
       </div>
-      <div id="tab-skills" class="tab-content" style="background:#00ffa6;display:none;"></div>
+      <!--Termina Contenido de la pestaña Skills Analytics-->
+
+      <!--Inicia Contenido de la pestaña Captación-->
       <div id="tab-captacion" class="tab-content" style="display:none;">
         <div class="ins-name-container">
-        <span class="nombre-institucion" id="headIstName">Placeholder Nombre de la Institución</span>
-      </div>
-      
-
-      <div class="wr-title-bar ">
+          <span class="nombre-institucion" id="headIstName">Placeholder Nombre de la Institución</span>
+        </div>
+        
+        <div class="wr-title-bar ">
         <div class="wr-tb-content">
           <div class="wr-tb-gp">
             <div class="wr-category-title">
@@ -1253,7 +1195,7 @@
           <div class="wg-filter">
             <div class="form">
               <div class="fl-title">
-                <p>Elegir Nivel Educativo</p>
+                <p>Filtrar indicador por:</p>
               </div>
               <div>
                 <select class="select" id="nivel-educativo" name="nivel-educativo">
@@ -1273,7 +1215,7 @@
             </div>
           </div>
         </div>
-      </div>
+        </div>
 
 
         <!--Inicia Widget Row -->
@@ -1281,7 +1223,7 @@
 
 
           <!--Inicia Widget-->
-          <div class="widget-layout" id="detallebalpsicosocial">
+          <div class="widget-layout" id="detallecarecaptacion">
             <!--Inicia Widget Title bar -->
             <div class="wg-top">
               <div class="wg-title-bar">
@@ -1290,8 +1232,8 @@
                 </div>
                 <div class="wg-actions-gp">
                   <div class="act-btns">
-                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallebalpsicosocial')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                    <a href="#" data-tooltip-id="ttBalPsi" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallecarecaptacion')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" data-tooltip-id="ttCareCap" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                 </div>
                   <div class="act-detail">
                       <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
@@ -1318,13 +1260,147 @@
             <div class="wg-content">
               <div class="care-container">
                 <div class="care-row">
-                  <div class="care-col cap1">
+                  <div class="care-col cap1 cr-bn">
                     <div class="care-title-bar">
                       <h4 class="care-title">Institución de origen de los aspirantes</h4>
                     </div>
                     <div class="care-content">
                       <div class="frame-content">
-                        <p>contenido</p>
+                        <div class="origen-content">
+                          <div class="care-h-row">
+                            <div class="care-h-capsule ">
+                              <div class="care-h-a"></div>
+                              <div class="care-h-b"><p class="origen-header" id="ori-data">Total</p></div>
+                            </div>
+                            <div class="care-h-cell ">
+                              <div class="care-h-b "><p class="origen-header" id="ori-data">Hombres</p></div>
+                            </div>
+                            <div class="care-h-cell ">
+                              <div class="care-h-b "><p class="origen-header" id="ori-data">Mujeres</p></div>
+                            </div>
+                          </div>
+                          <div class="care-h-row">
+                            <div class="care-h-capsule cb-g1">
+                              <div class="care-h-a"><p id="ori-name">Institución</p></div>
+                              <div class="care-h-b"><p id="ori-data">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g1">
+                              <div class="care-h-b "><p id="ori-data-h">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g1">
+                              <div class="care-h-b "><p id="ori-data-m">888</p></div>
+                            </div>
+                          </div>
+                          <div class="care-h-row">
+                            <div class="care-h-capsule cb-g2">
+                              <div class="care-h-a"><p id="ori-name">Institución</p></div>
+                              <div class="care-h-b"><p id="ori-data">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g2">
+                              <div class="care-h-b "><p id="ori-data-h">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g2">
+                              <div class="care-h-b "><p id="ori-data-m">888</p></div>
+                            </div>
+                          </div>
+                          <div class="care-h-row">
+                            <div class="care-h-capsule cb-g3">
+                              <div class="care-h-a"><p id="ori-name">Institución</p></div>
+                              <div class="care-h-b"><p id="ori-data">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g3">
+                              <div class="care-h-b "><p id="ori-data-h">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g3">
+                              <div class="care-h-b "><p id="ori-data-m">888</p></div>
+                            </div>
+                          </div>
+                          <div class="care-h-row">
+                            <div class="care-h-capsule cb-g4">
+                              <div class="care-h-a"><p id="ori-name">Institución</p></div>
+                              <div class="care-h-b"><p id="ori-data">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g4">
+                              <div class="care-h-b "><p id="ori-data-h">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g4">
+                              <div class="care-h-b "><p id="ori-data-m">888</p></div>
+                            </div>
+                          </div>
+                          <div class="care-h-row">
+                            <div class="care-h-capsule cb-g5">
+                              <div class="care-h-a"><p id="ori-name">Institución</p></div>
+                              <div class="care-h-b"><p id="ori-data">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g5">
+                              <div class="care-h-b "><p id="ori-data-h">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g5">
+                              <div class="care-h-b "><p id="ori-data-m">888</p></div>
+                            </div>
+                          </div>
+                          <div class="care-h-row">
+                            <div class="care-h-capsule cb-g6">
+                              <div class="care-h-a"><p id="ori-name">Institución</p></div>
+                              <div class="care-h-b"><p id="ori-data">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g6">
+                              <div class="care-h-b "><p id="ori-data-h">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g6">
+                              <div class="care-h-b "><p id="ori-data-m">888</p></div>
+                            </div>
+                          </div>
+                          <div class="care-h-row">
+                            <div class="care-h-capsule cb-g7">
+                              <div class="care-h-a"><p id="ori-name">Institución</p></div>
+                              <div class="care-h-b"><p id="ori-data">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g7">
+                              <div class="care-h-b "><p id="ori-data-h">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g7">
+                              <div class="care-h-b "><p id="ori-data-m">888</p></div>
+                            </div>
+                          </div>
+                          <div class="care-h-row">
+                            <div class="care-h-capsule cb-g8">
+                              <div class="care-h-a"><p id="ori-name">Institución</p></div>
+                              <div class="care-h-b"><p id="ori-data">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g8">
+                              <div class="care-h-b "><p id="ori-data-h">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g8">
+                              <div class="care-h-b "><p id="ori-data-m">888</p></div>
+                            </div>
+                          </div>
+                          <div class="care-h-row">
+                            <div class="care-h-capsule cb-g9">
+                              <div class="care-h-a"><p id="ori-name">Institución</p></div>
+                              <div class="care-h-b"><p id="ori-data">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g9">
+                              <div class="care-h-b "><p id="ori-data-h">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g9">
+                              <div class="care-h-b "><p id="ori-data-m">888</p></div>
+                            </div>
+                          </div>
+                          <div class="care-h-row">
+                            <div class="care-h-capsule cb-g10">
+                              <div class="care-h-a"><p id="ori-name">Institución</p></div>
+                              <div class="care-h-b"><p id="ori-data">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g10">
+                              <div class="care-h-b "><p id="ori-data-h">888</p></div>
+                            </div>
+                            <div class="care-h-cell cb-g10">
+                              <div class="care-h-b "><p id="ori-data-m">888</p></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="care-note"><div></div>         <div>Nota: Se presentan las instituciones con mayor cantidad de aspirantes.</div></div>
                       </div>
                     </div>
                   </div>
@@ -1334,29 +1410,151 @@
                     </div>
                     <div class="care-content">
                       <div class="frame-content">
-                        <p>contenido</p>
+                        <div class="inclinacion-content">
+
+                          <!-- Tab Navigation -->
+                          <div class="inc-tabs">
+                            <button class="inc-tab-btn it-l active" data-target="ic-polar">Gráfico Polar</button>
+                            <button class="inc-tab-btn it-r" data-target="ic-bars">Gráfico Barras</button>
+                          </div>
+
+                          <div class="inc-chart" id="ic-polar" >
+                            <div id="polarAreaChart"></div>
+                            <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+                            <script src="js/inclinacion-polar.js"></script>
+                          </div>
+
+                          <div class="inc-chart" id="ic-bars" style="display: none;">
+                            <div class="i-chart">
+                              <!-- Horizontal Inverted Bar Chart for next 6 tags -->
+                              <div id="horizontalBarChart2"></div>
+                              <script src="js/inclinacion-bar1.js"></script>
+                              
+                            </div>
+                            <div class="i-chart">
+                              <!-- Horizontal Inverted Bar Chart -->
+                              <div id="horizontalBarChart"></div>
+                              <script src="js/inclinacion-bar2.js"></script>
+                              
+                            </div>
+                          </div>
+                          <div class="care-note"><div></div>         <div>Nota: Se recomienda empatarlo con la oferta educativa de la institución.</div></div>
+                        </div>
+                        <script>
+                          // Tab switch logic
+                          document.querySelectorAll('.inc-tab-btn').forEach(function(btn) {
+                            btn.addEventListener('click', function() {
+                              document.querySelectorAll('.inc-tab-btn').forEach(b => b.classList.remove('active'));
+                              btn.classList.add('active');
+                              var polar = document.getElementById('ic-polar');
+                              var bars = document.getElementById('ic-bars');
+                              var showPolar = btn.dataset.target === 'ic-polar';
+                              var showBars = btn.dataset.target === 'ic-bars';
+
+                              // Hide both instantly
+                              polar.style.opacity = 0;
+                              bars.style.opacity = 0;
+                              polar.style.display = showPolar ? '' : 'none';
+                              bars.style.display = showBars ? '' : 'none';
+
+                              // Fade in the selected chart
+                              var el = showPolar ? polar : bars;
+                              el.style.transition = 'opacity 0.6s';
+                              setTimeout(function() {
+                                el.style.opacity = 1;
+                              }, 10);
+                            });
+                          });
+                        </script>
+                        <style>
+
+                        </style>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="care-row">
-                  <div class="care-col cap3">
+                  <div class="care-col cr-bn cap3">
                     <div class="care-title-bar">
                       <h4 class="care-title">Orden de los motivadores de los aspirantes</h4>
                     </div>
                     <div class="care-content">
                       <div class="frame-content">
-                        <p>contenido</p>
+                        <div class="motivadores-content">
+                          <div class="care-h-row">
+                            <div class="care-h-capsule cb-h1">
+                              <div class="care-h-b"><p id="mot-data">888</p></div>
+                              <div class="care-h-al"><p id="mot-name">Motivador 1</p></div>
+                            </div>
+                          </div>
+                          <div class="care-h-row">
+                            <div class="care-h-capsule cb-h2">
+                              <div class="care-h-b"><p id="mot-data">888</p></div>
+                              <div class="care-h-al"><p id="mot-name">Motivador 1</p></div>
+                            </div>
+                          </div>
+                          <div class="care-h-row">
+                            <div class="care-h-capsule cb-h3">
+                              <div class="care-h-b"><p id="mot-data">888</p></div>
+                              <div class="care-h-al"><p id="mot-name">Motivador 1</p></div>
+                            </div>
+                          </div>
+                          <div class="care-h-row">
+                            <div class="care-h-capsule cb-h4">
+                              <div class="care-h-b"><p id="mot-data">888</p></div>
+                              <div class="care-h-al"><p id="mot-name">Motivador 1</p></div>
+                            </div>
+                          </div>
+                          <div class="care-h-row">
+                            <div class="care-h-capsule cb-h4">
+                              <div class="care-h-b"><p id="mot-data">888</p></div>
+                              <div class="care-h-al"><p id="mot-name">Motivador 1</p></div>
+                            </div>
+                          </div>
+                          <div class="care-h-row">
+                            <div class="care-h-capsule cb-h4">
+                              <div class="care-h-b"><p id="mot-data">888</p></div>
+                              <div class="care-h-al"><p id="mot-name">Motivador 1</p></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="care-note"><div></div>         <div>Nota: Se recomienda empatarlo con los principales motivadores en tu institución.</div></div>
                       </div>
                     </div>
                   </div>
-                  <div class="care-col">
+                  <div class="care-col ">
                     <div class="care-title-bar">
                       <h4 class="care-title">Estilo predominante de aprendizaje de los aspirantess</h4>
                     </div>
                     <div class="care-content">
                       <div class="frame-content">
-                        <p>contenido</p>
+                        <div class="care-podium">
+                          <div class="pod-content">
+                            <div class="pod-2 cb-h2">
+                              <div class="poc-c">
+                                <div class="pod-place">2°</div>
+                                <div class="pod-cat" id="pod-data">Conceptual</div>
+                              </div>
+                            </div>
+                            <div class="pod-1 cb-h1">
+                              <div class="poc-c">
+                                <div class="pod-place">1°</div>
+                                <div class="pod-cat" id="pod-data">Conceptual</div>
+                              </div>
+                            </div>
+                            <div class="pod-3 cb-h3">
+                              <div class="poc-c">
+                                <div class="pod-place">3°</div>
+                                <div class="pod-cat" id="pod-data">Conceptual</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="pod-base">
+                            <div class="esc e1"></div>
+                            <div class="esc e2"></div>
+                          </div>
+                        </div>
+                        <div class="care-note"><div></div>         <div>Nota: se recomienda tomarlo en cuenta para las decisiones de comunicación institucional.</div></div>
                       </div>
                     </div>
                   </div>
@@ -1373,47 +1571,50 @@
           
         </div>
         <!--Termina Widget Row -->
+      
       </div>
+      <!--Termina Contenido de la pestaña Captación-->
+
+      <!--Inicia Contenido de la pestaña Admisión-->
       <div id="tab-admision" class="tab-content" style="display:none;">
         <div class="ins-name-container">
-        <span class="nombre-institucion" id="headIstName">Placeholder Nombre de la Institución</span>
-      </div>
+          <span class="nombre-institucion" id="headIstName">Placeholder Nombre de la Institución</span>
+        </div>
       
-
-      <div class="wr-title-bar ">
-        <div class="wr-tb-content">
-          <div class="wr-tb-gp">
-            <div class="wr-category-title">
-              <p class="category-title" id="categoryTitle2">CARE -Captación, Admisión, Retención</p>
-            </div>
-            <div class="wr-subtitle">
-              <p class="category-subtitle" id="categorySubtitle2">Powered by Lexium</p>
-            </div>
-          </div>
-          <div class="wg-filter">
-            <div class="form">
-              <div class="fl-title">
-                <p>Elegir Nivel Educativo</p>
+        <div class="wr-title-bar ">
+          <div class="wr-tb-content">
+            <div class="wr-tb-gp">
+              <div class="wr-category-title">
+                <p class="category-title" id="categoryTitle2">CARE -Captación, Admisión, Retención</p>
               </div>
-              <div>
-                <select class="select" id="nivel-educativo" name="nivel-educativo">
-                  <option value="primaria">Primaria</option>
-                  <option value="secundaria">Secundaria</option>
-                  <option value="preparatoria">Preparatoria</option>
-                </select>
+              <div class="wr-subtitle">
+                <p class="category-subtitle" id="categorySubtitle2">Powered by Lexium</p>
               </div>
-                <button class="btn-acc-lx btn-width">Aplicar</button>
             </div>
-            <div class="ft-sync">
-              <div class="ft-sync-date">
-                <p>Última sincronización:</p>
-                <p class="date">01/01/2023</p>
+            <div class="wg-filter">
+              <div class="form">
+                <div class="fl-title">
+                  <p>Filtrar indicador por:</p>
+                </div>
+                <div>
+                  <select class="select" id="nivel-educativo" name="nivel-educativo">
+                    <option value="primaria">Primaria</option>
+                    <option value="secundaria">Secundaria</option>
+                    <option value="preparatoria">Preparatoria</option>
+                  </select>
+                </div>
+                  <button class="btn-acc-lx btn-width">Aplicar</button>
               </div>
-              <a href="#" data-tooltip-id="ttSync" class="btn-sq-blue-m btn-modal"><img src="img/icon/history.svg" alt=""></a>
+              <div class="ft-sync">
+                <div class="ft-sync-date">
+                  <p>Última sincronización:</p>
+                  <p class="date">01/01/2023</p>
+                </div>
+                <a href="#" data-tooltip-id="ttSync" class="btn-sq-blue-m btn-modal"><img src="img/icon/history.svg" alt=""></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
 
         <!--Inicia Widget Row -->
@@ -1421,7 +1622,7 @@
 
 
           <!--Inicia Widget-->
-          <div class="widget-layout" id="detallebalpsicosocial">
+          <div class="widget-layout" id="detallecareadmision">
             <!--Inicia Widget Title bar -->
             <div class="wg-top">
               <div class="wg-title-bar">
@@ -1430,8 +1631,8 @@
                 </div>
                 <div class="wg-actions-gp">
                   <div class="act-btns">
-                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallebalpsicosocial')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                    <a href="#" data-tooltip-id="ttBalPsi" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallecareadmision')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" data-tooltip-id="ttCareAdm" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                 </div>
                   <div class="act-detail">
                       <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
@@ -1458,13 +1659,127 @@
             <div class="wg-content">
               <div class="care-container">
                 <div class="care-row">
-                  <div class="care-col ">
+                  <div class="care-col cr-bn">
                     <div class="care-title-bar">
                       <h4 class="care-title">Resultados KP</h4>
                     </div>
                     <div class="care-content">
                       <div class="frame-content">
-                        <p>contenido</p>
+                        <div class="kp-capsule">
+                          <div class="kp-s">
+                            <div class="kp-data-l" id="kp-data-a">888</div>
+                            <div class="kp-title-l">Aplicantes</div>
+                          </div>
+                          <div class="kp-s">
+                            <div class="kp-title-r">Cumplimiento con el puntaje</div>
+                            <div class="kp-data-r" id="kp-data-a">888</div>
+                          </div>
+                        </div>
+                        <div class="care-note"><div></div>         <div class="kp-nt" style="">Nota: Puntaje global esperado por la institución es de <div id="kp-pg">###</div></div></div>
+                        
+                      </div>
+                        
+                    </div>
+                    <div class="wg-content">
+            
+                      <div class="tb-gp">
+                        <div class="ctb-top">
+                          <div class="ctb-header-container">
+                            <div class="ctb-col">Bloque</div>
+                            <div class="ctb-col">Indicador de rango obtenido</div>
+                            <div class="ctb-col">Puntaje promedio obtenido</div>
+                            <div class="ctb-col">Promedio nacional</div>
+                            <div class="ctb-col">Diferencia</div>
+                          </div>
+                            <div class="ctb-row-container">
+                            <div class="ctb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>Matemáticas</p></div>
+                            <div class="ctb-ref-a" id="kp-data-a"><img src="img/icon/tl-green.png" alt=""></div>
+                            <div class="ctb-ref-a" id="kp-data-b">888</div>
+                            <div class="ctb-ref-a" id="kp-data-c">888</div>
+                            <div class="ctb-ref-a" id="kp-data-d">999</div>
+                            </div>
+                            <div class="ctb-row-container">
+                            <div class="ctb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>Comunicación</p></div>
+                            <div class="ctb-ref-a" id="kp-data-a"><img src="img/icon/tl-green.png" alt=""></div>
+                            <div class="ctb-ref-a" id="kp-data-b">888</div>
+                            <div class="ctb-ref-a" id="kp-data-c">888</div>
+                            <div class="ctb-ref-a" id="kp-data-d">999</div>
+                            </div>
+                            <div class="ctb-row-container">
+                            <div class="ctb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>H. Intelectuales</p></div>
+                            <div class="ctb-ref-a" id="kp-data-a"><img src="img/icon/tl-green.png" alt=""></div>
+                            <div class="ctb-ref-a" id="kp-data-b">888</div>
+                            <div class="ctb-ref-a" id="kp-data-c">888</div>
+                            <div class="ctb-ref-a" id="kp-data-d">999</div>
+                            </div>
+                            <div class="ctb-row-container">
+                            <div class="ctb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>L. Algebráico</p></div>
+                            <div class="ctb-ref-a" id="kp-data-a"><img src="img/icon/tl-green.png" alt=""></div>
+                            <div class="ctb-ref-a" id="kp-data-b">888</div>
+                            <div class="ctb-ref-a" id="kp-data-c">888</div>
+                            <div class="ctb-ref-a" id="kp-data-d">999</div>
+                            </div>
+                            <div class="ctb-row-container">
+                            <div class="ctb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>P. Geométrico</p></div>
+                            <div class="ctb-ref-a" id="kp-data-a"><img src="img/icon/tl-green.png" alt=""></div>
+                            <div class="ctb-ref-a" id="kp-data-b">888</div>
+                            <div class="ctb-ref-a" id="kp-data-c">888</div>
+                            <div class="ctb-ref-a" id="kp-data-d">999</div>
+                            </div>
+                            <div class="ctb-row-container">
+                            <div class="ctb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>P. Varacional</p></div>
+                            <div class="ctb-ref-a" id="kp-data-a"><img src="img/icon/tl-green.png" alt=""></div>
+                            <div class="ctb-ref-a" id="kp-data-b">888</div>
+                            <div class="ctb-ref-a" id="kp-data-c">888</div>
+                            <div class="ctb-ref-a" id="kp-data-d">999</div>
+                            </div>
+                            <div class="ctb-row-container">
+                            <div class="ctb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>Lectura Escrita Oralidad</p></div>
+                            <div class="ctb-ref-a" id="kp-data-a"><img src="img/icon/tl-green.png" alt=""></div>
+                            <div class="ctb-ref-a" id="kp-data-b">888</div>
+                            <div class="ctb-ref-a" id="kp-data-c">888</div>
+                            <div class="ctb-ref-a" id="kp-data-d">999</div>
+                            </div>
+                            <div class="ctb-row-container">
+                            <div class="ctb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>Com. Interpersonal</p></div>
+                            <div class="ctb-ref-a" id="kp-data-a"><img src="img/icon/tl-green.png" alt=""></div>
+                            <div class="ctb-ref-a" id="kp-data-b">888</div>
+                            <div class="ctb-ref-a" id="kp-data-c">888</div>
+                            <div class="ctb-ref-a" id="kp-data-d">999</div>
+                            </div>
+
+
+                          </div>
+                          <div class="ctb-row-container-end">
+                            <div class="ctb-sk-h"  id="habilidad" tip-id="Indice Promedio de Habilidades Intelectuales"><p>Indice Promedio</p></div>
+                            <div class="ctb-ref-h" id="kp-data-a"><img src="img/icon/tl-green.png" alt=""></div>
+                            <div class="ctb-ref-h" id="kp-data-b">888</div>
+                            <div class="ctb-ref-h" id="kp-data-c">888</div>
+                            <div class="ctb-ref-h" id="kp-data-d">999</div>
+                        </div>
+                      </div>
+                      <div class="rkp-anotaciones">
+                        <div class="rkp-a1">
+                          <svg width="10" height="10">
+                            <circle cx="5" cy="5" r="5" fill="red" />
+                          </svg>
+                          <div class="rkp-data">Bajo 0-410</div>
+                        </div>
+                        <div class="rkp-a1">
+                          <svg width="10" height="10">
+                            <circle cx="5" cy="5" r="5" fill="yellow" />
+                          </svg>
+                          <div class="rkp-data">Promedio 0-410</div>
+                        </div>
+                        <div class="rkp-a1">
+                          <svg width="10" height="10">
+                            <circle cx="5" cy="5" r="5" fill="green" />
+                          </svg>
+                          <div class="rkp-data">Alto 0-410</div>
+                        </div>
+                      </div>
+                      <div class="rkp-btm">
+                        <div class="care-note"><div></div>         <div>Nota: Relaciona esta información con tu oferta de propedéuticos.</div></div>
                       </div>
                     </div>
                   </div>
@@ -1486,7 +1801,7 @@
 
 
           <!--Inicia Widget-->
-          <div class="widget-layout" id="detallebalpsicosocial">
+          <div class="widget-layout" id="detallecareint">
             <!--Inicia Widget Title bar -->
             <div class="wg-top">
               <div class="wg-title-bar">
@@ -1495,8 +1810,8 @@
                 </div>
                 <div class="wg-actions-gp">
                   <div class="act-btns">
-                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallebalpsicosocial')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                    <a href="#" data-tooltip-id="ttBalPsi" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallecareint')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" data-tooltip-id="ttCareInt" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                 </div>
                   <div class="act-detail">
                       <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
@@ -1521,13 +1836,119 @@
   
             <!--Inicia Widget Content -->
             <div class="wg-content">
-              <div class="care-container">
-                <div class="care-row">
-                  <div class="care-col ">
-                    <div class="care-content">
-                      <div class="frame-content">
-                        <p>contenido</p>
-                      </div>
+              
+              <div class="tb-gp">
+                <div class="itb-top">
+                  <div class="itb-header-container">
+                    <div class="itb-sk">Habilidad</div>
+                    <div class="itb-col">Puntaje obtenido</div>
+                    <div class="itb-col">Nivel esperado por la institución</div>
+                    <div class="itb-col">Cantidad de aspirantes que no cumplen con el perfil</div>
+
+                  </div>
+                    <div class="itb-row-container">
+
+                    <div class="itb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>Aprendizaje</p></div>
+                    
+                    <div class="itb-ref-a" id="ci-data-a">888</div>
+                    <div class="itb-ref-a" id="ci-data-b">888</div>
+                    <div class="itb-ref-a" id="ci-data-c">888</div>
+
+                    </div>
+                    <div class="itb-row-container">
+
+                    <div class="itb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>Verbal</p></div>
+                    
+                    <div class="itb-ref-a" id="ci-data-a">888</div>
+                    <div class="itb-ref-a" id="ci-data-b">888</div>
+                    <div class="itb-ref-a" id="ci-data-c">888</div>
+
+                    </div>
+                    <div class="itb-row-container">
+
+                    <div class="itb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>Razonamiento</p></div>
+                    
+                    <div class="itb-ref-a" id="ci-data-a">888</div>
+                    <div class="itb-ref-a" id="ci-data-b">888</div>
+                    <div class="itb-ref-a" id="ci-data-c">888</div>
+
+                    </div>
+                    <div class="itb-row-container">
+
+                    <div class="itb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>Toma de Decisiones</p></div>
+                    
+                    <div class="itb-ref-a" id="ci-data-a">888</div>
+                    <div class="itb-ref-a" id="ci-data-b">888</div>
+                    <div class="itb-ref-a" id="ci-data-c">888</div>
+
+                    </div>
+                    <div class="itb-row-container">
+
+                    <div class="itb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>Planeación</p></div>
+                    
+                    <div class="itb-ref-a" id="ci-data-a">888</div>
+                    <div class="itb-ref-a" id="ci-data-b">888</div>
+                    <div class="itb-ref-a" id="ci-data-c">888</div>
+
+                    </div>
+                    <div class="itb-row-container">
+
+                    <div class="itb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>Lectura</p></div>
+                    
+                    <div class="itb-ref-a" id="ci-data-a">888</div>
+                    <div class="itb-ref-a" id="ci-data-b">888</div>
+                    <div class="itb-ref-a" id="ci-data-c">888</div>
+
+                    </div>
+                    <div class="itb-row-container">
+
+                    <div class="itb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>Matemáticas</p></div>
+                    
+                    <div class="itb-ref-a" id="ci-data-a">888</div>
+                    <div class="itb-ref-a" id="ci-data-b">888</div>
+                    <div class="itb-ref-a" id="ci-data-c">888</div>
+
+                    </div>
+
+
+                </div>
+                <div class="itb-row-container-end">
+
+                  <div class="tb-sk-h"  id="habilidad" tip-id="Indice Promedio de Habilidades Intelectuales"><p>Indice Promedio</p></div>
+                  
+                  <div class="ctb-ref-h" id="ci-data-a">888</div>
+                  <div class="ctb-ref-h" id="ci-data-b">888</div>
+                  <div class="tb-des-h" id="ci-data-c">999</div>
+                </div>
+              </div>
+              <div class="care-note"><div>Nota: Se recomienda complementar con Skill Training.</div>         <div>Nota: Puntajes en percentiles con escala de 0 a 100.</div></div>
+              <div class="chart-gp">
+                <div class="chart-title-container">
+                  <p class="chart-title" >Dispersión</p>
+                </div>
+                <div class="chart-img">
+                  <img src="img/chart/chart-placeholder.png" alt="Gráfica de Línea">
+                </div>
+                <div class="chart-bottom">
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="toggleSwitch2" class="toggle-switch-checkbox">
+                    <label class="toggle-switch-label" for="toggleSwitch2">
+                      <span class="toggle-switch-inner"></span>
+                      <span class="toggle-switch-switch"></span>
+                    </label>
+                    <span class="toggle-switch-text">Ver Promedio</span>
+                  </div>
+                  <div class="chart-legend">
+                    <div class="wg-chart-legend-item">
+                      <div class="wg-chart-legend-color" style="background-color: #7005F2;"></div>
+                      <div class="wg-chart-legend-text">Promedio Tu Institución</div>
+                    </div>
+                    <div class="wg-chart-legend-item">
+                      <div class="wg-chart-legend-color" style="background-color: #FF9500;"></div>
+                      <div class="wg-chart-legend-text">Referencia Pertinente: Nacional</div>
+                    </div>
+                    <div class="wg-chart-legend-item">
+                      <div class="wg-chart-legend-text">n= 200 alumnos</div>
                     </div>
                   </div>
                 </div>
@@ -1540,7 +1961,7 @@
           </div>
           <!--Termina Widget-->
           <!--Inicia Widget-->
-          <div class="widget-layout" id="detallebalpsicosocial">
+          <div class="widget-layout" id="detallecaresoc">
             <!--Inicia Widget Title bar -->
             <div class="wg-top">
               <div class="wg-title-bar">
@@ -1549,8 +1970,8 @@
                 </div>
                 <div class="wg-actions-gp">
                   <div class="act-btns">
-                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallebalpsicosocial')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                    <a href="#" data-tooltip-id="ttBalPsi" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallecaresoc')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" data-tooltip-id="ttCareSoc" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                 </div>
                   <div class="act-detail">
                       <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
@@ -1575,19 +1996,87 @@
   
             <!--Inicia Widget Content -->
             <div class="wg-content">
-              <div class="care-container">
-                <div class="care-row">
-                  <div class="care-col ">
-                    <div class="care-content">
-                      <div class="frame-content">
-                        <p>contenido</p>
-                      </div>
+              
+              <div class="tb-gp">
+                <div class="tb-top">
+                  <div class="itb-header-container">
+                    <div class="itb-sk">Habilidad</div>
+                    <div class="itb-col">Puntaje obtenido</div>
+                    <div class="itb-col">Nivel esperado por la institución</div>
+                    <div class="itb-col">Cantidad de aspirantes que no cumplen con el perfil</div>
+
+                  </div>
+                    <div class="itb-row-container">
+
+                    <div class="itb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>Intrapersonales</p></div>
+                    
+                    <div class="itb-ref-a" id="cs-data-a">888</div>
+                    <div class="itb-ref-a" id="cs-data-b">888</div>
+                    <div class="itb-ref-a" id="cs-data-c">888</div>
+
+                    </div>
+                    <div class="itb-row-container">
+
+                    <div class="itb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>Interpersonales</p></div>
+                    
+                    <div class="itb-ref-a" id="cs-data-a">888</div>
+                    <div class="itb-ref-a" id="cs-data-b">888</div>
+                    <div class="itb-ref-a" id="cs-data-c">888</div>
+
+                    </div>
+                    <div class="itb-row-container">
+
+                    <div class="itb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>Para la Vida</p></div>
+                    
+                    <div class="itb-ref-a" id="cs-data-a">888</div>
+                    <div class="itb-ref-a" id="cs-data-b">888</div>
+                    <div class="itb-ref-a" id="cs-data-c">888</div>
+
+                    </div>
+
+                </div>
+                <div class="itb-row-container-end">
+
+                  <div class="tb-sk-h"  id="habilidad" tip-id="Indice Promedio de Habilidades Intelectuales"><p>Indice Promedio</p></div>
+                  
+                  <div class="ctb-ref-h" id="cs-data-a">888</div>
+                  <div class="ctb-ref-h" id="cs-data-b">888</div>
+                  <div class="tb-des-h" id="cs-data-c">999</div>
+                </div>
+              </div>
+              <div class="care-note"><div>Nota: Se recomienda complementar con Skill Training.</div>         <div>Nota: Puntajes en percentiles con escala de 0 a 100.</div></div>
+              <div class="chart-gp">
+                <div class="chart-title-container">
+                  <p class="chart-title" >Dispersión</p>
+                </div>
+                <div class="chart-img">
+                  <img src="img/chart/chart-placeholder.png" alt="Gráfica de Línea">
+                </div>
+                <div class="chart-bottom">
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="toggleSwitch3" class="toggle-switch-checkbox">
+                    <label class="toggle-switch-label" for="toggleSwitch3">
+                      <span class="toggle-switch-inner"></span>
+                      <span class="toggle-switch-switch"></span>
+                    </label>
+                    <span class="toggle-switch-text">Ver Promedio</span>
+                  </div>
+                  <div class="chart-legend">
+                    <div class="wg-chart-legend-item">
+                      <div class="wg-chart-legend-color" style="background-color: #7005F2;"></div>
+                      <div class="wg-chart-legend-text">Promedio Tu Institución</div>
+                    </div>
+                    <div class="wg-chart-legend-item">
+                      <div class="wg-chart-legend-color" style="background-color: #FF9500;"></div>
+                      <div class="wg-chart-legend-text">Referencia Pertinente: Nacional</div>
+                    </div>
+                    <div class="wg-chart-legend-item">
+                      <div class="wg-chart-legend-text">n= 200 alumnos</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-  
             <!--Termina Widget Content -->
   
 
@@ -1597,47 +2086,50 @@
           
         </div>
         <!--Termina Widget Row -->
+      
       </div>
+      <!--Termina Contenido de la pestaña Admisión-->
+
+      <!--Inicia Contenido de la pestaña Retención-->
       <div id="tab-retencion" class="tab-content" style="display:none;">
         <div class="ins-name-container">
-        <span class="nombre-institucion" id="headIstName">Placeholder Nombre de la Institución</span>
-      </div>
+          <span class="nombre-institucion" id="headIstName">Placeholder Nombre de la Institución</span>
+        </div>
       
-
-      <div class="wr-title-bar ">
-        <div class="wr-tb-content">
-          <div class="wr-tb-gp">
-            <div class="wr-category-title">
-              <p class="category-title" id="categoryTitle2">CARE -Captación, Admisión, Retención</p>
-            </div>
-            <div class="wr-subtitle">
-              <p class="category-subtitle" id="categorySubtitle2">Powered by Lexium</p>
-            </div>
-          </div>
-          <div class="wg-filter">
-            <div class="form">
-              <div class="fl-title">
-                <p>Elegir Nivel Educativo</p>
+        <div class="wr-title-bar ">
+          <div class="wr-tb-content">
+            <div class="wr-tb-gp">
+              <div class="wr-category-title">
+                <p class="category-title" id="categoryTitle2">CARE -Captación, Admisión, Retención</p>
               </div>
-              <div>
-                <select class="select" id="nivel-educativo" name="nivel-educativo">
-                  <option value="primaria">Primaria</option>
-                  <option value="secundaria">Secundaria</option>
-                  <option value="preparatoria">Preparatoria</option>
-                </select>
+              <div class="wr-subtitle">
+                <p class="category-subtitle" id="categorySubtitle2">Powered by Lexium</p>
               </div>
-                <button class="btn-acc-lx btn-width">Aplicar</button>
             </div>
-            <div class="ft-sync">
-              <div class="ft-sync-date">
-                <p>Última sincronización:</p>
-                <p class="date">01/01/2023</p>
+            <div class="wg-filter">
+              <div class="form">
+                <div class="fl-title">
+                  <p>Filtrar indicador por:</p>
+                </div>
+                <div>
+                  <select class="select" id="nivel-educativo" name="nivel-educativo">
+                    <option value="primaria">Primaria</option>
+                    <option value="secundaria">Secundaria</option>
+                    <option value="preparatoria">Preparatoria</option>
+                  </select>
+                </div>
+                  <button class="btn-acc-lx btn-width">Aplicar</button>
               </div>
-              <a href="#" data-tooltip-id="ttSync" class="btn-sq-blue-m btn-modal"><img src="img/icon/history.svg" alt=""></a>
+              <div class="ft-sync">
+                <div class="ft-sync-date">
+                  <p>Última sincronización:</p>
+                  <p class="date">01/01/2023</p>
+                </div>
+                <a href="#" data-tooltip-id="ttSync" class="btn-sq-blue-m btn-modal"><img src="img/icon/history.svg" alt=""></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
 
         <!--Inicia Widget Row -->
@@ -1645,7 +2137,7 @@
 
 
           <!--Inicia Widget-->
-          <div class="widget-layout" id="detallebalpsicosocial">
+          <div class="widget-layout" id="detallecareretencion">
             <!--Inicia Widget Title bar -->
             <div class="wg-top">
               <div class="wg-title-bar">
@@ -1654,8 +2146,8 @@
                 </div>
                 <div class="wg-actions-gp">
                   <div class="act-btns">
-                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallebalpsicosocial')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                    <a href="#" data-tooltip-id="ttBalPsi" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallecareretencion')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" data-tooltip-id="ttCareRet" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                 </div>
                   <div class="act-detail">
                       <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
@@ -1684,27 +2176,146 @@
                 <div class="care-row">
                   <div class="care-col ">
                     <div class="care-title-bar">
+                      <h4 class="care-title">Riesgo de abandono por deficiencias en habilidades y hábitos</h4>
+                    </div>
+                    <div class="care-content">
+                      <div class="frame-content">
+                        <div class="rt-row">
+                          <div class="care-rt-capsule">
+                            <div class="care-rt-a ">
+                              <div class="care-rt-title">Riesgo de abandono por deficiencias en habilidades y hábitos</div>
+                              <div class="care-rt-data">n=250</div>
+                            </div>
+                            <div class="care-rt-b ">
+                              <div class="">¿Qué se identificó?</div>
+                              <div class="">
+                                <ul>
+                                  <li>Habilidades Intelectuales</li>
+                                  <li>Habilidades Socioemocionales</li>
+                                  <li>Hábitos efectivos</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="care-v-capsule r-bb ">
+                            <div class="care-v-a ">Riesgo alto</div>
+                            <div class="care-v-b "> 
+                              <div class="cv-b-value" id="riesgo-data">15%</div>
+                              <div class="cv-b-label">Nota: se recomienda aplicar la encuesta de riesgo de abandono.</div>
+                            </div>
+                          </div>
+                          <div class="care-v-capsule y-bb ">
+                            <div class="care-v-a ">Riesgo Moderado</div>
+                            <div class="care-v-b ">
+                              <div class="cv-b-value" id="riesgo-data">40%</div>
+                              <div class="cv-b-label"></div>
+                            </div>
+                          </div>
+                          <div class="care-v-capsule g-bb ">
+                            <div class="care-v-a ">Riesgo Bajo</div>
+                            <div class="care-v-b ">
+                              <div class="cv-b-value" id="riesgo-data">35%</div>
+                              <div class="cv-b-label"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="care-note"><div></div>         <div>.</div></div>
+                      </div>
+                    </div>
+                    <div class="care-title-bar">
                       <h4 class="care-title">Habilidades bajas relacionadas con el riesgo de abandono alto</h4>
                     </div>
                     <div class="care-content">
                       <div class="frame-content">
-                        <p>contenido</p>
+                        <div class="hra-content">
+                          <div class="hra-col">
+                            <div class="hra-title">Habilidades intelectuales</div>
+                            <div class="hra-capsule" id="hra-name">Analogías</div>
+                            <div class="hra-capsule" id="hra-name">Seguimiento de instrucciones</div>
+                            <div class="hra-capsule" id="hra-name">Orientación</div>
+                            <div class="hra-capsule" id="hra-name">Análisis de hechos</div>
+                            <div class="hra-capsule" id="hra-name">Aplicación de hechos</div>
+                          </div>
+                          <div class="hra-col">
+                            <div class="hra-title">Habilidades socioemocionales</div>
+                            <div class="hra-capsule" id="hra-name">Autoestima</div>
+                            <div class="hra-capsule" id="hra-name">Sertividad</div>
+                            <div class="hra-capsule" id="hra-name">Compromiso</div>
+                            <div class="hra-capsule" id="hra-name">Motivación</div>
+                            <div class="hra-capsule" id="hra-name">Administración del tiempo</div>
+                            <div class="hra-capsule" id="hra-name">Bienestar físico</div>
+                          </div>
+                          <div class="hra-col">
+                            <div class="hra-title">Habitos</div>
+                            <div class="hra-capsule" id="hra-name">Consistencia</div>
+                            <div class="hra-capsule" id="hra-name">Persistencia</div>
+                            <div class="hra-capsule" id="hra-name">Prudencia</div>
+                            <div class="hra-capsule" id="hra-name">Cooperación</div>
+                          </div>
+                        </div>
                       </div>
                     </div>
+
+                  </div>
+                </div>
+                <div class="care-row">
+                  <div class="care-col ">
+                    <div class="care-title-bar">
+                      <h4 class="care-title">Riesgo de abandono por factores contextuales</h4>
+                    </div>
+                    <div class="care-content">
+                      <div class="frame-content">
+                        <div class="rt-row">
+                          <div class="care-rt-capsule">
+                            <div class="care-rt-a ">
+                              <div class="care-rt-title">Riesgo de abandono por factores contextuales</div>
+                              <div class="care-rt-data">n=250</div>
+                            </div>
+                            <div class="care-rt-b ">
+                              <div class="">¿Qué se identificó? <br> Percepción del alumno sobre:</div>
+                              <div class="">
+                                <ul>
+                                  <li>Su futuro académico</li>
+                                  <li>Su situación académica</li>
+                                  <li>El ambiente de trabajo en la institución</li>
+                                  <li>Frecuencia de pensamientos de <br> abandono por parte del alumno</li>
+                                  
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="care-v-capsule r-bb ">
+                            <div class="care-v-a ">Riesgo alto</div>
+                            <div class="care-v-b ">
+                              <div class="cv-b-value" id="riesgo-data">15%</div>
+                              <div class="cv-b-label"></div>
+                            </div>
+                          </div>
+                          <div class="care-v-capsule y-bb ">
+                            <div class="care-v-a ">Riesgo Moderado</div>
+                            <div class="care-v-b ">
+                              <div class="cv-b-value" id="riesgo-data">40%</div>
+                              <div class="cv-b-label"></div>
+                            </div>
+                          </div>
+                          <div class="care-v-capsule g-bb ">
+                            <div class="care-v-a ">Riesgo Bajo</div>
+                            <div class="care-v-b ">
+                              <div class="cv-b-value" id="riesgo-data">35%</div>
+                              <div class="cv-b-label"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="care-note"><div></div>         <div>Nota: Se recomienda apoyarse con información de SIP en LEXIUM.</div></div>
+                      </div>
+                    </div>
+
+
                   </div>
                 </div>
                 <div class="care-row">
 
-                  <div class="care-col">
-                    <div class="care-title-bar">
-                      <h4 class="care-title">Percepción por el alumno de los factores contextuales que pueden determinar el riesgo de abandono </h4>
-                    </div>
-                    <div class="care-content">
-                      <div class="frame-content">
-                        <p>contenido</p>
-                      </div>
-                    </div>
-                  </div>
+
                 </div>
               </div>
             </div>
@@ -1718,24 +2329,12 @@
           
         </div>
         <!--Termina Widget Row -->
+        
       </div>
+      <!--Termina Contenido de la pestaña Retención-->
       <div id="tab-takingcare" class="tab-content" style="background:#6f00ff;display:none;"></div>
     </div>
-    <style>
-      .tab-content-container {
-        width: 1400px;
-        margin-top: 24px;
-        overflow: hidden;
-      }
-      .tab-content{
-        width: 1400px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          padding: 20px 20px 50px 20px; 
-      }
-    </style>
+    
     <script>
       const tabIds = [
       "tab-satisfaccion",
@@ -1982,6 +2581,73 @@
         </div>
       </div>
     </div>
+    <div class="tt-bg" id="ttCareCap">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">CARE - Captación</p>
+            <div class="btn-close" onclick="closeTooltip('ttCareCap')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="isgText">Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. </p>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="ttCareAdm">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">CARE - Admisión</p>
+            <div class="btn-close" onclick="closeTooltip('ttCareAdm')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="isgText">Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. </p>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="ttCareInt">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">CARE - Habilidades Intelectuales</p>
+            <div class="btn-close" onclick="closeTooltip('ttCareInt')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="isgText">Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. </p>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="ttCareSoc">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">CARE - Habilidades Socioemocionales</p>
+            <div class="btn-close" onclick="closeTooltip('ttCareSoc')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="isgText">Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. </p>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="ttCareRet">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">CARE - Retención</p>
+            <div class="btn-close" onclick="closeTooltip('ttCareRet')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="isgText">Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. </p>
+        </div>
+      </div>
+    </div>
+
+
     <div class="tt-bg" id="ttSync">
       <div class="sync-modal">
         <div class="tt-top">

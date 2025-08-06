@@ -88,7 +88,7 @@
           <div class="wg-filter">
             <div class="form">
               <div class="fl-title">
-                <p>Elegir Nivel Educativo</p>
+                <p>Filtrar indicador por:</p>
               </div>
               <div>
                 <select class="select" id="nivel-educativo" name="nivel-educativo">
@@ -116,7 +116,7 @@
 
 
           <!--Inicia Widget-->
-          <div class="widget-layout" id="detallebalpsicosocial">
+          <div class="widget-layout" id="detallecarecaptacion">
             <!--Inicia Widget Title bar -->
             <div class="wg-top">
               <div class="wg-title-bar">
@@ -125,8 +125,8 @@
                 </div>
                 <div class="wg-actions-gp">
                   <div class="act-btns">
-                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallebalpsicosocial')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                    <a href="#" data-tooltip-id="ttBalPsi" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallecarecaptacion')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" data-tooltip-id="ttCareCap" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                 </div>
                   <div class="act-detail">
                       <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
@@ -153,7 +153,7 @@
             <div class="wg-content">
               <div class="care-container">
                 <div class="care-row">
-                  <div class="care-col cap1">
+                  <div class="care-col cap1 cr-bn">
                     <div class="care-title-bar">
                       <h4 class="care-title">Institución de origen de los aspirantes</h4>
                     </div>
@@ -297,7 +297,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="care-col cr-bn">
+                  <div class="care-col ">
                     <div class="care-title-bar">
                       <h4 class="care-title">Inclinación de aspirantes  por área educativa</h4>
                     </div>
@@ -314,328 +314,21 @@
                           <div class="inc-chart" id="ic-polar" >
                             <div id="polarAreaChart"></div>
                             <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-                            <script>
-                              var options = {
-                                chart: {
-                                  type: 'polarArea',
-                                  width: 550,
-                                  height: 350,
-                                  events: {
-                                    mounted: function(chartContext, config) {
-                                      // Remove old labels if any
-                                      var polarChartDiv = document.getElementById('polarAreaChart');
-                                      var customLabelDiv = polarChartDiv.querySelector('.apex-polar-custom-label');
-                                      if (customLabelDiv) {
-                                        customLabelDiv.parentNode.removeChild(customLabelDiv);
-                                      }
-
-                                      // Create container for custom labels
-                                      customLabelDiv = document.createElement('div');
-                                      customLabelDiv.className = 'apex-polar-custom-label';
-                                      customLabelDiv.style.position = 'absolute';
-                                      customLabelDiv.style.top = '0';
-                                      customLabelDiv.style.left = '0';
-                                      customLabelDiv.style.width = '100%';
-                                      customLabelDiv.style.height = '100%';
-                                      customLabelDiv.style.pointerEvents = 'none';
-                                      polarChartDiv.style.position = 'relative';
-                                      polarChartDiv.appendChild(customLabelDiv);
-
-                                      // Get chart center and radius
-                                      var chartEl = chartContext.el.querySelector('.apexcharts-inner');
-                                      if (!chartEl) return;
-                                      var rect = chartEl.getBoundingClientRect();
-                                      var parentRect = polarChartDiv.getBoundingClientRect();
-                                      var centerX = rect.left + rect.width / 2 - parentRect.left;
-                                      var centerY = rect.top + rect.height / 2 - parentRect.top;
-                                      var radius = Math.min(rect.width, rect.height) / 2 * 0.85;
-
-                                      var labels = [
-                                        "C. Salud",
-                                        "C. Biologicas",
-                                        "Economía",
-                                        "Administración",
-                                        "Ingeniería",
-                                        "Tecnología",
-                                        "Ambiente Construido",
-                                        "Humanidades",
-                                        "Lenguas",
-                                        "Artes",
-                                        "Estudios Creativos",
-                                        "C. Sociales"
-                                      ];
-                                      var n = labels.length;
-                                      var offset = (Math.PI * 2) / (2 * n);
-                                      for (var i = 0; i < n; i++) {
-                                        var angle = ((Math.PI * 2) / n) * i - Math.PI / 2 + offset;
-                                        var x = centerX + Math.cos(angle) * (radius + 75);
-                                        var y = centerY + Math.sin(angle) * (radius + 75);
-
-                                        var labelDiv = document.createElement('div');
-                                        labelDiv.className = 'apex-custom-polar-label';
-                                        labelDiv.style.position = 'absolute';
-                                        labelDiv.style.left = (x - 40) + 'px';
-                                        labelDiv.style.top = (y - 10) + 'px';
-                                        labelDiv.style.width = '80px';
-                                        labelDiv.style.textAlign = 'center';
-                                        labelDiv.style.fontSize = '14px';
-                                        labelDiv.style.pointerEvents = 'none';
-                                        labelDiv.style.color = '#333';
-                                        labelDiv.innerText = labels[i];
-                                        customLabelDiv.appendChild(labelDiv);
-                                      }
-                                    },
-                                    updated: function(chartContext, config) {
-                                      // Redraw labels on update
-                                      if (typeof options.chart.events.mounted === 'function') {
-                                        options.chart.events.mounted(chartContext, config);
-                                      }
-                                    }
-                                  }
-                                },
-                                series: [21, 15, 18, 12, 25, 10, 8, 14, 9, 7, 11, 16],
-                                labels: [
-                                  "C. Salud",
-                                  "C. Biologicas",
-                                  "Economía",
-                                  "Administración",
-                                  "Ingeniería",
-                                  "Tecnología",
-                                  "Ambiente Construido",
-                                  "Humanidades",
-                                  "Lenguas",
-                                  "Artes",
-                                  "Estudios Creativos",
-                                  "C. Sociales"
-                                ],
-                                colors: [
-                                  "#4CAF50",
-                                  "#808000",
-                                  "#FFD700",
-                                  "#607D8B",
-                                  "#003366",
-                                  "#00BFFF",
-                                  "#A0522D",
-                                  "#800020",
-                                  "#FFA500",
-                                  "#800080",
-                                  "#FF00FF",
-                                  "#E2725B"
-                                ],
-                                stroke: {},
-                                fill: {
-                                  opacity: 1
-                                },
-                                legend: {
-                                  show: false
-                                },
-                                yaxis: {
-                                  show: false
-                                },
-                                xaxis: {
-                                  show: false,
-                                  labels: {
-                                    show: false
-                                  },
-                                  axisTicks: {
-                                    show: false
-                                  },
-                                  axisBorder: {
-                                    show: false
-                                  }
-                                },
-                                grid: {
-                                  show: false
-                                },
-                                tooltip: {
-                                  y: {
-                                    formatter: function(val) {
-                                      return val + ' Personas';
-                                    }
-                                  }
-                                }
-                              };
-
-                              var chart = new ApexCharts(document.querySelector("#polarAreaChart"), options);
-                              chart.render();
-                            </script>
-
+                            <script src="js/inclinacion-polar.js"></script>
                           </div>
 
                           <div class="inc-chart" id="ic-bars" style="display: none;">
                             <div class="i-chart">
                               <!-- Horizontal Inverted Bar Chart for next 6 tags -->
                               <div id="horizontalBarChart2"></div>
-                              <script>
-                                // Data for the next 6 tags of the polar chart
-                                var barLabels2 = [
-                                  "Ambiente Construido",
-                                  "Humanidades",
-                                  "Lenguas",
-                                  "Artes",
-                                  "Estudios Creativos",
-                                  "C. Sociales"
-                                ];
-                                var barSeries2 = [8, 14, 9, 7, 11, 16];
-                                var barColors2 = [
-                                  "#A0522D",
-                                  "#800020",
-                                  "#FFA500",
-                                  "#800080",
-                                  "#FF00FF",
-                                  "#E2725B"
-                                ];
-                                var barData2 = barLabels2.map(function(label, i) {
-                                  return { label: label, value: barSeries2[i], color: barColors2[i] };
-                                });
-                                barData2.sort(function(a, b) { return b.value - a.value; });
-                                barLabels2 = barData2.map(function(item) { return item.label; });
-                                barSeries2 = barData2.map(function(item) { return item.value; });
-                                barColors2 = barData2.map(function(item) { return item.color; });
-
-                                var barOptions2 = {
-                                  chart: {
-                                    type: 'bar',
-                                    height: 400,
-                                    width: 330,
-                                    toolbar: { show: false }
-                                  },
-                                  series: [{
-                                    data: barSeries2
-                                  }],
-                                  plotOptions: {
-                                    bar: {
-                                      horizontal: true,
-                                      distributed: true,
-                                      barHeight: '90%',
-                                      borderRadius: 2
-                                    }
-                                  },
-                                  colors: barColors2,
-                                  xaxis: {
-                                    categories: barLabels2,
-                                    labels: { show: false }, // Hide x axis numbers
-                                    axisTicks: { show: false }, // Hide x axis ticks
-                                    axisBorder: { show: false } // Hide x axis border/ruler
-                                  },
-                                  yaxis: {
-                                    labels: { style: { fontSize: '12px', fontFamily:'Poppins' } },
-                                    reversed: true
-                                  },
-                                  dataLabels: {
-                                    enabled: true,
-                                    style: { fontSize: '14px' }
-                                  },
-                                  grid: { show: false },
-                                  tooltip: {
-                                    enabled: true,
-                                    theme: 'light', // Same as polar chart default
-                                    style: {
-                                      fontSize: '14px',
-                                      fontFamily: undefined
-                                    },
-                                    y: {
-                                      formatter: function (val) {
-                                        return val + ' Personas';
-                                      },
-                                      title: {
-                                        formatter: function () {
-                                          return '';
-                                        }
-                                      }
-                                    },
-                                    marker: {
-                                      show: true
-                                    }
-                                  },
-                                  legend: { show: false } // Hide the legend
-                                };
-                                var barChart2 = new ApexCharts(document.querySelector("#horizontalBarChart2"), barOptions2);
-                                barChart2.render();
-                              </script>
+                              <script src="js/inclinacion-bar1.js"></script>
+                              
                             </div>
                             <div class="i-chart">
                               <!-- Horizontal Inverted Bar Chart -->
                               <div id="horizontalBarChart"></div>
-                              <script>
-                                // Data for the first 6 tags of the polar chart
-                                var barLabels = [
-                                  "C. Salud",
-                                  "C. Biologicas",
-                                  "Economía",
-                                  "Administración",
-                                  "Ingeniería",
-                                  "Tecnología"
-                                ];
-                                var barSeries = [21, 15, 18, 12, 25, 10];
-                                var barColors = [
-                                  "#4CAF50",
-                                  "#808000",
-                                  "#FFD700",
-                                  "#607D8B",
-                                  "#003366",
-                                  "#00BFFF"
-                                ];
-                                // Sort the bars in descending order
-                                var barData = barLabels.map(function(label, i) {
-                                  return { label: label, value: barSeries[i], color: barColors[i] };
-                                });
-                                barData.sort(function(a, b) { return b.value - a.value; });
-                                barLabels = barData.map(function(item) { return item.label; });
-                                barSeries = barData.map(function(item) { return item.value; });
-                                barColors = barData.map(function(item) { return item.color; });
-
-                                var barOptions = {
-                                  chart: {
-                                  type: 'bar',
-                                  height: 400,
-                                  width: 330,
-                                  toolbar: { show: false }
-                                  },
-                                  series: [{
-                                  data: barSeries
-                                  }],
-                                  plotOptions: {
-                                  bar: {
-                                  horizontal: true,
-                                  distributed: true,
-                                  barHeight: '90%',
-                                  borderRadius: 2
-                                  }
-                                  },
-                                  colors: barColors,
-                                  xaxis: {
-                                  categories: barLabels,
-                                  labels: { show: false }, // Hide x axis numbers
-                                  axisTicks: { show: false }, // Hide x axis ticks
-                                  axisBorder: { show: false } // Hide x axis border/ruler
-                                  },
-                                  yaxis: {
-                                  labels: { style: { fontSize: '12px', fontFamily:'Poppins' } }
-                                  },
-                                  dataLabels: {
-                                  enabled: true,
-                                  style: { fontSize: '14px' }
-                                  },
-                                  grid: { show: false },
-                                  tooltip: {
-                                  enabled: true,
-                                  y: {
-                                  formatter: function (val) {
-                                  return val + ' Personas';
-                                  },
-                                  title: {
-                                    formatter: function () {
-                                    return '';
-                                    }
-                                  }
-                                  }
-                                  },
-                                  legend: { show: false } // Hide the legend
-                                };
-                                var barChart = new ApexCharts(document.querySelector("#horizontalBarChart"), barOptions);
-                                barChart.render();
-                              </script>
+                              <script src="js/inclinacion-bar2.js"></script>
+                              
                             </div>
                           </div>
                           <div class="care-note"><div></div>         <div>Nota: Se recomienda empatarlo con la oferta educativa de la institución.</div></div>
@@ -674,7 +367,7 @@
                   </div>
                 </div>
                 <div class="care-row">
-                  <div class="care-col cap3">
+                  <div class="care-col cr-bn cap3">
                     <div class="care-title-bar">
                       <h4 class="care-title">Orden de los motivadores de los aspirantes</h4>
                     </div>
@@ -722,7 +415,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="care-col cr-bn">
+                  <div class="care-col ">
                     <div class="care-title-bar">
                       <h4 class="care-title">Estilo predominante de aprendizaje de los aspirantess</h4>
                     </div>
@@ -778,40 +471,40 @@
       </div>
       
 
-      <div class="wr-title-bar ">
-        <div class="wr-tb-content">
-          <div class="wr-tb-gp">
-            <div class="wr-category-title">
-              <p class="category-title" id="categoryTitle2">CARE -Captación, Admisión, Retención</p>
-            </div>
-            <div class="wr-subtitle">
-              <p class="category-subtitle" id="categorySubtitle2">Powered by Lexium</p>
-            </div>
-          </div>
-          <div class="wg-filter">
-            <div class="form">
-              <div class="fl-title">
-                <p>Elegir Nivel Educativo</p>
+        <div class="wr-title-bar ">
+          <div class="wr-tb-content">
+            <div class="wr-tb-gp">
+              <div class="wr-category-title">
+                <p class="category-title" id="categoryTitle2">CARE -Captación, Admisión, Retención</p>
               </div>
-              <div>
-                <select class="select" id="nivel-educativo" name="nivel-educativo">
-                  <option value="primaria">Primaria</option>
-                  <option value="secundaria">Secundaria</option>
-                  <option value="preparatoria">Preparatoria</option>
-                </select>
+              <div class="wr-subtitle">
+                <p class="category-subtitle" id="categorySubtitle2">Powered by Lexium</p>
               </div>
-                <button class="btn-acc-lx btn-width">Aplicar</button>
             </div>
-            <div class="ft-sync">
-              <div class="ft-sync-date">
-                <p>Última sincronización:</p>
-                <p class="date">01/01/2023</p>
+            <div class="wg-filter">
+              <div class="form">
+                <div class="fl-title">
+                  <p>Filtrar indicador por:</p>
+                </div>
+                <div>
+                  <select class="select" id="nivel-educativo" name="nivel-educativo">
+                    <option value="primaria">Primaria</option>
+                    <option value="secundaria">Secundaria</option>
+                    <option value="preparatoria">Preparatoria</option>
+                  </select>
+                </div>
+                  <button class="btn-acc-lx btn-width">Aplicar</button>
               </div>
-              <a href="#" data-tooltip-id="ttSync" class="btn-sq-blue-m btn-modal"><img src="img/icon/history.svg" alt=""></a>
+              <div class="ft-sync">
+                <div class="ft-sync-date">
+                  <p>Última sincronización:</p>
+                  <p class="date">01/01/2023</p>
+                </div>
+                <a href="#" data-tooltip-id="ttSync" class="btn-sq-blue-m btn-modal"><img src="img/icon/history.svg" alt=""></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
 
         <!--Inicia Widget Row -->
@@ -819,7 +512,7 @@
 
 
           <!--Inicia Widget-->
-          <div class="widget-layout" id="detallebalpsicosocial">
+          <div class="widget-layout" id="detallecareretencion">
             <!--Inicia Widget Title bar -->
             <div class="wg-top">
               <div class="wg-title-bar">
@@ -828,8 +521,8 @@
                 </div>
                 <div class="wg-actions-gp">
                   <div class="act-btns">
-                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallebalpsicosocial')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                    <a href="#" data-tooltip-id="ttBalPsi" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallecareretencion')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" data-tooltip-id="ttCareRet" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                 </div>
                   <div class="act-detail">
                       <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
@@ -881,27 +574,27 @@
                           </div>
                           <div class="care-v-capsule r-bb ">
                             <div class="care-v-a ">Riesgo alto</div>
-                            <div class="care-v-b ">
-                              <div class="cv-b-value">15%</div>
+                            <div class="care-v-b "> 
+                              <div class="cv-b-value" id="riesgo-data">15%</div>
                               <div class="cv-b-label">Nota: se recomienda aplicar la encuesta de riesgo de abandono.</div>
                             </div>
                           </div>
                           <div class="care-v-capsule y-bb ">
                             <div class="care-v-a ">Riesgo Moderado</div>
                             <div class="care-v-b ">
-                              <div class="cv-b-value">40%</div>
+                              <div class="cv-b-value" id="riesgo-data">40%</div>
                               <div class="cv-b-label"></div>
                             </div>
                           </div>
                           <div class="care-v-capsule g-bb ">
                             <div class="care-v-a ">Riesgo Bajo</div>
                             <div class="care-v-b ">
-                              <div class="cv-b-value">35%</div>
+                              <div class="cv-b-value" id="riesgo-data">35%</div>
                               <div class="cv-b-label"></div>
                             </div>
                           </div>
                         </div>
-                        <div class="care-note"><div></div>         <div>Nota: Se recomienda apoyarse con información de SIP en LEXIUM.</div></div>
+                        <div class="care-note"><div></div>         <div>.</div></div>
                       </div>
                     </div>
                     <div class="care-title-bar">
@@ -941,6 +634,61 @@
                   </div>
                 </div>
                 <div class="care-row">
+                  <div class="care-col ">
+                    <div class="care-title-bar">
+                      <h4 class="care-title">Riesgo de abandono por factores contextuales</h4>
+                    </div>
+                    <div class="care-content">
+                      <div class="frame-content">
+                        <div class="rt-row">
+                          <div class="care-rt-capsule">
+                            <div class="care-rt-a ">
+                              <div class="care-rt-title">Riesgo de abandono por factores contextuales</div>
+                              <div class="care-rt-data">n=250</div>
+                            </div>
+                            <div class="care-rt-b ">
+                              <div class="">¿Qué se identificó? <br> Percepción del alumno sobre:</div>
+                              <div class="">
+                                <ul>
+                                  <li>Su futuro académico</li>
+                                  <li>Su situación académica</li>
+                                  <li>El ambiente de trabajo en la institución</li>
+                                  <li>Frecuencia de pensamientos de <br> abandono por parte del alumno</li>
+                                  
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="care-v-capsule r-bb ">
+                            <div class="care-v-a ">Riesgo alto</div>
+                            <div class="care-v-b ">
+                              <div class="cv-b-value" id="riesgo-data">15%</div>
+                              <div class="cv-b-label"></div>
+                            </div>
+                          </div>
+                          <div class="care-v-capsule y-bb ">
+                            <div class="care-v-a ">Riesgo Moderado</div>
+                            <div class="care-v-b ">
+                              <div class="cv-b-value" id="riesgo-data">40%</div>
+                              <div class="cv-b-label"></div>
+                            </div>
+                          </div>
+                          <div class="care-v-capsule g-bb ">
+                            <div class="care-v-a ">Riesgo Bajo</div>
+                            <div class="care-v-b ">
+                              <div class="cv-b-value" id="riesgo-data">35%</div>
+                              <div class="cv-b-label"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="care-note"><div></div>         <div>Nota: Se recomienda apoyarse con información de SIP en LEXIUM.</div></div>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+                <div class="care-row">
 
 
                 </div>
@@ -964,40 +712,40 @@
       </div>
       
 
-      <div class="wr-title-bar ">
-        <div class="wr-tb-content">
-          <div class="wr-tb-gp">
-            <div class="wr-category-title">
-              <p class="category-title" id="categoryTitle2">CARE -Captación, Admisión, Retención</p>
-            </div>
-            <div class="wr-subtitle">
-              <p class="category-subtitle" id="categorySubtitle2">Powered by Lexium</p>
-            </div>
-          </div>
-          <div class="wg-filter">
-            <div class="form">
-              <div class="fl-title">
-                <p>Elegir Nivel Educativo</p>
+        <div class="wr-title-bar ">
+          <div class="wr-tb-content">
+            <div class="wr-tb-gp">
+              <div class="wr-category-title">
+                <p class="category-title" id="categoryTitle2">CARE -Captación, Admisión, Retención</p>
               </div>
-              <div>
-                <select class="select" id="nivel-educativo" name="nivel-educativo">
-                  <option value="primaria">Primaria</option>
-                  <option value="secundaria">Secundaria</option>
-                  <option value="preparatoria">Preparatoria</option>
-                </select>
+              <div class="wr-subtitle">
+                <p class="category-subtitle" id="categorySubtitle2">Powered by Lexium</p>
               </div>
-                <button class="btn-acc-lx btn-width">Aplicar</button>
             </div>
-            <div class="ft-sync">
-              <div class="ft-sync-date">
-                <p>Última sincronización:</p>
-                <p class="date">01/01/2023</p>
+            <div class="wg-filter">
+              <div class="form">
+                <div class="fl-title">
+                  <p>Filtrar indicador por:</p>
+                </div>
+                <div>
+                  <select class="select" id="nivel-educativo" name="nivel-educativo">
+                    <option value="primaria">Primaria</option>
+                    <option value="secundaria">Secundaria</option>
+                    <option value="preparatoria">Preparatoria</option>
+                  </select>
+                </div>
+                  <button class="btn-acc-lx btn-width">Aplicar</button>
               </div>
-              <a href="#" data-tooltip-id="ttSync" class="btn-sq-blue-m btn-modal"><img src="img/icon/history.svg" alt=""></a>
+              <div class="ft-sync">
+                <div class="ft-sync-date">
+                  <p>Última sincronización:</p>
+                  <p class="date">01/01/2023</p>
+                </div>
+                <a href="#" data-tooltip-id="ttSync" class="btn-sq-blue-m btn-modal"><img src="img/icon/history.svg" alt=""></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
 
         <!--Inicia Widget Row -->
@@ -1005,7 +753,7 @@
 
 
           <!--Inicia Widget-->
-          <div class="widget-layout" id="detallebalpsicosocial">
+          <div class="widget-layout" id="detallecareadmision">
             <!--Inicia Widget Title bar -->
             <div class="wg-top">
               <div class="wg-title-bar">
@@ -1014,8 +762,8 @@
                 </div>
                 <div class="wg-actions-gp">
                   <div class="act-btns">
-                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallebalpsicosocial')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                    <a href="#" data-tooltip-id="ttBalPsi" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallecareadmision')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" data-tooltip-id="ttCareAdm" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                 </div>
                   <div class="act-detail">
                       <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
@@ -1047,6 +795,21 @@
                       <h4 class="care-title">Resultados KP</h4>
                     </div>
                     <div class="care-content">
+                      <div class="frame-content">
+                        <div class="kp-capsule">
+                          <div class="kp-s">
+                            <div class="kp-data-l" id="kp-data-a">888</div>
+                            <div class="kp-title-l">Aplicantes</div>
+                          </div>
+                          <div class="kp-s">
+                            <div class="kp-title-r">Cumplimiento con el puntaje</div>
+                            <div class="kp-data-r" id="kp-data-a">888</div>
+                          </div>
+                        </div>
+                        <div class="care-note"><div></div>         <div class="kp-nt" style="">Nota: Puntaje global esperado por la institución es de <div id="kp-pg">###</div></div></div>
+                        
+                      </div>
+                        
                     </div>
                     <div class="wg-content">
             
@@ -1059,7 +822,7 @@
                             <div class="ctb-col">Promedio nacional</div>
                             <div class="ctb-col">Diferencia</div>
                           </div>
-                            <div class="ctb-row-container"></div>
+                            <div class="ctb-row-container">
                             <div class="ctb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>Matemáticas</p></div>
                             <div class="ctb-ref-a" id="kp-data-a"><img src="img/icon/tl-green.png" alt=""></div>
                             <div class="ctb-ref-a" id="kp-data-b">888</div>
@@ -1147,7 +910,7 @@
                         </div>
                       </div>
                       <div class="rkp-btm">
-                        <div class="care-note"><div></div>         <div>Nota: Placeholder notas, texto para notas.</div></div>
+                        <div class="care-note"><div></div>         <div>Nota: Relaciona esta información con tu oferta de propedéuticos.</div></div>
                       </div>
                     </div>
                   </div>
@@ -1169,7 +932,7 @@
 
 
           <!--Inicia Widget-->
-          <div class="widget-layout" id="detallebalpsicosocial">
+          <div class="widget-layout" id="detallecareint">
             <!--Inicia Widget Title bar -->
             <div class="wg-top">
               <div class="wg-title-bar">
@@ -1178,8 +941,8 @@
                 </div>
                 <div class="wg-actions-gp">
                   <div class="act-btns">
-                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallebalpsicosocial')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                    <a href="#" data-tooltip-id="ttBalPsi" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallecareint')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" data-tooltip-id="ttCareInt" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                 </div>
                   <div class="act-detail">
                       <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
@@ -1214,7 +977,7 @@
                     <div class="itb-col">Cantidad de aspirantes que no cumplen con el perfil</div>
 
                   </div>
-                    <div class="itb-row-container"></div>
+                    <div class="itb-row-container">
 
                     <div class="itb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>Aprendizaje</p></div>
                     
@@ -1289,7 +1052,7 @@
                   <div class="tb-des-h" id="ci-data-c">999</div>
                 </div>
               </div>
-              <div class="care-note"><div>Nota: Placeholder notas, texto para notas.</div>         <div>Nota: Placeholder notas, texto para notas.</div></div>
+              <div class="care-note"><div>Nota: Se recomienda complementar con Skill Training.</div>         <div>Nota: Puntajes en percentiles con escala de 0 a 100.</div></div>
               <div class="chart-gp">
                 <div class="chart-title-container">
                   <p class="chart-title" >Dispersión</p>
@@ -1299,8 +1062,8 @@
                 </div>
                 <div class="chart-bottom">
                   <div class="toggle-switch">
-                    <input type="checkbox" id="toggleSwitch1" class="toggle-switch-checkbox">
-                    <label class="toggle-switch-label" for="toggleSwitch1">
+                    <input type="checkbox" id="toggleSwitch2" class="toggle-switch-checkbox">
+                    <label class="toggle-switch-label" for="toggleSwitch2">
                       <span class="toggle-switch-inner"></span>
                       <span class="toggle-switch-switch"></span>
                     </label>
@@ -1329,7 +1092,7 @@
           </div>
           <!--Termina Widget-->
           <!--Inicia Widget-->
-          <div class="widget-layout" id="detallebalpsicosocial">
+          <div class="widget-layout" id="detallecaresoc">
             <!--Inicia Widget Title bar -->
             <div class="wg-top">
               <div class="wg-title-bar">
@@ -1338,8 +1101,8 @@
                 </div>
                 <div class="wg-actions-gp">
                   <div class="act-btns">
-                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallebalpsicosocial')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                    <a href="#" data-tooltip-id="ttBalPsi" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallecaresoc')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                    <a href="#" data-tooltip-id="ttCareSoc" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                 </div>
                   <div class="act-detail">
                       <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
@@ -1374,7 +1137,7 @@
                     <div class="itb-col">Cantidad de aspirantes que no cumplen con el perfil</div>
 
                   </div>
-                    <div class="itb-row-container"></div>
+                    <div class="itb-row-container">
 
                     <div class="itb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>Intrapersonales</p></div>
                     
@@ -1412,7 +1175,7 @@
                   <div class="tb-des-h" id="cs-data-c">999</div>
                 </div>
               </div>
-              <div class="care-note"><div>Nota: Placeholder notas, texto para notas.</div>         <div>Nota: Placeholder notas, texto para notas.</div></div>
+              <div class="care-note"><div>Nota: Se recomienda complementar con Skill Training.</div>         <div>Nota: Puntajes en percentiles con escala de 0 a 100.</div></div>
               <div class="chart-gp">
                 <div class="chart-title-container">
                   <p class="chart-title" >Dispersión</p>
@@ -1422,8 +1185,8 @@
                 </div>
                 <div class="chart-bottom">
                   <div class="toggle-switch">
-                    <input type="checkbox" id="toggleSwitch1" class="toggle-switch-checkbox">
-                    <label class="toggle-switch-label" for="toggleSwitch1">
+                    <input type="checkbox" id="toggleSwitch3" class="toggle-switch-checkbox">
+                    <label class="toggle-switch-label" for="toggleSwitch3">
                       <span class="toggle-switch-inner"></span>
                       <span class="toggle-switch-switch"></span>
                     </label>
