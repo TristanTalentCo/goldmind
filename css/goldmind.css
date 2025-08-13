@@ -409,16 +409,28 @@
     }
       .tab-content-container {
         width: 1400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         margin-top: 24px;
         overflow: hidden;
       }
       .tab-content{
         width: 1400px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          padding: 20px 20px 50px 20px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 20px 50px 20px; 
+      }
+      .contenido{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 20px 50px 20px; 
       }
 
 /* TERMINA NAVIGATION TABS */
@@ -628,6 +640,7 @@
   height: fit-content;
   display: flex;
   flex-direction: row;
+  alig
   justify-content: space-between;
   padding: 15px 50px;
   gap: 20px;
@@ -3580,764 +3593,61 @@
 /* TERMINA ESTILOS CARE */
     
 
-@media (min-width: 1280px) and (max-width: 1440px) {
-  .main-container {
-    width: 100%;
-    padding: 20px;
-    margin: 0;
-  }
-  .widget-row-a {
-    width: 100%;
-    padding: 0 20px;
-
-  }
-  header{
-    width: 100%;
-  }
-
-}
-
-@media (min-width: 768px) and (max-width: 1138px) and (orientation: landscape) {
-  .logo-bar-container {
-    padding: 0 40px;
-  }
-
-  .title-bar {
-    padding: 0 40px;
-  }
-
-  .main-container {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .widget-row-a {
-    width: 100%;
-    padding: 0 20px;
-  }
-  .tb-ref p{
-    width: 12ch;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .tb-sk-a p , .tb-sk-h p{
-    width: 10ch;
-    line-height: 1em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .tb-col-h{
-    padding: 0 9px;
-  }
-}
 
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  .logo-bar-container {
-    padding: 0 30px;
-  }
+      /* Standard Media Queries */
 
-  .title-bar {
-    padding: 0 30px;
-  }
-
-  .main-container {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .widget-row-a {
-        width: 100%;
-        height: 700px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 0 0px 15px 0;
-        gap: 20px;
-    }
-  .wg-top {
-      height: 95px;
-  }
-        .wr-title-bar {
-          padding: 10px;
-        }
-        .wr-st-content {
-          padding: 5px 10px;
-        }
-        .wr-notes {
-          padding: 0 10px;
-        }
-  
-}
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .logo-bar-container {
-    padding: 0 40px;
-  }
-
-  .title-bar {
-    padding: 0 40px;
-  }
-
-  .main-container {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .widget-row-a {
-    width: 100%;
-    padding: 0 40px;
-  }
-  
-}
-
-@media (min-width: 1024px) and (max-width: 1080px) and (orientation: landscape) {
-  .logo-bar-container {
-    padding: 0 50px;
-  }
-
-  .title-bar {
-    padding: 0 50px;
-  }
-
-  .main-container {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .widget-row-a {
-    width: 100%;
-    padding: 0 50px;
-  }
-}
-
-    @media (max-width: 768px) {
-      
-      .logo-bar {
-        background-color: var(--color-white);
-        height: 100px;
-        border-bottom: 1px solid var(--color-border);
+      /* Extra small devices (phones, less than 576px) */
+      @media (max-width: 575.98px) {
+        /* Add your styles here */
       }
 
-      .logo-bar-container {
-        display: flex;
-        justify-content: space-between;
-        align-items:end;
-        height: 100%;
-        padding: 0 12px 12px 15px;
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        /* Add your styles here */
       }
 
-      .user-info {
-        display: none;     
+      /* Medium devices (tablets, 768px and up) */
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        /* Add your styles here */
       }
 
-      .title-bar {
-        display: none;
-        height: fit-content;
-        padding: 10px 0;
-      }
-      .title-wrap {
-        margin: 0 ;
-        gap: 10px;
-      flex-direction: column;
-      justify-content: center;
-      }
-
-      .nombre-institucion, .title-bar-access {
-      justify-content: center;
-        font-size: 1.2em;
-      }
-
-      .btn-acc-qp .Acceso-a, .btn-acc-lx .Acceso-a {
-      display: none;
-      }
-      .ins-name-container{
-        display: flex;
-      }
-      .wr-tb-content{
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .footer-bar {
-
-        position: relative;
-
-      }
-      .footer-container{
-        padding: 0;
-        margin: 0;
-      }
-      .footer-container p{
-        padding: 0;
-        margin: 0;
-       }
-/* INICIA MENU USER ACTIONS */
-
-            .user-actions-menu {
-              display: none;
-              position: fixed;
-              top: 0;
-              right: 0%;
-              width: 300px;
-              height: 100%;
-              flex-direction: column;
-              justify-content: flex-start;
-              transition: left 0.3s ease-in-out;
-              z-index: 1000;
-              border-radius: 0;
-            }
-
-            .ua-user-container {
-              width: 100%;
-              height: 99px;
-              display: flex;  
-              flex-direction: row;
-              align-items: end;
-              justify-content: end;
-              padding-bottom: 12px;
-              padding-right: 10px;
-              border-bottom: 1px solid var(--color-border);
-            }
-            .ua-user-container p{
-              margin: 0;
-              padding: 0;
-            }
-
-            .user-actions-menu.open {
-            right: 0;
-            }
-
-            .ua-accesos, .ua-cerrar {
-            width: 100%;
-            }
-            .ua-accesos{
-            margin-top: 100px;
-            }
-
-            .ua-b-acc-qp, .ua-b-acc-lx, .ua-btn-cerrar {
-            width: 100%;
-            height: 65px;
-            }
-            .ua-b-acc-qp img, .ua-b-acc-lx img {
-            
-            height: 25px;
-            }
-
-            .ua-cerrar {
-            margin-top: auto;
-            margin-bottom: env(safe-area-inset-bottom);
-            }
-
-/* TERMINA MENU USER ACTIONS */
-
-        .main-container {
-          width: 100%;
-          padding: 20px;
-        }
-
-        .wr-title-bar {
-          padding: 10px;
-        }
-        .wr-st-content {
-          padding: 5px 10px;
-        }
-        .wr-notes {
-          padding: 0 10px;
-        }
-      .widget-row-a {
-        width: 100%;
-        height: fit-content;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 0 0px 15px 0;
-        gap: 20px;
-      }
-      .widget-layout {
-        height: fit-content;
-      }
-      .wg-top {
-        height: 44px;
-      }
-      .wg-content {
-        height: fit-content;
-      }
-      .wg-bttm-a {
-        width: 100%;
-        height: fit-content;
-        display: flex;
-        padding: 10px 10px;
-      }
-      .insight-wrap {
-        width: 100%;
-        height: 80px;
-
-      }
-      .insight-content {
-        width: 90%;
-      }
-      .is-margin {
-        width: 15px;
-        height: 100%;
-        background-color: rgba(0, 143, 251, 1);
-      }
-      .is-text-content {
-        padding-left: 0px;
-      }
-      .tooltip, .sync-modal {
-        width: 90%;
-        height: auto;
-        margin: 10px auto;
-      }
-
-      .tooltip-title {
-        font-size: 1.2em;
-      }
-
-      .tooltip-text {
-        font-size: 1em;
-        padding: 10px;
-      }
-      .s-content{
-        flex-direction: column;
-      }
-      .s-col{
-        width: 100%;
-        padding: 0 10px;
-      }
-      .b-right{
-        border: none;
-      }
-      .s-btm{
-        padding: 10px 0 ;
-        align-items: center;
-        justify-content: center;
-      }
-      .tb-ref {  
-        display: flex;
-        flex-direction: column !important;
-      }
-      .tb-ref-r {  
-        width: 10ch;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-
-      .hab-dtl{
-        flex-direction: column-reverse;
-        height: fit-content;
-      }
-      .hd-col-a{
-        width: 100%;
-      }
-      .accordion{
-        width: 100%;
-      }
-      .acc-category{
-        width: 100%;
-      }
-      .hd-col-b{
-        width: 100%;
-      }
-      .implicaciones-gp{
-        flex-direction: column;
-      }
-
-
-
-      /* INSIGHTS */
-      .insight-container {
-        width: 90%;
-        }
-  
-        .is-content-bttm {
-        width: 70%;
-        
-        }
-        .is-tb-row{
-          width: 100% !important;
-        }
-  
-        .is-nps-tb {
-        width: 100%;
-        }
-  
-        .is-content-top {
-        flex-direction: column;
-        }
-        .is-cell-a p{
-          word-wrap: break-word;
-          overflow-wrap: break-word;
-          white-space: normal;
-        }
-        .is-cell-a p{
-          width: 98px;
-        }
-        .is-nps-tb {
-          width: 300px;
-        }
-        .nps-header, .nps-cell {
-          height: 60px;
-        }
-        .is-nps-tb {
-          height: 120px;
-        }
-        .bp-tb-row > .bp-tb-cell-a{
-          
-          font-size: .7em;
-        }
-        .pa-d-col-a, .pa-d-col-b{
-          width: 100%;
-        }
-        .pa-d-content{
+      /* Large devices (desktops, 992px and up) */
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        .widget-row-a{
+          width: 960px;
+          gap: 10px;
           flex-direction: column;
         }
-        .pa-h-cell, .pa-h-cell-2{
-          width:220px;
 
+        .care-row{
+          flex-direction: column;
         }
-        .pa-c-cell, .pa-tb-gp-bars-2{
+        .care-col{
           width: 100%;
-        }
-        .pa-h-cell-a, .pa-tb-pref{
-          width: 120px;
           overflow: hidden;
-        }
-        .footer-bar{
-          display: flex;
-          position: relative;
         }
       }
 
-
-      @media (max-width: 390px) {
-        .is-tb-header {
-          width: 100%;
-          height: 35px;
-
-        }
-    
-        .is-tb-tags {
-          width: 100%;
-          height: 35px;
-        }
-    
-        .tag-b, .is-cell-b {
-          width: 88px;
-
-        }
-        .tag-b  p{
-          width: 6ch;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-
-        }
-        .tag-a, .is-cell-a {
-          width: 150px;
-
-        }
-        .is-content-bttm{
-          width: 95%;
+      /* Extra large devices (large desktops, 1200px and up) */
+      @media (min-width: 1200px) and (max-width: 1399.98px) {
+        .tab-content-container{
           
         }
-        .is-tb-row {
-          width: 100%;
-          height: 70px;
-
-        }
-    
-        .is-cell-a  p{
-          font-size: .9em;
-        }
-        .widget-title{
-          width: 16ch;
-          text-align: right;
-        }
-        .wr-tb-content{
-          flex-direction: column;
-          gap: 10px;
-        }
-        .wg-filter{
-          flex-direction: column;
-          align-items: right;
-          justify-content: right;
-          gap: 5px;
-        }
-        .wr-notes-content{
-          flex-direction: column;
-          gap: 5px;
-        }
-        .nombre-institucion{
-          width: 20ch;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
-        .tb-col, .tb-col-a, .tb-col-h { 
-          width: 80px;
-        }
-        .tb-ref, .tb-ref-a, .tb-ref-h { 
-          width: 80px;
-        }
-  
-        .tb-sk, .tb-sk-a, .tb-sk-h { 
-          width: 100px;
-        }
-         .tb-sk-a p, .tb-sk-h p{ 
-          margin: 0;
-          padding: 0;
-          font-size: .8em;
-          width: 10ch;
-          line-height: 1em;
-          justify-content:left !important  ;
-          padding: 0 8px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
-        .tb-col-a, .tb-col-h{
-          padding: 0;
-        }
-        .traffic-light {
-          width: 39px;
-          height: 14px;
-          padding: 0 3px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background-color: #ececec;
-          border-radius: 22px;
-        }
-  
-        .traffic-light .green,
-        .traffic-light .yellow,
-        .traffic-light .red {
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-        }
-  
-        /* PREFERENCIAS APRENDIZAJE MOBIL */
-        .pa-content-top {
-            padding: 10px 8px;
-            gap: 9px;
-          }
-        .pa-pref-row {
-          width: 100%;
-          height: 65px;
-        }
-  
-        .pa-m, .pa-a {
-          width: 250px;
-          display: flex;
-          flex-direction: column;
-        }
-  
-        .pa-m-top, .pa-a-top {
-          width: 100%;
-          height: 28px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: #ccc9ff;
-  
-          gap: 10px;
-        }
-  
-        .pref-row-t {
-          color: #000000;
-          font-size: .5em;
-          font-weight: 600;
-        }
-  
-        .pa-m-btm, .pa-a-btm {
-          width: 100%;
-          height: 28px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
-        }
-  
-        .pref-value {
-          color: #182336;
-          font-size: .9em;
-          font-weight: 600;
-        }
-        .pa-btm{
-          flex-direction: column;
-        }
-        .pa-b-col{
-          width: 100%;
-        }
-        .pa-n {
-          width: 100%;
-          display: flex;
-          flex-direction: column-reverse;
-          align-items: center;
-          justify-content: center;
-          background-color: #a9a5fa;
-          gap: 2px;
-        }
-  
-        .pref-title {
-          width: 100%;
-          height: 1lh;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          text-align: center;
-          color: #182336;
-          font-size: .7em;
-        }
-  
-        .pref-icon-fr{
-          width: 48px;
-          height: 48px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 100%;
-          background-color: #fff ;
-  
-        }
-        .tooltip-title {
-          width: 23ch;
-          overflow: auto;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
-
-        .chart-bottom{
-          flex-direction: column;
-        }
-        .chart-legend{
-          height: fit-content;
-        }
-        .hd-tb-col-a{
-          width: 100%;
-        }
-        .hd-tb-col-b{
-          width: 90px;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          overflow: hidden;
-        }
-        .hd-tb-title{
-          font-size: .7em;
-          text-align: right;
-        }
-        .hd-tb-header{
-          height: 60px;
-          font-size: .5em;
-        }
-        .hd-tb-row{
-          height: 70px;
-        }
-        .bp-tb-row{
-          width: 100%;
-          height: fit-content;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        .bp-data-row{
-          flex-direction: row;
-        }
-        .bp-tb-cell-a {
-          width: 100% !important;
-          overflow: hidden;
-        }
-        .bp-tb-cell-a > .bp-title{
-          width: 100%;
-          font-size: .9em;
-
-        }
-        .bp-tb-row-h > .bp-tb-cell-a{
-          display: none;
-        }
-        .bp-tb-row-h > .bp-data-row > .bp-tb-cell-b{
-          overflow: hidden;
-          font-size: .8em;
-        }
-        .bp-tb-row > .bp-data-row > .bp-tb-cell-b{
-          height: 60px;
-        }
-        .pa-tb-header{
-          gap: 0;
-        }
-        .pa-tb-gp-bars{
-          width: 100%;
+        .tab-content{
+          
           
         }
+        .widget-row-a{
+          width: 1280px;
+          gap: 12px;
+        }
+        .widget-layout{
 
-        .pa-h-cell-a{
-          display: none;
         }
-        .pa-h-cell, .pa-h-cell-2{
-          width: 100%;
-          justify-content: left;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          padding: 0 0 0 5px;
-        }
-        .pa-tb-row{
-          flex-direction: column;
-        }
-        .pref-icon-fr{
-          display: none;
-        }
-        .pa-tb-pref{
-          border-radius: 0;
-          width: 100%;
-          height: fit-content;
-          padding: 5px 0;
-          font-weight: 600;
-        }
-<<<<<<< HEAD
-        
-      .footer-bar {
-        height: fit-content;
-        position: relative;
+      }
 
-      }
-      .footer-container{
-       flex-direction: column;
-       gap: 0;
-      }
-      .footer-container p{
-       padding: 0;
-       margin: 0;
-      }
-=======
-        .is-tb-main{
-          width: 90%;
-        }
-        .is-tb-header{
-          height: 35px;
-        }
-        .is-tb-row{
-          height: 60px;
-        }
-        .tag-b p{
-          width: 6ch;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
-        .footer-container{
-          flex-direction: column;
-        }
-        .user-actions-inst-logo{
-          display: none;
-        }
->>>>>>> 0289700ba6a8b6f7291d489165540e44d10ced01
+      /* XX-Large devices (larger desktops, 1400px and up) */
+      @media (min-width: 1400px) {
+        /* Add your styles here */
       }
