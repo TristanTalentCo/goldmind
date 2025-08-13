@@ -25,62 +25,65 @@
                                 barSeries2 = barData2.map(function(item) { return item.value; });
                                 barColors2 = barData2.map(function(item) { return item.color; });
 
-                                var barOptions2 = {
-                                  chart: {
-                                    type: 'bar',
-                                    height: 400,
-                                    width: 330,
-                                    toolbar: { show: false }
-                                  },
-                                  series: [{
-                                    data: barSeries2
-                                  }],
-                                  plotOptions: {
-                                    bar: {
-                                      horizontal: true,
-                                      distributed: true,
-                                      barHeight: '90%',
-                                      borderRadius: 2
-                                    }
-                                  },
-                                  colors: barColors2,
-                                  xaxis: {
-                                    categories: barLabels2,
-                                    labels: { show: false }, // Hide x axis numbers
-                                    axisTicks: { show: false }, // Hide x axis ticks
-                                    axisBorder: { show: false } // Hide x axis border/ruler
-                                  },
-                                  yaxis: {
-                                    labels: { style: { fontSize: '12px', fontFamily:'Poppins' } },
-                                    reversed: true
-                                  },
-                                  dataLabels: {
-                                    enabled: true,
-                                    style: { fontSize: '14px' }
-                                  },
-                                  grid: { show: false },
-                                  tooltip: {
-                                    enabled: true,
-                                    theme: 'light', // Same as polar chart default
-                                    style: {
-                                      fontSize: '14px',
-                                      fontFamily: undefined
-                                    },
-                                    y: {
-                                      formatter: function (val) {
-                                        return val + ' Personas';
-                                      },
-                                      title: {
-                                        formatter: function () {
-                                          return '';
-                                        }
-                                      }
-                                    },
-                                    marker: {
-                                      show: true
-                                    }
-                                  },
-                                  legend: { show: false } // Hide the legend
-                                };
+                                 var barOptions2 = {
+                                            chart: {
+                                            type: 'bar',
+                                            height: 400,
+                                            width: 330,
+                                            toolbar: { show: false }
+                                            },
+                                            series: [{
+                                            data: barSeries2
+                                            }],
+                                            plotOptions: {
+                                            bar: {
+                                              horizontal: true,
+                                              distributed: true,
+                                              barHeight: '90%',
+                                              borderRadius: 2
+                                            }
+                                            },
+                                            colors: barColors2,
+                                            xaxis: {
+                                            categories: barLabels2,
+                                            labels: { show: false }, // Hide x axis numbers
+                                            axisTicks: { show: false }, // Hide x axis ticks
+                                            axisBorder: { show: false } // Hide x axis border/ruler
+                                            },
+                                            yaxis: {
+                                            labels: { style: { fontSize: '12px', fontFamily:'Poppins' } },
+                                            reversed: true
+                                            },
+                                            dataLabels: {
+                                            enabled: true,
+                                            style: { fontSize: '14px' },
+                                            formatter: function(val) {
+                                              return val + ' pers.';
+                                            }
+                                            },
+                                            grid: { show: false },
+                                            tooltip: {
+                                            enabled: true,
+                                            theme: 'light', // Same as polar chart default
+                                            style: {
+                                              fontSize: '14px',
+                                              fontFamily: undefined
+                                            },
+                                            y: {
+                                              formatter: function (val) {
+                                              return val + ' pers.';
+                                              },
+                                              title: {
+                                              formatter: function () {
+                                                return '';
+                                              }
+                                              }
+                                            },
+                                            marker: {
+                                              show: true
+                                            }
+                                            },
+                                            legend: { show: false } // Hide the legend
+                                          };
                                 var barChart2 = new ApexCharts(document.querySelector("#horizontalBarChart2"), barOptions2);
                                 barChart2.render();

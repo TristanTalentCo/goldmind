@@ -26,53 +26,56 @@
                                 barSeries = barData.map(function(item) { return item.value; });
                                 barColors = barData.map(function(item) { return item.color; });
 
-                                var barOptions = {
-                                  chart: {
-                                  type: 'bar',
-                                  height: 400,
-                                  width: 330,
-                                  toolbar: { show: false }
-                                  },
-                                  series: [{
-                                  data: barSeries
-                                  }],
-                                  plotOptions: {
-                                  bar: {
-                                  horizontal: true,
-                                  distributed: true,
-                                  barHeight: '90%',
-                                  borderRadius: 2
-                                  }
-                                  },
-                                  colors: barColors,
-                                  xaxis: {
-                                  categories: barLabels,
-                                  labels: { show: false }, // Hide x axis numbers
-                                  axisTicks: { show: false }, // Hide x axis ticks
-                                  axisBorder: { show: false } // Hide x axis border/ruler
-                                  },
-                                  yaxis: {
-                                  labels: { style: { fontSize: '12px', fontFamily:'Poppins' } }
-                                  },
-                                  dataLabels: {
-                                  enabled: true,
-                                  style: { fontSize: '14px' }
-                                  },
-                                  grid: { show: false },
-                                  tooltip: {
-                                  enabled: true,
-                                  y: {
-                                  formatter: function (val) {
-                                  return val + ' Personas';
-                                  },
-                                  title: {
-                                    formatter: function () {
-                                    return '';
-                                    }
-                                  }
-                                  }
-                                  },
-                                  legend: { show: false } // Hide the legend
-                                };
+                                  var barOptions = {
+                                            chart: {
+                                            type: 'bar',
+                                            height: 400,
+                                            width: 330,
+                                            toolbar: { show: false }
+                                            },
+                                            series: [{
+                                            data: barSeries
+                                            }],
+                                            plotOptions: {
+                                            bar: {
+                                            horizontal: true,
+                                            distributed: true,
+                                            barHeight: '90%',
+                                            borderRadius: 2
+                                            }
+                                            },
+                                            colors: barColors,
+                                            xaxis: {
+                                            categories: barLabels,
+                                            labels: { show: false }, // Hide x axis numbers
+                                            axisTicks: { show: false }, // Hide x axis ticks
+                                            axisBorder: { show: false } // Hide x axis border/ruler
+                                            },
+                                            yaxis: {
+                                            labels: { style: { fontSize: '12px', fontFamily:'Poppins' } }
+                                            },
+                                            dataLabels: {
+                                            enabled: true,
+                                            style: { fontSize: '14px' },
+                                            formatter: function(val) {
+                                            return val + ' pers.';
+                                            }
+                                            },
+                                            grid: { show: false },
+                                            tooltip: {
+                                            enabled: true,
+                                            y: {
+                                            formatter: function (val) {
+                                            return val + ' pers.';
+                                            },
+                                            title: {
+                                            formatter: function () {
+                                            return '';
+                                            }
+                                            }
+                                            }
+                                            },
+                                            legend: { show: false } // Hide the legend
+                                          };
                                 var barChart = new ApexCharts(document.querySelector("#horizontalBarChart"), barOptions);
                                 barChart.render();
