@@ -1325,6 +1325,11 @@
   font-weight: 500;
 
 }
+.tb-sk-h-txt{ 
+  font-size: .9em;
+  font-weight: 600;
+  
+}
 .tb-sk, .tb-sk-a, .tb-sk-h{ 
   background-color: #BDD6FF;
   justify-content: center;
@@ -2796,7 +2801,7 @@
   align-items: right;
   justify-content: space-between;
   gap: 5px;
-  padding:  4px 10px;
+  padding:  4px 30px;
   font-size: .7em;
   color: var(--color-gray);
 }
@@ -3093,7 +3098,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   overflow: hidden;
 }
 .care-rt-b{
@@ -3600,6 +3605,21 @@
       /* Extra small devices (phones, less than 576px) */
       @media (max-width: 575.98px) {
         /* Add your styles here */
+        .widget-row-a{
+          width: 100%;
+          gap: 10px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .widget-layout{
+          width: 320px;
+        }
+        .voc-content iframe{
+          width: 310px;
+          height: 400px;
+          
+        }
       }
 
       /* Small devices (landscape phones, 576px and up) */
@@ -3610,6 +3630,7 @@
       /* Medium devices (tablets, 768px and up) */
       @media (min-width: 768px) and (max-width: 991.98px) {
         /* Add your styles here */
+        
       }
 
       /* Large devices (desktops, 992px and up) */
