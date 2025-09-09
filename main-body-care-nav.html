@@ -86,7 +86,108 @@
     </nav>
     <script src="js/gm-tab-nav.js"></script>
     
-
+    <!-- Responsive Navbar for Small/Medium Devices -->
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap');
+      .responsive-navbar {
+        display: none;
+        margin: 24px 0 16px 0;
+        font-family: 'Poppins', sans-serif;
+      }
+      .responsive-navbar label {
+        color: #002366;
+        font-weight: 500;
+        margin-right: 10px;
+        font-size: 1rem;
+      }
+      .responsive-navbar select {
+        background: #f6f8fb;
+        color: #182336;
+        border: 1px solid #002366;
+        border-radius: 6px;
+        padding: 8px 12px;
+        font-size: 1rem;
+        font-family: inherit;
+        font-weight: 500;
+        outline: none;
+        transition: border 0.2s;
+      }
+      .responsive-navbar select:focus {
+        border: 1.5px solid #182336;
+      }
+      @media (max-width: 900px) {
+        .custom-navbar {
+          display: none !important;
+        }
+        .responsive-navbar {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          padding: 0 16px;
+        }
+      }
+    </style>
+    <div class="responsive-navbar">
+      <label for="tabSelector">Selecciona sección:</label>
+      <select id="tabSelector">
+        <option value="tab-satisfaccion">Satisfacción - Voc / VoE</option>
+        <option value="tab-skills">Skills Analytics</option>
+        <option value="tab-captacion">Captación</option>
+        <option value="tab-admision">Admisión</option>
+        <option value="tab-retencion">Retención</option>
+      </select>
+    </div>
+    <script>
+      // Responsive tab selector logic
+      document.getElementById('tabSelector').addEventListener('change', function() {
+        const tabIds = [
+          "tab-satisfaccion",
+          "tab-skills",
+          "tab-captacion",
+          "tab-admision",
+          "tab-retencion"
+        ];
+        tabIds.forEach(id => {
+          const el = document.getElementById(id);
+          if (el) {
+            el.style.display = "none";
+            el.style.opacity = "0";
+          }
+        });
+        const selectedId = this.value;
+        const selectedEl = document.getElementById(selectedId);
+        if (selectedEl) {
+          selectedEl.style.display = "block";
+          // Force reflow for transition
+          void selectedEl.offsetWidth;
+          setTimeout(() => {
+            selectedEl.style.opacity = "1";
+          }, 10);
+        }
+        // Also update desktop navbar active state if visible
+        document.querySelectorAll('.navbar-tab').forEach((tab, idx) => {
+          if (tabIds[idx] === selectedId) tab.classList.add('active');
+          else tab.classList.remove('active');
+        });
+      });
+      // On load, sync select with visible tab
+      window.addEventListener('DOMContentLoaded', function() {
+        const tabIds = [
+          "tab-satisfaccion",
+          "tab-skills",
+          "tab-captacion",
+          "tab-admision",
+          "tab-retencion"
+        ];
+        const select = document.getElementById('tabSelector');
+        let shown = tabIds.find(id => {
+          const el = document.getElementById(id);
+          return el && (el.style.display === "block" || el.style.display === "");
+        });
+        if (shown) select.value = shown;
+      });
+    </script>
+   
     <div class="tab-content-container" >
       <!-- Contenido de la pestaña Satisfacción -->
       <div id="tab-satisfaccion" class="tab-content" style="display:block;">

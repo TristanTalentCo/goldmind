@@ -3612,8 +3612,16 @@
           justify-content: center;
           align-items: center;
         }
+        .wr-tb-content, .wg-filter, .form, .fl-title{
+          flex-direction: column;
+          height: fit-content;
+        }
         .widget-layout{
           width: 320px;
+        }
+        .tb-sk-a, .tb-ref, .tb-des, .tb-sk-h{
+          overflow: hidden;
+          justify-content: left;
         }
         .voc-content iframe{
           width: 310px;
@@ -3625,12 +3633,45 @@
       /* Small devices (landscape phones, 576px and up) */
       @media (min-width: 576px) and (max-width: 767.98px) {
         /* Add your styles here */
+        .widget-row-a{
+          width: 60%;
+          gap: 10px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          
+        }
+        .wr-title-bar {
+          width: 55%;
+        }
+        .wg-filter, .fl-title{
+          flex-direction: column;
+          justify-content: right;
+          align-items: end;
+          height: fit-content;
+        }
+        
       }
 
       /* Medium devices (tablets, 768px and up) */
       @media (min-width: 768px) and (max-width: 991.98px) {
         /* Add your styles here */
-        
+        .widget-row-a{
+          width: 65%;
+          gap: 10px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .wr-title-bar {
+          width: 60%;
+        }
+        .wg-filter, .fl-title{
+          flex-direction: column;
+          justify-content: right;
+          align-items: end;
+          height: fit-content;
+        }
       }
 
       /* Large devices (desktops, 992px and up) */
@@ -3640,6 +3681,7 @@
           gap: 10px;
           flex-direction: column;
         }
+        
 
         .care-row{
           flex-direction: column;
