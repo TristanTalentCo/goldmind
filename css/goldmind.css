@@ -3041,6 +3041,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 .care-v-b{
   
@@ -3152,6 +3153,7 @@
   height: 30px;
   display: flex;
   flex-direction: row;
+  text-align: center;
   align-items: center;
   justify-content: center;
   color: var(--color-dark);
@@ -3163,6 +3165,7 @@
   height: fit-content;
   display: flex;
   flex-direction: row;
+  text-align: center;
   align-items: center;
   justify-content: center;
   padding: 8px 0;
@@ -3675,7 +3678,38 @@
           height: 400px;
           
         }
-
+        .tb-des{
+          overflow: hidden;
+        }
+        .pa-content-top{
+          padding: 10px 2px;
+        }
+        .pa-pref-row{
+          text-align: center;
+        }
+        .pref-title{
+          width: 60px;
+          overflow: hidden;
+        }
+        .pa-btm{
+          flex-direction: column;
+          align-items: center;
+          
+        }
+        .pa-b-col{
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          
+          padding: 0;
+        }
+        .pa-header-a{
+          height: fit-content;
+        }
+        .pa-h-title{
+          text-align: center;
+          
+        }
         .care-row{
           flex-direction: column;
           
@@ -3714,6 +3748,7 @@
           padding: 8px 0;
           margin: 0;
           height: fit-content;
+          text-align: center;
         }
         .inc-tabs{
           display: none;
@@ -3803,7 +3838,44 @@
           align-items: end;
           height: fit-content;
         }
-        
+        .care-row{
+          flex-direction: column;
+          
+          align-items: center;
+        }
+        .care-col{
+          width: 100%;
+          overflow: hidden;
+        }
+        .kp-capsule{
+          width: 100%;
+          height: fit-content;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+        }
+        .kp-s:nth-child(1){
+          flex-direction: row-reverse;
+          
+        }
+        .kp-s{  
+          width: 70%;
+          height: 35px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          line-height: .8em;
+          text-align: center;
+          font-size: .8em;
+        }
+        .kp-data-l, .kp-data-r{
+          border-radius: 0;
+        }
+        .ctb-header-container > div, .itb-header-container > div{
+          height: 50px;
+        }
       }
 
       /* Medium devices (tablets, 768px and up) */
