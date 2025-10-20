@@ -24,14 +24,18 @@
       padding: 0;
     }
     .logo {
+      display: flex;
+      flex-direction: row;
       font-family: 'Montserrat', sans-serif;
       font-weight: var(--font-weight-bold);
       font-size: 1.5em;
       -webkit-user-select: none;
       user-select: none;
+      gap: 16px;
     }
     .logo img{
       height: 50px;
+      
     }
     body {
 
@@ -3950,4 +3954,7 @@
       /* XX-Large devices (larger desktops, 1400px and up) */
       @media (min-width: 1400px) {
         /* Add your styles here */
+      }
+
+
       }
