@@ -5,7 +5,7 @@
       tab.addEventListener('click', function() {
         document.querySelector('.navbar-tab.active').classList.remove('active');
         tab.classList.add('active');
-        slider.style.left = `calc(${idx} * (100% / 5))`;
+        slider.style.left = `calc(${idx} * (100% / 6))`;
       });
       });
     })();
