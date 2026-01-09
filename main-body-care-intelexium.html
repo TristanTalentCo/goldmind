@@ -79,7 +79,7 @@
     <nav class="custom-navbar">
       <ul class="navbar-tabs">
       <li class="navbar-tab active">Satisfacción - Voc / VoE</li>
-      <li class="navbar-tab">Skills Analytics</li>
+      <li class="navbar-tab">Skill Analytics</li>
       <li class="navbar-tab">Captación</li>
       <li class="navbar-tab">Admisión</li>
       <li class="navbar-tab">Retención</li>
@@ -87,110 +87,18 @@
       <div class="navbar-slider"></div>
       </ul>
     </nav>
-    <script src="js/gm-tab-nav.js"></script>
-    
-    <!-- Responsive Navbar for Small/Medium Devices -->
-    <style>
-      @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap');
-      .responsive-navbar {
-        display: none;
-        margin: 50px 0 0px 0;
-        font-family: 'Poppins', sans-serif;
-      }
-      .responsive-navbar label {
-        color: #002366;
-        font-weight: 500;
-        margin-right: 10px;
-        font-size: 1rem;
-      }
-      .responsive-navbar select {
-        background: #f6f8fb;
-        color: #182336;
-        border: 1px solid #002366;
-        border-radius: 6px;
-        padding: 8px 12px;
-        font-size: 1rem;
-        font-family: inherit;
-        font-weight: 500;
-        outline: none;
-        transition: border 0.2s;
-      }
-      .responsive-navbar select:focus {
-        border: 1.5px solid #182336;
-      }
-      @media (max-width: 900px) {
-        .custom-navbar {
-          display: none !important;
-        }
-        .responsive-navbar {
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          padding: 0 16px;
-        }
-      }
-    </style>
+        
     <div class="responsive-navbar">
       
       <select id="tabSelector">
         <option value="tab-satisfaccion">Satisfacción - Voc / VoE</option>
-        <option value="tab-skills">Skills Analytics</option>
+        <option value="tab-skills">Skill Analytics</option>
         <option value="tab-captacion">Captación</option>
         <option value="tab-admision">Admisión</option>
         <option value="tab-retencion">Retención</option>
         <option value="tab-intelexium">InteLEXIUM</option>
       </select>
     </div>
-    <script>
-      // Responsive tab selector logic
-      document.getElementById('tabSelector').addEventListener('change', function() {
-        const tabIds = [
-          "tab-satisfaccion",
-          "tab-skills",
-          "tab-captacion",
-          "tab-admision",
-          "tab-retencion"
-        ];
-        tabIds.forEach(id => {
-          const el = document.getElementById(id);
-          if (el) {
-            el.style.display = "none";
-            el.style.opacity = "0";
-          }
-        });
-        const selectedId = this.value;
-        const selectedEl = document.getElementById(selectedId);
-        if (selectedEl) {
-          selectedEl.style.display = "block";
-          // Force reflow for transition
-          void selectedEl.offsetWidth;
-          setTimeout(() => {
-            selectedEl.style.opacity = "1";
-          }, 10);
-        }
-        // Also update desktop navbar active state if visible
-        document.querySelectorAll('.navbar-tab').forEach((tab, idx) => {
-          if (tabIds[idx] === selectedId) tab.classList.add('active');
-          else tab.classList.remove('active');
-        });
-      });
-      // On load, sync select with visible tab
-      window.addEventListener('DOMContentLoaded', function() {
-        const tabIds = [
-          "tab-satisfaccion",
-          "tab-skills",
-          "tab-captacion",
-          "tab-admision",
-          "tab-retencion"
-        ];
-        const select = document.getElementById('tabSelector');
-        let shown = tabIds.find(id => {
-          const el = document.getElementById(id);
-          return el && (el.style.display === "block" || el.style.display === "");
-        });
-        if (shown) select.value = shown;
-      });
-    </script>
    
     <div class="tab-content-container" >
       <!-- Contenido de la pestaña Satisfacción -->
@@ -2328,8 +2236,9 @@
         </div>      
       </div>
       <!--Termina Contenido de la pestaña Retención-->
+
       <!--Inicia Contenido de la pestaña INTELEXIUM-->
-      <div id="tab-takingcare" class="tab-content tab-ai" style="display:none;">
+      <div id="tab-intelexium" class="tab-content tab-ai" style="display:none;">
           <div class="main-ai-agent">
             <!-- INICIA LEFT COLUMN -->
             <aside class="ai-col">
@@ -2343,16 +2252,54 @@
 
                   <div class="ai-history-module">
                     <div class="section-header"><img src="img/icon/ai-history.png" alt="">Historial de consultas</div>
+                    <!-- INICIA AI SCROLL HISTORIAL -->
                     <div class="ai-history-list">
                       <!-- INICIA AI BOTON COLUMNA -->
-                      <div class="ai-col-item ai-history-item" id="aiHistoryItem">
-                        <div class="ai-c-title "><a href="" id="aiHistoryItemName" class="ai-history-name">Item de historial 026 con nombre extenso</a></div>
-                        <button class="ai-c-btn ai-b-trash ai-history-delete" id="aiHistoryItemBorrar"><img src="img/icon/ai-trash.svg" alt=""></button>
+                      <div class="ai-col-item ai-history-item" >
+                        <div class="ai-c-title "><a href="#" class="aiHistoryItemName">Item de historial 026 con nombre extenso</a></div>
+                        <button class="ai-c-btn ai-b-trash aiHistoryItemBorrar btn-modal" data-tooltip-id="ttAiBorrar"  ><img src="img/icon/ai-trash.svg" alt=""></button>
+                      </div>
+                      <!-- TERMINA AI BOTON COLUMNA -->
+                      <!-- INICIA AI BOTON COLUMNA -->
+                      <div class="ai-col-item ai-history-item" >
+                        <div class="ai-c-title "><a href="#" class="aiHistoryItemName">Item de historial 025 con nombre extenso</a></div>
+                        <button class="ai-c-btn ai-b-trash aiHistoryItemBorrar btn-modal" data-tooltip-id="ttAiBorrar"  ><img src="img/icon/ai-trash.svg" alt=""></button>
+                      </div>
+                      <!-- TERMINA AI BOTON COLUMNA -->
+                      <!-- INICIA AI BOTON COLUMNA -->
+                      <div class="ai-col-item ai-history-item" >
+                        <div class="ai-c-title "><a href="#" class="aiHistoryItemName">Item de historial 024 con nombre extenso</a></div>
+                        <button class="ai-c-btn ai-b-trash aiHistoryItemBorrar btn-modal" data-tooltip-id="ttAiBorrar"  ><img src="img/icon/ai-trash.svg" alt=""></button>
+                      </div>
+                      <!-- TERMINA AI BOTON COLUMNA -->
+                      <!-- INICIA AI BOTON COLUMNA -->
+                      <div class="ai-col-item ai-history-item" >
+                        <div class="ai-c-title "><a href="#" class="aiHistoryItemName">Item de historial 023 con nombre extenso</a></div>
+                        <button class="ai-c-btn ai-b-trash aiHistoryItemBorrar btn-modal" data-tooltip-id="ttAiBorrar"  ><img src="img/icon/ai-trash.svg" alt=""></button>
+                      </div>
+                      <!-- TERMINA AI BOTON COLUMNA -->
+                      <!-- INICIA AI BOTON COLUMNA -->
+                      <div class="ai-col-item ai-history-item" >
+                        <div class="ai-c-title "><a href="#" class="aiHistoryItemName">Item de historial 022 con nombre extenso</a></div>
+                        <button class="ai-c-btn ai-b-trash aiHistoryItemBorrar btn-modal" data-tooltip-id="ttAiBorrar"  ><img src="img/icon/ai-trash.svg" alt=""></button>
+                      </div>
+                      <!-- TERMINA AI BOTON COLUMNA -->
+                      <!-- INICIA AI BOTON COLUMNA -->
+                      <div class="ai-col-item ai-history-item" >
+                        <div class="ai-c-title "><a href="#" class="aiHistoryItemName">Item de historial 021 con nombre extenso</a></div>
+                        <button class="ai-c-btn ai-b-trash aiHistoryItemBorrar btn-modal" data-tooltip-id="ttAiBorrar"  ><img src="img/icon/ai-trash.svg" alt=""></button>
+                      </div>
+                      <!-- TERMINA AI BOTON COLUMNA -->
+                      <!-- INICIA AI BOTON COLUMNA -->
+                      <div class="ai-col-item ai-history-item" >
+                        <div class="ai-c-title "><a href="#" class="aiHistoryItemName">Item de historial 020 con nombre extenso</a></div>
+                        <button class="ai-c-btn ai-b-trash aiHistoryItemBorrar btn-modal" data-tooltip-id="ttAiBorrar"  ><img src="img/icon/ai-trash.svg" alt=""></button>
                       </div>
                       <!-- TERMINA AI BOTON COLUMNA -->
                       
                       
                     </div>
+                    <!-- TERMINA AI SCROLL HISTORIAL -->
                   </div>
                 </div>
 
@@ -2365,15 +2312,15 @@
                   </div>
                 </div>
               </section>
-
+              <!-- INICIA AI SETTINGS -->
               <section class="card ai-config">
                 <div class="section-header">
                   <img src="img/icon/ai-settings.svg" alt="">
-                  Configura información complementaria
+                  Información complementaria
                 </div>
                 <!-- INICIA AI BOTON COLUMNA -->
                 <div class="ai-col-item">
-                  <div class="ai-c-title"><a href="#"  data-tooltip-id="ttAiSettings" class="btn-modal">Qué posición ocupas en la organización</a></div>
+                  <div class="ai-c-title"><a href="#"  data-tooltip-id="ttAiSettings" class="btn-modal">Configuración Complementaria</a></div>
                 </div>
                 <!-- TERMINA AI BOTON COLUMNA -->
                 
@@ -2395,371 +2342,348 @@
             <section class="ai-chat">
 
               <div class="ai-conversation">
-                <div class="ai-agent-content">
-                  <!-- INICIA MENSAJE USUARIO -->
-                   <div class= "ai-user-message">
-                    <div class="ai-user-text">
-                      Consulta de usuario: ¿Cómo puedo mejorar la retención de estudiantes en programas en línea?
+                <div class="ai-intelexium-frame" style="display: block;">
+                  <div class="ai-intelexium-logo">
+                    <img src="img/logo/logo-lexium-intelligence.svg" alt="">
+                    <div class="ai-intelexium-descripcion ai-bg-blue">
+                      <p>InteLEXIUM es el agente de inteligencia artificial que te permitirá relacionar datos dinamicamente y proyectar tendencias de acuerdo a la información de tu institución.</p>
                     </div>
-                   </div>
-                  <!-- TERMINA MENSAJE USUARIO -->
-                  <!-- INICIA MENSAJE AGENTE AI -->
-                  <div class="ai-message ai-agent ai-agent-msg" id="aiAgentMsg">
-                    <div class="ai-agent-card">
-                      <div class="ai-agent-header">
-                        
-                        <button class="ai-agent-toggle"><span class="ai-agent-title" id="aiAgentTitle">Lexium · Análisis</span><img src="img/icon/ai-acc-arrow.svg" class="ai-acc-arrow" id="aiAccArrow" alt=""></button>
-                      </div>
-
-                      <div class="ai-agent-answer">
-                        <div class="ai-markdown">
-                          <div >
-                            <h1>Título principal (H1)</h1>
-                            <p>
-                              Este es un párrafo introductorio con <strong>texto en negritas</strong>,
-                              <em>texto en cursiva</em> y <code>código inline</code>.
-                            </p>
-
-                            <h2>Subtítulo de sección (H2)</h2>
-                            <p>
-                              GitHub Markdown permite escribir contenido estructurado de forma clara y legible.
-                              Aquí tienes un <a href="#">enlace de ejemplo</a> dentro de un párrafo.
-                            </p>
-
-                            <h3>Subsección (H3)</h3>
-                            <p>
-                              A continuación se muestra una lista desordenada:
-                            </p>
-
-                            <ul>
-                              <li>Elemento de lista uno</li>
-                              <li>
-                                Elemento de lista dos con <strong>énfasis</strong>
-                              </li>
-                              <li>
-                                Elemento de lista tres con sublista:
-                                <ul>
-                                  <li>Subelemento A</li>
-                                  <li>Subelemento B</li>
-                                </ul>
-                              </li>
-                            </ul>
-
-                            <p>
-                              También soporta listas ordenadas:
-                            </p>
-
-                            <ol>
-                              <li>Primer paso</li>
-                              <li>Segundo paso</li>
-                              <li>Tercer paso</li>
-                            </ol>
-
-                            <h3>Bloque de cita</h3>
-                            <blockquote>
-                              <p>
-                                “Este es un bloque de cita. Se usa para resaltar una idea, nota o referencia
-                                importante dentro del contenido.”
-                              </p>
-                            </blockquote>
-
-                            <h3>Bloque de código</h3>
-                            <pre><code>
-                          // Ejemplo de código JavaScript
-                          function analizarDatos(datos) {
-                            if (!datos.length) return null;
-
-                            return datos.map(item => ({
-                              valor: item.valor,
-                              tendencia: item.valor > 50 ? 'alta' : 'media'
-                            }));
-                          }
-                            </code></pre>
-
-                            <h3>Tabla (GitHub Flavored Markdown)</h3>
-                            <table>
-                              <thead>
-                                <tr>
-                                  <th>Indicador</th>
-                                  <th>Valor</th>
-                                  <th>Interpretación</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>Retención</td>
-                                  <td>82%</td>
-                                  <td>Alta</td>
-                                </tr>
-                                <tr>
-                                  <td>Deserción</td>
-                                  <td>12%</td>
-                                  <td>Media</td>
-                                </tr>
-                                <tr>
-                                  <td>Satisfacción</td>
-                                  <td>4.6 / 5</td>
-                                  <td>Muy alta</td>
-                                </tr>
-                              </tbody>
-                            </table>
-
-                            <h3>Texto combinado</h3>
-                            <p>
-                              Es posible combinar <strong>negritas</strong>, <em>cursivas</em>,
-                              <code>código inline</code> y <a href="#">enlaces</a> en un mismo bloque
-                              sin perder legibilidad.
-                            </p>
-
-                          </div>
-                        </div>
-                      </div>
+                    <div class="ai-intelexium-descripcion ai-bg-orange">
+                      <p>Lexium no se hace responsable por el mal uso de esta herramienta. El usuario debe tomar las interacciones con la IA solo como una referencia para la toma de decisiones.</p>
                     </div>
                   </div>
-                  <!-- TERMINA MENSAJE AGENTE AI -->
-                  <!-- INICIA MENSAJE USUARIO -->
-                   <div class= "ai-user-message">
-                    <div class="ai-user-text">
-                      Consulta de usuario: ¿Cómo puedo mejorar la retención de estudiantes en programas en línea?
-                    </div>
-                   </div>
-                  <!-- TERMINA MENSAJE USUARIO -->
-                  <!-- INICIA MENSAJE AGENTE AI -->
-                  <div class="ai-message ai-agent ai-agent-msg" id="aiAgentMsg">
-                    <div class="ai-agent-card">
-                      <div class="ai-agent-header">
-                        
-                        <button class="ai-agent-toggle"><span class="ai-agent-title" id="aiAgentTitle">Lexium · Análisis</span><img src="img/icon/ai-acc-arrow.svg" class="ai-acc-arrow" id="aiAccArrow" alt=""></button>
+                </div>
+                <div class="ai-agent-frame" style="display: none;">
+                  <div class="ai-agent-content" >
+                    <!-- INICIA MENSAJE USUARIO -->
+                     <div class= "ai-user-message">
+                      <div class="ai-user-text">
+                        Consulta de usuario: ¿Cómo puedo mejorar la retención de estudiantes en programas en línea?
                       </div>
-
-                      <div class="ai-agent-answer">
-                        <div class="ai-markdown">
-                          <div >
-                            <h1>Título principal (H1)</h1>
-                            <p>
-                              Este es un párrafo introductorio con <strong>texto en negritas</strong>,
-                              <em>texto en cursiva</em> y <code>código inline</code>.
-                            </p>
-
-                            <h2>Subtítulo de sección (H2)</h2>
-                            <p>
-                              GitHub Markdown permite escribir contenido estructurado de forma clara y legible.
-                              Aquí tienes un <a href="#">enlace de ejemplo</a> dentro de un párrafo.
-                            </p>
-
-                            <h3>Subsección (H3)</h3>
-                            <p>
-                              A continuación se muestra una lista desordenada:
-                            </p>
-
-                            <ul>
-                              <li>Elemento de lista uno</li>
-                              <li>
-                                Elemento de lista dos con <strong>énfasis</strong>
-                              </li>
-                              <li>
-                                Elemento de lista tres con sublista:
-                                <ul>
-                                  <li>Subelemento A</li>
-                                  <li>Subelemento B</li>
-                                </ul>
-                              </li>
-                            </ul>
-
-                            <p>
-                              También soporta listas ordenadas:
-                            </p>
-
-                            <ol>
-                              <li>Primer paso</li>
-                              <li>Segundo paso</li>
-                              <li>Tercer paso</li>
-                            </ol>
-
-                            <h3>Bloque de cita</h3>
-                            <blockquote>
-                              <p>
-                                “Este es un bloque de cita. Se usa para resaltar una idea, nota o referencia
-                                importante dentro del contenido.”
-                              </p>
-                            </blockquote>
-
-                            <h3>Bloque de código</h3>
-                            <pre><code>
-                          // Ejemplo de código JavaScript
-                          function analizarDatos(datos) {
-                            if (!datos.length) return null;
-
-                            return datos.map(item => ({
-                              valor: item.valor,
-                              tendencia: item.valor > 50 ? 'alta' : 'media'
-                            }));
-                          }
-                            </code></pre>
-
-                            <h3>Tabla (GitHub Flavored Markdown)</h3>
-                            <table>
-                              <thead>
-                                <tr>
-                                  <th>Indicador</th>
-                                  <th>Valor</th>
-                                  <th>Interpretación</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>Retención</td>
-                                  <td>82%</td>
-                                  <td>Alta</td>
-                                </tr>
-                                <tr>
-                                  <td>Deserción</td>
-                                  <td>12%</td>
-                                  <td>Media</td>
-                                </tr>
-                                <tr>
-                                  <td>Satisfacción</td>
-                                  <td>4.6 / 5</td>
-                                  <td>Muy alta</td>
-                                </tr>
-                              </tbody>
-                            </table>
-
-                            <h3>Texto combinado</h3>
-                            <p>
-                              Es posible combinar <strong>negritas</strong>, <em>cursivas</em>,
-                              <code>código inline</code> y <a href="#">enlaces</a> en un mismo bloque
-                              sin perder legibilidad.
-                            </p>
-
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- TERMINA MENSAJE AGENTE AI -->
-                  <!-- INICIA MENSAJE USUARIO -->
-                   <div class= "ai-user-message">
-                    <div class="ai-user-text">
-                      Consulta de usuario: ¿Cómo puedo mejorar la retención de estudiantes en programas en línea?
-                    </div>
-                   </div>
-                  <!-- TERMINA MENSAJE USUARIO -->
-                  <!-- INICIA MENSAJE AGENTE AI -->
-                  <div class="ai-message ai-agent ai-agent-msg" id="aiAgentMsg">
-                    <div class="ai-agent-card">
-                      <div class="ai-agent-header">
-                        
-                        <button class="ai-agent-toggle"><span class="ai-agent-title" id="aiAgentTitle">Lexium · Análisis</span><img src="img/icon/ai-acc-arrow.svg" class="ai-acc-arrow" id="aiAccArrow" alt=""></button>
-                      </div>
-
-                      <div class="ai-agent-answer">
-                        <div class="ai-markdown">
-                          <div >
-                            <h1>Título principal (H1)</h1>
-                            <p>
-                              Este es un párrafo introductorio con <strong>texto en negritas</strong>,
-                              <em>texto en cursiva</em> y <code>código inline</code>.
-                            </p>
-
-                            <h2>Subtítulo de sección (H2)</h2>
-                            <p>
-                              GitHub Markdown permite escribir contenido estructurado de forma clara y legible.
-                              Aquí tienes un <a href="#">enlace de ejemplo</a> dentro de un párrafo.
-                            </p>
-
-                            <h3>Subsección (H3)</h3>
-                            <p>
-                              A continuación se muestra una lista desordenada:
-                            </p>
-
-                            <ul>
-                              <li>Elemento de lista uno</li>
-                              <li>
-                                Elemento de lista dos con <strong>énfasis</strong>
-                              </li>
-                              <li>
-                                Elemento de lista tres con sublista:
-                                <ul>
-                                  <li>Subelemento A</li>
-                                  <li>Subelemento B</li>
-                                </ul>
-                              </li>
-                            </ul>
-
-                            <p>
-                              También soporta listas ordenadas:
-                            </p>
-
-                            <ol>
-                              <li>Primer paso</li>
-                              <li>Segundo paso</li>
-                              <li>Tercer paso</li>
-                            </ol>
-
-                            <h3>Bloque de cita</h3>
-                            <blockquote>
-                              <p>
-                                “Este es un bloque de cita. Se usa para resaltar una idea, nota o referencia
-                                importante dentro del contenido.”
-                              </p>
-                            </blockquote>
-
-                            <h3>Bloque de código</h3>
-                            <pre><code>
-                          // Ejemplo de código JavaScript
-                          function analizarDatos(datos) {
-                            if (!datos.length) return null;
-
-                            return datos.map(item => ({
-                              valor: item.valor,
-                              tendencia: item.valor > 50 ? 'alta' : 'media'
-                            }));
-                          }
-                            </code></pre>
-
-                            <h3>Tabla (GitHub Flavored Markdown)</h3>
-                            <table>
-                              <thead>
-                                <tr>
-                                  <th>Indicador</th>
-                                  <th>Valor</th>
-                                  <th>Interpretación</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>Retención</td>
-                                  <td>82%</td>
-                                  <td>Alta</td>
-                                </tr>
-                                <tr>
-                                  <td>Deserción</td>
-                                  <td>12%</td>
-                                  <td>Media</td>
-                                </tr>
-                                <tr>
-                                  <td>Satisfacción</td>
-                                  <td>4.6 / 5</td>
-                                  <td>Muy alta</td>
-                                </tr>
-                              </tbody>
-                            </table>
-
-                            <h3>Texto combinado</h3>
-                            <p>
-                              Es posible combinar <strong>negritas</strong>, <em>cursivas</em>,
-                              <code>código inline</code> y <a href="#">enlaces</a> en un mismo bloque
-                              sin perder legibilidad.
-                            </p>
-
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- TERMINA MENSAJE AGENTE AI -->
+                     </div>
+                    <!-- TERMINA MENSAJE USUARIO -->
+                    <!-- INICIA MENSAJE AGENTE AI -->
+                    <div class="ai-message ai-agent ai-agent-msg" id="aiAgentMsg">
+                      <div class="ai-agent-card">
+                        <div class="ai-agent-header">
                   
+                          <button class="ai-agent-toggle"><span class="ai-agent-title" id="aiAgentTitle">Lexium · Análisis</span><img src="img/icon/ai-acc-arrow.svg" class="ai-acc-arrow" id="aiAccArrow" alt=""></button>
+                        </div>
+                        <div class="ai-agent-answer">
+                          <div class="ai-markdown">
+                            <div >
+                              <h1>Título principal (H1)</h1>
+                              <p>
+                                Este es un párrafo introductorio con <strong>texto en negritas</strong>,
+                                <em>texto en cursiva</em> y <code>código inline</code>.
+                              </p>
+                              <h2>Subtítulo de sección (H2)</h2>
+                              <p>
+                                GitHub Markdown permite escribir contenido estructurado de forma clara y legible.
+                                Aquí tienes un <a href="#">enlace de ejemplo</a> dentro de un párrafo.
+                              </p>
+                              <h3>Subsección (H3)</h3>
+                              <p>
+                                A continuación se muestra una lista desordenada:
+                              </p>
+                              <ul>
+                                <li>Elemento de lista uno</li>
+                                <li>
+                                  Elemento de lista dos con <strong>énfasis</strong>
+                                </li>
+                                <li>
+                                  Elemento de lista tres con sublista:
+                                  <ul>
+                                    <li>Subelemento A</li>
+                                    <li>Subelemento B</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                              <p>
+                                También soporta listas ordenadas:
+                              </p>
+                              <ol>
+                                <li>Primer paso</li>
+                                <li>Segundo paso</li>
+                                <li>Tercer paso</li>
+                              </ol>
+                              <h3>Bloque de cita</h3>
+                              <blockquote>
+                                <p>
+                                  “Este es un bloque de cita. Se usa para resaltar una idea, nota o referencia
+                                  importante dentro del contenido.”
+                                </p>
+                              </blockquote>
+                              <h3>Bloque de código</h3>
+                              <pre><code>
+                            // Ejemplo de código JavaScript
+                            function analizarDatos(datos) {
+                              if (!datos.length) return null;
+                              return datos.map(item => ({
+                                valor: item.valor,
+                                tendencia: item.valor > 50 ? 'alta' : 'media'
+                              }));
+                            }
+                              </code></pre>
+                              <h3>Tabla (GitHub Flavored Markdown)</h3>
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th>Indicador</th>
+                                    <th>Valor</th>
+                                    <th>Interpretación</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Retención</td>
+                                    <td>82%</td>
+                                    <td>Alta</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Deserción</td>
+                                    <td>12%</td>
+                                    <td>Media</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Satisfacción</td>
+                                    <td>4.6 / 5</td>
+                                    <td>Muy alta</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <h3>Texto combinado</h3>
+                              <p>
+                                Es posible combinar <strong>negritas</strong>, <em>cursivas</em>,
+                                <code>código inline</code> y <a href="#">enlaces</a> en un mismo bloque
+                                sin perder legibilidad.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- TERMINA MENSAJE AGENTE AI -->
+                    <!-- INICIA MENSAJE USUARIO -->
+                     <div class= "ai-user-message">
+                      <div class="ai-user-text">
+                        Consulta de usuario: ¿Cómo puedo mejorar la retención de estudiantes en programas en línea?
+                      </div>
+                     </div>
+                    <!-- TERMINA MENSAJE USUARIO -->
+                    <!-- INICIA MENSAJE AGENTE AI -->
+                    <div class="ai-message ai-agent ai-agent-msg" id="aiAgentMsg">
+                      <div class="ai-agent-card">
+                        <div class="ai-agent-header">
+                  
+                          <button class="ai-agent-toggle"><span class="ai-agent-title" id="aiAgentTitle">Lexium · Análisis</span><img src="img/icon/ai-acc-arrow.svg" class="ai-acc-arrow" id="aiAccArrow" alt=""></button>
+                        </div>
+                        <div class="ai-agent-answer">
+                          <div class="ai-markdown">
+                            <div >
+                              <h1>Título principal (H1)</h1>
+                              <p>
+                                Este es un párrafo introductorio con <strong>texto en negritas</strong>,
+                                <em>texto en cursiva</em> y <code>código inline</code>.
+                              </p>
+                              <h2>Subtítulo de sección (H2)</h2>
+                              <p>
+                                GitHub Markdown permite escribir contenido estructurado de forma clara y legible.
+                                Aquí tienes un <a href="#">enlace de ejemplo</a> dentro de un párrafo.
+                              </p>
+                              <h3>Subsección (H3)</h3>
+                              <p>
+                                A continuación se muestra una lista desordenada:
+                              </p>
+                              <ul>
+                                <li>Elemento de lista uno</li>
+                                <li>
+                                  Elemento de lista dos con <strong>énfasis</strong>
+                                </li>
+                                <li>
+                                  Elemento de lista tres con sublista:
+                                  <ul>
+                                    <li>Subelemento A</li>
+                                    <li>Subelemento B</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                              <p>
+                                También soporta listas ordenadas:
+                              </p>
+                              <ol>
+                                <li>Primer paso</li>
+                                <li>Segundo paso</li>
+                                <li>Tercer paso</li>
+                              </ol>
+                              <h3>Bloque de cita</h3>
+                              <blockquote>
+                                <p>
+                                  “Este es un bloque de cita. Se usa para resaltar una idea, nota o referencia
+                                  importante dentro del contenido.”
+                                </p>
+                              </blockquote>
+                              <h3>Bloque de código</h3>
+                              <pre><code>
+                            // Ejemplo de código JavaScript
+                            function analizarDatos(datos) {
+                              if (!datos.length) return null;
+                              return datos.map(item => ({
+                                valor: item.valor,
+                                tendencia: item.valor > 50 ? 'alta' : 'media'
+                              }));
+                            }
+                              </code></pre>
+                              <h3>Tabla (GitHub Flavored Markdown)</h3>
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th>Indicador</th>
+                                    <th>Valor</th>
+                                    <th>Interpretación</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Retención</td>
+                                    <td>82%</td>
+                                    <td>Alta</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Deserción</td>
+                                    <td>12%</td>
+                                    <td>Media</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Satisfacción</td>
+                                    <td>4.6 / 5</td>
+                                    <td>Muy alta</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <h3>Texto combinado</h3>
+                              <p>
+                                Es posible combinar <strong>negritas</strong>, <em>cursivas</em>,
+                                <code>código inline</code> y <a href="#">enlaces</a> en un mismo bloque
+                                sin perder legibilidad.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- TERMINA MENSAJE AGENTE AI -->
+                    <!-- INICIA MENSAJE USUARIO -->
+                     <div class= "ai-user-message">
+                      <div class="ai-user-text">
+                        Consulta de usuario: ¿Cómo puedo mejorar la retención de estudiantes en programas en línea?
+                      </div>
+                     </div>
+                    <!-- TERMINA MENSAJE USUARIO -->
+                    <!-- INICIA MENSAJE AGENTE AI -->
+                    <div class="ai-message ai-agent ai-agent-msg" id="aiAgentMsg">
+                      <div class="ai-agent-card">
+                        <div class="ai-agent-header">
+                  
+                          <button class="ai-agent-toggle"><span class="ai-agent-title" id="aiAgentTitle">Lexium · Análisis</span><img src="img/icon/ai-acc-arrow.svg" class="ai-acc-arrow" id="aiAccArrow" alt=""></button>
+                        </div>
+                        <div class="ai-agent-answer">
+                          <div class="ai-markdown">
+                            <div >
+                              <h1>Título principal (H1)</h1>
+                              <p>
+                                Este es un párrafo introductorio con <strong>texto en negritas</strong>,
+                                <em>texto en cursiva</em> y <code>código inline</code>.
+                              </p>
+                              <h2>Subtítulo de sección (H2)</h2>
+                              <p>
+                                GitHub Markdown permite escribir contenido estructurado de forma clara y legible.
+                                Aquí tienes un <a href="#">enlace de ejemplo</a> dentro de un párrafo.
+                              </p>
+                              <h3>Subsección (H3)</h3>
+                              <p>
+                                A continuación se muestra una lista desordenada:
+                              </p>
+                              <ul>
+                                <li>Elemento de lista uno</li>
+                                <li>
+                                  Elemento de lista dos con <strong>énfasis</strong>
+                                </li>
+                                <li>
+                                  Elemento de lista tres con sublista:
+                                  <ul>
+                                    <li>Subelemento A</li>
+                                    <li>Subelemento B</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                              <p>
+                                También soporta listas ordenadas:
+                              </p>
+                              <ol>
+                                <li>Primer paso</li>
+                                <li>Segundo paso</li>
+                                <li>Tercer paso</li>
+                              </ol>
+                              <h3>Bloque de cita</h3>
+                              <blockquote>
+                                <p>
+                                  “Este es un bloque de cita. Se usa para resaltar una idea, nota o referencia
+                                  importante dentro del contenido.”
+                                </p>
+                              </blockquote>
+                              <h3>Bloque de código</h3>
+                              <pre><code>
+                            // Ejemplo de código JavaScript
+                            function analizarDatos(datos) {
+                              if (!datos.length) return null;
+                              return datos.map(item => ({
+                                valor: item.valor,
+                                tendencia: item.valor > 50 ? 'alta' : 'media'
+                              }));
+                            }
+                              </code></pre>
+                              <h3>Tabla (GitHub Flavored Markdown)</h3>
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th>Indicador</th>
+                                    <th>Valor</th>
+                                    <th>Interpretación</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Retención</td>
+                                    <td>82%</td>
+                                    <td>Alta</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Deserción</td>
+                                    <td>12%</td>
+                                    <td>Media</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Satisfacción</td>
+                                    <td>4.6 / 5</td>
+                                    <td>Muy alta</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <h3>Texto combinado</h3>
+                              <p>
+                                Es posible combinar <strong>negritas</strong>, <em>cursivas</em>,
+                                <code>código inline</code> y <a href="#">enlaces</a> en un mismo bloque
+                                sin perder legibilidad.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- TERMINA MENSAJE AGENTE AI -->
+                  
+                  </div>
                 </div>
               </div>
 
@@ -2821,50 +2745,6 @@
       <!--Termina Contenido de la pestaña INTELEXIUM-->
     </div>
     
-    <script>
-      const tabIds = [
-      "tab-satisfaccion",
-      "tab-skills",
-      "tab-captacion",
-      "tab-admision",
-      "tab-retencion",
-      "tab-takingcare"
-      ];
-
-      // Add transition style to all tab contents
-      tabIds.forEach(id => {
-      const el = document.getElementById(id);
-      el.style.transition = "opacity 0.35s";
-      el.style.opacity = (el.style.display === "block" || el.style.display === "") ? "1" : "0";
-      });
-
-      document.querySelectorAll('.navbar-tab').forEach((tab, idx) => {
-      tab.addEventListener('click', function() {
-        const currentIdx = tabIds.findIndex(id => document.getElementById(id).style.display === "block");
-        const currentId = tabIds[currentIdx >= 0 ? currentIdx : 0];
-        const nextId = tabIds[idx];
-        if (currentId === nextId) return;
-
-        const currentEl = document.getElementById(currentId);
-        const nextEl = document.getElementById(nextId);
-
-        // Fade out current
-        currentEl.style.opacity = "0";
-        setTimeout(() => {
-        currentEl.style.display = "none";
-        nextEl.style.display = "block";
-        // Force reflow for transition
-        void nextEl.offsetWidth;
-        nextEl.style.opacity = "0";
-        setTimeout(() => {
-          nextEl.style.opacity = "1";
-        }, 10);
-        }, 350);
-      });
-      });
-    </script>
-
-
   </main>
 
   <!-- INICIA FOOTER BAR -->
@@ -2910,7 +2790,7 @@
   </div>
   <!-- TERMINA MENU USER ACTIONS -->
 
-    <!-- INICIA MODALES -->
+    <!-- INICIA MODALES SATISFACCION-->
     <div class="tt-bg" id="ttVoc">
       <div class="tooltip">
         <div class="tt-top">
@@ -2937,6 +2817,33 @@
         </div>
       </div>
     </div>
+    <div class="tt-bg" id="igVoc">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Voz del Cliente - Insight General</p>
+            <div class="btn-close" onclick="closeTooltip('igVoc')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="igText">Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. </p>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="igVoe">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Voz del Colaborador - Insight General</p>
+            <div class="btn-close" onclick="closeTooltip('igVoe')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p class="tooltip-text" id="isgText">Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. </p>
+        </div>
+      </div>
+    </div>
+    <!-- INICIA MODALES SKILL ANALYTICS-->
     <div class="tt-bg" id="ttHabInt">
       <div class="tooltip">
         <div class="tt-top">
@@ -2986,32 +2893,6 @@
         </div>
         <div class="tt-btm">
           <p class="tooltip-text" id="ttText">“Balance psicosocial” está diseñado para identificar los pensamientos, sentimientos y conductas que una persona presenta y que pueden traducirse en factores de riesgo en alguna o algunas de las siguientes variables relacionadas con el ámbito psicosocial: ansiedad, depresión, autoimagen negativa en redes sociales, adicción a la tecnología, tendencia a la autolesión, tendencia a ser bully y bajo control de impulsos.</p>
-        </div>
-      </div>
-    </div>
-    <div class="tt-bg" id="igVoc">
-      <div class="tooltip">
-        <div class="tt-top">
-          <div class="tt-t-bar">
-            <p class="tooltip-title" id="ttTitle">Voz del Cliente - Insight General</p>
-            <div class="btn-close" onclick="closeTooltip('igVoc')"><img src="img/icon/x.svg" alt=""></div>
-          </div>
-        </div>
-        <div class="tt-btm">
-          <p class="tooltip-text" id="igText">Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. </p>
-        </div>
-      </div>
-    </div>
-    <div class="tt-bg" id="igVoe">
-      <div class="tooltip">
-        <div class="tt-top">
-          <div class="tt-t-bar">
-            <p class="tooltip-title" id="ttTitle">Voz del Colaborador - Insight General</p>
-            <div class="btn-close" onclick="closeTooltip('igVoe')"><img src="img/icon/x.svg" alt=""></div>
-          </div>
-        </div>
-        <div class="tt-btm">
-          <p class="tooltip-text" id="isgText">Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. Placeholder Insight General. </p>
         </div>
       </div>
     </div>
@@ -3067,6 +2948,7 @@
         </div>
       </div>
     </div>
+    <!-- INICIA MODALES CARE-->
     <div class="tt-bg" id="ttCareCap">
       <div class="tooltip">
         <div class="tt-top">
@@ -3132,6 +3014,7 @@
         </div>
       </div>
     </div>
+    <!-- INICIA MODALES AI -->
     <div class="tt-bg" id="ttAiFaq">
       <div class="tooltip">
         <div class="tt-top">
@@ -3154,7 +3037,45 @@
           </div>
         </div>
         <div class="tt-btm">
-          <p class="tooltip-text" id="isgText">FORMULARIO</p>
+          
+          <div class="ai-modal-settings">
+            <form action="" id="aiSettingsForm">
+                
+                  <!-- Input 1 -->
+                    <input type="text" class="ai-modal-input" placeholder="Qué posición ocupas en la organización.">
+                  <!-- Input 2 -->
+                   <input type="text" class="ai-modal-input" placeholder="Cuál es tu contexto de trabajo (ciudad, temporada, otros datos)">
+                  <!-- Save Button -->
+                  <button type="submit" class="btn-acc-qp btn-save" onclick="closeTooltip('ttAiSettings')" id="aiBtnSettingsGuardar">Guardar</button>
+                
+            </form>
+            <script>
+              const form = document.getElementById('aiSettingsForm');
+
+              form.addEventListener('submit', function(event) {
+                
+                event.preventDefault();
+
+                
+                const datos = new FormData(form);
+
+                
+                fetch('backend.php', { // URL de backend
+                  method: 'POST',
+                  body: datos
+                })
+                .then(response => {
+                    if(response.ok) {
+                        console.log('¡Enviado con éxito!');
+                        // Aquí puedes mostrar un mensaje de "Guardado" al usuario
+                    }
+                })
+                .catch(error => {
+                    console.error('Hubo un error:', error);
+                });
+              });
+            </script>
+          </div>
         </div>
       </div>
     </div>
@@ -3168,6 +3089,29 @@
         </div>
         <div class="tt-btm">
           <p class="tooltip-text" id="isgText">Lexium no se hace responsable por el mal uso de esta herramienta. El usuario debe tomar las interacciones con la IA solo como una referencia para la toma de decisiones. </p>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="ttAiBorrar">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">InteLEXIUM - ¿Desea eliminar esta consulta?</p>
+            <div type="button" class="btn-close" onclick="closeTooltip('ttAiBorrar'); "><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <p> Desea eliminar la consulta con el título: </p>
+          <h2 class="tooltip-text" id="aiBorrarTitulo">Título de la consulta </h2>
+          <div class="btn-acc-qp-group">
+            <button class="btn-acc-lx btn-delete">
+              Eliminar
+            </button>
+            <button class="btn-acc-qp btn-cancel" onclick="closeTooltip('ttAiBorrar')">
+              Cancelar
+            </button>
+            
+          </div>
         </div>
       </div>
     </div>
@@ -3335,7 +3279,10 @@
     
 
   <!-- TERMINA MODALES -->
-    
+   
+    <script src="js/gm-tab-nav.js"></script>
+    <script src="js/gm-tab-transitions.js"></script>
+    <script src="js/gm-responsive-nav.js"></script>
     <script src="js/logo-care.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/tooltip.js"></script>
@@ -3345,6 +3292,7 @@
     <script src="js/screenshot.js"></script>
     <script src="js/ai-agentaccordeon.js"></script>
     <script src="js/ai-charcount.js"></script>
+    <script src="js/ai-lexium-button.js"></script>
 </body>
 
 </html>
