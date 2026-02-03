@@ -3743,6 +3743,7 @@
       font-size: 14px;
     }
     .ai-c-title{
+      width: 30ch;
       height: 1lh;
       overflow: hidden;
       text-overflow: ellipsis;
