@@ -1,10 +1,12 @@
       const tabIds = [
-      "tab-satisfaccion",
-      "tab-skills",
+      "tab-dashboardestrategico",
+      "tab-skillanalytics",
       "tab-captacion",
       "tab-admision",
       "tab-retencion",
-      "tab-intelexium"
+      "tab-intelexium",
+      "tab-sensor",
+      "tab-vozdelcliente"
       ];
 
       // Add transition style to all tab contents

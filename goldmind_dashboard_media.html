@@ -7,6 +7,7 @@
   <title>Goldmind - Business Intelligence</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/goldmind.css">
+  <link rel="stylesheet" href="css/dashboard_botones.css">
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -25,22 +26,22 @@
   
 </head>
 
-<body class="no-scroll">
+<body>
 
   <header>
     <div class="logo-bar">
       <div class="logo-bar-container">
         <div class="logo">
-          <img src="img/logo/goldmind.svg" alt="Goldmind Business Intelligence">
-          <img src="img/logo/care-logo.png" id="logo-care" alt="Goldmind Business Intelligence">
+          <img src="img/logo/logo-lexium-goldmind.svg" alt="Goldmind Business Intelligence">
+          
         </div>
-        
+        <div class="logo-bar-title">DASHBOARD ESTRATÉGICO</div>
         <div class="user-actions">
-          <div class="user-actions-inst-logo">
+          <div class="user-actions-inst-logo" style="display: none;">
             <span class="nombre-institucion user-inst-name" id="headIstName">Placeholder Nombre de la Institución</span>
             <img src="img/logo/inst-logo.png" alt="">
           </div>
-          <div data-tooltip-id="ttGolIns" class="btn-gm-insights btn-modal"><img src="img/icon/bulb.svg" alt="Ver Goldmind Insights"></div>
+          
           <div class="user-container">
             <div class="profile-pic"></div>
             <div class="user-info">
@@ -61,13 +62,13 @@
             <span class="nombre-institucion" id="headIstName">Placeholder Nombre de la Institución</span>
         </div>
         <div class="title-bar-access">
-          <div class="btn-acc-qp">
-            <span class="Acceso-a">Acceso a</span>
-            <img src="img/logo/questionpro-logo-white.svg" alt="">
-          </div>
           <div class="btn-acc-lx">
-            <span class="Acceso-a">Acceso a</span>
+            <span class="Acceso-a">Plataforma</span>
             <img src="img/logo/lexium-logo.svg" alt="">
+          </div>
+          <div class="btn-acc-cerrar">
+            <span class="Acceso-a">Cerrar sesión</span>
+            <img src="img/icon/exit.svg" alt="">
           </div>
         </div>
       </div>
@@ -75,18 +76,87 @@
   </header>
 
   <main>
+    <div class="custom-navbar">
+        <nav class="navbar-header">
+          <div class="navbar-menu-open">
+              <div class="navbar-tab btn-home-menu active">
+                  <img src="img/icon/home.svg" alt="">
+              </div>
+              <div class="btn-open-menu">
+                  <img src="img/icon/menu.svg" alt="">
+              </div>
+          </div>
+          <div class="navbar-menu-tabs">
+              <div class="nav-category">
+                  <div class="nav-cat-tag">PRODUCTOS</div>
+              </div>
+              <div class="btn-nav-tab navbar-tab">
+                  <div class="nav-h-ic">
+                      <div class="nav-h-tag"><img src="img/logo/logo-skills-analytics-w.svg" alt=""></div>
+                  </div>
+                  <div class="nav-h-desc">
+                      <div class="nav-h-txt">Analítica de habilidades</div>
+                  </div>
+              </div>
+              <div class="nav-care">
+                  <div class="nav-h-ic">
+                      <div class="nav-h-tag"><img src="img/logo/logo-care-w.svg" alt=""></div>
+                  </div>
+              </div>
+              <div class="btn-nav-tab navbar-tab">
+                  <div class="nav-p-tag">
+                      <div class="nav-p-tag">Captación</div>
+                  </div>
+              </div>
+              <div class="btn-nav-tab navbar-tab">
+                  <div class="nav-p-tag">
+                      <div class="nav-p-tag">Admisión</div>
+                  </div>
+              </div>
+              <div class="btn-nav-tab navbar-tab">
+                  <div class="nav-p-tag">
+                      <div class="nav-p-tag">Retención</div>
+                  </div>
+              </div>
+              <div class="nav-category">
+                  <div class="nav-cat-tag">HERRAMIENTAS</div>
+              </div>
+              <div class="btn-nav-tab navbar-tab">
+                  <div class="nav-h-ic">
+                      <div class="nav-h-tag"><img src="img/logo/logo-intelexium.svg" alt=""></div>
+                  </div>
+                  <div class="nav-h-desc">
+                      <div class="nav-h-txt">Análisis predictivo con Inteligencia Artificial</div>
+                  </div>
+              </div>
+              <div class="btn-nav-tab navbar-tab">
+                  <div class="nav-h-ic">
+                      <div class="nav-h-tag">Sensor</div>
+                  </div>
+                  <div class="nav-h-desc">
+                      <div class="nav-h-txt">Análisis financiero con Inteligencia Artificial</div>
+                  </div>
+              </div>
+              <div class="btn-nav-tab navbar-tab">
+                  <div class="nav-h-ic">
+                      <div class="nav-h-tag">Voz del Cliente</div>
+                  </div>
+                  <div class="nav-h-desc">
+                      <div class="nav-h-txt">Medición de lealtad y satisfacción de la comunidad educativa</div>
+                  </div>
+              </div>
+          </div>
+        </nav>   
+        <div class="navbar-footer">
+          <div class="navbar-f-content">
+            <a href="https://www.lexiumonline.com/politicas/" class="">Aviso de privacidad</a>
+            <p class="">Lexium Goldmind</p>
+            <p class="">© Derechos Reservados 2026</p>
+          </div>
+        </div>
+        
+    </div>
 
-    <nav class="custom-navbar">
-      <ul class="navbar-tabs">
-      <li class="navbar-tab active">Customer Satisfaction <br> (Satisfacción del Cliente)</li>
-      <li class="navbar-tab">Skill Analytics <br> (Analítica de Habilidades)</li>
-      <li class="navbar-tab">Captación</li>
-      <li class="navbar-tab">Admisión</li>
-      <li class="navbar-tab">Retención</li>
-      <li class="navbar-tab">InteLEXIUM <br> (Análisis Predictivo IA)</li>
-      <div class="navbar-slider"></div>
-      </ul>
-    </nav>
         
     <div class="responsive-navbar">
       
@@ -101,8 +171,84 @@
     </div>
    
     <div class="tab-content-container" >
+      <!-- Contenido de la pestaña Dashboard Estratégico -->
+      <div id="tab-dashboardestrategico" class="tab-content" style="display:block;">
+        <div class="contenido">
+          <div class="gm-db-container">
+            <div class="gm-prods-row">
+                <div class="gm-row-title">
+                    <div class="gm-row-tag">PRODUCTOS</div>
+                </div>
+                <div class="gm-p-r">
+                    <div class="gm-p-frame ">
+                        <div class="gm-p-title">
+                            <div class="gm-p-icon"><img src="img/logo/logo-skills-analytics.svg" alt=""></div>
+                        </div>
+                        <div class="gm-p-skills-row">
+                            <div class="gm-btn-frame ">
+                                <div class="btn db-tab">
+                                    <div class="b-p-btm"><img src="img/dashboard-icons/icon-skills-analytics.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gm-p-frame">
+                        <div class="gm-p-title">
+                            <div class="gm-p-icon"><img src="img/logo/logo-care.svg" alt=""></div>
+                        </div>
+                        <div class="gm-p-row">
+                            <div class="btn  db-tab">
+                                <div class="b-p-top"><div class="b-p-tag">Captación</div></div>
+                                <div class="b-p-btm"><img src="img/dashboard-icons/icon-captacion.png" alt=""></div>
+                            </div>
+                            <div class="btn db-tab">
+                                <div class="b-p-top"><div class="b-p-tag">Admisión</div></div>
+                                <div class="b-p-btm"><img src="img/dashboard-icons/icon-admision.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="gm-p-row">
+                            <div class="btn db-tab">
+                                <div class="b-p-top"><div class="b-p-tag">Retención</div></div>
+                                <div class="b-p-btm"><img src="img/dashboard-icons/icon-retencion.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gm-tools-row">
+                <div class="gm-row-title">
+                    <div class="gm-row-tag">HERRAMIENTAS</div>
+                </div>
+                <div class="gm-h-frame">
+                    <div class="gm-h-row">
+                        <div class="gm-h-b-frame ">
+                            <div class="btn-h-content db-tab">
+                                <div class="gm-h-top"><div class="gm-h-tag"><img src="img/logo/logo-intelexium.svg" alt=""></div></div>
+                                <div class="gm-h-btm"><div class="gm-h-desc">Análisis predictivo con Inteligencia Artificial</div></div>
+                            </div>
+                        </div>
+                        <div class="gm-h-b-frame ">
+                            <div class="btn-h-content db-tab">
+                                <div class="gm-h-top"><div class="gm-h-tag">Sensor</div></div>
+                                <div class="gm-h-btm"><div class="gm-h-desc">Análisis financiero con Inteligencia Artificial</div></div>
+                            </div>
+                        </div>
+                        <div class="gm-h-b-frame ">
+                            <div class="btn-h-content db-tab">
+                                <div class="gm-h-top"><div class="gm-h-tag">Voz del Cliente</div></div>
+                                <div class="gm-h-btm"><div class="gm-h-desc">Medición de lealtad y satisfacción de la comunidad educativa</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Termina Contenido de la pestaña Dashboard Estratégico -->
       <!-- Contenido de la pestaña Satisfacción -->
-      <div id="tab-satisfaccion" class="tab-content" style="display:block;">
+      <div id="tab-vozdelcliente" class="tab-content" style="display:none;">
         <div class="contenido">
           <div class="ins-name-container">
             <span class="nombre-institucion" id="headIstName">Placeholder Nombre de la Institución</span>
@@ -114,7 +260,7 @@
                   <p class="category-title" id="categoryTitle1">Indicadores de Satisfacción del Cliente y Colaboradores</p>
                 </div>
                 <div class="wr-subtitle">
-                  <p class="category-subtitle" id="categorySubtitle1">Powered by Growe</p>
+                  <p class="category-subtitle" id="categorySubtitle1"></p>
                 </div>
               </div>
             </div>
@@ -249,8 +395,8 @@
       </div>
       <!-- Termina Contenido de la pestaña Satisfacción -->
 
-      <!-- Contenido de la pestaña Skills Analytics -->
-      <div id="tab-skills" class="tab-content" style="display:none;">        
+      <!-- Contenido de la pestaña Skill Analytics -->
+      <div id="tab-skillanalytics" class="tab-content" style="display:none;">        
         <div class="contenido">
           <div class="ins-name-container">
             <span class="nombre-institucion" id="headIstName">Placeholder Nombre de la Institución</span>
@@ -260,10 +406,10 @@
             <div class="wr-tb-content">
               <div class="wr-tb-gp">
                 <div class="wr-category-title">
-                  <p class="category-title" id="categoryTitle2">Skills Analytics</p>
+                  <p class="category-title" id="categoryTitle2"><img src="img/logo/logo-skills-analytics.svg" alt=""></p>
                 </div>
                 <div class="wr-subtitle">
-                  <p class="category-subtitle" id="categorySubtitle2">Powered by Lexium</p>
+                  <p class="category-subtitle" id="categorySubtitle2"></p>
                 </div>
               </div>
               <div class="wg-filter">
@@ -295,10 +441,10 @@
           <div class="wr-notes">
             <div class="wr-notes-content">
               <div class="note">
-                <p class="st-data" id="note1">Lexium es una estadística de referencia.</p>
+                <p class="st-data" id="note1"></p>
               </div>
               <div class="note">
-                <p class="st-data" id="note2">Muestra no representativa.</p>
+                <p class="st-data" id="note2"></p>
               </div>
             </div>
           </div>
@@ -1150,7 +1296,7 @@
           <!--Termina Widget Row -->
         </div>
       </div>
-      <!--Termina Contenido de la pestaña Skills Analytics-->
+      <!--Termina Contenido de la pestaña Skill Analytics-->
 
       <!--Inicia Contenido de la pestaña Captación-->
       <div id="tab-captacion" class="tab-content" style="display:none;">
@@ -1164,10 +1310,10 @@
           <div class="wr-tb-content">
             <div class="wr-tb-gp">
               <div class="wr-category-title">
-                <p class="category-title" id="categoryTitle2">CARE -Captación, Admisión, Retención</p>
+                <p class="category-title" id="categoryTitle2"><img src="img/logo/logo-care.svg" alt=""></p>
               </div>
               <div class="wr-subtitle">
-                <p class="category-subtitle" id="categorySubtitle2">Powered by Lexium</p>
+                <p class="category-subtitle" id="categorySubtitle2"></p>
               </div>
             </div>
             <div class="wg-filter">
@@ -1550,10 +1696,10 @@
             <div class="wr-tb-content">
               <div class="wr-tb-gp">
                 <div class="wr-category-title">
-                  <p class="category-title" id="categoryTitle2">CARE -Captación, Admisión, Retención</p>
+                  <p class="category-title" id="categoryTitle2"><img src="img/logo/logo-care.svg" alt=""></p>
                 </div>
                 <div class="wr-subtitle">
-                  <p class="category-subtitle" id="categorySubtitle2">Powered by Lexium</p>
+                  <p class="category-subtitle" id="categorySubtitle2"></p>
                 </div>
               </div>
               <div class="wg-filter">
@@ -2016,10 +2162,10 @@
             <div class="wr-tb-content">
               <div class="wr-tb-gp">
                 <div class="wr-category-title">
-                  <p class="category-title" id="categoryTitle2">CARE -Captación, Admisión, Retención</p>
+                  <p class="category-title" id="categoryTitle2"><img src="img/logo/logo-care.svg" alt=""></p>
                 </div>
                 <div class="wr-subtitle">
-                  <p class="category-subtitle" id="categorySubtitle2">Powered by Lexium</p>
+                  <p class="category-subtitle" id="categorySubtitle2"></p>
                 </div>
               </div>
               <div class="wg-filter">
@@ -2073,7 +2219,7 @@
               <!--Inicia Widget Status bar -->
               <div class="wg-status-bar">
                 <div class="wg-st-a">
-                  <p class="st-data">Filtrado por:</p>
+                  <p class="st-data">Grado:</p>
                   <p class="st-data" id="statusA">Data A</p>
                 </div>
                 <div class="wg-st-b">
@@ -2088,142 +2234,133 @@
                   <div class="care-row">
                     <div class="care-col ">
                       <div class="care-title-bar">
-                        <h4 class="care-title">Riesgo de abandono por deficiencias en habilidades y hábitos</h4>
+                        <h4 class="care-title">Probabilidad de riesgo de abandono en alumnos</h4>
                       </div>
                       <div class="care-content">
                         <div class="frame-content">
                           <div class="rt-row">
                             <div class="care-rt-capsule">
                               <div class="care-rt-a ">
-                                <div class="care-rt-title">Riesgo de abandono por deficiencias en habilidades y hábitos</div>
-                                
+                                <div class="care-rt-title">Considerando el nivel de desarrollo <br> de habilidades clave</div>
+                                <div class="care-rt-data">
+                                  <div class="care-rt-d-a">n=<div class="" id="rtDataN">18</div></div>
+                                  <div class="care-rt-d-b">personas</div>
+                                </div>
                               </div>
                               <div class="care-rt-b ">
-                                <div class="">¿Qué se identificó?</div>
+                                
                                 <div class="">
                                   <ul>
                                     <li>Habilidades intelectuales</li>
                                     <li>Habilidades socioemocionales</li>
-                                    <li>Hábitos efectivos</li>
+                                    <li>Hábitos</li>
                                   </ul>
                                 </div>
                               </div>
                             </div>
-                            <div class="care-v-capsule r-bb ">
-                              <div class="care-v-a ">Riesgo alto</div>
-                              <div class="care-v-b ">
-                                <div class="cv-b-value" id="riesgo-data">15%</div>
-                                <div class="cv-b-label">Nota: se recomienda aplicar la encuesta de riesgo de abandono.</div>
+                            <a href="#" data-tooltip-id="ttCareRetHabilidadesBajas" class=" btn-modal">
+                              <div class="care-v-capsule r-bb care-v-btn">
+                                <div class="care-v-a ">
+                                  <div class="care-v-a-title">Alta probabilidad de riesgo de abandono</div>
+                                  
+                                </div>
+                                <div class="care-v-b ">
+                                  <div class="cv-b-value" id="riesgo-data">2</div>
+                                  <div class="cv-b-label">Personas</div>
+                                  <div class="care-v-b-sub">(haz click para ver habilidades clave a fortalecer)</div>
+                                </div>
                               </div>
-                            </div>
+                            </a>
                             <div class="care-v-capsule y-bb ">
-                              <div class="care-v-a ">Riesgo Moderado</div>
+                              <div class="care-v-a ">Moderada probabilidad de riesgo de abandono</div>
                               <div class="care-v-b ">
-                                <div class="cv-b-value" id="riesgo-data">40%</div>
-                                <div class="cv-b-label"></div>
+                                <div class="cv-b-value" id="riesgo-data">15</div>
+                                <div class="cv-b-label">Personas</div>
+                                <div class="care-v-b-sub"></div>
                               </div>
                             </div>
                             <div class="care-v-capsule g-bb ">
-                              <div class="care-v-a ">Riesgo Bajo</div>
+                              <div class="care-v-a ">Baja probabilidad de riesgo de abandono</div>
                               <div class="care-v-b ">
-                                <div class="cv-b-value" id="riesgo-data">35%</div>
-                                <div class="cv-b-label"></div>
+                                <div class="cv-b-value" id="riesgo-data">1</div>
+                                <div class="cv-b-label">Personas</div>
+                                <div class="care-v-b-sub"></div>
                               </div>
                             </div>
                           </div>
-                          <div class="care-note"><div>N= <span id="nCant">###</span> </div>        <div>.</div></div>
+                          
                           
                         </div>
                       </div>
-                      <div class="care-title-bar">
-                        <h4 class="care-title">Habilidades bajas relacionadas con el riesgo de abandono alto</h4>
-                      </div>
-                      <div class="care-content">
-                        <div class="frame-content">
-                          <div class="hra-content">
-                            <div class="hra-col">
-                              <div class="hra-title">Habilidades intelectuales</div>
-                              <div class="hra-capsule" id="hra-name">Analogías</div>
-                              <div class="hra-capsule" id="hra-name">Seguimiento de instrucciones</div>
-                              <div class="hra-capsule" id="hra-name">Orientación</div>
-                              <div class="hra-capsule" id="hra-name">Análisis de hechos</div>
-                              <div class="hra-capsule" id="hra-name">Aplicación de hechos</div>
-                            </div>
-                            <div class="hra-col">
-                              <div class="hra-title">Habilidades socioemocionales</div>
-                              <div class="hra-capsule" id="hra-name">Autoestima</div>
-                              <div class="hra-capsule" id="hra-name">Sertividad</div>
-                              <div class="hra-capsule" id="hra-name">Compromiso</div>
-                              <div class="hra-capsule" id="hra-name">Motivación</div>
-                              <div class="hra-capsule" id="hra-name">Administración del tiempo</div>
-                              <div class="hra-capsule" id="hra-name">Bienestar físico</div>
-                            </div>
-                            <div class="hra-col">
-                              <div class="hra-title">Habitos</div>
-                              <div class="hra-capsule" id="hra-name">Consistencia</div>
-                              <div class="hra-capsule" id="hra-name">Persistencia</div>
-                              <div class="hra-capsule" id="hra-name">Prudencia</div>
-                              <div class="hra-capsule" id="hra-name">Cooperación</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+
                     </div>
                   </div>
                   <div class="care-row">
                     <div class="care-col ">
                       <div class="care-title-bar">
-                        <h4 class="care-title">Riesgo de abandono por factores contextuales</h4>
+                        <h4 class="care-title">Riesgo de abandono por nivel de conocimientos adquiridos</h4>
                       </div>
                       <div class="care-content">
                         <div class="frame-content">
                           <div class="rt-row">
                             <div class="care-rt-capsule">
                               <div class="care-rt-a ">
-                                <div class="care-rt-title">Riesgo de abandono por factores contextuales</div>
-                                
+                                <div class="care-rt-title">Considerando la brecha de conocimientos</div>
+                                <div class="care-rt-data">
+                                  <div class="care-rt-d-a">n=<div class="" id="rtDataN">18</div></div>
+                                  <div class="care-rt-d-b">personas</div>
+                                </div>
                               </div>
                               <div class="care-rt-b ">
-                                <div class="">¿Qué se identificó? <br> Percepción del alumno sobre:</div>
+                                
                                 <div class="">
                                   <ul>
-                                    <li>Su futuro académico</li>
-                                    <li>Su situación académica</li>
-                                    <li>El ambiente de trabajo en la institución</li>
-                                    <li>Frecuencia de pensamientos de <br> abandono por parte del alumno</li>
-          
+                                    <li>Perfil de conocimientos (Knowledge Profile)</li>
                                   </ul>
                                 </div>
                               </div>
                             </div>
-                            <div class="care-v-capsule r-bb ">
-                              <div class="care-v-a ">Riesgo alto</div>
-                              <div class="care-v-b ">
-                                <div class="cv-b-value" id="riesgo-data">15%</div>
-                                <div class="cv-b-label"></div>
+                            <a href="#" data-tooltip-id="ttCareRetConocimientosBajos" class=" btn-modal">
+                              <div class="care-v-capsule r-bb ">
+                                <div class="care-v-a ">Alta probabilidad de riesgo de abandono</div>
+                                <div class="care-v-b ">
+                                  <div class="cv-b-value" id="riesgo-data">11</div>
+                                  <div class="cv-b-label">Personas</div>
+                                  <div class="care-v-b-sub">(haz click para ver conocimientos a fortalecer)</div>
+                                </div>
                               </div>
-                            </div>
+                            </a>
                             <div class="care-v-capsule y-bb ">
-                              <div class="care-v-a ">Riesgo Moderado</div>
+                              <div class="care-v-a ">Moderada probabilidad de riesgo de abandono</div>
                               <div class="care-v-b ">
-                                <div class="cv-b-value" id="riesgo-data">40%</div>
-                                <div class="cv-b-label"></div>
+                                <div class="cv-b-value" id="riesgo-data">5</div>
+                                <div class="cv-b-label">Personas</div>
+                                <div class="care-v-b-sub"></div>
                               </div>
                             </div>
                             <div class="care-v-capsule g-bb ">
-                              <div class="care-v-a ">Riesgo Bajo</div>
+                              <div class="care-v-a ">Baja probabilidad de riesgo de abandono</div>
                               <div class="care-v-b ">
-                                <div class="cv-b-value" id="riesgo-data">35%</div>
-                                <div class="cv-b-label"></div>
+                                <div class="cv-b-value" id="riesgo-data">2</div>
+                               <div class="cv-b-label">Personas</div>
+                               <div class="care-v-b-sub"></div>
                               </div>
                             </div>
                           </div>
-                          <div class="care-note"><div>N= <span id="nCant">###</span> </div>        <div>Nota: Se recomienda apoyarse con información de SIP en LEXIUM.</div></div>
+                          
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="care-row">
+                    <div class="wg-button-row">
+                      <a href="#" data-tooltip-id="ttCareRetVideo" class="btn-modal">
+                        <div class="wg-btn">
+                          <div class="wg-btn-icon"><img src="img/icon/ic-video.svg" alt=""></div>
+                          <div class="wg-btn-tag">¿Qué hacer con <br> esta información?</div>
+                        </div>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2743,15 +2880,20 @@
           </div>
       </div>
       <!--Termina Contenido de la pestaña INTELEXIUM-->
+      <!--Inicia Contenido de la pestaña SENSOR-->
+      <div id="tab-sensor" class="tab-content tab-ai" style="display:none;">
+          
+      </div>
+      <!--Termina Contenido de la pestaña SENSOR-->
     </div>
     
   </main>
 
   <!-- INICIA FOOTER BAR -->
-  <footer class="footer-bar">
+  <footer class="footer-bar" style="display: none;">
     <div class="footer-container">
-      <a href="https://www.lexiumonline.com/politicas/" class="footer-link">Acuerdo de privacidad</a>
-      <p class="footer-text">Lexium - © Derechos Reservados 2025</p>
+      <a href="https://www.lexiumonline.com/politicas/" class="footer-link">Aviso de privacidad</a>
+      <p class="footer-text">Lexium Goldmind - © Derechos Reservados 2026</p>
     </div>
   </footer>
   <!-- TERMINA FOOTER BAR -->
@@ -2774,7 +2916,7 @@
     <div class="ua-accesos">
 
         <a href="https://www.lexium.com" class="ua-b-acc-lx">
-            <span class="text">Acceso a</span>
+            <span class="text">Plataforma</span>
             <img src="img/logo/lexium-logo.svg" alt="">
         </a>
     </div>
@@ -3011,6 +3153,90 @@
         </div>
       </div>
     </div>
+    <div class="tt-bg" id="ttCareRetHabilidadesBajas">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Habilidades bajas obtenidas que pueden predecir el riesgo de abandono</p>
+            <div class="btn-close" onclick="closeTooltip('ttCareRetHabilidadesBajas')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <div class="tt-btm-table">
+           <div class="tt-b-tb-row-3 tt-b-tb-header">
+             <div class="tt-b-tb-cell">Habilidades <br> intelectuales</div>
+             <div class="tt-b-tb-cell">Habilidades <br> socioemocionales</div>
+             <div class="tt-b-tb-cell">Hábitos</div>
+           </div>
+           <div class="tt-b-tb-row-3 tt-b-tb-content">
+             <div class="tt-b-tb-cell tt-cell-left">
+                <ul class="tt-cell-li">
+                  <li class="tt-cell-li-item">Habilidad Intelectual 1</li>
+                  <li class="tt-cell-li-item">Habilidad Intelectual 1</li>
+                  <li class="tt-cell-li-item">Habilidad Intelectual 1</li>
+                </ul>
+             </div>
+             <div class="tt-b-tb-cell tt-cell-left">
+                <ul class="tt-cell-li">
+                  <li class="tt-cell-li-item">Habilidad Socioemocional 1</li>
+                  <li class="tt-cell-li-item">Habilidad Socioemocional 2</li>
+                  <li class="tt-cell-li-item">Habilidad Socioemocional 3</li>
+                </ul>
+             </div>
+             <div class="tt-b-tb-cell tt-cell-left">
+                <ul class="tt-cell-li">
+                  <li class="tt-cell-li-item">Hábito 1</li>
+                  <li class="tt-cell-li-item">Hábito 2</li>
+                  <li class="tt-cell-li-item">Hábito 3</li>
+                </ul>
+             </div>
+
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="ttCareRetConocimientosBajos">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">Conocimientos bajos obtenidos que pueden predecir <br> el riesgo de abandono</p>
+            <div class="btn-close" onclick="closeTooltip('ttCareRetConocimientosBajos')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <div class="tt-btm-table">
+           <div class="tt-b-tb-row-1 tt-b-tb-header">
+             <div class="tt-b-tb-cell">Conocimientos</div>
+           </div>
+           <div class="tt-b-tb-row-1 tt-b-tb-content">
+             <div class="tt-b-tb-cell tt-cell-left">
+                <ul class="tt-cell-li">
+                  <li class="tt-cell-li-item">Habilidad Intelectual 1</li>
+                  <li class="tt-cell-li-item">Habilidad Intelectual 1</li>
+                  <li class="tt-cell-li-item">Habilidad Intelectual 1</li>
+                </ul>
+             </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tt-bg" id="ttCareRetVideo">
+      <div class="tooltip">
+        <div class="tt-top">
+          <div class="tt-t-bar">
+            <p class="tooltip-title" id="ttTitle">¿Qué hacer con esta información?</p>
+            <div class="btn-close" onclick="closeTooltip('ttCareRetVideo')"><img src="img/icon/x.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="tt-btm">
+          <div class="tt-btm-content">
+            Placeholder Video ¿Qué hacer con esta información?
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- INICIA MODALES AI -->
     <div class="tt-bg" id="ttAiFaq">
       <div class="tooltip">
@@ -3171,7 +3397,7 @@
         </form>
       </div>
     </div>
-    <div class="tt-bg " id="ttGolIns" style="display: flex;" >
+    <div class="tt-bg " id="ttGolIns" style="display: none;" >
       <div class="insight-container">
         <div class="is-top">
           <div class="is-t-bar">
@@ -3277,8 +3503,9 @@
 
   <!-- TERMINA MODALES -->
    
-    <script src="js/gm-tab-nav.js"></script>
+    <script src="js/custom-navbar.js"></script>
     <script src="js/gm-tab-transitions.js"></script>
+    <script src="js/gm-dashboard-tab-transitions.js"></script>
     <script src="js/gm-responsive-nav.js"></script>
     <script src="js/logo-care.js"></script>
     <script src="js/menu.js"></script>
