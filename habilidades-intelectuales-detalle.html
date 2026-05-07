@@ -27,14 +27,20 @@
 
 <body>
 
-<header>
+  <header>
     <div class="logo-bar">
       <div class="logo-bar-container">
         <div class="logo">
-          <img src="img/logo/goldmind.svg" alt="Goldmind Business Intelligence">
+          <img src="img/logo/logo-lexium-goldmind.svg" alt="Goldmind Business Intelligence">
+          
         </div>
+        <div class="logo-bar-title">DASHBOARD ESTRATÉGICO</div>
         <div class="user-actions">
-          <div data-tooltip-id="ttGolIns" class="btn-gm-insights btn-modal"><img src="img/icon/bulb.svg" alt="Ver Goldmind Insights"></div>
+          <div class="user-actions-inst-logo" style="display: none;">
+            <span class="nombre-institucion user-inst-name" id="headIstName">Placeholder Nombre de la Institución</span>
+            <img src="img/logo/inst-logo.png" alt="">
+          </div>
+          
           <div class="user-container">
             <div class="profile-pic"></div>
             <div class="user-info">
@@ -55,13 +61,13 @@
             <span class="nombre-institucion" id="headIstName">Placeholder Nombre de la Institución</span>
         </div>
         <div class="title-bar-access">
-          <div class="btn-acc-qp">
-            <span class="Acceso-a">Acceso a</span>
-            <img src="img/logo/questionpro-logo-white.svg" alt="">
-          </div>
           <div class="btn-acc-lx">
-            <span class="Acceso-a">Acceso a</span>
+            <span class="Acceso-a">Plataforma</span>
             <img src="img/logo/lexium-logo.svg" alt="">
+          </div>
+          <div class="btn-acc-cerrar">
+            <span class="Acceso-a">Cerrar sesión</span>
+            <img src="img/icon/exit.svg" alt="">
           </div>
         </div>
       </div>
@@ -75,312 +81,260 @@
       </div>
       
 
-      <div class="wr-title-bar ">
-        <div class="wr-tb-content">
-          <div class="wr-tb-gp">
-            <div class="wr-category-title">
-              <p class="category-title" id="categoryTitle2">Skills Analytics</p>
-            </div>
-            <div class="wr-subtitle">
-              <p class="category-subtitle" id="categorySubtitle2">Powered by Lexium</p>
-            </div>
-          </div>
-          <div class="wg-filter">
-            <div class="form">
-              <div class="fl-title">
-                <p>Elegir Nivel Educativo</p>
-              </div>
-              <div>
-                <select class="select" id="nivel-educativo" name="nivel-educativo">
-                  <option value="primaria">Primaria</option>
-                  <option value="secundaria">Secundaria</option>
-                  <option value="preparatoria">Preparatoria</option>
-                </select>
-              </div>
-                <button class="btn-acc-lx btn-width">Aplicar</button>
-            </div>
-            <div class="ft-sync">
-              <div class="ft-sync-date">
-                <p>Última sincronización:</p>
-                <p class="date">01/01/2023</p>
-              </div>
-              <a href="#" data-tooltip-id="ttSync" class="btn-sq-blue-m btn-modal"><img src="img/icon/history.svg" alt=""></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="wr-notes">
-        <div class="wr-notes-content">
-          <div class="note">
-            <p class="st-data" id="note1">Lexium es una estadística de referencia.</p>
-          </div>
-          <div class="note">
-            <p class="st-data" id="note2">Muestra no representativa.</p>
-          </div>
-        </div>
-      </div>
-      <div class="wr-subtitle">
-        <div class="wr-st-content">
-          <p class="subcategory-title" id="subcategoryTitle">Indicadores Cuantitativos</p>
-        </div>
-      </div>
-        <!--Inicia Widget Row -->
-        <div class="widget-row-a">
-
-
-          <!--Inicia Widget-->
-          <div class="widget-layout" id="detallehabintelectuales">
-            <!--Inicia Widget Title bar -->
-            <div class="wg-top">
-              <div class="wg-title-bar">
-                <div class="wg-title">
-                  <p class="widget-title">Habilidades Intelectuales</p>
+      <div class="contenido">
+        <div class="wr-title-bar ">
+              <div class="wr-tb-content">
+                <div class="wr-tb-gp">
+                  <div class="wr-category-title">
+                    <p class="category-title" id="categoryTitle2"><img src="img/logo/logo-skills-analytics.svg" alt=""></p>
+                  </div>
+                  <div class="wr-subtitle">
+                    <p class="category-subtitle" id="categorySubtitle2"></p>
+                  </div>
                 </div>
-                <div class="wg-actions-gp">
-                  <div class="act-btns">
-                    <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallehabintelectuales')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                    <a href="#" data-tooltip-id="ttHabInt" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
-                </div>
-                  <div class="act-detail">
-                      <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-out.svg" alt="Ver indicador a detalle"></a>
+                <div class="wg-filter">
+                  <div class="form">
+                    <div class="fl-title">
+                      <p>Elegir Nivel Educativo</p>
+                    </div>
+                    <div  class="wg-f-c">
+                      <div>
+                        <select class="select" id="nivel-educativo" name="nivel-educativo">
+                          <option value="primaria">Primaria</option>
+                          <option value="secundaria">Secundaria</option>
+                          <option value="preparatoria">Preparatoria</option>
+                        </select>
+                      </div>
+                        <button class="btn-acc-lx btn-width">Aplicar</button>
+                    </div>
+                  </div>
+                  <div class="ft-sync">
+                    <div class="ft-sync-date">
+                      <p>Última sincronización:</p>
+                      <p class="date">01/01/2023</p>
+                    </div>
+                    <a href="#" data-tooltip-id="ttSync" class="btn-sq-blue-m btn-modal"><img src="img/icon/history.svg" alt=""></a>
                   </div>
                 </div>
               </div>
             </div>
-            <!--Termina Widget Title bar -->
-  
-            <!--Inicia Widget Status bar -->
-            <div class="wg-status-bar">
-              <div class="wg-st-a">
-                <p class="st-data">Filtrado por:</p>
-                <p class="st-data" id="statusA">Data A</p>
-              </div>
-              <div class="wg-st-b">
-                <p class="st-data">Periodo:</p>
-                <p class="st-data">Data B</p>
-              </div>
+        <div class="wr-notes">
+          <div class="wr-notes-content">
+            <div class="note">
+        
             </div>
-            <!--Termina Widget Status bar -->
-  
-            <!--Inicia Widget Content -->
-            <div class="wg-content">
-              <div class="hab-dtl">
-                <div class="hd-col-a">
-                  <div class="accordion">
-                    <div class="accordion-header">Selecciona Habilidad</div>
-                    <div class="accordion-category">
-                      <div class="acc-category-title">Aprendizaje</div>
-                      <div class="acc-category-options">
-                        <a href="#" class="option">Índice Promedio Aprendizaje <span>▶</span></a>
-                        <a href="#" class="option">Clasificación <span>▶</span></a>
-                        <a href="#" class="option">Orientación <span>▶</span></a>
-                        <a href="#" class="option">Planeación <span>▶</span></a>
-                        <a href="#" class="option">Analogías Simbólicas <span>▶</span></a>
-                        <a href="#" class="option">Progresión Numérica <span>▶</span></a>
-                        <a href="#" class="option">Vocabulario <span>▶</span></a>
-                        <a href="#" class="option">Vocabulario de Matemáticas <span>▶</span></a>
-                        <a href="#" class="option">Analogías <span>▶</span></a>
-                        <a href="#" class="option">Seguimiento de Instrucciones <span>▶</span></a>
-                      </div>
+            <div class="note">
+        
+            </div>
+          </div>
+        </div>
+        <div class="wr-subtitle">
+          <div class="wr-st-content">
+        
+          </div>
+        </div>
+          <!--Inicia Widget Row -->
+          <div class="widget-row-a">
+            <!--Inicia Widget-->
+            <div class="widget-layout" id="detallehabintelectuales">
+              <!--Inicia Widget Title bar -->
+              <div class="wg-top">
+                <div class="wg-title-bar">
+                  <div class="wg-title">
+                    <p class="widget-title">Habilidades Intelectuales</p>
+                  </div>
+                  <div class="wg-actions-gp">
+                    <div class="act-btns">
+                      <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallehabintelectuales')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                      <a href="#" data-tooltip-id="ttHabInt" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                  </div>
+                    <div class="act-detail">
+                        <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-out.svg" alt="Ver indicador a detalle"></a>
                     </div>
-                    <div class="accordion-category">
-                      <div class="acc-category-title">Verbal</div>
-                      <div class="acc-category-options">
-                        <a href="#" class="option">Índice Promedio Verbal <span>▶</span></a>
-                        <a href="#" class="option">Vocabulario <span>▶</span></a>
-                        <a href="#" class="option">Vocabulario de Matemáticas <span>▶</span></a>
-                        <a href="#" class="option">Analogías <span>▶</span></a>
-                        <a href="#" class="option">Seguimiento de Instrucciones <span>▶</span></a>
-                      </div>
-                    </div>
-                    <div class="accordion-category">
-                      <div class="acc-category-title">Razonamiento</div>
-                      <div class="acc-category-options">
-                        <a href="#" class="option">Razonamiento Lógico <span>▶</span></a>
-                      </div>
-                    </div>
-                    <div class="accordion-category">
-                      <div class="acc-category-title">Toma de Decisiones</div>
-                      <div class="acc-category-options">
-                        <a href="#" class="option">Índice Promedio Toma de Decisiones <span>▶</span></a>
-                        <a href="#" class="option">Discriminación <span>▶</span></a>
-                        <a href="#" class="option">Juicio de Conceptos <span>▶</span></a>
-                        <a href="#" class="option">Conceptualización de Hechos <span>▶</span></a>
-                        <a href="#" class="option">Aplicación de Hechos <span>▶</span></a>
-                      </div>
-                    </div>
-                    <div class="accordion-category">
-                      <div class="acc-category-title">Planeación</div>
-                      <div class="acc-category-options">
-                        <a href="#" class="option">Índice Promedio Planeación <span>▶</span></a>
-                        <a href="#" class="option">Orientación <span>▶</span></a>
-                        <a href="#" class="option">Planeación <span>▶</span></a>
-                      </div>
-                    </div>
-                    <div class="accordion-category">
-                      <div class="acc-category-title">Lectura</div>
-                      <div class="acc-category-options">
-                        <a href="#" class="option">Índice Promedio Lectura <span>▶</span></a>
-                        <a href="#" class="option">Discriminación <span>▶</span></a>
-                        <a href="#" class="option">Clasificación <span>▶</span></a>
-                        <a href="#" class="option">Vocabulario <span>▶</span></a>
-                        <a href="#" class="option">Analogías <span>▶</span></a>
-                        <a href="#" class="option">Seguimiento de Instrucciones <span>▶</span></a>
-                      </div>
-                    </div>
-                    <div class="accordion-category">
-                      <div class="acc-category-title">Matemáticas</div>
-                      <div class="acc-category-options">
-                        <a href="#" class="option">Índice Promedio Matemáticas<span>▶</span></a>
-                        <a href="#" class="option">Progresión Numérica <span>▶</span></a>
-                        <a href="#" class="option">Aplicación de Hechos <span>▶</span></a>
-                        <a href="#" class="option">Análisis de Hechos <span>▶</span></a>
-                        <a href="#" class="option">Orientación <span>▶</span></a>
-                        <a href="#" class="option">Planeación <span>▶</span></a>
-                        <a href="#" class="option">Analogías Simbólicas <span>▶</span></a>
-                        <a href="#" class="option">Razonamiento Lógico <span>▶</span></a>
-                      </div>
-                    </div>
-                    <a href="#" class="option final-button">Índice Promedio<span>▶</span></a>
                   </div>
                 </div>
-                
-                <div class="hd-col-b">
-                  <div class="hd-tb-top">
-                    <div class="hd-tb-header">
-                      <div class="hd-tb-col-a ">
-                        <p>Habilidad</p>
+              </div>
+              <!--Termina Widget Title bar -->
+              <!--Inicia Widget Status bar -->
+              <div class="wg-status-bar">
+                <div class="wg-st-a">
+                  <p class="st-data">Filtrado por:</p>
+                  <p class="st-data" id="statusA">Data A</p>
+                </div>
+                <div class="wg-st-b">
+                  <p class="st-data">Periodo:</p>
+                  <p class="st-data">Data B</p>
+                </div>
+              </div>
+              <!--Termina Widget Status bar -->
+              <!--Inicia Widget Content -->
+              <div class="wg-content">
+                <div class="hab-dtl">
+                  <div class="hd-col-a">
+                    <div class="accordion">
+                      <div class="accordion-header">Selecciona Habilidad</div>
+                      <div class="accordion-category">
+                        <div class="acc-category-title">Aprendizaje</div>
+                        <div class="acc-category-options">
+                          <a href="#" class="option">Índice Promedio Aprendizaje <span>▶</span></a>
+                          <a href="#" class="option">Clasificación <span>▶</span></a>
+                          <a href="#" class="option">Orientación <span>▶</span></a>
+                          <a href="#" class="option">Planeación <span>▶</span></a>
+                          <a href="#" class="option">Analogías Simbólicas <span>▶</span></a>
+                          <a href="#" class="option">Progresión Numérica <span>▶</span></a>
+                          <a href="#" class="option">Vocabulario <span>▶</span></a>
+                          <a href="#" class="option">Vocabulario de Matemáticas <span>▶</span></a>
+                          <a href="#" class="option">Analogías <span>▶</span></a>
+                          <a href="#" class="option">Seguimiento de Instrucciones <span>▶</span></a>
+                        </div>
                       </div>
-                      <div class="hd-tb-col-b ">
-                        <p>Diagnóstico</p>
+                      <div class="accordion-category">
+                        <div class="acc-category-title">Verbal</div>
+                        <div class="acc-category-options">
+                          <a href="#" class="option">Índice Promedio Verbal <span>▶</span></a>
+                          <a href="#" class="option">Vocabulario <span>▶</span></a>
+                          <a href="#" class="option">Vocabulario de Matemáticas <span>▶</span></a>
+                          <a href="#" class="option">Analogías <span>▶</span></a>
+                          <a href="#" class="option">Seguimiento de Instrucciones <span>▶</span></a>
+                        </div>
                       </div>
-                      <div class="hd-tb-col-b col-b col-g">
-                        <p class="tb-ref-r">Referencia Pertinente: </p>
-                        <p class="tb-ref-t" id="tipoRef">Nacional</p>
+                      <div class="accordion-category">
+                        <div class="acc-category-title">Razonamiento</div>
+                        <div class="acc-category-options">
+                          <a href="#" class="option">Razonamiento Lógico <span>▶</span></a>
+                        </div>
                       </div>
-                      <div class="hd-tb-col-b ">
-                        <p>Desviación Estándar</p>
+                      <div class="accordion-category">
+                        <div class="acc-category-title">Toma de Decisiones</div>
+                        <div class="acc-category-options">
+                          <a href="#" class="option">Índice Promedio Toma de Decisiones <span>▶</span></a>
+                          <a href="#" class="option">Discriminación <span>▶</span></a>
+                          <a href="#" class="option">Juicio de Conceptos <span>▶</span></a>
+                          <a href="#" class="option">Conceptualización de Hechos <span>▶</span></a>
+                          <a href="#" class="option">Aplicación de Hechos <span>▶</span></a>
+                        </div>
+                      </div>
+                      <div class="accordion-category">
+                        <div class="acc-category-title">Planeación</div>
+                        <div class="acc-category-options">
+                          <a href="#" class="option">Índice Promedio Planeación <span>▶</span></a>
+                          <a href="#" class="option">Orientación <span>▶</span></a>
+                          <a href="#" class="option">Planeación <span>▶</span></a>
+                        </div>
+                      </div>
+                      <div class="accordion-category">
+                        <div class="acc-category-title">Lectura</div>
+                        <div class="acc-category-options">
+                          <a href="#" class="option">Índice Promedio Lectura <span>▶</span></a>
+                          <a href="#" class="option">Discriminación <span>▶</span></a>
+                          <a href="#" class="option">Clasificación <span>▶</span></a>
+                          <a href="#" class="option">Vocabulario <span>▶</span></a>
+                          <a href="#" class="option">Analogías <span>▶</span></a>
+                          <a href="#" class="option">Seguimiento de Instrucciones <span>▶</span></a>
+                        </div>
+                      </div>
+                      <div class="accordion-category">
+                        <div class="acc-category-title">Matemáticas</div>
+                        <div class="acc-category-options">
+                          <a href="#" class="option">Índice Promedio Matemáticas<span>▶</span></a>
+                          <a href="#" class="option">Progresión Numérica <span>▶</span></a>
+                          <a href="#" class="option">Aplicación de Hechos <span>▶</span></a>
+                          <a href="#" class="option">Análisis de Hechos <span>▶</span></a>
+                          <a href="#" class="option">Orientación <span>▶</span></a>
+                          <a href="#" class="option">Planeación <span>▶</span></a>
+                          <a href="#" class="option">Analogías Simbólicas <span>▶</span></a>
+                          <a href="#" class="option">Razonamiento Lógico <span>▶</span></a>
+                        </div>
+                      </div>
+                      <a href="#" class="option final-button">Índice Promedio<span>▶</span></a>
+                    </div>
+                  </div>
+        
+                  <div class="hd-col-b">
+                    <div class="hd-tb-top">
+                      <div class="hd-tb-header">
+                        <div class="hd-tb-col-a ">
+                          <p>Habilidad</p>
+                        </div>
+                        <div class="hd-tb-col-b ">
+                          <p>Puntaje promedio <br> obtenido en <br> Tu Institución</p>
+                        </div>
+                        <div class="hd-tb-col-b col-b col-g">
+                          <p class="tb-ref-r">Referencia <b>Nacional</b></p>
+                          
+                          <p>de este nivel</p>
+                        </div>
+                        <div class="hd-tb-col-b ">
+                          <p>Tu Desviación Estándar</p>
+                        </div>
+                      </div>
+                      <div class="hd-tb-row">
+                        <div class="hd-tb-col-a">
+                          <p class="hd-tb-ti tle" id="habilidad">Vocabulario de Matemáticas</p>
+                        </div>
+                        <div class="hd-tb-col-b">
+                          <div class="ts-a">
+                            <div class="traffic-light">
+                              <div class="red" id="tlRed"></div>
+                              <div class="yellow" id="tlYellow"></div>
+                              <div class="green" id="tlGreen"></div>
+                            </div>
+                          </div>
+                          <div class="trf-a" id="diagnostico">333</div>
+                        </div>
+                        <div class="hd-tb-col-b col-g">
+                          <p id="referencia">888</p>
+                        </div>
+                        <div class="hd-tb-col-b">
+                          <p id="desviacion">999</p>
+                        </div>
                       </div>
                     </div>
-                    <div class="hd-tb-row">
-                      <div class="hd-tb-col-a">
-                        <p class="hd-tb-ti tle" id="habilidad">Vocabulario de Matemáticas</p>
+                    <div class="chart-gp">
+                      <div class="chart-title-container">
+                        <p class="chart-title" >Dispersión de tus alumnos</p>
+                        <p class="chart-subtitle" >En base al Índice Promedio de Habilidades Intelectuales (I.P.H.I.)</p>
+                        <p class="chart-poblacion" >n= 200 alumnos</p>
                       </div>
-                      <div class="hd-tb-col-b">
-                        <div class="ts-a">
-                          <div class="traffic-light">
-                            <div class="red" id="tlRed"></div>
-                            <div class="yellow" id="tlYellow"></div>
-                            <div class="green" id="tlGreen"></div>
+                      <div class="chart-img">
+                        <img src="img/chart/chart-placeholder.png"  alt="Gráfica de Línea">
+                      </div>
+                      <div class="chart-bottom">
+                        <div class="toggle-switch">
+                          <input type="checkbox" id="toggleSwitch1" class="toggle-switch-checkbox">
+                          <label class="toggle-switch-label" for="toggleSwitch1">
+                            <span class="toggle-switch-inner"></span>
+                            <span class="toggle-switch-switch"></span>
+                          </label>
+                          <span class="toggle-switch-text">Ver I.P.H.I.</span>
+                        </div>
+                        <div class="chart-legend">
+                          <div class="wg-chart-legend-item">
+                            <div class="wg-chart-legend-color" style="background-color: #7005F2;"></div>
+                            <div class="wg-chart-legend-text">I.P.H.I. de <br> Tu Institución</div>
+                          </div>
+                          <div class="wg-chart-legend-item">
+                            <div class="wg-chart-legend-color" style="background-color: #FF9500;"></div>
+                            <div class="wg-chart-legend-text">Referencia <br> Nacional </div>
+                          </div>
+                          <div class="wg-chart-legend-item">
+                            
                           </div>
                         </div>
-                        <div class="trf-a" id="diagnostico">333</div>
-                      </div>
-                      <div class="hd-tb-col-b col-g">
-                        <p id="referencia">888</p>
-                      </div>
-                      <div class="hd-tb-col-b">
-                        <p id="desviacion">999</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="chart-gp">
-                    <div class="chart-title-container">
-                      <p class="chart-title" >Dispersión</p>
-                    </div>
-                    <div class="chart-img">
-                      <img src="img/chart/chart-placeholder.png"  alt="Gráfica de Línea">
-                    </div>
-                    <div class="chart-bottom">
-                      <div class="toggle-switch">
-                        <input type="checkbox" id="toggleSwitch1" class="toggle-switch-checkbox">
-                        <label class="toggle-switch-label" for="toggleSwitch1">
-                          <span class="toggle-switch-inner"></span>
-                          <span class="toggle-switch-switch"></span>
-                        </label>
-                        <span class="toggle-switch-text">Ver Promedio</span>
-                      </div>
-                      <div class="chart-legend">
-                        <div class="wg-chart-legend-item">
-                          <div class="wg-chart-legend-color" style="background-color: #7005F2;"></div>
-                          <div class="wg-chart-legend-text">Promedio Tu Institución</div>
-                        </div>
-                        <div class="wg-chart-legend-item">
-                          <div class="wg-chart-legend-color" style="background-color: #FF9500;"></div>
-                          <div class="wg-chart-legend-text">Referencia Pertinente: Nacional </div>
-                        </div>
-                        <div class="wg-chart-legend-item">
-                          <div class="wg-chart-legend-text">n= 200 alumnos</div>
-                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-
+              <!--Termina Widget Content -->
+              <!--Inicia Widget Bottom bar -->
+              <!--Termina Widget Bottom bar -->
             </div>
-  
-            <!--Termina Widget Content -->
-  
-            <!--Inicia Widget Bottom bar -->
-            <div class="wg-bttm-a">
-              <div class="implicaciones-gp">
-                <div class="implicaciones-wrap p">
-                  <div class="im-margin pm"></div>
-                  <div class="im-content">
-                    <div class="im-icon-content"><img src="img/icon/bulb.svg" alt=""></div>
-                    <div class="im-text-content">
-                      <div class="im-title">
-                        <p class="imp-title">Implicaciones: Enseñanza / Aprendizaje</p>
-                        <a href="#" class="btn-edit"><img src="img/icon/pencil.svg" alt="Editar Implicaciones"></a>
-                      </div>
-                      <a href="#" data-tooltip-id="imEA" class="btn-modal">
-                        <p class="implicaciones-txt" id="imText">Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text </p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="implicaciones-wrap o">
-                  <div class="im-margin om"></div>
-                  <div class="im-content">
-                    <div class="im-icon-content"><img src="img/icon/bulb.svg" alt=""></div>
-                    <div class="im-text-content">
-                      <div class="im-title">
-                        <p class="imp-title">Implicaciones: Captación / Retención</p>
-                        <a href="#" class="btn-edit"><img src="img/icon/pencil.svg" alt="Editar Implicaciones"></a>
-                      </div>
-                      <a href="#" data-tooltip-id="imCR" class="btn-modal">
-                        <p class="implicaciones-txt" id="imText">Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text </p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="implicaciones-wrap g">
-                  <div class="im-margin gm"></div>
-                  <div class="im-content">
-                    <div class="im-icon-content"><img src="img/icon/bulb.svg" alt=""></div>
-                    <div class="im-text-content">
-                      <div class="im-title">
-                        <p class="imp-title">Implicaciones: Administrativas / Financieras</p>
-                        <a href="#" class="btn-edit"><img src="img/icon/pencil.svg" alt="Editar Implicaciones"></a>
-                      </div>
-                      <a href="#" data-tooltip-id="imAF" class="btn-modal">
-                        <p class="implicaciones-txt" id="imText">Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text Insight Text </p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <!--Termina Widget Bottom bar -->
+            <!--Termina Widget-->
+        
           </div>
-          <!--Termina Widget-->
-
-          
-        </div>
-        <!--Termina Widget Row -->
+          <!--Termina Widget Row -->
+      </div>
     </div>
   </main>
 
