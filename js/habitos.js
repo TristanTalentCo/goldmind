@@ -88,7 +88,7 @@
     };
 
     // Datos temporales mientras conectas la API real
-    HABChart.update([100, 75, 30, 35]);
+    HABChart.update([0, 10, 20, 50]);
 
     // Cuando tengas la API lista, activa esto:
     // HABChart.loadFromAPI();

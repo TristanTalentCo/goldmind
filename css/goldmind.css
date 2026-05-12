@@ -3069,9 +3069,179 @@
   align-items: center;
   justify-content: center;
 }
+.care-solicita{
+  background-image: url('../img/backs/captacion_back.png') ;
+    background-size: cover;
+    background-position:start;
+    background-repeat: no-repeat;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.care-sol-banner {
+  position: relative;
+  width: 650px;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.25);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  overflow: hidden;
+  z-index: 1;
+}
 
+/* Borde animado */
+.care-sol-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px; /* grosor del borde */
+  border-radius: 12px;
+
+  background: linear-gradient(
+    120deg,
+    var(--color-blue2),
+    #fff,
+    var(--color-primary),
+    
+    #fff,
+    var(--color-blue2)
+  );
+
+  background-size: 300% 300%;
+  animation: borderMove 6s linear infinite;
+
+  /* máscara para mostrar solo el borde */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  z-index: -1;
+}
+
+/* Animación del degradado */
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+.cta-button {
+  position: relative;
+  padding: 16px 38px;
+  border: none;
+  border-radius: 14px;
+  background: var(--color-primary);
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.35),
+    0 4px 10px rgba(249, 115, 22, 0.25);
+
+  animation: pulseCTA 2s infinite;
+}
+
+/* Hover */
+.cta-button:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow:
+    0 12px 28px rgba(37, 99, 235, 0.45),
+    0 8px 18px rgba(249, 115, 22, 0.35);
+}
+
+/* Click */
+.cta-button:active {
+  transform: scale(0.96);
+}
+
+/* Efecto brillo */
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 80%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+  animation: shine 3s infinite;
+}
+
+/* Pulso persuasivo */
+@keyframes pulseCTA {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.03);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Movimiento del brillo */
+@keyframes shine {
+  0% {
+    left: -120%;
+  }
+
+  60% {
+    left: 140%;
+  }
+
+  100% {
+    left: 140%;
+  }
+}
+.care-solicita img{
+  width: 400px;
+}
+.care-sol-title{
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--color-blue);
+  text-align: center;
+  line-height: 1em;
+}
+.care-sol-text{
+  width: 600px;
+  font-size: .9em;
+  color: var(--color-dark);
+  text-align: center;
+  line-height: 1.2em;
+}
 .cap1{
-  width: 550px;
+  width: 850px;
 }
 .cap3{
   width: 650px;

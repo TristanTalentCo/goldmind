@@ -1,17 +1,16 @@
 
             document.addEventListener('DOMContentLoaded', function() {
               const tabMap = [
-                
                 'tab-skillanalytics'
               ];
 
-              const dbTabs = document.querySelectorAll('.db-tab-back');
+              const dbTabs = document.querySelectorAll('.db-tab-back2');
               
               dbTabs.forEach((tab, index) => {
                 tab.addEventListener('click', function(e) {
                   e.preventDefault();
                   
-                  const currentTab = document.getElementById('tab-socioemocional-detalle');
+                  const currentTab = document.getElementById('detalle-return2');
                   const targetId = tabMap[index];
                   const targetTab = document.getElementById(targetId);
                   
