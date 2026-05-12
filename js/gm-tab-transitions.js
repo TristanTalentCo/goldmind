@@ -6,7 +6,9 @@
       "tab-retencion",
       "tab-intelexium",
       "tab-sensor",
-      "tab-vozdelcliente"
+      "tab-vozdelcliente",
+      "tab-intelectual-detalle",
+      "tab-socioemocional-detalle"
       ];
 
       // Add transition style to all tab contents

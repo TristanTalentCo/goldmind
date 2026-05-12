@@ -380,9 +380,9 @@
                   <div  class="wg-f-c">
                     <div>
                       <select class="select" id="nivel-educativo" name="nivel-educativo">
-                        <option value="primaria">Preparatoria 1</option>
-                        <option value="secundaria">Preparatoria 2</option>
-                        <option value="preparatoria">Preparatoria 3</option>
+                        <option value="primaria">Preparatoria</option>
+                        <option value="secundaria">Universidad</option>
+                        
                       </select>
                     </div>
                       <button class="btn-acc-lx btn-width">Aplicar</button>
@@ -428,9 +428,6 @@
                         <a href="#" data-tooltip-id="ttHabInt" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                         <a href="#" class="btn-sq-gray" onclick="takeScreenshot('habintelectuales')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
                     </div>
-                      <div class="act-detail">
-                          <a href="habilidades-intelectuales-detalle.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -439,7 +436,7 @@
                 <div class="wg-status-bar">
                   <div class="wg-st-a">
                     <p class="st-data"></p>
-                    <p class="st-data" id="statusA">Preparatoria 1</p>
+                    <p class="st-data" id="statusA">Preparatoria</p>
                   </div>
                   <div class="wg-st-b">
                     <p class="st-data"></p>
@@ -613,6 +610,9 @@
                         </div>
                       </div>
                     </div>
+                    <div class="chart-bottom">
+                      <a href="#" class="btn-acc-lx db-tab-vd"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle">Ver dispersión a detalle</a>
+                    </div>
                   </div>
                 </div>
                 <!--Termina Widget Content -->
@@ -652,9 +652,6 @@
                         <a href="#" data-tooltip-id="ttHabSoc" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                         <a href="#" class="btn-sq-gray" onclick="takeScreenshot('habsocioemocionales')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
                     </div>
-                      <div class="act-detail">
-                          <a href="habilidades-socioemocionales-detalle.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -663,7 +660,7 @@
                 <div class="wg-status-bar">
                   <div class="wg-st-a">
                     <p class="st-data"></p>
-                    <p class="st-data" id="statusA">Preparatoria 1</p>
+                    <p class="st-data" id="statusA">Preparatoria</p>
                   </div>
                   <div class="wg-st-b">
                     
@@ -776,6 +773,9 @@
                         </div>
                       </div>
                     </div>
+                    <div class="chart-bottom">
+                      <a href="#" class="btn-acc-lx db-tab-vd"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle">Ver dispersión a detalle</a>
+                    </div>
                   </div>
                 </div>
                 <!--Termina Widget Content -->
@@ -816,7 +816,7 @@
           <!--Inicia Widget Row -->
           <div class="widget-row-a">
             <!--Inicia Widget-->
-            <div class="widget-layout wl-584" id="prefaprendizaje">
+            <div class="widget-layout" id="prefaprendizaje">
               <!--Inicia Widget Title bar -->
               <div class="wg-top">
                 <div class="wg-title-bar">
@@ -837,7 +837,7 @@
               <div class="wg-status-bar">
                 <div class="wg-st-a">
                   <p class="st-data"></p>
-                  <p class="st-data" id="statusA">Preparatoria 1</p>
+                  <p class="st-data" id="statusA">Preparatoria</p>
                 </div>
                 <div class="wg-st-b">
                   
@@ -852,6 +852,31 @@
                   <div class="pa-top">
                     
                     <div class="pa-content-top">
+                      <div class="pa-gp-main ">
+                        <div class="pa-gp-tag"></div>
+                        <div class="pa-gp-row">
+                          <div class="pa-pref-row pa-header-row">
+                        
+                            <div class="pa-n" >
+                              
+                            </div>
+                            <div class="pa-a">
+                              <div class="pa-a-btm">
+                                <div class="pa-semaforo">
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-tag">Baja</div>
+                                </div>
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-tag">Moderada</div>
+                                </div>
+                                <div class="pa-s-cont"><div class="pa-s-tag">Alta</div></div>
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
                       <div class="pa-gp-main pa-gp-bg">
                         <div class="pa-gp-tag">Preferencias <br> perceptuales</div>
                         <div class="pa-gp-row">
@@ -862,8 +887,14 @@
                               <div class="pref-title" id="prefAprTitle">Lenguaje Visual</div>
                             </div>
                             <div class="pa-a">
-                              <div class="pa-a-btm">
-                                <div class="pref-value" id="prefAprValue">---</div>
+                              <div class="pa-semaforo">
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-red" id="tlRed"></div>
+                                </div>
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-yellow" id="tlYellow"></div>
+                                </div>
+                                <div class="pa-s-cont"><div class="pa-s-green" id="tlGreen"></div></div>
                               </div>
                             </div>
                           </div>
@@ -874,8 +905,14 @@
                               <div class="pref-title" id="prefAprTitle">Numérico Visual</div>
                             </div>
                             <div class="pa-a">
-                              <div class="pa-a-btm">
-                                <div class="pref-value" id="prefAprValue">---</div>
+                              <div class="pa-semaforo">
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-red" id="tlRed"></div>
+                                </div>
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-yellow" id="tlYellow"></div>
+                                </div>
+                                <div class="pa-s-cont"><div class="pa-s-green" id="tlGreen"></div></div>
                               </div>
                             </div>
                           </div>
@@ -886,8 +923,14 @@
                               <div class="pref-title" id="prefAprTitle" >Lenguaje Auditivo</div>
                             </div>
                             <div class="pa-a">
-                              <div class="pa-a-btm">
-                                <div class="pref-value" id="prefAprValue">---</div>
+                              <div class="pa-semaforo">
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-red" id="tlRed"></div>
+                                </div>
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-yellow" id="tlYellow"></div>
+                                </div>
+                                <div class="pa-s-cont"><div class="pa-s-green" id="tlGreen"></div></div>
                               </div>
                             </div>
                           </div>
@@ -898,8 +941,14 @@
                               <div class="pref-title" id="prefAprTitle" >Numérico Auditivo</div>
                             </div>
                             <div class="pa-a">
-                              <div class="pa-a-btm">
-                                <div class="pref-value" id="prefAprValue">---</div>
+                              <div class="pa-semaforo">
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-red" id="tlRed"></div>
+                                </div>
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-yellow" id="tlYellow"></div>
+                                </div>
+                                <div class="pa-s-cont"><div class="pa-s-green" id="tlGreen"></div></div>
                               </div>
                             </div>
                           </div>
@@ -915,8 +964,14 @@
                               <div class="pref-title" id="prefAprTitle" >Kinestésico</div>
                             </div>
                             <div class="pa-a">
-                              <div class="pa-a-btm">
-                                <div class="pref-value" id="prefAprValue">---</div>
+                              <div class="pa-semaforo">
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-red" id="tlRed"></div>
+                                </div>
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-yellow" id="tlYellow"></div>
+                                </div>
+                                <div class="pa-s-cont"><div class="pa-s-green" id="tlGreen"></div></div>
                               </div>
                             </div>
                           </div>
@@ -932,8 +987,14 @@
                               <div class="pref-title" id="prefAprTitle" >Trabajo en Equipo</div>
                             </div>
                             <div class="pa-a">
-                              <div class="pa-a-btm">
-                                <div class="pref-value" id="prefAprValue">---</div>
+                              <div class="pa-semaforo">
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-red" id="tlRed"></div>
+                                </div>
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-yellow" id="tlYellow"></div>
+                                </div>
+                                <div class="pa-s-cont"><div class="pa-s-green" id="tlGreen"></div></div>
                               </div>
                             </div>
                           </div>
@@ -944,8 +1005,14 @@
                               <div class="pref-title" id="prefAprTitle" >Trabajo Individual</div>
                             </div>
                             <div class="pa-a">
-                              <div class="pa-a-btm">
-                                <div class="pref-value" id="prefAprValue">---</div>
+                              <div class="pa-semaforo">
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-red" id="tlRed"></div>
+                                </div>
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-yellow" id="tlYellow"></div>
+                                </div>
+                                <div class="pa-s-cont"><div class="pa-s-green" id="tlGreen"></div></div>
                               </div>
                             </div>
                           </div>
@@ -961,8 +1028,14 @@
                               <div class="pref-title" id="prefAprTitle" >Comunicación Escrita</div>
                             </div>
                             <div class="pa-a">
-                              <div class="pa-a-btm">
-                                <div class="pref-value" id="prefAprValue">---</div>
+                              <div class="pa-semaforo">
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-red" id="tlRed"></div>
+                                </div>
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-yellow" id="tlYellow"></div>
+                                </div>
+                                <div class="pa-s-cont"><div class="pa-s-green" id="tlGreen"></div></div>
                               </div>
                             </div>
                           </div>
@@ -973,8 +1046,14 @@
                               <div class="pref-title" id="prefAprTitle" >Comunicación Oral</div>
                             </div>
                             <div class="pa-a">
-                              <div class="pa-a-btm">
-                                <div class="pref-value" id="prefAprValue">---</div>
+                              <div class="pa-semaforo">
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-red" id="tlRed"></div>
+                                </div>
+                                <div class="pa-s-cont">
+                                  <div class="pa-s-yellow" id="tlYellow"></div>
+                                </div>
+                                <div class="pa-s-cont"><div class="pa-s-green" id="tlGreen"></div></div>
                               </div>
                             </div>
                           </div>
@@ -1008,7 +1087,7 @@
             </div>
             <!--Termina Widget-->
             <!--Inicia Widget-->
-            <div class="widget-layout wl-584" id="prefaprendizaje">
+            <div class="widget-layout" id="sk-habitos">
               <!--Inicia Widget Title bar -->
               <div class="wg-top">
                 <div class="wg-title-bar">
@@ -1017,8 +1096,8 @@
                   </div>
                   <div class="wg-actions-gp">
                     <div class="act-btns">
-                      <a href="#" data-tooltip-id="ttPreApr" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
-                      <a href="#" class="btn-sq-gray" onclick="takeScreenshot('prefaprendizaje')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                      <a href="#" data-tooltip-id="ttHab" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                      <a href="#" class="btn-sq-gray" onclick="takeScreenshot('sk-habitos')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
                   </div>
                     
                   </div>
@@ -1028,20 +1107,165 @@
               <!--Inicia Widget Status bar -->
               <div class="wg-status-bar">
                 <div class="wg-st-a">
-                  <p class="st-data">.</p>
-                  <p class="st-data" id="statusA"></p>
+                  <p class="st-data"></p>
+                  <p class="st-data" id="statusA">Preparatoria</p>
                 </div>
                 <div class="wg-st-b">
-                  <p class="st-data">.</p>
-                  <p class="st-data"></p>
+                  
+                  <p class="st-data">Información actualizada al día de hoy</p>
                 </div>
               </div>
               <!--Termina Widget Status bar -->
               <!--Inicia Widget Content -->
               <div class="wg-content">
           
-                <div class="hab-content" style="height: 628px;">
+                <div class="hab-content" >
+                  <div class="hab-title">Percentiles: 0 a 49 bajo, 50 a 79 promedio, 80 a 100 alto.</div>
+                 <div class="hab-chart"> 
+                  <?xml version="1.0" encoding="UTF-8"?>
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 550 550">
+                    
+                    <defs>
+                      <style>
+                        .st0 {
+                          fill: #ff6700;
+                        }
+
+                        .st1 {
+                          stroke: #ff6700;
+                          stroke-width: 2px;
+                        }
+
+                        .st1, .st2 {
+                          fill: none;
+                          stroke-miterlimit: 10;
+                        }
+
+                        .st2 {
+                          stroke: #afafaf;
+                          stroke-width: .75px;
+                        }
+                      </style>
+                    </defs>
+                    <g id="hab_x5F_grid">
+                      <g>
+                        <g>
+                          <rect class="st2" x="133.58" y="133.58" width="282.84" height="282.84" transform="translate(-113.91 275) rotate(-45)"/>
+                          <rect class="st2" x="168.93" y="168.93" width="212.13" height="212.13" transform="translate(-113.91 275) rotate(-45)"/>
+                          <rect class="st2" x="204.29" y="204.29" width="141.42" height="141.42" transform="translate(-113.91 275) rotate(-45)"/>
+                          <rect class="st2" x="239.64" y="239.64" width="70.71" height="70.71" transform="translate(-113.91 275) rotate(-45)"/>
+                        </g>
+                        <g>
+                          <line class="st2" x1="275" y1="275" x2="275" y2="475"/>
+                          <line class="st2" x1="275" y1="275" x2="475" y2="275"/>
+                          <line class="st2" x1="275" y1="275" x2="275" y2="75"/>
+                          <line class="st2" x1="275" y1="275" x2="75" y2="275"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="hab_x5F_tags">
+                      <g>
+                        <path d="M244.31,58.14c-.38.19-1.15.38-2.13.38-2.28,0-3.99-1.44-3.99-4.09s1.72-4.25,4.22-4.25c1.01,0,1.64.22,1.92.36l-.25.85c-.4-.19-.96-.34-1.63-.34-1.9,0-3.15,1.21-3.15,3.33,0,1.98,1.14,3.25,3.11,3.25.64,0,1.28-.13,1.7-.34l.22.83Z"/>
+                        <path d="M252.27,54.28c0,2.78-1.69,4.26-3.75,4.26s-3.63-1.65-3.63-4.1c0-2.57,1.6-4.25,3.75-4.25s3.63,1.69,3.63,4.09ZM246,54.41c0,1.73.94,3.27,2.58,3.27s2.59-1.52,2.59-3.36c0-1.61-.84-3.29-2.58-3.29s-2.59,1.59-2.59,3.37Z"/>
+                        <path d="M253.63,58.41v-8.08h1.14l2.59,4.09c.6.95,1.07,1.8,1.45,2.63h.02c-.1-1.09-.12-2.07-.12-3.33v-3.38h.98v8.08h-1.06l-2.57-4.1c-.56-.9-1.1-1.82-1.51-2.7h-.04c.06,1.03.08,2,.08,3.35v3.45h-.98Z"/>
+                        <path d="M261.39,57.14c.47.29,1.15.53,1.87.53,1.07,0,1.69-.56,1.69-1.38,0-.76-.43-1.19-1.52-1.61-1.32-.47-2.13-1.15-2.13-2.29,0-1.26,1.04-2.19,2.61-2.19.83,0,1.43.19,1.79.4l-.29.85c-.26-.14-.8-.38-1.54-.38-1.1,0-1.52.66-1.52,1.21,0,.76.49,1.13,1.61,1.56,1.37.53,2.06,1.19,2.06,2.37,0,1.25-.92,2.33-2.83,2.33-.78,0-1.63-.23-2.06-.52l.26-.88Z"/>
+                        <path d="M268.49,50.32v8.08h-1.04v-8.08h1.04Z"/>
+                        <path d="M270.17,57.14c.47.29,1.15.53,1.87.53,1.07,0,1.69-.56,1.69-1.38,0-.76-.43-1.19-1.52-1.61-1.32-.47-2.13-1.15-2.13-2.29,0-1.26,1.04-2.19,2.61-2.19.83,0,1.43.19,1.79.4l-.29.85c-.26-.14-.8-.38-1.54-.38-1.1,0-1.52.66-1.52,1.21,0,.76.49,1.13,1.61,1.56,1.37.53,2.06,1.19,2.06,2.37,0,1.25-.92,2.33-2.83,2.33-.78,0-1.63-.23-2.06-.52l.26-.88Z"/>
+                        <path d="M277.76,51.21h-2.46v-.89h5.99v.89h-2.47v7.2h-1.06v-7.2Z"/>
+                        <path d="M286.38,54.62h-3.14v2.91h3.5v.88h-4.55v-8.08h4.37v.88h-3.32v2.55h3.14v.86Z"/>
+                        <path d="M288.1,58.41v-8.08h1.14l2.59,4.09c.6.95,1.07,1.8,1.45,2.63h.02c-.1-1.09-.12-2.07-.12-3.33v-3.38h.98v8.08h-1.06l-2.57-4.1c-.56-.9-1.1-1.82-1.51-2.7h-.04c.06,1.03.08,2,.08,3.35v3.45h-.98Z"/>
+                        <path d="M301.64,58.14c-.38.19-1.15.38-2.13.38-2.28,0-3.99-1.44-3.99-4.09s1.71-4.25,4.22-4.25c1.01,0,1.64.22,1.92.36l-.25.85c-.4-.19-.96-.34-1.63-.34-1.9,0-3.15,1.21-3.15,3.33,0,1.98,1.14,3.25,3.11,3.25.64,0,1.28-.13,1.7-.34l.22.83Z"/>
+                        <path d="M304,50.32v8.08h-1.04v-8.08h1.04Z"/>
+                        <path d="M307.13,55.87l-.84,2.54h-1.08l2.75-8.08h1.26l2.76,8.08h-1.12l-.86-2.54h-2.87ZM309.78,55.05l-.79-2.33c-.18-.53-.3-1.01-.42-1.48h-.02c-.12.48-.25.97-.41,1.46l-.79,2.34h2.43Z"/>
+                      </g>
+                      <g>
+                        <path d="M479.69,270.53c.5-.08,1.16-.16,2-.16,1.03,0,1.79.24,2.27.67.44.38.71.97.71,1.69s-.22,1.31-.62,1.73c-.55.59-1.45.89-2.47.89-.31,0-.6-.01-.84-.07v3.24h-1.04v-7.99ZM480.74,274.43c.23.06.52.08.86.08,1.26,0,2.03-.61,2.03-1.73s-.76-1.58-1.91-1.58c-.46,0-.8.04-.98.08v3.14Z"/>
+                        <path d="M490.26,274.73h-3.14v2.91h3.5v.88h-4.54v-8.08h4.37v.88h-3.32v2.55h3.14v.86Z"/>
+                        <path d="M491.98,270.55c.53-.11,1.28-.17,2-.17,1.12,0,1.83.2,2.34.66.41.36.64.91.64,1.54,0,1.07-.67,1.77-1.52,2.06v.04c.62.22,1,.79,1.19,1.63.26,1.13.46,1.91.62,2.22h-1.08c-.13-.23-.31-.92-.54-1.93-.24-1.12-.67-1.54-1.62-1.57h-.98v3.5h-1.04v-7.98ZM493.02,274.23h1.07c1.12,0,1.82-.61,1.82-1.54,0-1.04-.76-1.5-1.86-1.51-.5,0-.86.05-1.03.1v2.95Z"/>
+                        <path d="M498.29,277.25c.47.29,1.15.53,1.87.53,1.07,0,1.69-.56,1.69-1.38,0-.75-.43-1.19-1.52-1.61-1.32-.47-2.14-1.15-2.14-2.29,0-1.26,1.04-2.19,2.62-2.19.83,0,1.43.19,1.79.4l-.29.85c-.26-.14-.8-.38-1.54-.38-1.1,0-1.52.66-1.52,1.21,0,.76.49,1.13,1.61,1.56,1.37.53,2.06,1.19,2.06,2.37,0,1.25-.92,2.33-2.83,2.33-.78,0-1.63-.23-2.06-.52l.26-.88Z"/>
+                        <path d="M505.4,270.44v8.08h-1.04v-8.08h1.04Z"/>
+                        <path d="M507.08,277.25c.47.29,1.15.53,1.87.53,1.07,0,1.69-.56,1.69-1.38,0-.75-.43-1.19-1.52-1.61-1.32-.47-2.14-1.15-2.14-2.29,0-1.26,1.04-2.19,2.62-2.19.83,0,1.43.19,1.79.4l-.29.85c-.26-.14-.8-.38-1.54-.38-1.1,0-1.52.66-1.52,1.21,0,.76.49,1.13,1.61,1.56,1.37.53,2.06,1.19,2.06,2.37,0,1.25-.92,2.33-2.83,2.33-.78,0-1.63-.23-2.06-.52l.26-.88Z"/>
+                        <path d="M514.67,271.33h-2.46v-.89h5.99v.89h-2.47v7.2h-1.06v-7.2Z"/>
+                        <path d="M523.29,274.73h-3.14v2.91h3.5v.88h-4.55v-8.08h4.37v.88h-3.32v2.55h3.14v.86Z"/>
+                        <path d="M525,278.52v-8.08h1.14l2.59,4.09c.6.95,1.07,1.8,1.45,2.63h.02c-.1-1.09-.12-2.07-.12-3.33v-3.38h.98v8.08h-1.06l-2.57-4.1c-.56-.9-1.1-1.82-1.51-2.7h-.04c.06,1.03.08,2,.08,3.35v3.45h-.98Z"/>
+                        <path d="M538.55,278.26c-.38.19-1.15.38-2.13.38-2.28,0-3.99-1.44-3.99-4.09s1.71-4.25,4.22-4.25c1.01,0,1.64.22,1.92.36l-.25.85c-.4-.19-.96-.34-1.63-.34-1.9,0-3.15,1.21-3.15,3.33,0,1.98,1.14,3.25,3.11,3.25.63,0,1.28-.13,1.7-.34l.22.83Z"/>
+                        <path d="M540.9,270.44v8.08h-1.04v-8.08h1.04Z"/>
+                        <path d="M544.04,275.98l-.84,2.54h-1.08l2.75-8.08h1.26l2.76,8.08h-1.12l-.86-2.54h-2.87ZM546.69,275.16l-.79-2.33c-.18-.53-.3-1.01-.42-1.48h-.02c-.12.48-.25.97-.41,1.46l-.79,2.34h2.43Z"/>
+                      </g>
+                      <g>
+                        <path d="M7.08,278.26c-.38.19-1.15.38-2.13.38-2.28,0-3.99-1.44-3.99-4.09s1.72-4.25,4.22-4.25c1.01,0,1.64.22,1.92.36l-.25.85c-.4-.19-.96-.34-1.63-.34-1.9,0-3.15,1.21-3.15,3.33,0,1.98,1.14,3.25,3.11,3.25.64,0,1.28-.13,1.7-.34l.22.83Z"/>
+                        <path d="M15.05,274.4c0,2.78-1.69,4.26-3.75,4.26s-3.63-1.66-3.63-4.1c0-2.57,1.6-4.25,3.75-4.25s3.63,1.69,3.63,4.09ZM8.78,274.53c0,1.73.94,3.27,2.58,3.27s2.59-1.52,2.59-3.36c0-1.61-.84-3.29-2.58-3.29s-2.59,1.59-2.59,3.37Z"/>
+                        <path d="M23.32,274.4c0,2.78-1.69,4.26-3.75,4.26s-3.63-1.66-3.63-4.1c0-2.57,1.6-4.25,3.75-4.25s3.63,1.69,3.63,4.09ZM17.05,274.53c0,1.73.94,3.27,2.58,3.27s2.59-1.52,2.59-3.36c0-1.61-.84-3.29-2.58-3.29s-2.59,1.59-2.59,3.37Z"/>
+                        <path d="M24.68,270.53c.5-.08,1.16-.16,2-.16,1.03,0,1.79.24,2.27.67.44.38.71.97.71,1.69s-.22,1.31-.62,1.73c-.55.59-1.45.89-2.47.89-.31,0-.6-.01-.84-.07v3.24h-1.04v-7.99ZM25.72,274.43c.23.06.52.08.86.08,1.26,0,2.03-.61,2.03-1.73s-.76-1.58-1.91-1.58c-.46,0-.8.04-.98.08v3.14Z"/>
+                        <path d="M35.25,274.73h-3.14v2.91h3.5v.88h-4.55v-8.08h4.37v.88h-3.32v2.55h3.14v.86Z"/>
+                        <path d="M36.97,270.55c.53-.11,1.28-.17,2-.17,1.12,0,1.83.2,2.34.66.41.36.64.91.64,1.54,0,1.07-.67,1.77-1.52,2.06v.04c.62.22,1,.79,1.19,1.63.26,1.13.46,1.91.62,2.22h-1.08c-.13-.23-.31-.92-.54-1.93-.24-1.12-.67-1.54-1.62-1.57h-.98v3.5h-1.04v-7.98ZM38.01,274.23h1.07c1.12,0,1.82-.61,1.82-1.54,0-1.04-.76-1.5-1.86-1.51-.5,0-.86.05-1.03.1v2.95Z"/>
+                        <path d="M44.79,275.98l-.84,2.54h-1.08l2.75-8.08h1.26l2.76,8.08h-1.12l-.86-2.54h-2.87ZM47.44,275.16l-.79-2.33c-.18-.53-.3-1.01-.42-1.48h-.02c-.12.48-.25.97-.41,1.46l-.79,2.34h2.43Z"/>
+                        <path d="M56.29,278.26c-.38.19-1.15.38-2.13.38-2.28,0-3.99-1.44-3.99-4.09s1.72-4.25,4.22-4.25c1.01,0,1.64.22,1.92.36l-.25.85c-.4-.19-.96-.34-1.63-.34-1.9,0-3.15,1.21-3.15,3.33,0,1.98,1.14,3.25,3.11,3.25.64,0,1.28-.13,1.7-.34l.22.83Z"/>
+                        <path d="M58.65,270.44v8.08h-1.04v-8.08h1.04Z"/>
+                        <path d="M67.38,274.4c0,2.78-1.69,4.26-3.75,4.26s-3.63-1.66-3.63-4.1c0-2.57,1.6-4.25,3.75-4.25s3.63,1.69,3.63,4.09ZM61.11,274.53c0,1.73.94,3.27,2.58,3.27s2.59-1.52,2.59-3.36c0-1.61-.84-3.29-2.58-3.29s-2.59,1.59-2.59,3.37ZM65.44,268.58l-1.52,1.39h-.86l1.12-1.39h1.27Z"/>
+                        <path d="M68.74,278.52v-8.08h1.14l2.59,4.09c.6.95,1.07,1.8,1.45,2.63h.02c-.1-1.09-.12-2.07-.12-3.33v-3.38h.98v8.08h-1.06l-2.57-4.1c-.56-.9-1.1-1.82-1.51-2.7h-.04c.06,1.03.08,2,.08,3.35v3.45h-.98Z"/>
+                      </g>
+                      <g>
+                        <path d="M246.13,503.92c.5-.08,1.16-.16,2-.16,1.03,0,1.79.24,2.27.67.44.38.71.97.71,1.69s-.22,1.31-.62,1.73c-.55.59-1.45.89-2.47.89-.31,0-.6-.01-.84-.07v3.24h-1.04v-7.99ZM247.17,507.81c.23.06.52.08.86.08,1.26,0,2.03-.61,2.03-1.73s-.76-1.58-1.91-1.58c-.46,0-.8.04-.98.08v3.14Z"/>
+                        <path d="M252.51,503.93c.53-.11,1.28-.17,2-.17,1.12,0,1.83.2,2.34.66.41.36.64.91.64,1.54,0,1.07-.67,1.77-1.52,2.06v.04c.62.22,1,.79,1.19,1.63.26,1.13.46,1.91.62,2.22h-1.08c-.13-.23-.31-.92-.54-1.93-.24-1.12-.67-1.54-1.62-1.57h-.98v3.5h-1.04v-7.98ZM253.56,507.61h1.07c1.12,0,1.82-.61,1.82-1.54,0-1.04-.76-1.5-1.86-1.51-.5,0-.86.05-1.03.1v2.95Z"/>
+                        <path d="M260.01,503.82v4.79c0,1.81.8,2.58,1.88,2.58,1.2,0,1.97-.79,1.97-2.58v-4.79h1.06v4.71c0,2.48-1.31,3.5-3.06,3.5-1.65,0-2.9-.95-2.9-3.45v-4.76h1.06Z"/>
+                        <path d="M266.73,503.93c.64-.1,1.39-.17,2.22-.17,1.5,0,2.57.35,3.27,1.01.72.66,1.14,1.59,1.14,2.9s-.41,2.4-1.16,3.14c-.76.75-2,1.16-3.57,1.16-.74,0-1.37-.04-1.9-.1v-7.95ZM267.78,511.08c.26.05.65.06,1.06.06,2.23,0,3.44-1.25,3.44-3.43.01-1.91-1.07-3.12-3.27-3.12-.54,0-.95.05-1.22.11v6.38Z"/>
+                        <path d="M278.91,508.11h-3.14v2.92h3.5v.88h-4.55v-8.08h4.37v.88h-3.32v2.55h3.14v.86Z"/>
+                        <path d="M280.63,511.9v-8.08h1.14l2.59,4.09c.6.95,1.07,1.8,1.45,2.63h.02c-.1-1.09-.12-2.07-.12-3.33v-3.38h.98v8.08h-1.06l-2.57-4.1c-.56-.9-1.1-1.82-1.51-2.7h-.04c.06,1.03.08,2,.08,3.35v3.45h-.98Z"/>
+                        <path d="M294.17,511.64c-.38.19-1.15.38-2.13.38-2.28,0-3.99-1.44-3.99-4.09s1.71-4.25,4.22-4.25c1.01,0,1.64.22,1.92.36l-.25.85c-.4-.19-.96-.34-1.63-.34-1.9,0-3.15,1.21-3.15,3.33,0,1.98,1.14,3.25,3.11,3.25.63,0,1.28-.13,1.7-.34l.22.83Z"/>
+                        <path d="M296.53,503.82v8.08h-1.04v-8.08h1.04Z"/>
+                        <path d="M299.66,509.36l-.84,2.54h-1.08l2.75-8.08h1.26l2.76,8.08h-1.12l-.86-2.54h-2.87ZM302.31,508.54l-.79-2.33c-.18-.53-.3-1.01-.42-1.48h-.02c-.12.48-.25.97-.41,1.46l-.79,2.34h2.43Z"/>
+                      </g>
+                      <path d="M283.48,275.2c0,2.21-.82,3.43-2.26,3.43-1.27,0-2.13-1.19-2.15-3.34,0-2.18.94-3.38,2.26-3.38s2.15,1.22,2.15,3.29ZM279.96,275.3c0,1.69.52,2.65,1.32,2.65.9,0,1.33-1.05,1.33-2.71s-.41-2.65-1.32-2.65c-.77,0-1.33.94-1.33,2.71Z"/>
+                      <g>
+                        <path d="M279.17,230.57v-.54l.69-.67c1.66-1.58,2.41-2.42,2.42-3.4,0-.66-.32-1.27-1.29-1.27-.59,0-1.08.3-1.38.55l-.28-.62c.45-.38,1.09-.66,1.84-.66,1.4,0,1.99.96,1.99,1.89,0,1.2-.87,2.17-2.24,3.49l-.52.48v.02h2.92v.73h-4.15Z"/>
+                        <path d="M288.17,224.81h-2.48l-.25,1.67c.15-.02.29-.04.53-.04.5,0,1,.11,1.4.35.51.29.93.85.93,1.67,0,1.27-1.01,2.22-2.42,2.22-.71,0-1.31-.2-1.62-.4l.22-.67c.27.16.8.36,1.39.36.83,0,1.54-.54,1.54-1.41,0-.84-.57-1.44-1.87-1.44-.37,0-.66.04-.9.07l.42-3.12h3.11v.74Z"/>
+                      </g>
+                      <g>
+                        <path d="M283.04,174.12h-2.48l-.25,1.67c.15-.02.29-.04.53-.04.5,0,1,.11,1.4.35.51.29.93.85.93,1.67,0,1.27-1.01,2.22-2.42,2.22-.71,0-1.31-.2-1.62-.4l.22-.67c.27.16.8.36,1.39.36.83,0,1.54-.54,1.54-1.41,0-.84-.57-1.44-1.87-1.44-.37,0-.66.04-.9.07l.42-3.12h3.11v.74Z"/>
+                        <path d="M288.61,176.56c0,2.21-.82,3.43-2.26,3.43-1.27,0-2.13-1.19-2.15-3.34,0-2.18.94-3.38,2.26-3.38s2.15,1.22,2.15,3.29ZM285.08,176.66c0,1.69.52,2.65,1.32,2.65.9,0,1.33-1.05,1.33-2.71s-.41-2.65-1.32-2.65c-.77,0-1.33.94-1.33,2.71Z"/>
+                      </g>
+                      <g>
+                        <path d="M283.38,123.34v.58l-2.83,5.92h-.91l2.82-5.75v-.02h-3.18v-.73h4.1Z"/>
+                        <path d="M288.17,124.08h-2.48l-.25,1.67c.15-.02.29-.04.53-.04.5,0,1,.11,1.4.35.51.29.93.85.93,1.67,0,1.27-1.01,2.22-2.42,2.22-.71,0-1.31-.2-1.62-.4l.22-.67c.27.16.8.36,1.39.36.83,0,1.54-.54,1.54-1.41,0-.84-.57-1.44-1.87-1.44-.37,0-.66.04-.9.07l.42-3.12h3.11v.74Z"/>
+                      </g>
+                      <g>
+                        <path d="M281.07,72.07h-.02l-1.13.61-.17-.67,1.42-.76h.75v6.5h-.85v-5.68Z"/>
+                        <path d="M288.61,74.43c0,2.21-.82,3.43-2.26,3.43-1.27,0-2.13-1.19-2.15-3.34,0-2.18.94-3.38,2.26-3.38s2.15,1.22,2.15,3.29ZM285.08,74.53c0,1.69.52,2.65,1.32,2.65.9,0,1.33-1.05,1.33-2.71s-.41-2.65-1.32-2.65c-.77,0-1.33.94-1.33,2.71Z"/>
+                        <path d="M293.74,74.43c0,2.21-.82,3.43-2.26,3.43-1.27,0-2.13-1.19-2.15-3.34,0-2.18.94-3.38,2.26-3.38s2.15,1.22,2.15,3.29ZM290.21,74.53c0,1.69.52,2.65,1.32,2.65.9,0,1.33-1.05,1.33-2.71s-.41-2.65-1.32-2.65c-.77,0-1.33.94-1.33,2.71Z"/>
+                      </g>
+                    </g>
+                    <g id="hab_x5F_line">
+                      <polygon
+                        class="st1"
+                        points="
+                          275,75
+                          475,275
+                          275,475
+                          75,275
+                        "
+                      />
+                    </g>
+                    <g id="hab_x5F_1">
+                      <circle class="st0" cx="275.32" cy="75.34" r="6.41"/>
+                    </g>
+                    <g id="hab_x5F_2">
+                      <circle class="st0" cx="275.32" cy="75.34" r="6.41"/>
+                      <circle class="st0" cx="475" cy="275.34" r="6.41"/>
+                      <circle class="st0" cx="475" cy="275.34" r="6.41"/>
+                    </g>
+                    <g id="hab_x5F_3">
+                      <circle class="st0" cx="275.32" cy="75.34" r="6.41"/>
+                      <circle class="st0" cx="275" cy="475" r="6.41"/>
+                    </g>
+                    <g id="hab_x5F_4">
+                      <circle class="st0" cx="275.32" cy="75.34" r="6.41"/>
+                      <circle class="st0" cx="275" cy="475" r="6.41"/>
+                      <circle class="st0" cx="75.32" cy="275" r="6.41"/>
+                    </g>
+                  </svg>
                   
+                 </div>
                 </div>
               </div>
               <!--Termina Widget Content -->
@@ -1099,15 +1323,15 @@
                 <div class="wg-f-c">
                   <div >
                     <select class="select" id="nivel-educativo" name="nivel-educativo">
-                      <option value="primaria">Primaria</option>
-                      <option value="secundaria">Secundaria</option>
+                      
                       <option value="preparatoria">Preparatoria</option>
+                      <option value="universidad">Universidad</option>
                     </select>
                   </div>
                     <button class="btn-acc-lx btn-width">Aplicar</button>
                 </div>
               </div>
-              <div class="ft-sync">
+              <div class="ft-sync" style="display: none;">
                 <div class="ft-sync-date">
                   <p>Última sincronización:</p>
                   <p class="date">01/01/2023</p>
@@ -1132,9 +1356,7 @@
                       <a href="#" data-tooltip-id="ttCareCap" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                       <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallecarecaptacion')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
                   </div>
-                    <div class="act-detail">
-                        <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -1485,15 +1707,15 @@
                   <div class="wg-f-c">
                     <div>
                       <select class="select" id="nivel-educativo" name="nivel-educativo">
-                        <option value="primaria">Preparatoria 1</option>
-                        <option value="secundaria">Preparatoria 2</option>
-                        <option value="preparatoria">Preparatoria 3</option>
+                        <option value="primaria">Preparatoria</option>
+                        <option value="secundaria">Universidad</option>
+                        
                       </select>
                     </div>
                       <button class="btn-acc-lx btn-width">Aplicar</button>
                   </div>
                 </div>
-                <div class="ft-sync">
+                <div class="ft-sync" style="display: none;">
                   <div class="ft-sync-date">
                     <p>Última sincronización:</p>
                     <p class="date">01/01/2023</p>
@@ -1518,9 +1740,7 @@
                       <a href="#" data-tooltip-id="ttCareAdm" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                       <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallecareadmision')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
                   </div>
-                    <div class="act-detail">
-                        <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -1528,12 +1748,12 @@
               <!--Inicia Widget Status bar -->
               <div class="wg-status-bar">
                 <div class="wg-st-a">
-                  <p class="st-data">Filtrado por:</p>
-                  <p class="st-data" id="statusA">Data A</p>
+                  
+                  <p class="st-data" id="statusA">Preparatoria</p>
                 </div>
                 <div class="wg-st-b">
-                  <p class="st-data">Periodo:</p>
-                  <p class="st-data">Data B</p>
+                  
+                  <p class="st-data">.</p>
                 </div>
               </div>
               <!--Termina Widget Status bar -->
@@ -1672,257 +1892,7 @@
           
           </div>
           <!--Termina Widget Row -->
-          <!--Inicia Widget Row -->
-          <div class="widget-row-a">
-            <!--Inicia Widget-->
-            <div class="widget-layout" id="detallecareint">
-              <!--Inicia Widget Title bar -->
-              <div class="wg-top">
-                <div class="wg-title-bar">
-                  <div class="wg-title">
-                    <p class="widget-title">Habilidades Intelectuales</p>
-                  </div>
-                  <div class="wg-actions-gp">
-                    <div class="act-btns">
-                      <a href="#" data-tooltip-id="ttCareInt" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
-                      <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallecareint')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                  </div>
-                    <div class="act-detail">
-                        <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--Termina Widget Title bar -->
-              <!--Inicia Widget Status bar -->
-              <div class="wg-status-bar">
-                <div class="wg-st-a">
-                  <p class="st-data">Filtrado por:</p>
-                  <p class="st-data" id="statusA">Data A</p>
-                </div>
-                <div class="wg-st-b">
-                  <p class="st-data">Periodo:</p>
-                  <p class="st-data">Data B</p>
-                </div>
-              </div>
-              <!--Termina Widget Status bar -->
-              <!--Inicia Widget Content -->
-              <div class="wg-content">
           
-                <div class="tb-gp">
-                  <div class="itb-top">
-                    <div class="itb-header-container">
-                      <div class="itb-sk">Habilidad</div>
-                      <div class="itb-col">Puntaje obtenido</div>
-                      <div class="itb-col">Puntaje esperado por la institución</div>
-                      <div class="itb-col">Cantidad de aspirantes que no cumplen con el puntaje</div>
-                    </div>
-                      <div class="itb-row-container">
-                      <div class="itb-sk-a"  id="habilidad" tip-id="Comprender, procesar y aprender la información que se presenta."><p>Aprendizaje</p></div>
-          
-                      <div class="itb-ref-a" id="ci-data-a">888</div>
-                      <div class="itb-ref-a" id="ci-data-b">888</div>
-                      <div class="itb-ref-a" id="ci-data-c">888</div>
-                      </div>
-                      <div class="itb-row-container">
-                      <div class="itb-sk-a"  id="habilidad" tip-id="Se relaciona con el procesamiento de la información semántica."><p>Verbal</p></div>
-          
-                      <div class="itb-ref-a" id="ci-data-a">888</div>
-                      <div class="itb-ref-a" id="ci-data-b">888</div>
-                      <div class="itb-ref-a" id="ci-data-c">888</div>
-                      </div>
-                      <div class="itb-row-container">
-                      <div class="itb-sk-a"  id="habilidad" tip-id="Para analizar las implicaciones de la información presentada."><p>Razonamiento</p></div>
-          
-                      <div class="itb-ref-a" id="ci-data-a">888</div>
-                      <div class="itb-ref-a" id="ci-data-b">888</div>
-                      <div class="itb-ref-a" id="ci-data-c">888</div>
-                      </div>
-                      <div class="itb-row-container">
-                      <div class="itb-sk-a"  id="habilidad" tip-id="Permiten evaluar, juzgar, establecer prioridades y trabajar bajo presión."><p>Toma de Decisiones</p></div>
-          
-                      <div class="itb-ref-a" id="ci-data-a">888</div>
-                      <div class="itb-ref-a" id="ci-data-b">888</div>
-                      <div class="itb-ref-a" id="ci-data-c">888</div>
-                      </div>
-                      <div class="itb-row-container">
-                      <div class="itb-sk-a"  id="habilidad" tip-id="Capacidad para organizar la información y planear a mediano y a largo plazo."><p>Planeación</p></div>
-          
-                      <div class="itb-ref-a" id="ci-data-a">888</div>
-                      <div class="itb-ref-a" id="ci-data-b">888</div>
-                      <div class="itb-ref-a" id="ci-data-c">888</div>
-                      </div>
-                      <div class="itb-row-container">
-                      <div class="itb-sk-a"  id="habilidad" tip-id="Leer a una velocidad adecuada y comprender la información presentada."><p>Lectura</p></div>
-          
-                      <div class="itb-ref-a" id="ci-data-a">888</div>
-                      <div class="itb-ref-a" id="ci-data-b">888</div>
-                      <div class="itb-ref-a" id="ci-data-c">888</div>
-                      </div>
-                      <div class="itb-row-container">
-                      <div class="itb-sk-a"  id="habilidad" tip-id="Procesamiento, asimilación y aplicación de la información abstracta."><p>Matemáticas</p></div>
-          
-                      <div class="itb-ref-a" id="ci-data-a">888</div>
-                      <div class="itb-ref-a" id="ci-data-b">888</div>
-                      <div class="itb-ref-a" id="ci-data-c">888</div>
-                      </div>
-                  </div>
-                  <div class="itb-row-container-end">
-                    <div class="tb-sk-h"  id="habilidad" tip-id="Indice Promedio de Habilidades Intelectuales"><p>I.P.H.I.</p></div>
-          
-                    <div class="ctb-ref-h" id="ci-data-a">888</div>
-                    <div class="ctb-ref-h" id="ci-data-b">888</div>
-                    <div class="tb-des-h" id="ci-data-c">999</div>
-                  </div>
-                </div>
-                <div class="care-note"><div>Nota: Se recomienda complementar con Skill Training.</div>         <div>Nota: Puntajes en percentiles con escala de 0 a 100.</div></div>
-                <div class="chart-gp">
-                  <div class="chart-title-container">
-                    <p class="chart-title" >Dispersión</p>
-                  </div>
-                  <div class="chart-img">
-                    <img src="img/chart/chart-placeholder.png" alt="Gráfica de Línea">
-                  </div>
-                  <div class="chart-bottom">
-                    <div class="toggle-switch">
-                      <input type="checkbox" id="toggleSwitch2" class="toggle-switch-checkbox">
-                      <label class="toggle-switch-label" for="toggleSwitch2">
-                        <span class="toggle-switch-inner"></span>
-                        <span class="toggle-switch-switch"></span>
-                      </label>
-                      <span class="toggle-switch-text">Ver Promedio</span>
-                    </div>
-                    <div class="chart-legend">
-                      <div class="wg-chart-legend-item">
-                        <div class="wg-chart-legend-color" style="background-color: #7005F2;"></div>
-                        <div class="wg-chart-legend-text">Promedio Tu Institución</div>
-                      </div>
-                      <div class="wg-chart-legend-item">
-                        <div class="wg-chart-legend-color" style="background-color: #FF9500;"></div>
-                        <div class="wg-chart-legend-text">Referencia Pertinente: Nacional</div>
-                      </div>
-                      <div class="wg-chart-legend-item">
-                        <div class="wg-chart-legend-text">n= 200 alumnos</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--Termina Widget Content -->
-            </div>
-            <!--Termina Widget-->
-            <!--Inicia Widget-->
-            <div class="widget-layout" id="detallecaresoc">
-              <!--Inicia Widget Title bar -->
-              <div class="wg-top">
-                <div class="wg-title-bar">
-                  <div class="wg-title">
-                    <p class="widget-title">Habilidades Socioemocionales</p>
-                  </div>
-                  <div class="wg-actions-gp">
-                    <div class="act-btns">
-                      <a href="#" data-tooltip-id="ttCareSoc" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
-                      <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallecaresoc')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
-                  </div>
-                    <div class="act-detail">
-                        <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--Termina Widget Title bar -->
-              <!--Inicia Widget Status bar -->
-              <div class="wg-status-bar">
-                <div class="wg-st-a">
-                  <p class="st-data">Filtrado por:</p>
-                  <p class="st-data" id="statusA">Data A</p>
-                </div>
-                <div class="wg-st-b">
-                  <p class="st-data">Periodo:</p>
-                  <p class="st-data">Data B</p>
-                </div>
-              </div>
-              <!--Termina Widget Status bar -->
-              <!--Inicia Widget Content -->
-              <div class="wg-content">
-          
-                <div class="tb-gp">
-                  <div class="tb-top">
-                    <div class="itb-header-container">
-                      <div class="itb-sk">Habilidad</div>
-                      <div class="itb-col">Puntaje obtenido</div>
-                      <div class="itb-col">Puntaje esperado por la institución</div>
-                      <div class="itb-col">Cantidad de aspirantes que no cumplen con el puntaje</div>
-                    </div>
-                      <div class="itb-row-container">
-                      <div class="itb-sk-a"  id="habilidad" tip-id="Permiten establecer una adecuada relación con uno mismo."><p>Intrapersonales</p></div>
-          
-                      <div class="itb-ref-a" id="cs-data-a">888</div>
-                      <div class="itb-ref-a" id="cs-data-b">888</div>
-                      <div class="itb-ref-a" id="cs-data-c">888</div>
-                      </div>
-                      <div class="itb-row-container">
-                      <div class="itb-sk-a"  id="habilidad" tip-id="Importantes para establecer una relación emocional sana y efectiva con otras personas."><p>Interpersonales</p></div>
-          
-                      <div class="itb-ref-a" id="cs-data-a">888</div>
-                      <div class="itb-ref-a" id="cs-data-b">888</div>
-                      <div class="itb-ref-a" id="cs-data-c">888</div>
-                      </div>
-                      <div class="itb-row-container">
-                      <div class="itb-sk-a"  id="habilidad" tip-id="Manejo emocional en contextos personales, sociales y profesionales."><p>Para la Vida</p></div>
-          
-                      <div class="itb-ref-a" id="cs-data-a">888</div>
-                      <div class="itb-ref-a" id="cs-data-b">888</div>
-                      <div class="itb-ref-a" id="cs-data-c">888</div>
-                      </div>
-                  </div>
-                  <div class="itb-row-container-end">
-                    <div class="tb-sk-h tb-sk-h-txt"  id="habilidad" tip-id="Indice Promedio de Habilidades Socioemocionales"><p>Indice de <br>inteligencia emocional</p></div>
-          
-                    <div class="ctb-ref-h" id="cs-data-a">888</div>
-                    <div class="ctb-ref-h" id="cs-data-b">888</div>
-                    <div class="tb-des-h" id="cs-data-c">999</div>
-                  </div>
-                </div>
-                <div class="care-note"><div>Nota: Se recomienda complementar con Skill Training.</div>         <div>Nota: Puntajes en percentiles con escala de 0 a 100.</div></div>
-                <div class="chart-gp">
-                  <div class="chart-title-container">
-                    <p class="chart-title" >Dispersión</p>
-                  </div>
-                  <div class="chart-img">
-                    <img src="img/chart/chart-placeholder.png" alt="Gráfica de Línea">
-                  </div>
-                  <div class="chart-bottom">
-                    <div class="toggle-switch">
-                      <input type="checkbox" id="toggleSwitch3" class="toggle-switch-checkbox">
-                      <label class="toggle-switch-label" for="toggleSwitch3">
-                        <span class="toggle-switch-inner"></span>
-                        <span class="toggle-switch-switch"></span>
-                      </label>
-                      <span class="toggle-switch-text">Ver Promedio</span>
-                    </div>
-                    <div class="chart-legend">
-                      <div class="wg-chart-legend-item">
-                        <div class="wg-chart-legend-color" style="background-color: #7005F2;"></div>
-                        <div class="wg-chart-legend-text">Promedio Tu Institución</div>
-                      </div>
-                      <div class="wg-chart-legend-item">
-                        <div class="wg-chart-legend-color" style="background-color: #FF9500;"></div>
-                        <div class="wg-chart-legend-text">Referencia Pertinente: Nacional</div>
-                      </div>
-                      <div class="wg-chart-legend-item">
-                        <div class="wg-chart-legend-text">n= 200 alumnos</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--Termina Widget Content -->
-            </div>
-            <!--Termina Widget-->
-          
-          </div>
-          <!--Termina Widget Row -->
         </div>     
       </div>
       <!--Termina Contenido de la pestaña Admisión-->
@@ -1951,15 +1921,14 @@
                   <div class="wg-f-c">
                     <div>
                       <select class="select" id="nivel-educativo" name="nivel-educativo">
-                        <option value="primaria">Primaria</option>
-                        <option value="secundaria">Secundaria</option>
-                        <option value="preparatoria">Preparatoria</option>
+                        <option value="primaria">Preparatoria</option>
+                        <option value="secundaria">Universidad</option>
                       </select>
                     </div>
                       <button class="btn-acc-lx btn-width">Aplicar</button>
                   </div>
                 </div>
-                <div class="ft-sync">
+                <div class="ft-sync" style="display: none;">
                   <div class="ft-sync-date">
                     <p>Última sincronización:</p>
                     <p class="date">01/01/2023</p>
@@ -1984,9 +1953,6 @@
                       <a href="#" data-tooltip-id="ttCareRet" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
                       <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallecareretencion')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
                   </div>
-                    <div class="act-detail">
-                        <a href="main-body.html" class="btn-sq-blue"><img src="img/icon/zoom-in.svg" alt="Ver indicador a detalle"></a>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -2656,10 +2622,424 @@
       </div>
       <!--Termina Contenido de la pestaña INTELEXIUM-->
       <!--Inicia Contenido de la pestaña SENSOR-->
-      <div id="tab-sensor" class="tab-content tab-ai" style="display:none;">
+      <div id="tab-sensor" class="tab-content " style="display:none;">
           
       </div>
       <!--Termina Contenido de la pestaña SENSOR-->
+      <!--Inicia Contenido de la pestaña INTELECTUAL DETALLE-->
+      <div id="tab-intelectual-detalle" class="tab-content " style="display:none;">
+        <div class="contenido">
+          <div class="wr-title-bar ">
+                <div class="wr-tb-content">
+                  <div class="wr-tb-gp">
+                    <div class="wr-category-title">
+                      <p class="category-title" id="categoryTitle2"><img src="img/logo/logo-skills-analytics.svg" alt=""></p>
+                    </div>
+                    <div class="wr-subtitle">
+                      <p class="category-subtitle" id="categorySubtitle2"></p>
+                    </div>
+                  </div>
+                  <div class="wg-filter">
+                    <div class="form">
+                      <div class="fl-title">
+                        <p>Elegir Nivel Educativo</p>
+                      </div>
+                      <div  class="wg-f-c">
+                        <div>
+                          <select class="select" id="nivel-educativo" name="nivel-educativo">
+                            <option value="primaria">Preparatoria</option>
+                            <option value="secundaria">Universidad</option>
+                            
+                          </select>
+                        </div>
+                          <button class="btn-acc-lx btn-width">Aplicar</button>
+                      </div>
+                    </div>
+                    <div class="ft-sync" style="display: none;">
+                      <div class="ft-sync-date">
+                        <p>Última sincronización:</p>
+                        <p class="date">01/01/2023</p>
+                      </div>
+                      <a href="#" data-tooltip-id="ttSync" class="btn-sq-blue-m btn-modal"><img src="img/icon/history.svg" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          <div class="wr-notes">
+            <div class="wr-notes-content">
+              <div class="note">
+          
+              </div>
+              <div class="note">
+          
+              </div>
+            </div>
+          </div>
+          <div class="wr-subtitle">
+            <div class="wr-st-content">
+          
+            </div>
+          </div>
+            <!--Inicia Widget Row -->
+            <div class="widget-row-a">
+              <!--Inicia Widget-->
+              <div class="widget-layout" id="detallehabintelectuales">
+                <!--Inicia Widget Title bar -->
+                <div class="wg-top">
+                  <div class="wg-title-bar">
+                    <div class="wg-title">
+                      <p class="widget-title">Habilidades intelectuales</p>
+                    </div>
+                    <div class="wg-actions-gp">
+                      <div class="act-btns">
+                        <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallehabintelectuales')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                        <a href="#" data-tooltip-id="ttHabInt" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Termina Widget Title bar -->
+                <!--Inicia Widget Status bar -->
+                <div class="wg-status-bar">
+                  <div class="wg-st-a">
+                    
+                    <p class="st-data" id="statusA">Preparatoria</p>
+                  </div>
+                  <div class="wg-st-b">
+                    
+                    <p class="st-data">Información actualizada al día de hoy</p>
+                  </div>
+                </div>
+                <!--Termina Widget Status bar -->
+                <!--Inicia Widget Content -->
+                <div class="wg-content">
+                  <div class="hab-dtl">
+                    <div class="hd-col-a">
+                      <div class="accordion">
+                        <div class="accordion-header">Selecciona Habilidad</div>
+                        <div class="accordion-category">
+                          
+                          <a href="#" class="option">Planeación <span>▶</span></a>
+                          <a href="#" class="option">Analogías simbólicas <span>▶</span></a>
+                          <a href="#" class="option">Progresión numérica <span>▶</span></a>
+                          <a href="#" class="option">Vocabulario <span>▶</span></a>
+                          <a href="#" class="option">Vocabulario de matemáticas <span>▶</span></a>
+                          <a href="#" class="option">Analogías <span>▶</span></a>
+                          <a href="#" class="option">Seguimiento de instrucciones <span>▶</span></a>
+                          <a href="#" class="option">Razonamiento lógico <span>▶</span></a>
+                          <a href="#" class="option">Discriminación <span>▶</span></a>
+                          <a href="#" class="option">Juicio de conceptos <span>▶</span></a>
+                          <a href="#" class="option">Conceptualización de hechos <span>▶</span></a>
+                          <a href="#" class="option">Aplicación de hechos <span>▶</span></a>
+                          <a href="#" class="option">Análisis de hechos <span>▶</span></a>
+                          
+                        </div>
+                      </div>
+                    </div>
+          
+                    <div class="hd-col-b">
+                      <div class="hd-tb-top">
+                        <div class="hd-tb-header">
+                          <div class="hd-tb-col-a ">
+                            <p>Habilidad</p>
+                          </div>
+                          <div class="hd-tb-col-b ">
+                            <p>Puntaje promedio obtenido  <br> en tu institución</p>
+                          </div>
+                          <div class="hd-tb-col-b col-b col-g">
+                            <p class="tb-ref-r">Referencia nacional de este nivel</p>
+                            
+                            <p>de este nivel</p>
+                          </div>
+                          <div class="hd-tb-col-b ">
+                            <p>Tu desviación estándar</p>
+                          </div>
+                        </div>
+                        <div class="hd-tb-row">
+                          <div class="hd-tb-col-a hd-tb-bg">
+                            <p class="hd-tb-title" id="habilidad">Conceptualización de hechos</p>
+                          </div>
+                          <div class="hd-tb-col-b">
+                            <div class="ts-a">
+                              <div class="traffic-light">
+                                <div class="red" id="tlRed"></div>
+                                <div class="yellow" id="tlYellow"></div>
+                                <div class="green" id="tlGreen"></div>
+                              </div>
+                            </div>
+                            <div class="trf-a" id="diagnostico">333</div>
+                          </div>
+                          <div class="hd-tb-col-b col-g">
+                            <p id="referencia">888</p>
+                          </div>
+                          <div class="hd-tb-col-b">
+                            <p id="desviacion">999</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="chart-gp">
+                        <div class="chart-title-container">
+                          <p class="chart-title" >Dispersión de tus alumnos</p>
+                          <p class="chart-subtitle" >En base al Índice Promedio de Habilidades Intelectuales (I.P.H.I.)</p>
+                          <p class="chart-poblacion" >n= 200 alumnos</p>
+                        </div>
+                        <div class="chart-img">
+                          <img src="img/chart/chart-placeholder.png"  alt="Gráfica de Línea">
+                        </div>
+                        <div class="chart-bottom">
+                          <div class="toggle-switch">
+                            <input type="checkbox" id="toggleSwitch1" class="toggle-switch-checkbox">
+                            <label class="toggle-switch-label" for="toggleSwitch1">
+                              <span class="toggle-switch-inner"></span>
+                              <span class="toggle-switch-switch"></span>
+                            </label>
+                            <span class="toggle-switch-text">Ver I.P.H.I.</span>
+                          </div>
+                          <div class="chart-legend">
+                            <div class="wg-chart-legend-item">
+                              <div class="wg-chart-legend-color" style="background-color: #7005F2;"></div>
+                              <div class="wg-chart-legend-text">I.P.H.I. de <br> Tu Institución</div>
+                            </div>
+                            <div class="wg-chart-legend-item">
+                              <div class="wg-chart-legend-color" style="background-color: #FF9500;"></div>
+                              <div class="wg-chart-legend-text">Referencia <br> Nacional </div>
+                            </div>
+                            <div class="wg-chart-legend-item">
+                              
+                            </div>
+                          </div>
+                        </div>
+                        <div class="chart-bottom">
+                          <a href="#" class="btn-acc-lx2 db-tab-back"> <img src="img/icon/return.svg" alt="Regresar a vista principal"> Regresar a vista principal  </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Termina Widget Content -->
+                <!--Inicia Widget Bottom bar -->
+                <!--Termina Widget Bottom bar -->
+              </div>
+              <!--Termina Widget-->
+          
+            </div>
+            <!--Termina Widget Row -->
+        </div>
+      </div>
+      <!--Termina Contenido de la pestaña INTELECTUAL DETALLE-->
+      <!--Inicia Contenido de la pestaña SOCIOEMOCIONAL DETALLE-->
+      <div id="tab-socioemocional-detalle" class="tab-content " style="display:none;">
+        <div class="contenido">
+          <div class="wr-title-bar ">
+                  <div class="wr-tb-content">
+                    <div class="wr-tb-gp">
+                      <div class="wr-category-title">
+                        <p class="category-title" id="categoryTitle2"><img src="img/logo/logo-skills-analytics.svg" alt=""></p>
+                      </div>
+                      <div class="wr-subtitle">
+                        <p class="category-subtitle" id="categorySubtitle2"></p>
+                      </div>
+                    </div>
+                    <div class="wg-filter">
+                      <div class="form">
+                        <div class="fl-title">
+                          <p>Elegir Nivel Educativo</p>
+                        </div>
+                        <div  class="wg-f-c">
+                          <div>
+                            <select class="select" id="nivel-educativo" name="nivel-educativo">
+                              <option value="primaria">Preparatoria</option>
+                              <option value="secundaria">Universidad</option>
+                            </select>
+                          </div>
+                            <button class="btn-acc-lx btn-width">Aplicar</button>
+                        </div>
+                      </div>
+                      <div class="ft-sync" style="display: none;">
+                        <div class="ft-sync-date">
+                          <p>Última sincronización:</p>
+                          <p class="date">01/01/2023</p>
+                        </div>
+                        <a href="#" data-tooltip-id="ttSync" class="btn-sq-blue-m btn-modal"><img src="img/icon/history.svg" alt=""></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <div class="wr-notes">
+              <div class="wr-notes-content">
+                <div class="note">
+          
+                </div>
+                <div class="note">
+          
+                </div>
+              </div>
+            </div>
+            <div class="wr-subtitle">
+              <div class="wr-st-content">
+          
+              </div>
+            </div>
+            <!--Inicia Widget Row -->
+            <div class="widget-row-a">
+              <!--Inicia Widget-->
+              <div class="widget-layout" id="detallehabsocioemocionales">
+                <!--Inicia Widget Title bar -->
+                <div class="wg-top">
+                  <div class="wg-title-bar">
+                    <div class="wg-title">
+                      <p class="widget-title">Habilidades socioemocionales</p>
+                    </div>
+                    <div class="wg-actions-gp">
+                      <div class="act-btns">
+                        <a href="#" class="btn-sq-gray" onclick="takeScreenshot('detallehabsocioemocionales')"><img src="img/icon/download.svg" alt="Descargar este indicador"></a>
+                        <a href="#" data-tooltip-id="ttHabSoc" class="btn-sq-gray btn-modal"><img src="img/icon/question-mark.svg" alt="Descripción del indicador"></a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Termina Widget Title bar -->
+                <!--Inicia Widget Status bar -->
+                <div class="wg-status-bar">
+                  <div class="wg-st-a">
+                    <p class="st-data"></p>
+                    <p class="st-data" id="statusA">Preparatoria</p>
+                  </div>
+                  <div class="wg-st-b">
+                    <p class="st-data"></p>
+                    <p class="st-data">Información actualizada al día de hoy</p>
+                  </div>
+                </div>
+                <!--Termina Widget Status bar -->
+                <!--Inicia Widget Content -->
+                <div class="wg-content">
+                  <div class="hab-dtl">
+                    <div class="hd-col-a">
+                      <div class="accordion">
+                        <div class="accordion-header">Selecciona Habilidad</div>
+                        <div class="accordion-category">
+                          <div class="acc-category-title">Intrapersonales</div>
+                          <div class="acc-category-options">
+                            
+                            <a href="#" class="option">Autoestima <span>▶</span></a>
+                            <a href="#" class="option">Manejo de la Tensión <span>▶</span></a>
+                            <a href="#" class="option">Bienestar Físico <span>▶</span></a>
+                            <a href="#" class="option">Propensión al Cambio <span>▶</span></a>
+                          </div>
+                        </div>
+          
+                        <div class="accordion-category">
+                          <div class="acc-category-title">Interpersonales</div>
+                          <div class="acc-category-options">
+                            
+                            <a href="#" class="option">Asertividad <span>▶</span></a>
+                            <a href="#" class="option">Conciencia de los Demás <span>▶</span></a>
+                            <a href="#" class="option">Empatía <span>▶</span></a>
+                          </div>
+                        </div>
+                        <div class="accordion-category">
+                          <div class="acc-category-title">Para la Vida</div>
+                          <div class="acc-category-options">
+                            
+                            <a href="#" class="option">Motivación <span>▶</span></a>
+                            <a href="#" class="option">Compromiso <span>▶</span></a>
+                            <a href="#" class="option">Administración del Tiempo <span>▶</span></a>
+                            <a href="#" class="option">Toma de Decisiones <span>▶</span></a>
+                            <a href="#" class="option">Liderazgo <span>▶</span></a>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+          
+                    <div class="hd-col-b">
+                      <div class="hd-tb-top">
+                        <div class="hd-tb-header">
+                          <div class="hd-tb-col-a ">
+                            <p>Habilidad</p>
+                          </div>
+                          <div class="hd-tb-col-b ">
+                            <p>Puntaje promedio obtenido en tu institución</p>
+                          </div>
+                          <div class="hd-tb-col-b col-b col-g">
+                            <p class="tb-ref-r">Referencia nacional <br> de este nivel</p>
+                            
+                            
+                          </div>
+                          <div class="hd-tb-col-b ">
+                            <p>Tu desviación estándar</p>
+                          </div>
+                        </div>
+                        <div class="hd-tb-row">
+                          <div class="hd-tb-col-a hd-tb-bg">
+                            <p class="hd-tb-title" id="habilidad">Autoestima</p>
+                          </div>
+                          <div class="hd-tb-col-b">
+                            <div class="ts-a">
+                              <div class="traffic-light">
+                                <div class="red" id="tlRed"></div>
+                                <div class="yellow" id="tlYellow"></div>
+                                <div class="green" id="tlGreen"></div>
+                              </div>
+                            </div>
+                            <div class="trf-a" id="diagnostico">333</div>
+                          </div>
+                          <div class="hd-tb-col-b col-g">
+                            <p id="referencia">888</p>
+                          </div>
+                          <div class="hd-tb-col-b">
+                            <p id="desviacion">999</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="chart-gp">
+                        <div class="chart-title-container">
+                          <p class="chart-title" >Dispersión de tus alumnos</p>
+                          <p class="chart-subtitle" >En base al Índice Promedio de Habilidades Intelectuales (I.P.H.I.)</p>
+                          <p class="chart-poblacion" >n= 200 alumnos</p>
+                        </div>
+                        <div class="chart-img">
+                          <img src="img/chart/chart-placeholder.png"  alt="Gráfica de Línea">
+                        </div>
+                        <div class="chart-bottom">
+                          <div class="toggle-switch">
+                            <input type="checkbox" id="toggleSwitch1" class="toggle-switch-checkbox">
+                            <label class="toggle-switch-label" for="toggleSwitch1">
+                              <span class="toggle-switch-inner"></span>
+                              <span class="toggle-switch-switch"></span>
+                            </label>
+                            <span class="toggle-switch-text">Ver I.I.E.</span>
+                          </div>
+                          <div class="chart-legend">
+                            <div class="wg-chart-legend-item">
+                              <div class="wg-chart-legend-color" style="background-color: #7005F2;"></div>
+                              <div class="wg-chart-legend-text">I.I.E. de <br> Tu Institución</div>
+                            </div>
+                            <div class="wg-chart-legend-item">
+                              <div class="wg-chart-legend-color" style="background-color: #FF9500;"></div>
+                              <div class="wg-chart-legend-text">Referencia <br> Nacional </div>
+                            </div>
+                            <div class="wg-chart-legend-item">
+                              
+                            </div>
+                          </div>
+                        </div>
+                        <div class="chart-bottom">
+                          <a href="#" class="btn-acc-lx2 db-tab-back"> <img src="img/icon/return.svg" alt="Regresar a vista principal"> Regresar a vista principal  </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Termina Widget Content -->
+              </div>
+              <!--Termina Widget-->
+          
+            </div>
+            <!--Termina Widget Row -->
+        </div>
+      </div>
+      <!--Termina Contenido de la pestaña SOCIOEMOCIONAL DETALLE-->
     </div>
     
   </main>
@@ -2797,16 +3177,16 @@
         </div>
       </div>
     </div>
-    <div class="tt-bg" id="ttBalPsi">
+    <div class="tt-bg" id="ttHab">
       <div class="tooltip">
         <div class="tt-top">
           <div class="tt-t-bar">
-            <p class="tooltip-title" id="ttTitle">Balance Psicosocial</p>
-            <div class="btn-close" onclick="closeTooltip('ttBalPsi')"><img src="img/icon/x.svg" alt=""></div>
+            <p class="tooltip-title" id="ttTitle">Hábitos</p>
+            <div class="btn-close" onclick="closeTooltip('ttHab')"><img src="img/icon/x.svg" alt=""></div>
           </div>
         </div>
         <div class="tt-btm">
-          <p class="tooltip-text" id="ttText">“Balance psicosocial” está diseñado para identificar los pensamientos, sentimientos y conductas que una persona presenta y que pueden traducirse en factores de riesgo en alguna o algunas de las siguientes variables relacionadas con el ámbito psicosocial: ansiedad, depresión, autoimagen negativa en redes sociales, adicción a la tecnología, tendencia a la autolesión, tendencia a ser bully y bajo control de impulsos.</p>
+          <p class="tooltip-text" id="ttText">Descripcion</p>
         </div>
       </div>
     </div>
@@ -3281,6 +3661,8 @@
     <script src="js/custom-navbar.js"></script>
     <script src="js/gm-tab-transitions.js"></script>
     <script src="js/gm-dashboard-tab-transitions.js"></script>
+    <script src="js/gm-vistadetalle-tab-transitions.js"></script>
+    <script src="js/gm-back-tab-transitions.js"></script>
     <script src="js/gm-responsive-nav.js"></script>
     <script src="js/logo-care.js"></script>
     <script src="js/menu.js"></script>
@@ -3292,6 +3674,7 @@
     <script src="js/ai-agentaccordeon.js"></script>
     <script src="js/ai-charcount.js"></script>
     <script src="js/ai-lexium-button.js"></script>
+    <script src="js/habitos.js"></script>
 </body>
 
 </html>
