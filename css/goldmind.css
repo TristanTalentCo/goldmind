@@ -3070,24 +3070,22 @@
   justify-content: center;
 }
 .care-solicita{
-  background-image: url('../img/backs/captacion_back.png') ;
-    background-size: cover;
-    background-position:start;
-    background-repeat: no-repeat;
+  background-color: var(--color-bg-secondary);
   height: 500px;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 .care-sol-banner {
   position: relative;
-  width: 650px;
+  width: 600px;
   height: fit-content;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 12px;
+  border: 2px solid var(--color-blue);
   box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.25);
   padding: 20px 0;
   display: flex;
@@ -3099,47 +3097,9 @@
   z-index: 1;
 }
 
-/* Borde animado */
-.care-sol-banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 3px; /* grosor del borde */
-  border-radius: 12px;
 
-  background: linear-gradient(
-    120deg,
-    var(--color-blue2),
-    #fff,
-    var(--color-primary),
-    
-    #fff,
-    var(--color-blue2)
-  );
 
-  background-size: 300% 300%;
-  animation: borderMove 6s linear infinite;
 
-  /* máscara para mostrar solo el borde */
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-
-  z-index: -1;
-}
-
-/* Animación del degradado */
-@keyframes borderMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 300% 50%;
-  }
-}
 
 .cta-button {
   position: relative;
@@ -3227,11 +3187,17 @@
   width: 400px;
 }
 .care-sol-title{
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: 600;
   color: var(--color-blue);
   text-align: center;
   line-height: 1em;
+}
+.care-sol-i{
+  font-size: 3em;
+   color: var(--color-blue);
+   font-family: 'poppins', sans-serif;
+   font-weight: 800;
 }
 .care-sol-text{
   width: 600px;
